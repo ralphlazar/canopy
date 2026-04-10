@@ -18,7 +18,7 @@
       "region": "West Africa",
       "status": "operational",
       "political_risk": "low",
-      "itmo_buyer": "Switzerland",
+      "itmo_buyer": "Multiple",
       "notes": "ITMO agreement with Switzerland operational since 2023. Ghana Carbon Market Office established. Domestic carbon market framework in place. Strong institutional capacity.",
       "updated": "2026-03-15"
     },
@@ -48,7 +48,7 @@
       "region": "West Africa",
       "status": "agreement-signed",
       "political_risk": "low",
-      "itmo_buyer": "Japan",
+      "itmo_buyer": "Multiple",
       "notes": "Bilateral agreement signed with Japan under JCM framework. ITMO eligibility criteria under development. Carbon registry being established.",
       "updated": "2026-02-15"
     },
@@ -88,7 +88,7 @@
       "region": "Southern Africa",
       "status": "agreement-signed",
       "political_risk": "medium",
-      "itmo_buyer": "Sweden",
+      "itmo_buyer": "Multiple",
       "notes": "Bilateral agreement with Sweden signed. Forest carbon focus. Zambia Carbon Market Framework under development. Currency instability creates transaction risk.",
       "updated": "2026-01-15"
     },
@@ -141,16 +141,6 @@
       "itmo_buyer": null,
       "notes": "National carbon market framework established but bilateral ITMO agreements not yet signed. Regulatory capacity weak. Oil sector dominates policy attention. Large potential market.",
       "updated": "2026-02-20"
-    },
-    {
-      "id": "cameroon",
-      "name": "Cameroon",
-      "region": "Central Africa",
-      "status": "in-negotiation",
-      "political_risk": "high",
-      "itmo_buyer": "Multiple",
-      "notes": "Bilateral negotiations ongoing. Anglophone conflict in Northwest and Southwest regions creates significant implementation risk. Strong forest carbon potential in east.",
-      "updated": "2026-01-10"
     },
     {
       "id": "drc",
