@@ -194,9 +194,82 @@
   .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
   .footer-link:hover { color: var(--text-muted); }
 
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 57px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+    padding: 8px 0 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .mobile-menu-item:hover { background: var(--bg2); }
+  .mobile-menu-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .mobile-menu-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 8px 24px;
+  }
+  .mobile-menu-sub {
+    padding: 10px 24px;
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .mobile-menu-sub:hover { background: var(--bg2); }
+
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
+    .hamburger { display: flex; }
     .hero { padding: 40px 20px 32px; }
     .hero-h { font-size: 26px; }
     .stats, .policy-summary { grid-template-columns: repeat(2, 1fr); }
@@ -533,6 +606,7 @@
   @media (max-width: 768px) {
     .home-hero { padding: 32px 20px 24px; }
     .home-grid { grid-template-columns: 1fr; padding: 0 20px 32px; }
+    .home-card-map { max-height: 200px; }
   }
 
   .live-num {
@@ -623,10 +697,10 @@
     </div>
   </div>
   <div class="nav-links">
-    <span class="nav-link" onclick="showView('projects')">Projects</span>
-    <span class="nav-link" onclick="showView('instruments')">Funding</span>
-    <span class="nav-link" onclick="showView('policy')">Policy</span>
+    <span class="nav-link" onclick="showView('policy'); activatePolicyMap();">Policy</span>
+    <span class="nav-link" onclick="showView('projects'); activateProjMap();">Projects</span>
     <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
+    <span class="nav-link" onclick="showView('instruments')">Funding</span>
     <div class="search-wrap">
       <span class="search-icon">&#9906;</span>
       <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
@@ -634,7 +708,20 @@
     </div>
     <button class="nav-cta">Subscribe to brief</button>
   </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
+  <div class="mobile-menu-item" onclick="mobileNav('projects')"><span class="mobile-menu-num" style="background:#1a4a2e">2</span>Projects</div>
+  <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">3</span>Intelligence</div>
+  <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">4</span>Funding Instruments</div>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-sub" onclick="mobileNav('about')">About</div>
+  <div class="mobile-menu-sub">Subscribe to brief</div>
+</div>
 
 <!-- HOME -->
 <div id="view-home" class="view active">
@@ -650,7 +737,7 @@
         <div class="home-card-map-overlay">
           <div class="home-card-map-top">
             <div>
-              <div class="home-card-map-title"><span class="card-num card-num-1">1</span>Policy tracker</div>
+              <div class="home-card-map-title"><span class="card-num card-num-1">1</span>Policy Tracker</div>
               <div class="home-card-map-sub">Article 6.2 status across 54 nations</div>
             </div>
             <div class="home-card-map-cta">Open -></div>
@@ -704,7 +791,7 @@
     <div class="home-card home-card-4" onclick="showView('instruments');">
       <div class="home-card-header">
         <div>
-          <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Funding instruments</div>
+          <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Funding Instruments</div>
           <div class="home-card-map-sub" id="home-inst-stat">22 instruments indexed</div>
         </div>
         <div class="home-card-map-cta">Open -></div>
@@ -738,17 +825,17 @@
     <div class="page-sub"><span class="live-num" id="proj-page-count">148</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
   </div>
   <div class="view-toggle">
-    <button class="toggle-btn active" onclick="setProjView('grid',this)">Grid</button>
-    <button class="toggle-btn" onclick="setProjView('map',this)">Map</button>
+    <button class="toggle-btn active" onclick="setProjView('map',this)">Map</button>
+    <button class="toggle-btn" onclick="setProjView('grid',this)">Grid</button>
   </div>
-  <div id="proj-map-wrap" class="map-hidden">
+  <div id="proj-map-wrap">
     <div class="map-container">
       <svg id="proj-map" viewBox="0 80 700 600"></svg>
       <div class="map-legend" id="proj-legend"></div>
-      <div class="map-hint">Click a country to filter projects. Click again to clear.</div>
+      <div class="map-hint">Click a country to see projects. Click again to clear.</div>
     </div>
   </div>
-  <div id="proj-grid-wrap">
+  <div id="proj-grid-wrap" class="map-hidden">
     <div class="cat-tabs" id="proj-tabs">
       <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
       <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
@@ -985,6 +1072,21 @@
   const statusLabel = { 'operational':'Operational', 'agreement-signed':'Agreement signed', 'in-negotiation':'In negotiation', 'framework-only':'Framework only', 'no-framework':'No framework' };
   const riskLabel   = { 'low':'Low risk', 'medium':'Medium risk', 'high':'High risk', 'very-high':'Very high risk' };
 
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  function mobileNav(view) {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    showView(view);
+    if (view === 'policy') activatePolicyMap();
+    if (view === 'projects') activateProjMap();
+  }
+
   function showView(name) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-'+name).classList.add('active');
@@ -1199,7 +1301,6 @@
         renderMiniProjMap();
         renderMiniPolicyMap();
       }
-      document.getElementById('mini-proj-stat').textContent = allProjects.length + ' projects tracked';
 
     } catch(e) { console.error(e); }
   }
@@ -1306,6 +1407,10 @@
   searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
   document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
+    if (!e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
   });
 
   load();
@@ -1382,6 +1487,8 @@
   }
 
   // RENDER POLICY MAP
+  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
+
   async function renderPolicyMap() {
     const svg = d3.select('#policy-map');
     svg.selectAll('*').remove();
@@ -1405,6 +1512,7 @@
       })
       .attr('title', f => isoToId[+f.id] || '')
       .on('mouseover', (event, f) => {
+        if (isTouchDevice()) return;
         const id = isoToId[+f.id];
         const c = policyById[id];
         if (!c) return;
@@ -1413,6 +1521,7 @@
       .on('mousemove', moveTooltip)
       .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
+        hideTooltip();
         const id = isoToId[+f.id];
         const c = policyById[id];
         if (c) openPolicyDetail(c);
@@ -1468,6 +1577,7 @@
       .attr('stroke', '#fff')
       .attr('stroke-width', 0.5)
       .on('mouseover', (event, f) => {
+        if (isTouchDevice()) return;
         const id = isoToId[+f.id];
         if (!id) return;
         const count = projCountryMap[id] || 0;
@@ -1582,12 +1692,12 @@
     document.querySelectorAll('#view-projects .toggle-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     if (mode === 'map') {
-      document.getElementById('proj-map-wrap').classList.remove('map-hidden');
-      document.getElementById('proj-grid-wrap').classList.add('map-hidden');
+      document.getElementById('proj-map-wrap').style.display = 'block';
+      document.getElementById('proj-grid-wrap').style.display = 'none';
       renderProjMap();
     } else {
-      document.getElementById('proj-map-wrap').classList.add('map-hidden');
-      document.getElementById('proj-grid-wrap').classList.remove('map-hidden');
+      document.getElementById('proj-map-wrap').style.display = 'none';
+      document.getElementById('proj-grid-wrap').style.display = 'block';
       selectedProjCountry = null;
     }
   }
@@ -1596,12 +1706,12 @@
     document.querySelectorAll('#view-policy .toggle-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     if (mode === 'map') {
-      document.getElementById('policy-map-wrap').classList.remove('map-hidden');
-      document.getElementById('policy-list-wrap').classList.add('map-hidden');
+      document.getElementById('policy-map-wrap').style.display = 'block';
+      document.getElementById('policy-list-wrap').style.display = 'none';
       renderPolicyMap();
     } else {
-      document.getElementById('policy-map-wrap').classList.add('map-hidden');
-      document.getElementById('policy-list-wrap').classList.remove('map-hidden');
+      document.getElementById('policy-map-wrap').style.display = 'none';
+      document.getElementById('policy-list-wrap').style.display = 'block';
     }
   }
 
@@ -1751,23 +1861,21 @@
 
   function activateProjMap() {
     setTimeout(() => {
-      document.getElementById('proj-map-wrap').classList.remove('map-hidden');
-      document.getElementById('proj-grid-wrap').classList.add('map-hidden');
+      document.getElementById('proj-map-wrap').style.display = 'block';
+      document.getElementById('proj-grid-wrap').style.display = 'none';
       document.querySelectorAll('#view-projects .toggle-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('#view-projects .toggle-btn')[1].classList.add('active');
+      document.querySelectorAll('#view-projects .toggle-btn')[0].classList.add('active');
       renderProjMap();
     }, 50);
   }
 
   function activatePolicyMap() {
     setTimeout(() => {
+      document.getElementById('policy-map-wrap').style.display = 'block';
+      document.getElementById('policy-list-wrap').style.display = 'none';
       renderPolicyMap();
     }, 50);
   }
-
-  // Trigger policy map on nav click
-  document.querySelector('[onclick="showView(\'policy\')"]')
-    .addEventListener('click', () => { if (allPolicy.length) renderPolicyMap(); });
 
   // If data loaded before D3, render mini maps now
   if (allProjects.length) {
