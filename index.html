@@ -267,25 +267,27 @@
   .mobile-menu-sub:hover { background: var(--bg2); }
 
   @media (max-width: 768px) {
-    nav { padding: 14px 20px; }
+    nav { padding: 14px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
-    .hero { padding: 40px 20px 32px; }
+    .hero { padding: 40px 24px 32px; }
     .hero-h { font-size: 26px; }
     .stats, .policy-summary { grid-template-columns: repeat(2, 1fr); }
-    .stat, .policy-stat { padding: 18px 20px; }
+    .stat, .policy-stat { padding: 18px 24px; }
     .stat:nth-child(2), .policy-stat:nth-child(2) { border-right: none; }
-    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count, .policy-grid { padding-left: 20px; padding-right: 20px; }
+    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count, .policy-grid { padding-left: 24px; padding-right: 24px; }
     .proj-grid, .inst-grid, .cat-group-grid, .proj-full-grid { grid-template-columns: 1fr; }
     .intel-item { grid-template-columns: 80px 1fr; }
     .intel-age { display: none; }
-    footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
     .detail-panel { width: 100%; }
     .policy-row { display: block; padding: 14px 0; }
-    .policy-row:hover { margin: 0 -20px; padding: 14px 20px; }
+    .policy-row:hover { margin: 0 -24px; padding: 14px 24px; }
     .policy-row > div:first-child { margin-bottom: 8px; }
     .policy-row .status-pill { margin-right: 6px; }
     .policy-notes-preview { display: none; }
+    .view-toggle { padding: 6px 24px 0; }
+    .map-container { padding: 8px 24px 12px; }
   }
   @media (max-width: 480px) {
     .stats { grid-template-columns: 1fr 1fr; }
@@ -607,8 +609,9 @@
     padding: 5px 14px;
   }
   @media (max-width: 768px) {
-    .home-hero { padding: 32px 20px 24px; }
-    .home-grid { grid-template-columns: 1fr; padding: 0 20px 32px; }
+    .home-hero { padding: 32px 24px 24px; }
+    .home-grid { grid-template-columns: 1fr; padding: 0 24px 32px; }
+    .home-card-map { max-height: 220px; overflow: hidden; }
   }
 
   .mobile-search-btn {
@@ -623,7 +626,7 @@
   }
   .mobile-search-bar {
     display: none;
-    padding: 10px 20px;
+    padding: 10px 24px;
     border-bottom: 1px solid var(--border);
     background: var(--bg);
   }
