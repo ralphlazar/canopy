@@ -1024,6 +1024,526 @@
         "Kilimanjaro"
       ],
       "featured": false
+    },
+    {
+      "id": "ghana-cocoa-agroforestry",
+      "name": "Ghana Cocoa Agroforestry",
+      "country": "Ghana",
+      "region": "Ashanti Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "3.2M tCO2e",
+      "area": "48,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Agroforestry",
+        "Smallholder",
+        "Supply chain",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ghana-atewa-redd",
+      "name": "Atewa Forest REDD+",
+      "country": "Ghana",
+      "region": "Eastern Region",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "2.8M tCO2e",
+      "area": "32,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Biodiversity hotspot",
+        "Water source",
+        "Mining threat"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ghana-volta-basin",
+      "name": "Volta Basin Reforestation",
+      "country": "Ghana",
+      "region": "Northern Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.1M tCO2e",
+      "area": "29,000 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "Watershed",
+        "Farmer-managed",
+        "Savanna transition"
+      ],
+      "featured": false
+    },
+    {
+      "id": "senegal-casamance-mangrove",
+      "name": "Casamance Mangrove Restoration",
+      "country": "Senegal",
+      "region": "Casamance",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "740,000 tCO2e",
+      "area": "11,200 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Mangrove",
+        "Women-led",
+        "Fisheries",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "senegal-great-green-wall",
+      "name": "Senegal Great Green Wall",
+      "country": "Senegal",
+      "region": "Ferlo Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "4.6M tCO2e",
+      "area": "58,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Great Green Wall",
+        "Sahel",
+        "Government partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "senegal-saloum-delta",
+      "name": "Saloum Delta Blue Carbon",
+      "country": "Senegal",
+      "region": "Fatick Region",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "580,000 tCO2e",
+      "area": "7,600 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO biosphere",
+        "Mangrove",
+        "Artisanal fishing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mali-sahel-arr",
+      "name": "Mali Sahel Farmer Reforestation",
+      "country": "Mali",
+      "region": "Mopti Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "3.8M tCO2e",
+      "area": "44,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Great Green Wall",
+        "Farmer-managed",
+        "Sahel",
+        "FMNR"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mali-boucle-niger",
+      "name": "Boucle du Baole IFM",
+      "country": "Mali",
+      "region": "Segou Region",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "1.9M tCO2e",
+      "area": "77,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Biosphere reserve",
+        "Community forestry",
+        "Conflict-affected"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nigeria-cross-river",
+      "name": "Cross River Rainforest REDD+",
+      "country": "Nigeria",
+      "region": "Cross River State",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "7.4M tCO2e",
+      "area": "96,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Under validation",
+      "tags": [
+        "Rainforest",
+        "Gorilla habitat",
+        "State government"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nigeria-niger-delta-blue",
+      "name": "Niger Delta Blue Carbon",
+      "country": "Nigeria",
+      "region": "Delta State",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "1.4M tCO2e",
+      "area": "18,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Mangrove",
+        "Delta",
+        "Pollution co-benefit",
+        "Community tenure"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nigeria-ogoniland",
+      "name": "Ogoniland Mangrove Restoration",
+      "country": "Nigeria",
+      "region": "Rivers State",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "880,000 tCO2e",
+      "area": "9,400 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Post-oil spill",
+        "UNEP remediation",
+        "Mangrove"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ivory-coast-tai-redd",
+      "name": "Tai National Park REDD+",
+      "country": "Ivory Coast",
+      "region": "Sud-Ouest",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "5.9M tCO2e",
+      "area": "330,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "UNESCO",
+        "Chimpanzee",
+        "Last primary rainforest",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ivory-coast-cocoa-mosaic",
+      "name": "Cocoa Landscape Mosaic",
+      "country": "Ivory Coast",
+      "region": "Bas-Sassandra",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "4.1M tCO2e",
+      "area": "52,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Agroforestry",
+        "Cocoa",
+        "Supply chain",
+        "Deforestation-free"
+      ],
+      "featured": false
+    },
+    {
+      "id": "guinea-ziama-massif",
+      "name": "Ziama Massif REDD+",
+      "country": "Guinea",
+      "region": "Nzerekore",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "3.6M tCO2e",
+      "area": "116,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Biosphere reserve",
+        "Upper Guinea forest",
+        "Community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "guinea-bissau-mangrove",
+      "name": "Guinea-Bissau Mangrove Arc",
+      "country": "Guinea-Bissau",
+      "region": "Bijagos Archipelago",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "1.1M tCO2e",
+      "area": "16,400 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO biosphere",
+        "Mangrove",
+        "Island community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sierra-leone-gola",
+      "name": "Gola Rainforest REDD+",
+      "country": "Sierra Leone",
+      "region": "Eastern Province",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "4.2M tCO2e",
+      "area": "71,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Transboundary",
+        "Upper Guinea",
+        "RSPB partnership",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "liberia-grebo-krahn",
+      "name": "Grebo-Krahn REDD+",
+      "country": "Liberia",
+      "region": "Maryland County",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "6.8M tCO2e",
+      "area": "230,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Upper Guinea forest",
+        "Pygmy hippo",
+        "Logging threat"
+      ],
+      "featured": false
+    },
+    {
+      "id": "liberia-wonegizi",
+      "name": "Wonegizi Chimpanzee Reserve",
+      "country": "Liberia",
+      "region": "Lofa County",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "2.4M tCO2e",
+      "area": "38,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Chimpanzee",
+        "Community-led",
+        "Gold Standard",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "togo-fazao-malfakassa",
+      "name": "Fazao-Malfakassa National Park",
+      "country": "Togo",
+      "region": "Centre Region",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "1.8M tCO2e",
+      "area": "192,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "National park",
+        "Elephant",
+        "Buffer communities"
+      ],
+      "featured": false
+    },
+    {
+      "id": "benin-pendjari",
+      "name": "Pendjari Biosphere Reserve",
+      "country": "Benin",
+      "region": "Atacora Department",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "3.1M tCO2e",
+      "area": "480,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Lion stronghold",
+        "Transboundary",
+        "UNESCO biosphere"
+      ],
+      "featured": false
+    },
+    {
+      "id": "burkina-faso-nazinga",
+      "name": "Nazinga Game Ranch Carbon",
+      "country": "Burkina Faso",
+      "region": "Centre-Sud Region",
+      "methodology": "Savanna burning \u00b7 VM0032",
+      "credits": "140,000 tCO2e/yr",
+      "area": "94,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Game ranch",
+        "Elephant",
+        "Fire management"
+      ],
+      "featured": false
+    },
+    {
+      "id": "niger-agroforestry-maradi",
+      "name": "Maradi Farmer Reforestation",
+      "country": "Niger",
+      "region": "Maradi Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "5.1M tCO2e",
+      "area": "61,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "FMNR",
+        "Great Green Wall",
+        "Farmer-managed",
+        "Sahel"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mauritania-sahel-arr",
+      "name": "Southern Mauritania Reforestation",
+      "country": "Mauritania",
+      "region": "Assaba Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.3M tCO2e",
+      "area": "27,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Great Green Wall",
+        "Sahel",
+        "Pastoral community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gambia-mangrove-saloum",
+      "name": "Gambia River Mangroves",
+      "country": "Gambia",
+      "region": "Central River Region",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "410,000 tCO2e",
+      "area": "5,100 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Mangrove",
+        "Women-led",
+        "Community forestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cape-verde-reforestation",
+      "name": "Cape Verde Highland Reforestation",
+      "country": "Cape Verde",
+      "region": "Santo Antao",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "280,000 tCO2e",
+      "area": "3,200 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Island",
+        "Dryland",
+        "Soil erosion",
+        "Government-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ghana-brong-ahafo",
+      "name": "Brong-Ahafo Forest Transition",
+      "country": "Ghana",
+      "region": "Bono Region",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "3.4M tCO2e",
+      "area": "74,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Forest-savanna transition",
+        "Timber community",
+        "Buffer"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nigeria-mambilla-plateau",
+      "name": "Mambilla Plateau Grassland",
+      "country": "Nigeria",
+      "region": "Taraba State",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "2.7M tCO2e",
+      "area": "64,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Highland grassland",
+        "Montane",
+        "Pastoral community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ivory-coast-banco",
+      "name": "Banco National Park Buffer",
+      "country": "Ivory Coast",
+      "region": "Abidjan District",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "680,000 tCO2e",
+      "area": "3,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Urban forest",
+        "Peri-urban",
+        "Deforestation pressure"
+      ],
+      "featured": false
+    },
+    {
+      "id": "senegal-kedougou",
+      "name": "Kedougou Forest Landscape",
+      "country": "Senegal",
+      "region": "Kedougou Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "2.9M tCO2e",
+      "area": "88,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Guinea woodland",
+        "Mining pressure",
+        "Community forestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sierra-leone-freetown-mangrove",
+      "name": "Freetown Peninsula Mangroves",
+      "country": "Sierra Leone",
+      "region": "Western Area",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "320,000 tCO2e",
+      "area": "3,800 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Urban mangrove",
+        "Coastal protection",
+        "City partnership"
+      ],
+      "featured": false
     }
   ]
 }
