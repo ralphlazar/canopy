@@ -27,6 +27,12 @@
     --comp-text: #0c447c;
     --sov-bg: #faeeda;
     --sov-text: #633806;
+    --blend-bg: #f3eefb;
+    --blend-text: #5b2d8e;
+    --phil-bg: #fde8f0;
+    --phil-text: #8e1a4a;
+    --emerg-bg: #e8f7fb;
+    --emerg-text: #0c6a7c;
   }
 
   html { scroll-behavior: smooth; }
@@ -55,11 +61,7 @@
     z-index: 100;
   }
 
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
 
   .logo-mark {
     width: 30px;
@@ -72,32 +74,12 @@
     flex-shrink: 0;
   }
 
-  .logo-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.01em;
-  }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub { font-size: 12px; color: var(--text-muted); font-weight: 400; }
 
-  .logo-sub {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
 
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
-
-  .nav-link {
-    font-size: 13px;
-    color: var(--text-muted);
-    transition: color 0.15s;
-    cursor: pointer;
-  }
-
+  .nav-link { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
   .nav-link:hover { color: var(--text); }
 
   .nav-cta {
@@ -111,7 +93,6 @@
     font-weight: 500;
     transition: background 0.15s;
   }
-
   .nav-cta:hover { background: var(--green-pale); }
 
   /* ── HERO ── */
@@ -149,11 +130,7 @@
     margin-bottom: 32px;
   }
 
-  .hero-btns {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
   .btn-primary {
     font-size: 13px;
@@ -166,7 +143,6 @@
     cursor: pointer;
     transition: opacity 0.15s;
   }
-
   .btn-primary:hover { opacity: 0.85; }
 
   .btn-secondary {
@@ -179,7 +155,6 @@
     cursor: pointer;
     transition: border-color 0.15s, color 0.15s;
   }
-
   .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
 
   /* ── STATS ── */
@@ -191,26 +166,10 @@
     margin: 0 auto;
   }
 
-  .stat {
-    padding: 24px 40px;
-    border-right: 1px solid var(--border);
-  }
-
+  .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
-
-  .stat-n {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--green);
-    letter-spacing: -0.025em;
-    margin-bottom: 4px;
-  }
-
-  .stat-l {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
+  .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
+  .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
   /* ── SECTIONS ── */
   .section {
@@ -227,29 +186,12 @@
     margin-bottom: 20px;
   }
 
-  .sec-title {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-  }
-
-  .sec-all {
-    font-size: 12px;
-    color: var(--green-bright);
-    cursor: pointer;
-    transition: color 0.15s;
-  }
-
-  .sec-all:hover { color: var(--green-bright); }
+  .sec-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
+  .sec-all { font-size: 12px; color: var(--green-bright); cursor: pointer; transition: color 0.15s; }
+  .sec-all:hover { opacity: 0.75; }
 
   /* ── PROJECTS ── */
-  .proj-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
+  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
   .proj-card {
     border: 1px solid var(--border);
@@ -259,22 +201,10 @@
     transition: border-color 0.15s;
     cursor: pointer;
   }
-
   .proj-card:hover { border-color: var(--text-dim); }
 
-  .proj-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    gap: 8px;
-  }
-
-  .proj-country {
-    font-size: 11px;
-    color: var(--text-dim);
-    line-height: 1.3;
-  }
+  .proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 8px; }
+  .proj-country { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
 
   .proj-method {
     font-size: 10px;
@@ -287,25 +217,9 @@
     flex-shrink: 0;
   }
 
-  .proj-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
-  }
-
-  .proj-meta {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-
-  .proj-tags {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
+  .proj-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .proj-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+  .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
 
   .proj-tag {
     font-size: 10px;
@@ -326,16 +240,10 @@
     align-items: start;
     padding: 13px 0;
     border-bottom: 1px solid var(--border);
-    transition: background 0.1s;
   }
-
   .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
 
-  .intel-dom {
-    font-size: 11px;
-    color: var(--text-dim);
-    padding-top: 2px;
-  }
+  .intel-dom { font-size: 11px; color: var(--text-dim); padding-top: 2px; }
 
   .intel-hl {
     font-size: 14px;
@@ -344,23 +252,12 @@
     cursor: pointer;
     transition: color 0.15s;
   }
-
   .intel-hl:hover { color: var(--green); }
 
-  .intel-age {
-    font-size: 11px;
-    color: var(--text-dim);
-    text-align: right;
-    padding-top: 2px;
-    white-space: nowrap;
-  }
+  .intel-age { font-size: 11px; color: var(--text-dim); text-align: right; padding-top: 2px; white-space: nowrap; }
 
   /* ── INSTRUMENTS ── */
-  .inst-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
+  .inst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
   .inst-card {
     border: 1px solid var(--border);
@@ -370,35 +267,21 @@
     transition: border-color 0.15s;
     cursor: pointer;
   }
-
   .inst-card:hover { border-color: var(--text-dim); }
 
-  .inst-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 7px;
-    letter-spacing: -0.01em;
-  }
+  .inst-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 7px; letter-spacing: -0.01em; }
+  .inst-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
 
-  .inst-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
+  .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
+  .b-voluntary  { background: var(--vol-bg);   color: var(--vol-text); }
+  .b-compliance { background: var(--comp-bg);  color: var(--comp-text); }
+  .b-sovereign  { background: var(--sov-bg);   color: var(--sov-text); }
+  .b-blended    { background: var(--blend-bg); color: var(--blend-text); }
+  .b-philanthropic { background: var(--phil-bg); color: var(--phil-text); }
+  .b-emerging   { background: var(--emerg-bg); color: var(--emerg-text); }
 
-  .inst-badge {
-    font-size: 10px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    font-weight: 600;
-  }
-
-  .b-vol { background: var(--vol-bg); color: var(--vol-text); }
-  .b-comp { background: var(--comp-bg); color: var(--comp-text); }
-  .b-sov { background: var(--sov-bg); color: var(--sov-text); }
+  /* ── LOADING ── */
+  .loading { color: var(--text-dim); font-size: 13px; padding: 20px 0; }
 
   /* ── FOOTER ── */
   footer {
@@ -412,16 +295,8 @@
   }
 
   .footer-note { font-size: 12px; color: var(--text-dim); }
-
   .footer-links { display: flex; gap: 24px; }
-
-  .footer-link {
-    font-size: 12px;
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: color 0.15s;
-  }
-
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
   .footer-link:hover { color: var(--text-muted); }
 
   /* ── RESPONSIVE ── */
@@ -486,7 +361,7 @@
 <div class="stats">
   <div class="stat"><div class="stat-n">147</div><div class="stat-l">Active projects tracked</div></div>
   <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
-  <div class="stat"><div class="stat-n">23</div><div class="stat-l">Funding instruments indexed</div></div>
+  <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
   <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
 </div>
 
@@ -495,46 +370,8 @@
     <span class="sec-title">Featured projects</span>
     <span class="sec-all">View all 147 →</span>
   </div>
-  <div class="proj-grid">
-    <div class="proj-card">
-      <div class="proj-top">
-        <span class="proj-country">South Africa · Mpumalanga</span>
-        <span class="proj-method">ARR · VM0047</span>
-      </div>
-      <div class="proj-name">Save the Sand</div>
-      <div class="proj-meta">7.3M tCO₂e · 40,000 ha · CCB Gold</div>
-      <div class="proj-tags">
-        <span class="proj-tag">Article 6.2 pathway</span>
-        <span class="proj-tag">Community co-owned</span>
-        <span class="proj-tag">Under validation</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-top">
-        <span class="proj-country">Burkina Faso · Sahel</span>
-        <span class="proj-method">ARR · VM0047</span>
-      </div>
-      <div class="proj-name">Tond Tenga</div>
-      <div class="proj-meta">3.7M tCO₂e · 12,000 ha · CCP approved</div>
-      <div class="proj-tags">
-        <span class="proj-tag">Great Green Wall</span>
-        <span class="proj-tag">185 villages</span>
-        <span class="proj-tag">Issuance 2027</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-top">
-        <span class="proj-country">Kenya · Lamu</span>
-        <span class="proj-method">Blue Carbon</span>
-      </div>
-      <div class="proj-name">Mikoko Pamoja</div>
-      <div class="proj-meta">3,000 tCO₂e/yr · 117 ha · Gold Standard</div>
-      <div class="proj-tags">
-        <span class="proj-tag">Mangrove restoration</span>
-        <span class="proj-tag">Community-led</span>
-        <span class="proj-tag">Issuing</span>
-      </div>
-    </div>
+  <div class="proj-grid" id="projects-grid">
+    <div class="loading">Loading projects…</div>
   </div>
 </div>
 
@@ -543,51 +380,18 @@
     <span class="sec-title">Latest intelligence</span>
     <span class="sec-all">View all →</span>
   </div>
-  <div class="intel-list">
-    <div class="intel-item">
-      <span class="intel-dom">Carbon markets</span>
-      <span class="intel-hl">South Africa advances Article 6.2 bilateral framework — ITMO eligibility criteria published</span>
-      <span class="intel-age">Today</span>
-    </div>
-    <div class="intel-item">
-      <span class="intel-dom">Funding</span>
-      <span class="intel-hl">Bezos Earth Fund opens $200M African biodiversity round — applications open May 2026</span>
-      <span class="intel-age">2 days ago</span>
-    </div>
-    <div class="intel-item">
-      <span class="intel-dom">Policy</span>
-      <span class="intel-hl">World Bank approves $500M debt-for-nature framework for Sub-Saharan Africa</span>
-      <span class="intel-age">4 days ago</span>
-    </div>
-    <div class="intel-item">
-      <span class="intel-dom">Science</span>
-      <span class="intel-hl">New meta-analysis confirms community-managed lands match state protected areas on biodiversity outcomes</span>
-      <span class="intel-age">1 week ago</span>
-    </div>
+  <div class="intel-list" id="intelligence-list">
+    <div class="loading">Loading intelligence…</div>
   </div>
 </div>
 
 <div class="section" id="instruments">
   <div class="sec-hdr">
     <span class="sec-title">Funding instruments</span>
-    <span class="sec-all">View all 23 →</span>
+    <span class="sec-all" id="instruments-all">View all 22 →</span>
   </div>
-  <div class="inst-grid">
-    <div class="inst-card">
-      <div class="inst-name">Voluntary carbon credits</div>
-      <div class="inst-desc">VCS, Gold Standard, and CCB-certified credits from nature-based projects. Purchased by corporates for net-zero commitments.</div>
-      <span class="inst-badge b-vol">Voluntary</span>
-    </div>
-    <div class="inst-card">
-      <div class="inst-name">Article 6.2 ITMOs</div>
-      <div class="inst-desc">Internationally transferred mitigation outcomes traded bilaterally between sovereign states under the Paris Agreement.</div>
-      <span class="inst-badge b-comp">Compliance</span>
-    </div>
-    <div class="inst-card">
-      <div class="inst-name">Debt-for-nature swaps</div>
-      <div class="inst-desc">Sovereign debt restructured in exchange for binding conservation commitments. Growing rapidly in Sub-Saharan Africa.</div>
-      <span class="inst-badge b-sov">Sovereign</span>
-    </div>
+  <div class="inst-grid" id="instruments-grid">
+    <div class="loading">Loading instruments…</div>
   </div>
 </div>
 
@@ -599,6 +403,111 @@
     <span class="footer-link">Contact</span>
   </div>
 </footer>
+
+<script>
+  // ── HELPERS ──────────────────────────────────────────────
+
+  function ageLabel(dateStr) {
+    const now = new Date();
+    const then = new Date(dateStr);
+    const days = Math.floor((now - then) / 86400000);
+    if (days === 0) return 'Today';
+    if (days === 1) return 'Yesterday';
+    if (days < 7)  return `${days} days ago`;
+    if (days < 14) return '1 week ago';
+    if (days < 30) return `${Math.floor(days / 7)} weeks ago`;
+    return `${Math.floor(days / 30)} months ago`;
+  }
+
+  const categoryLabel = {
+    voluntary:      'Voluntary',
+    compliance:     'Compliance',
+    sovereign:      'Sovereign',
+    blended:        'Blended finance',
+    philanthropic:  'Philanthropic',
+    emerging:       'Emerging'
+  };
+
+  // ── RENDER PROJECTS ──────────────────────────────────────
+
+  function renderProjects(projects) {
+    const featured = projects.filter(p => p.featured);
+    const grid = document.getElementById('projects-grid');
+    grid.innerHTML = featured.map(p => `
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-country">${p.country} · ${p.region}</span>
+          <span class="proj-method">${p.methodology}</span>
+        </div>
+        <div class="proj-name">${p.name}</div>
+        <div class="proj-meta">${p.credits} · ${p.area} · ${p.certification}</div>
+        <div class="proj-tags">
+          ${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // ── RENDER INTELLIGENCE ──────────────────────────────────
+
+  function renderIntelligence(items) {
+    const approved = items.filter(i => i.status === 'approved');
+    const list = document.getElementById('intelligence-list');
+    list.innerHTML = approved.map(i => `
+      <div class="intel-item">
+        <span class="intel-dom">${i.domain}</span>
+        <span class="intel-hl">${i.headline}</span>
+        <span class="intel-age">${ageLabel(i.date)}</span>
+      </div>
+    `).join('');
+  }
+
+  // ── RENDER INSTRUMENTS ───────────────────────────────────
+
+  function renderInstruments(instruments) {
+    const featured = instruments.filter(i => i.featured);
+    const grid = document.getElementById('instruments-grid');
+    const total = instruments.length;
+
+    document.getElementById('stat-instruments').textContent = total;
+    document.getElementById('instruments-all').textContent = `View all ${total} →`;
+
+    grid.innerHTML = featured.map(i => `
+      <div class="inst-card">
+        <div class="inst-name">${i.name}</div>
+        <div class="inst-desc">${i.description}</div>
+        <span class="inst-badge b-${i.category}">${categoryLabel[i.category] || i.category}</span>
+      </div>
+    `).join('');
+  }
+
+  // ── LOAD DATA ────────────────────────────────────────────
+
+  async function load() {
+    try {
+      const [projRes, intelRes, instRes] = await Promise.all([
+        fetch('data/projects.json'),
+        fetch('data/intelligence.json'),
+        fetch('data/instruments.json')
+      ]);
+
+      const [projData, intelData, instData] = await Promise.all([
+        projRes.json(),
+        intelRes.json(),
+        instRes.json()
+      ]);
+
+      renderProjects(projData.projects);
+      renderIntelligence(intelData.intelligence);
+      renderInstruments(instData.instruments);
+
+    } catch (err) {
+      console.error('Failed to load data:', err);
+    }
+  }
+
+  load();
+</script>
 
 </body>
 </html>
