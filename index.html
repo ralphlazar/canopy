@@ -9,297 +9,126 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #ffffff;
-    --bg2: #fafaf8;
-    --bg3: #f5f5f2;
-    --border: #e8e8e5;
-    --green: #1a4a2e;
-    --green-bright: #1a4a2e;
-    --green-light: #1a4a2e;
-    --green-pale: #e8f5e0;
-    --green-text: #27500a;
-    --text: #1a1a18;
-    --text-muted: #5f5e5a;
-    --text-dim: #999896;
-    --vol-bg: #eaf3de;
-    --vol-text: #27500a;
-    --comp-bg: #e6f1fb;
-    --comp-text: #0c447c;
-    --sov-bg: #faeeda;
-    --sov-text: #633806;
-    --blend-bg: #f3eefb;
-    --blend-text: #5b2d8e;
-    --phil-bg: #fde8f0;
-    --phil-text: #8e1a4a;
-    --emerg-bg: #e8f7fb;
-    --emerg-text: #0c6a7c;
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5; --green: #1a4a2e;
+    --green-pale: #e8f5e0; --green-text: #27500a;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --vol-bg: #eaf3de;   --vol-text: #27500a;
+    --comp-bg: #e6f1fb;  --comp-text: #0c447c;
+    --sov-bg: #faeeda;   --sov-text: #633806;
+    --blend-bg: #f3eefb; --blend-text: #5b2d8e;
+    --phil-bg: #fde8f0;  --phil-text: #8e1a4a;
+    --emerg-bg: #e8f7fb; --emerg-text: #0c6a7c;
   }
 
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
   a { color: inherit; text-decoration: none; }
 
-  /* ── NAV ── */
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 40px;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .nav-logo { display: flex; align-items: center; gap: 10px; }
-
-  .logo-mark {
-    width: 30px;
-    height: 30px;
-    background: var(--green);
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .logo-mark { width: 30px; height: 30px; background: var(--green); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
-  .logo-sub { font-size: 12px; color: var(--text-muted); font-weight: 400; }
-
+  .logo-sub  { font-size: 12px; color: var(--text-muted); font-weight: 400; }
   .nav-links { display: flex; gap: 28px; align-items: center; }
-
-  .nav-link { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
+  .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
   .nav-link:hover { color: var(--text); }
-
-  .nav-cta {
-    font-size: 12px;
-    padding: 7px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--green);
-    color: var(--green);
-    background: transparent;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.15s;
-  }
+  .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
 
-  /* ── HERO ── */
-  .hero {
-    padding: 72px 40px 56px;
-    border-bottom: 1px solid var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  .view { display: none; }
+  .view.active { display: block; }
 
-  .hero-eye {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--green);
-    margin-bottom: 18px;
-  }
-
-  .hero-h {
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.12;
-    letter-spacing: -0.025em;
-    color: var(--text);
-    max-width: 640px;
-    margin-bottom: 18px;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-    color: var(--text-muted);
-    max-width: 540px;
-    line-height: 1.7;
-    margin-bottom: 32px;
-  }
-
+  .hero { padding: 72px 40px 56px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .hero-eye { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 18px; }
+  .hero-h { font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--text); max-width: 640px; margin-bottom: 18px; }
+  .hero-sub { font-size: 15px; color: var(--text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 32px; }
   .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
-  .btn-primary {
-    font-size: 13px;
-    padding: 10px 22px;
-    border-radius: 8px;
-    border: none;
-    background: var(--green);
-    color: #e8f5e0;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s;
-  }
+  .btn-primary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: none; background: var(--green); color: #e8f5e0; font-weight: 600; cursor: pointer; transition: opacity 0.15s; }
   .btn-primary:hover { opacity: 0.85; }
-
-  .btn-secondary {
-    font-size: 13px;
-    padding: 10px 22px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-  }
+  .btn-secondary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
 
-  /* ── STATS ── */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
   .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
-  /* ── SECTIONS ── */
-  .section {
-    padding: 32px 40px;
-    border-bottom: 1px solid var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .sec-hdr {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 20px;
-  }
-
+  .section { padding: 32px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .sec-hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
   .sec-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
-  .sec-all { font-size: 12px; color: var(--green-bright); cursor: pointer; transition: color 0.15s; }
-  .sec-all:hover { opacity: 0.75; }
+  .sec-all { font-size: 12px; color: var(--green); cursor: pointer; transition: opacity 0.15s; }
+  .sec-all:hover { opacity: 0.7; }
 
-  /* ── PROJECTS ── */
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-
-  .proj-card {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    background: var(--bg2);
-    transition: border-color 0.15s;
-    cursor: pointer;
-  }
+  .proj-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .proj-card:hover { border-color: var(--text-dim); }
-
   .proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 8px; }
   .proj-country { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
-
-  .proj-method {
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 20px;
-    background: var(--vol-bg);
-    color: var(--vol-text);
-    font-weight: 600;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
+  .proj-method { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--vol-bg); color: var(--vol-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
   .proj-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
   .proj-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
   .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
 
-  .proj-tag {
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: var(--bg3);
-    color: var(--text-dim);
-    border: 1px solid var(--border);
-  }
-
-  /* ── INTELLIGENCE ── */
   .intel-list { display: flex; flex-direction: column; }
-
-  .intel-item {
-    display: grid;
-    grid-template-columns: 110px 1fr 90px;
-    gap: 16px;
-    align-items: start;
-    padding: 13px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .intel-item { display: grid; grid-template-columns: 110px 1fr 90px; gap: 16px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
   .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
-
   .intel-dom { font-size: 11px; color: var(--text-dim); padding-top: 2px; }
-
-  .intel-hl {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.45;
-    cursor: pointer;
-    transition: color 0.15s;
-  }
-  .intel-hl:hover { color: var(--green); }
-
+  .intel-hl { font-size: 14px; color: var(--text); line-height: 1.45; transition: color 0.15s; }
+  .intel-item:hover .intel-hl { color: var(--green); }
   .intel-age { font-size: 11px; color: var(--text-dim); text-align: right; padding-top: 2px; white-space: nowrap; }
 
-  /* ── INSTRUMENTS ── */
   .inst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-
-  .inst-card {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    background: var(--bg2);
-    transition: border-color 0.15s;
-    cursor: pointer;
-  }
+  .inst-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .inst-card:hover { border-color: var(--text-dim); }
-
   .inst-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 7px; letter-spacing: -0.01em; }
   .inst-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
-
   .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
-  .b-voluntary  { background: var(--vol-bg);   color: var(--vol-text); }
-  .b-compliance { background: var(--comp-bg);  color: var(--comp-text); }
-  .b-sovereign  { background: var(--sov-bg);   color: var(--sov-text); }
-  .b-blended    { background: var(--blend-bg); color: var(--blend-text); }
-  .b-philanthropic { background: var(--phil-bg); color: var(--phil-text); }
-  .b-emerging   { background: var(--emerg-bg); color: var(--emerg-text); }
+  .b-voluntary     { background: var(--vol-bg);   color: var(--vol-text); }
+  .b-compliance    { background: var(--comp-bg);  color: var(--comp-text); }
+  .b-sovereign     { background: var(--sov-bg);   color: var(--sov-text); }
+  .b-blended       { background: var(--blend-bg); color: var(--blend-text); }
+  .b-philanthropic { background: var(--phil-bg);  color: var(--phil-text); }
+  .b-emerging      { background: var(--emerg-bg); color: var(--emerg-text); }
 
-  /* ── LOADING ── */
+  .page-header { padding: 40px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+  .page-back:hover { color: var(--text); }
+  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
+  .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+  .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
+  .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
+  .cat-tab:hover { border-color: var(--text-dim); color: var(--text); }
+  .cat-tab.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
+
+  .cat-group { padding: 28px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .cat-group:last-child { border-bottom: none; }
+  .cat-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 16px; }
+  .cat-group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+  .overlay.open { opacity: 1; pointer-events: all; }
+  .detail-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; background: var(--bg); z-index: 201; overflow-y: auto; transform: translateX(100%); transition: transform 0.25s ease; border-left: 1px solid var(--border); }
+  .detail-panel.open { transform: translateX(0); }
+  .detail-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 1; }
+  .detail-close { font-size: 20px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
+  .detail-close:hover { color: var(--text); }
+  .detail-badge { margin-bottom: 12px; }
+  .detail-name { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
+  .detail-body { padding: 24px 28px; }
+  .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; }
+
   .loading { color: var(--text-dim); font-size: 13px; padding: 20px 0; }
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .footer-note { font-size: 12px; color: var(--text-dim); }
   .footer-links { display: flex; gap: 24px; }
   .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
   .footer-link:hover { color: var(--text-muted); }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
@@ -308,14 +137,13 @@
     .stats { grid-template-columns: repeat(2, 1fr); }
     .stat { padding: 18px 20px; }
     .stat:nth-child(2) { border-right: none; }
-    .section { padding: 24px 20px; }
-    .proj-grid { grid-template-columns: 1fr; }
-    .inst-grid { grid-template-columns: 1fr; }
+    .section, .page-header, .cat-tabs, .cat-group { padding-left: 20px; padding-right: 20px; }
+    .proj-grid, .inst-grid, .cat-group-grid { grid-template-columns: 1fr; }
     .intel-item { grid-template-columns: 80px 1fr; }
     .intel-age { display: none; }
     footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
+    .detail-panel { width: 100%; }
   }
-
   @media (max-width: 480px) {
     .stats { grid-template-columns: 1fr 1fr; }
     .stat:nth-child(odd) { border-right: 1px solid var(--border); }
@@ -327,7 +155,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo">
+  <div class="nav-logo" onclick="showView('home')">
     <div class="logo-mark">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M8 1.5C5.5 1.5 3 4 3 8c0 2.2 1.3 4 3.2 5C6.8 11.2 7.4 9 8 7.5c.6 1.5 1.2 3.7 1.8 5.5C11.7 12 13 10.2 13 8c0-4-2.5-6.5-5-6.5z" fill="#9FE1CB"/>
@@ -340,174 +168,222 @@
     </div>
   </div>
   <div class="nav-links">
-    <a class="nav-link" href="#projects">Projects</a>
-    <a class="nav-link" href="#instruments">Funding instruments</a>
-    <a class="nav-link" href="#policy">Policy tracker</a>
-    <a class="nav-link" href="#intelligence">Intelligence</a>
+    <span class="nav-link" onclick="showView('home')">Projects</span>
+    <span class="nav-link" onclick="showView('instruments')">Funding instruments</span>
+    <span class="nav-link">Policy tracker</span>
+    <span class="nav-link" onclick="showView('home')">Intelligence</span>
     <button class="nav-cta">Subscribe to brief</button>
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-eye">African Conservation Finance · Est. 2026</div>
-  <h1 class="hero-h">The complete resource for conservation finance in Africa</h1>
-  <p class="hero-sub">Every project. Every funding instrument. Every policy development. Tracked, organised, and explained for funders, developers, and policymakers working at the frontier of conservation finance.</p>
-  <div class="hero-btns">
-    <button class="btn-primary">Explore projects</button>
-    <button class="btn-secondary">Subscribe to weekly brief</button>
+<!-- HOME -->
+<div id="view-home" class="view active">
+  <div class="hero">
+    <div class="hero-eye">African Conservation Finance · Est. 2026</div>
+    <h1 class="hero-h">The complete resource for conservation finance in Africa</h1>
+    <p class="hero-sub">Every project. Every funding instrument. Every policy development. Tracked, organised, and explained for funders, developers, and policymakers working at the frontier of conservation finance.</p>
+    <div class="hero-btns">
+      <button class="btn-primary">Explore projects</button>
+      <button class="btn-secondary" onclick="showView('instruments')">Browse funding instruments</button>
+    </div>
   </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-n">147</div><div class="stat-l">Active projects tracked</div></div>
+    <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
+    <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
+    <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
+  </div>
+  <div class="section">
+    <div class="sec-hdr">
+      <span class="sec-title">Featured projects</span>
+      <span class="sec-all">View all 147 -></span>
+    </div>
+    <div class="proj-grid" id="projects-grid"><div class="loading">Loading...</div></div>
+  </div>
+  <div class="section">
+    <div class="sec-hdr">
+      <span class="sec-title">Latest intelligence</span>
+      <span class="sec-all">View all -></span>
+    </div>
+    <div class="intel-list" id="intelligence-list"><div class="loading">Loading...</div></div>
+  </div>
+  <div class="section">
+    <div class="sec-hdr">
+      <span class="sec-title">Funding instruments</span>
+      <span class="sec-all" id="instruments-all" onclick="showView('instruments')" style="cursor:pointer">View all 22 -></span>
+    </div>
+    <div class="inst-grid" id="instruments-preview"><div class="loading">Loading...</div></div>
+  </div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links">
+      <span class="footer-link">About</span>
+      <span class="footer-link">Subscribe</span>
+      <span class="footer-link">Contact</span>
+    </div>
+  </footer>
 </div>
 
-<div class="stats">
-  <div class="stat"><div class="stat-n">147</div><div class="stat-l">Active projects tracked</div></div>
-  <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
-  <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
-  <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
+<!-- INSTRUMENTS PAGE -->
+<div id="view-instruments" class="view">
+  <div class="page-header">
+    <div class="page-back" onclick="showView('home')">← Back</div>
+    <div class="page-title">Funding instruments</div>
+    <div class="page-sub">Every instrument used to finance conservation in Africa - how each works, who uses it, and where it fits.</div>
+  </div>
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterCat('all',this)">All</button>
+    <button class="cat-tab" onclick="filterCat('voluntary',this)">Voluntary market</button>
+    <button class="cat-tab" onclick="filterCat('compliance',this)">Compliance market</button>
+    <button class="cat-tab" onclick="filterCat('sovereign',this)">Sovereign</button>
+    <button class="cat-tab" onclick="filterCat('blended',this)">Blended finance</button>
+    <button class="cat-tab" onclick="filterCat('philanthropic',this)">Philanthropic</button>
+    <button class="cat-tab" onclick="filterCat('emerging',this)">Emerging</button>
+  </div>
+  <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links">
+      <span class="footer-link">About</span>
+      <span class="footer-link">Subscribe</span>
+      <span class="footer-link">Contact</span>
+    </div>
+  </footer>
 </div>
 
-<div class="section" id="projects">
-  <div class="sec-hdr">
-    <span class="sec-title">Featured projects</span>
-    <span class="sec-all">View all 147 →</span>
+<!-- DETAIL PANEL -->
+<div class="overlay" id="overlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detail-panel">
+  <div class="detail-header">
+    <div>
+      <div class="detail-badge" id="detail-badge"></div>
+      <div class="detail-name" id="detail-name"></div>
+    </div>
+    <button class="detail-close" onclick="closeDetail()">x</button>
   </div>
-  <div class="proj-grid" id="projects-grid">
-    <div class="loading">Loading projects…</div>
-  </div>
-</div>
-
-<div class="section" id="intelligence">
-  <div class="sec-hdr">
-    <span class="sec-title">Latest intelligence</span>
-    <span class="sec-all">View all →</span>
-  </div>
-  <div class="intel-list" id="intelligence-list">
-    <div class="loading">Loading intelligence…</div>
+  <div class="detail-body">
+    <div class="detail-desc" id="detail-desc"></div>
   </div>
 </div>
-
-<div class="section" id="instruments">
-  <div class="sec-hdr">
-    <span class="sec-title">Funding instruments</span>
-    <span class="sec-all" id="instruments-all">View all 22 →</span>
-  </div>
-  <div class="inst-grid" id="instruments-grid">
-    <div class="loading">Loading instruments…</div>
-  </div>
-</div>
-
-<footer>
-  <span class="footer-note">Updated daily · Pan-African · Independent</span>
-  <div class="footer-links">
-    <span class="footer-link">About</span>
-    <span class="footer-link">Subscribe</span>
-    <span class="footer-link">Contact</span>
-  </div>
-</footer>
 
 <script>
-  // ── HELPERS ──────────────────────────────────────────────
+  let allInstruments = [];
+  let currentCat = 'all';
 
-  function ageLabel(dateStr) {
-    const now = new Date();
-    const then = new Date(dateStr);
-    const days = Math.floor((now - then) / 86400000);
-    if (days === 0) return 'Today';
-    if (days === 1) return 'Yesterday';
-    if (days < 7)  return `${days} days ago`;
-    if (days < 14) return '1 week ago';
-    if (days < 30) return `${Math.floor(days / 7)} weeks ago`;
-    return `${Math.floor(days / 30)} months ago`;
-  }
-
-  const categoryLabel = {
-    voluntary:      'Voluntary',
-    compliance:     'Compliance',
-    sovereign:      'Sovereign',
-    blended:        'Blended finance',
-    philanthropic:  'Philanthropic',
-    emerging:       'Emerging'
+  const catLabel = {
+    voluntary:'Voluntary market', compliance:'Compliance market',
+    sovereign:'Sovereign', blended:'Blended finance',
+    philanthropic:'Philanthropic', emerging:'Emerging'
   };
+  const catOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
 
-  // ── RENDER PROJECTS ──────────────────────────────────────
-
-  function renderProjects(projects) {
-    const featured = projects.filter(p => p.featured);
-    const grid = document.getElementById('projects-grid');
-    grid.innerHTML = featured.map(p => `
-      <div class="proj-card">
-        <div class="proj-top">
-          <span class="proj-country">${p.country} · ${p.region}</span>
-          <span class="proj-method">${p.methodology}</span>
-        </div>
-        <div class="proj-name">${p.name}</div>
-        <div class="proj-meta">${p.credits} · ${p.area} · ${p.certification}</div>
-        <div class="proj-tags">
-          ${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
+  function showView(name) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-'+name).classList.add('active');
+    window.scrollTo(0,0);
+    closeDetail();
   }
 
-  // ── RENDER INTELLIGENCE ──────────────────────────────────
-
-  function renderIntelligence(items) {
-    const approved = items.filter(i => i.status === 'approved');
-    const list = document.getElementById('intelligence-list');
-    list.innerHTML = approved.map(i => `
-      <div class="intel-item">
-        <span class="intel-dom">${i.domain}</span>
-        <span class="intel-hl">${i.headline}</span>
-        <span class="intel-age">${ageLabel(i.date)}</span>
-      </div>
-    `).join('');
+  function filterCat(cat, btn) {
+    currentCat = cat;
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    renderFull();
   }
 
-  // ── RENDER INSTRUMENTS ───────────────────────────────────
-
-  function renderInstruments(instruments) {
-    const featured = instruments.filter(i => i.featured);
-    const grid = document.getElementById('instruments-grid');
-    const total = instruments.length;
-
-    document.getElementById('stat-instruments').textContent = total;
-    document.getElementById('instruments-all').textContent = `View all ${total} →`;
-
-    grid.innerHTML = featured.map(i => `
-      <div class="inst-card">
-        <div class="inst-name">${i.name}</div>
-        <div class="inst-desc">${i.description}</div>
-        <span class="inst-badge b-${i.category}">${categoryLabel[i.category] || i.category}</span>
-      </div>
-    `).join('');
+  function openDetail(inst) {
+    document.getElementById('detail-name').textContent = inst.name;
+    document.getElementById('detail-desc').textContent = inst.description;
+    document.getElementById('detail-badge').innerHTML =
+      '<span class="inst-badge b-'+inst.category+'">'+(catLabel[inst.category]||inst.category)+'</span>';
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
-  // ── LOAD DATA ────────────────────────────────────────────
+  function closeDetail() {
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('detail-panel').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function cardHTML(i) {
+    const safe = JSON.stringify(i).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    return '<div class="inst-card" onclick=\'openDetail('+safe+')\'>'+
+      '<div class="inst-name">'+i.name+'</div>'+
+      '<div class="inst-desc">'+i.description+'</div>'+
+      '<span class="inst-badge b-'+i.category+'">'+(catLabel[i.category]||i.category)+'</span>'+
+      '</div>';
+  }
+
+  function renderFull() {
+    const list = currentCat === 'all' ? allInstruments : allInstruments.filter(i => i.category === currentCat);
+    const container = document.getElementById('instruments-full');
+    if (currentCat === 'all') {
+      const grouped = {};
+      catOrder.forEach(c => grouped[c] = []);
+      list.forEach(i => { if(grouped[i.category]) grouped[i.category].push(i); });
+      container.innerHTML = catOrder.filter(c => grouped[c].length)
+        .map(c => '<div class="cat-group"><div class="cat-group-title">'+catLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(cardHTML).join('')+'</div></div>')
+        .join('');
+    } else {
+      container.innerHTML = '<div class="cat-group"><div class="cat-group-title">'+catLabel[currentCat]+'</div><div class="cat-group-grid">'+list.map(cardHTML).join('')+'</div></div>';
+    }
+  }
+
+  function ageLabel(d) {
+    const days = Math.floor((new Date()-new Date(d))/86400000);
+    if(days===0) return 'Today';
+    if(days===1) return 'Yesterday';
+    if(days<7)   return days+' days ago';
+    if(days<14)  return '1 week ago';
+    if(days<30)  return Math.floor(days/7)+' weeks ago';
+    return Math.floor(days/30)+' months ago';
+  }
 
   async function load() {
     try {
-      const [projRes, intelRes, instRes] = await Promise.all([
+      const [pR,iR,instR] = await Promise.all([
         fetch('data/projects.json'),
         fetch('data/intelligence.json'),
         fetch('data/instruments.json')
       ]);
+      const [pd,id,instd] = await Promise.all([pR.json(),iR.json(),instR.json()]);
 
-      const [projData, intelData, instData] = await Promise.all([
-        projRes.json(),
-        intelRes.json(),
-        instRes.json()
-      ]);
+      allInstruments = instd.instruments;
+      const total = allInstruments.length;
+      document.getElementById('stat-instruments').textContent = total;
+      document.getElementById('instruments-all').textContent = 'View all '+total+' ->';
 
-      renderProjects(projData.projects);
-      renderIntelligence(intelData.intelligence);
-      renderInstruments(instData.instruments);
+      // projects
+      document.getElementById('projects-grid').innerHTML = pd.projects.filter(p=>p.featured).map(p=>
+        '<div class="proj-card">'+
+        '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
+        '<div class="proj-name">'+p.name+'</div>'+
+        '<div class="proj-meta">'+p.credits+' - '+p.area+' - '+p.certification+'</div>'+
+        '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>'+
+        '</div>'
+      ).join('');
 
-    } catch (err) {
-      console.error('Failed to load data:', err);
-    }
+      // intelligence
+      document.getElementById('intelligence-list').innerHTML = id.intelligence.filter(i=>i.status==='approved').map(i=>
+        '<div class="intel-item">'+
+        '<span class="intel-dom">'+i.domain+'</span>'+
+        '<span class="intel-hl">'+i.headline+'</span>'+
+        '<span class="intel-age">'+ageLabel(i.date)+'</span>'+
+        '</div>'
+      ).join('');
+
+      // instruments preview (featured only)
+      document.getElementById('instruments-preview').innerHTML = allInstruments.filter(i=>i.featured).map(cardHTML).join('');
+
+      // instruments full page
+      renderFull();
+
+    } catch(e) { console.error(e); }
   }
 
   load();
 </script>
-
 </body>
 </html>
