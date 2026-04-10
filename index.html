@@ -26,8 +26,9 @@
     --risk-low: #2d9b5a; --risk-med: #e6a020; --risk-high: #d4542a; --risk-vhigh: #8b1a1a;
   }
 
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { overflow-x: hidden; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
 
   nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
@@ -1019,34 +1020,15 @@
     <div class="page-title">About</div>
   </div>
   <div class="about-body">
-    <div class="about-lead">Canopy is a public resource on conservation finance in Africa.</div>
+    <p class="about-lead">Canopy is a public resource on conservation finance in Africa.</p>
 
-    <h3 class="about-h">What it covers</h3>
-    <ul class="about-list">
-      <li>148 tracked projects across 54 countries - methodology, certification, and current status</li>
-      <li>22 funding instruments explained - from voluntary carbon credits to debt-for-nature swaps</li>
-      <li>Article 6.2 readiness mapped for every African nation</li>
-      <li>Weekly intelligence across carbon markets, biodiversity policy, conservation finance, and philanthropic flows</li>
-    </ul>
+    <p class="about-p">It covers 148 tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
 
-    <h3 class="about-h">Who it is for</h3>
-    <ul class="about-list">
-      <li>Funders and family offices allocating capital to African conservation</li>
-      <li>Investors who need to understand the landscape before committing</li>
-      <li>Advisors who need to brief clients quickly</li>
-      <li>Anyone tracking what is actually happening at the frontier of conservation finance</li>
-    </ul>
+    <p class="about-p">It is built for funders, family offices, and advisors who need to understand the landscape before committing capital - and for anyone tracking what is actually happening at the frontier of conservation finance.</p>
 
-    <h3 class="about-h">The problem it solves</h3>
-    <p class="about-p">The information infrastructure for African conservation finance is fragmented. Data sits across registries, government portals, and specialist publications. Getting a clear picture requires weeks of research most investors don't have time for. Canopy puts it in one place, kept current, explained clearly.</p>
+    <p class="about-p">The information infrastructure for this space is fragmented. Data sits across registries, government portals, and specialist publications. Getting a clear picture requires weeks of research most investors do not have time for. Canopy puts it in one place, kept current, explained clearly.</p>
 
-    <h3 class="about-h">Independence</h3>
-    <ul class="about-list">
-      <li>No advertising</li>
-      <li>No sponsored content</li>
-      <li>No commercial relationship with any project developer or registry</li>
-      <li>Project scorecards - coming in Phase 2 - will be independently rated</li>
-    </ul>
+    <p class="about-p">Canopy carries no advertising and no sponsored content. It has no commercial relationship with any project developer or registry. Project scorecards, coming in Phase 2, will be independently rated.</p>
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
