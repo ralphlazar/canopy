@@ -639,6 +639,14 @@
     outline: none;
     font-family: inherit;
   }
+  .mobile-search-results {
+    display: none;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .mobile-search-results.visible { display: block; }
 
   @media (max-width: 768px) {
     .mobile-search-btn { display: block; }
@@ -750,6 +758,7 @@
 <div class="mobile-search-bar" id="mobile-search-bar">
   <input class="mobile-search-input" id="mobile-search-input" type="text" placeholder="Search projects, instruments, countries..." autocomplete="off">
 </div>
+<div class="mobile-search-results" id="mobile-search-results"></div>
 
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
@@ -1456,13 +1465,83 @@
   searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
 
   const mobileSearchInput = document.getElementById('mobile-search-input');
-  mobileSearchInput.addEventListener('input', e => {
-    const q = e.target.value.trim();
-    searchInput.value = q;
-    runSearch(q);
-    if (q.length > 1) searchResults.style.position = 'fixed';
-  });
-  mobileSearchInput.addEventListener('keydown', e => { if (e.key === 'Escape') { clearSearch(); document.getElementById('mobile-search-bar').classList.remove('open'); } });
+  const mobileSearchResults = document.getElementById('mobile-search-results');
+
+  function runMobileSearch(query) {
+    if (!query || query.length < 2) {
+      mobileSearchResults.classList.remove('visible');
+      mobileSearchResults.innerHTML = '';
+      return;
+    }
+    const projHits = allProjects.filter(p =>
+      matches(query, p.name, p.country, p.region, p.methodology, p.certification, ...p.tags)
+    ).slice(0, 5);
+    const instHits = allInstruments.filter(i =>
+      matches(query, i.name, i.description)
+    ).slice(0, 3);
+    const policyHits = allPolicy.filter(c =>
+      matches(query, c.name, c.region, c.notes, c.itmo_buyer)
+    ).slice(0, 3);
+    const total = projHits.length + instHits.length + policyHits.length;
+    if (total === 0) {
+      mobileSearchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
+      mobileSearchResults.classList.add('visible');
+      return;
+    }
+    let html = '';
+    if (projHits.length) {
+      html += '<div class="search-group-title">Projects</div>';
+      html += projHits.map(p =>
+        '<div class="search-result" onclick=\'mobilSearchSelectProject('+safeJSON(p)+')\'>' +
+        '<div class="search-result-name">'+p.name+'</div>' +
+        '<div class="search-result-sub">'+p.country+' - '+p.methodology+'</div></div>'
+      ).join('');
+    }
+    if (instHits.length) {
+      html += '<div class="search-group-title">Funding instruments</div>';
+      html += instHits.map(i =>
+        '<div class="search-result" onclick=\'mobilSearchSelectInst('+safeJSON(i)+')\'>' +
+        '<div class="search-result-name">'+i.name+'</div>' +
+        '<div class="search-result-sub">'+(instCatLabel[i.category]||i.category)+'</div></div>'
+      ).join('');
+    }
+    if (policyHits.length) {
+      html += '<div class="search-group-title">Policy tracker</div>';
+      html += policyHits.map(c =>
+        '<div class="search-result" onclick=\'mobilSearchSelectPolicy('+safeJSON(c)+')\'>' +
+        '<div class="search-result-name">'+c.name+'</div>' +
+        '<div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div></div>'
+      ).join('');
+    }
+    mobileSearchResults.innerHTML = html;
+    mobileSearchResults.classList.add('visible');
+  }
+
+  function closeMobileSearch() {
+    mobileSearchInput.value = '';
+    mobileSearchResults.innerHTML = '';
+    mobileSearchResults.classList.remove('visible');
+    document.getElementById('mobile-search-bar').classList.remove('open');
+  }
+
+  function mobilSearchSelectProject(p) {
+    closeMobileSearch();
+    showView('projects');
+    setTimeout(() => openProjectDetail(p), 50);
+  }
+  function mobilSearchSelectInst(i) {
+    closeMobileSearch();
+    showView('instruments');
+    setTimeout(() => openInstDetail(i), 50);
+  }
+  function mobilSearchSelectPolicy(c) {
+    closeMobileSearch();
+    showView('policy');
+    setTimeout(() => openPolicyDetail(c), 50);
+  }
+
+  mobileSearchInput.addEventListener('input', e => runMobileSearch(e.target.value.trim()));
+  mobileSearchInput.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileSearch(); });
   document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
     if (!e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
