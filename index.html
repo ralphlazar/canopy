@@ -34,7 +34,7 @@
   .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
   .logo-mark { width: 30px; height: 30px; background: var(--green); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
-  .logo-sub  { font-size: 12px; color: var(--text-muted); font-weight: 400; }
+  .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
   .nav-link:hover { color: var(--text); }
@@ -54,7 +54,7 @@
   .btn-secondary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
 
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
@@ -105,11 +105,11 @@
   .b-philanthropic { background: var(--phil-bg);  color: var(--phil-text); }
   .b-emerging      { background: var(--emerg-bg); color: var(--emerg-text); }
 
-  .page-header { padding: 40px 40px 0; max-width: 1100px; margin: 0 auto; }
-  .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+  .page-header { padding: 16px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 8px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
   .page-back:hover { color: var(--text); }
-  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
-  .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
+  .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
 
   .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
   .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
@@ -160,7 +160,7 @@
 
   .policy-notes-preview { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-  .policy-disclaimer { font-size: 11px; color: var(--text-dim); padding: 16px 40px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); font-style: italic; }
+  .policy-disclaimer { font-size: 11px; color: var(--text-dim); padding: 8px 40px 12px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); font-style: italic; }
 
   .intel-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
   .intel-full { padding: 0 40px; max-width: 1100px; margin: 0 auto; }
@@ -218,27 +218,393 @@
     .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
   }
 
+  .map-tooltip {
+    position: fixed;
+    background: var(--text);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    white-space: nowrap;
+    z-index: 300;
+    line-height: 1.5;
+  }
+  .map-tooltip.visible { opacity: 1; }
+
+  /* ABOUT */
+  .about-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+  }
+  .about-lead {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+  }
+  .about-h {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+    margin-top: 36px;
+  }
+  .about-p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+  .about-list li {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .about-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+
+  /* SEARCH */
+  .search-wrap {
+    position: relative;
+    margin-left: 8px;
+  }
+  .search-input {
+    font-size: 12px;
+    padding: 6px 12px 6px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--text);
+    width: 180px;
+    transition: width 0.2s, border-color 0.15s;
+    outline: none;
+    font-family: inherit;
+  }
+  .search-input:focus {
+    width: 240px;
+    border-color: var(--green);
+    background: var(--bg);
+  }
+  .search-icon {
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 13px;
+    pointer-events: none;
+  }
+  .search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 360px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 500;
+    max-height: 480px;
+    overflow-y: auto;
+    display: none;
+  }
+  .search-results.visible { display: block; }
+  .search-group-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    padding: 12px 16px 6px;
+  }
+  .search-result {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border-bottom: 1px solid var(--border);
+  }
+  .search-result:last-child { border-bottom: none; }
+  .search-result:hover { background: var(--bg2); }
+  .search-result-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .search-result-sub  { font-size: 11px; color: var(--text-dim); }
+  .search-empty { padding: 20px 16px; font-size: 13px; color: var(--text-dim); text-align: center; }
+
   /* MAP */
-  .view-toggle { display: flex; gap: 0; padding: 24px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .view-toggle { display: flex; gap: 0; padding: 6px 40px 0; max-width: 1100px; margin: 0 auto; }
   .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; }
   .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
   .toggle-btn:last-child  { border-radius: 0 6px 6px 0; border-left: none; }
   .toggle-btn.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
 
-  .map-container { padding: 24px 40px; max-width: 1100px; margin: 0 auto; }
-  .map-container svg { width: 100%; height: auto; display: block; }
-  .map-hint { font-size: 12px; color: var(--text-dim); margin-top: 12px; }
+  .map-container { padding: 8px 40px 12px; max-width: 1100px; margin: 0 auto; }
+  .map-container svg { width: 100%; height: auto; max-height: 106vh; display: block; }
+  .map-hint { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
 
   .country-path { stroke: #fff; stroke-width: 0.5; cursor: pointer; transition: opacity 0.15s; }
   .country-path:hover { opacity: 0.75; }
   .country-dot { cursor: pointer; transition: opacity 0.15s; }
   .country-dot:hover { opacity: 0.75; }
 
-  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
   .legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
 
-  .map-hidden { display: none; }
+  /* HOME GRID */
+  .home-hero {
+    padding: 20px 40px 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+  .home-card {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .home-card-1 { border-color: rgba(139,26,26,0.25); background: rgba(139,26,26,0.025); }
+  .home-card-2 { border-color: rgba(26,74,46,0.25);  background: rgba(26,74,46,0.025); }
+  .home-card-3 { border-color: rgba(74,111,163,0.25); background: rgba(74,111,163,0.025); }
+  .home-card-4 { border-color: rgba(193,127,0,0.25);  background: rgba(193,127,0,0.025); }
+  .home-card-1:hover { border-color: rgba(139,26,26,0.5); }
+  .home-card-2:hover { border-color: rgba(26,74,46,0.5); }
+  .home-card-3:hover { border-color: rgba(74,111,163,0.5); }
+  .home-card-4:hover { border-color: rgba(193,127,0,0.5); }
+  .card-num-1 { background: #8b1a1a; }
+  .card-num-2 { background: #1a4a2e; }
+  .card-num-3 { background: #4a6fa3; }
+  .card-num-4 { background: #c17f00; }
+  .home-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px 20px 14px;
+  }
+  .home-card-map {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+  }
+  .home-card-map svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--bg2);
+  }
+  .home-card-map-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: linear-gradient(160deg, rgba(250,250,248,0.6) 0%, transparent 40%, transparent 60%, rgba(250,250,248,0.5) 100%);
+    pointer-events: none;
+  }
+  .home-card-map-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .home-card-map-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .home-card-map-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .home-card-map-cta {
+    font-size: 11px;
+    color: var(--text-dim);
+    pointer-events: none;
+  }
+  .home-card:hover .home-card-map-cta { color: var(--green); }
+  .home-card-map-bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+  .hcl-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+  .hcl-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+  .home-card-intel {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 4px;
+    flex: 1;
+  }
+  .home-intel-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .home-intel-item:last-child { border-bottom: none; }
+  .home-intel-dom { font-size: 10px; color: var(--text-dim); padding-top: 2px; }
+  .home-intel-hl  { font-size: 12px; color: var(--text); line-height: 1.45; }
+  .home-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 20px 20px;
+    flex: 1;
+    align-content: flex-start;
+  }
+  .home-card-badges .inst-badge {
+    font-size: 11px;
+    padding: 5px 14px;
+  }
+  @media (max-width: 768px) {
+    .home-hero { padding: 32px 20px 24px; }
+    .home-grid { grid-template-columns: 1fr; padding: 0 20px 32px; }
+  }
+
+  .live-num {
+    color: #1a4a2e;
+    font-weight: 700;
+    animation: pulse-opacity 2.5s ease-in-out infinite;
+  }
+  @keyframes pulse-opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+
+  /* MINI MAPS */
+  .mini-maps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .mini-map-panel {
+    position: relative;
+    background: var(--bg2);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .mini-map-panel:first-child {
+    border-right: 1px solid var(--border);
+  }
+  .mini-map-panel svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+  .mini-map-panel:hover svg { opacity: 1; }
+  .mini-map-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 24px;
+    background: linear-gradient(transparent, rgba(250,250,248,0.92));
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .mini-map-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .mini-map-stat {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 3px;
+  }
+  .mini-map-cta {
+    font-size: 11px;
+    color: var(--text-dim);
+    transition: color 0.2s;
+    white-space: nowrap;
+    padding-bottom: 2px;
+  }
+  .mini-map-panel:hover .mini-map-cta { color: var(--green); }
+  @media (max-width: 768px) {
+    .mini-maps { grid-template-columns: 1fr; }
+    .mini-map-panel:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  }
 </style>
 </head>
 <body>
@@ -252,61 +618,112 @@
       </svg>
     </div>
     <div>
-      <span class="logo-name">Canopy</span>
-      <span class="logo-sub"> · African Conservation Finance</span>
+      <div class="logo-name">Canopy</div>
+      <div class="logo-sub">African Conservation Finance</div>
     </div>
   </div>
   <div class="nav-links">
     <span class="nav-link" onclick="showView('projects')">Projects</span>
-    <span class="nav-link" onclick="showView('instruments')">Funding instruments</span>
-    <span class="nav-link" onclick="showView('policy')">Policy tracker</span>
-    <span class="nav-link" onclick="showView('intelligence')">Intelligence</span>
+    <span class="nav-link" onclick="showView('instruments')">Funding</span>
+    <span class="nav-link" onclick="showView('policy')">Policy</span>
+    <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
+    <div class="search-wrap">
+      <span class="search-icon">&#9906;</span>
+      <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
     <button class="nav-cta">Subscribe to brief</button>
   </div>
 </nav>
 
 <!-- HOME -->
 <div id="view-home" class="view active">
-  <div class="hero">
-    <div class="hero-eye">African Conservation Finance · Est. 2026</div>
+  <div class="home-hero">
     <h1 class="hero-h">The complete resource for conservation finance in Africa</h1>
-    <p class="hero-sub">Every project. Every funding instrument. Every policy development. Tracked, organised, and explained for funders, developers, and policymakers working at the frontier of conservation finance.</p>
-    <div class="hero-btns">
-      <button class="btn-primary" onclick="showView('projects')">Explore projects</button>
-      <button class="btn-secondary" onclick="showView('instruments')">Browse funding instruments</button>
-    </div>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-n" id="stat-projects">148</div><div class="stat-l">Active projects tracked</div></div>
-    <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
-    <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
-    <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
-  </div>
-  <div class="section">
-    <div class="sec-hdr">
-      <span class="sec-title">Featured projects</span>
-      <span class="sec-all" onclick="showView('projects')">View all -></span>
+  <div class="home-grid">
+
+    <!-- Policy tracker -->
+    <div class="home-card home-card-1" onclick="showView('policy'); activatePolicyMap();">
+      <div class="home-card-map">
+        <svg id="mini-policy-map" viewBox="0 0 700 750"></svg>
+        <div class="home-card-map-overlay">
+          <div class="home-card-map-top">
+            <div>
+              <div class="home-card-map-title"><span class="card-num card-num-1">1</span>Policy tracker</div>
+              <div class="home-card-map-sub">Article 6.2 status across 54 nations</div>
+            </div>
+            <div class="home-card-map-cta">Open -></div>
+          </div>
+          <div class="home-card-map-bottom">
+            <span class="hcl-dot" style="background:#1a4a2e"></span>Operational
+            <span class="hcl-dot" style="background:#0c5c58;margin-left:8px"></span>Agreement signed
+            <span class="hcl-dot" style="background:#c17f00;margin-left:8px"></span>In negotiation
+            <span class="hcl-dot" style="background:#6b7fa3;margin-left:8px"></span>Framework only
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="proj-grid" id="projects-preview"><div class="loading">Loading...</div></div>
-  </div>
-  <div class="section">
-    <div class="sec-hdr">
-      <span class="sec-title">Latest intelligence</span>
-      <span class="sec-all" onclick="showView('intelligence')">View all -></span>
+
+    <!-- Projects -->
+    <div class="home-card home-card-2" onclick="showView('projects'); activateProjMap();">
+      <div class="home-card-map">
+        <svg id="mini-proj-map" viewBox="0 0 700 750"></svg>
+        <div class="home-card-map-overlay">
+          <div class="home-card-map-top">
+            <div>
+              <div class="home-card-map-title"><span class="card-num card-num-2">2</span>Projects</div>
+              <div class="home-card-map-sub" id="mini-proj-stat"><span class="live-num">148</span> projects tracked across Africa</div>
+            </div>
+            <div class="home-card-map-cta">Open -></div>
+          </div>
+          <div class="home-card-map-bottom">
+            <span class="hcl-swatch" style="background:#c8e6d0"></span>Few
+            <span class="hcl-swatch" style="background:#6db88a;margin-left:8px"></span>Some
+            <span class="hcl-swatch" style="background:#1a4a2e;margin-left:8px"></span>Many
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="intel-list" id="intelligence-list"><div class="loading">Loading...</div></div>
-  </div>
-  <div class="section">
-    <div class="sec-hdr">
-      <span class="sec-title">Funding instruments</span>
-      <span class="sec-all" onclick="showView('instruments')">View all -></span>
+
+    <!-- Intelligence -->
+    <div class="home-card home-card-3" onclick="showView('intelligence');">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-3">3</span>Intelligence</div>
+          <div class="home-card-map-sub">Weekly signals from across the landscape</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+      <div class="home-card-intel" id="home-intel-list">
+        <div class="loading">Loading...</div>
+      </div>
     </div>
-    <div class="inst-grid" id="instruments-preview"><div class="loading">Loading...</div></div>
+
+    <!-- Funding instruments -->
+    <div class="home-card home-card-4" onclick="showView('instruments');">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Funding instruments</div>
+          <div class="home-card-map-sub" id="home-inst-stat">22 instruments indexed</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+      <div class="home-card-badges">
+        <span class="inst-badge b-voluntary">Voluntary market</span>
+        <span class="inst-badge b-compliance">Compliance market</span>
+        <span class="inst-badge b-sovereign">Sovereign</span>
+        <span class="inst-badge b-blended">Blended finance</span>
+        <span class="inst-badge b-philanthropic">Philanthropic</span>
+        <span class="inst-badge b-emerging">Emerging</span>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
     <div class="footer-links">
-      <span class="footer-link">About</span>
+      <span class="footer-link" onclick="showView('about')">About</span>
       <span class="footer-link">Subscribe</span>
       <span class="footer-link">Contact</span>
     </div>
@@ -318,7 +735,7 @@
   <div class="page-header">
     <div class="page-back" onclick="showView('home')">- Back</div>
     <div class="page-title">Projects</div>
-    <div class="page-sub">Conservation finance projects across Africa - tracked, verified, and explained.</div>
+    <div class="page-sub"><span class="live-num" id="proj-page-count">148</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
   </div>
   <div class="view-toggle">
     <button class="toggle-btn active" onclick="setProjView('grid',this)">Grid</button>
@@ -326,7 +743,7 @@
   </div>
   <div id="proj-map-wrap" class="map-hidden">
     <div class="map-container">
-      <svg id="proj-map" viewBox="0 0 700 750"></svg>
+      <svg id="proj-map" viewBox="0 80 700 600"></svg>
       <div class="map-legend" id="proj-legend"></div>
       <div class="map-hint">Click a country to filter projects. Click again to clear.</div>
     </div>
@@ -345,7 +762,7 @@
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
 
@@ -368,7 +785,7 @@
   <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
 
@@ -385,7 +802,7 @@
   </div>
   <div id="policy-map-wrap">
     <div class="map-container">
-      <svg id="policy-map" viewBox="0 0 700 750"></svg>
+      <svg id="policy-map" viewBox="0 80 700 600"></svg>
       <div class="map-legend">
         <div class="legend-item"><div class="legend-swatch" style="background:#1a4a2e"></div>Operational</div>
         <div class="legend-item"><div class="legend-swatch" style="background:#0c5c58"></div>Agreement signed</div>
@@ -420,7 +837,7 @@
   <div class="policy-disclaimer" id="policy-disclaimer"></div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
 
@@ -444,9 +861,58 @@
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
+
+<!-- ABOUT -->
+<div id="view-about" class="view">
+  <div class="page-header">
+    <div class="page-back" onclick="showView('home')">- Back</div>
+    <div class="page-title">About</div>
+  </div>
+  <div class="about-body">
+    <div class="about-lead">Canopy is a public resource on conservation finance in Africa.</div>
+
+    <h3 class="about-h">What it covers</h3>
+    <ul class="about-list">
+      <li>148 tracked projects across 54 countries - methodology, certification, and current status</li>
+      <li>22 funding instruments explained - from voluntary carbon credits to debt-for-nature swaps</li>
+      <li>Article 6.2 readiness mapped for every African nation</li>
+      <li>Weekly intelligence across carbon markets, biodiversity policy, conservation finance, and philanthropic flows</li>
+    </ul>
+
+    <h3 class="about-h">Who it is for</h3>
+    <ul class="about-list">
+      <li>Funders and family offices allocating capital to African conservation</li>
+      <li>Investors who need to understand the landscape before committing</li>
+      <li>Advisors who need to brief clients quickly</li>
+      <li>Anyone tracking what is actually happening at the frontier of conservation finance</li>
+    </ul>
+
+    <h3 class="about-h">The problem it solves</h3>
+    <p class="about-p">The information infrastructure for African conservation finance is fragmented. Data sits across registries, government portals, and specialist publications. Getting a clear picture requires weeks of research most investors don't have time for. Canopy puts it in one place, kept current, explained clearly.</p>
+
+    <h3 class="about-h">Independence</h3>
+    <ul class="about-list">
+      <li>No advertising</li>
+      <li>No sponsored content</li>
+      <li>No commercial relationship with any project developer or registry</li>
+      <li>Project scorecards - coming in Phase 2 - will be independently rated</li>
+    </ul>
+  </div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links">
+      <span class="footer-link" onclick="showView('about')">About</span>
+      <span class="footer-link">Subscribe</span>
+      <span class="footer-link">Contact</span>
+    </div>
+  </footer>
+</div>
+
+<!-- TOOLTIP -->
+<div class="map-tooltip" id="map-tooltip"></div>
 
 <!-- DETAIL PANEL -->
 <div class="overlay" id="overlay" onclick="closeDetail()"></div>
@@ -465,6 +931,10 @@
   let allIntelligence = [];
   let currentIntelFilter = 'all';
 
+  function cleanDashes(str) {
+    return str ? str.replace(/\u2014/g, '-').replace(/\u2013/g, '-') : str;
+  }
+
   function filterIntel(f, btn) {
     currentIntelFilter = f;
     document.querySelectorAll('#intel-tabs .cat-tab').forEach(t=>t.classList.remove('active'));
@@ -481,7 +951,7 @@
       ? list.map(i =>
           '<div class="intel-item" onclick=\'openIntelDetail('+safeJSON(i)+')\'>' +
           '<span class="intel-dom">'+i.domain+'</span>' +
-          '<span class="intel-hl">'+i.headline+'</span>' +
+          '<span class="intel-hl">'+cleanDashes(i.headline)+'</span>' +
           '<span class="intel-age">'+ageLabel(i.date)+'</span>' +
           '</div>'
         ).join('')
@@ -492,9 +962,13 @@
     const source = i.url
       ? '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value"><a href="'+i.url+'" target="_blank" style="color:var(--green)">Read original -></a></span></div>'
       : '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value" style="color:var(--text-dim)">Not linked</span></div>';
-    openDetail(i.domain,
-      '',
-      '<div class="detail-desc">'+i.headline+'</div>'+
+    const summary = i.summary
+      ? '<div class="detail-section-title">Summary</div><p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:20px">'+cleanDashes(i.summary)+'</p>'
+      : '';
+    openDetail(
+      cleanDashes(i.headline),
+      '<span class="proj-tag">'+i.domain+'</span>',
+      summary +
       '<div class="detail-section-title">Details</div>'+
       '<div class="detail-meta-row"><span class="detail-meta-label">Domain</span><span class="detail-meta-value">'+i.domain+'</span></div>'+
       '<div class="detail-meta-row"><span class="detail-meta-label">Date</span><span class="detail-meta-value">'+i.date+'</span></div>'+
@@ -515,12 +989,20 @@
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-'+name).classList.add('active');
     window.scrollTo(0,0); closeDetail();
+    if (name === 'home' && allProjects.length) {
+      renderMiniProjMap();
+      renderMiniPolicyMap();
+    }
   }
 
   function closeDetail() {
     document.getElementById('overlay').classList.remove('open');
     document.getElementById('detail-panel').classList.remove('open');
     document.body.style.overflow = '';
+    if (selectedProjCountry) {
+      selectedProjCountry = null;
+      d3.select('#proj-map').selectAll('path').attr('opacity', 1);
+    }
   }
 
   function openDetail(name, badgeHTML, bodyHTML) {
@@ -671,7 +1153,7 @@
   async function load() {
     try {
       const [pR,iR,instR,polR] = await Promise.all([
-        fetch('data/projects.json'), fetch('data/intelligence.json'),
+        fetch('data/projects.json'), fetch('data/intelligence.json?v='+Date.now()),
         fetch('data/instruments.json'), fetch('data/policy.json')
       ]);
       const [pd,id,instd,pold] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json()]);
@@ -679,14 +1161,22 @@
       allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
       allIntelligence = id.intelligence.filter(i=>i.status==='approved');
 
-      document.getElementById('stat-projects').textContent = allProjects.length;
-      document.getElementById('stat-instruments').textContent = allInstruments.length;
+      // home intel feed
+      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,4);
+      document.getElementById('home-intel-list').innerHTML = homeIntel.length
+        ? homeIntel.map(i =>
+            '<div class="home-intel-item">' +
+            '<span class="home-intel-dom">'+i.domain+'</span>' +
+            '<span class="home-intel-hl">'+cleanDashes(i.headline)+'</span>' +
+            '</div>'
+          ).join('')
+        : '<div class="empty">No items yet.</div>';
 
-      // home previews
-      document.getElementById('projects-preview').innerHTML = allProjects.filter(p=>p.featured).map(projCardHTML).join('');
-      document.getElementById('intelligence-list').innerHTML = id.intelligence.filter(i=>i.status==='approved').map(i=>
-        '<div class="intel-item"><span class="intel-dom">'+i.domain+'</span><span class="intel-hl">'+i.headline+'</span><span class="intel-age">'+ageLabel(i.date)+'</span></div>').join('');
-      document.getElementById('instruments-preview').innerHTML = allInstruments.filter(i=>i.featured).map(instCardHTML).join('');
+      document.getElementById('home-inst-stat').textContent = allInstruments.length + ' instruments indexed';
+      const projCount = allProjects.length;
+      document.querySelector('#mini-proj-stat .live-num').textContent = projCount;
+      document.getElementById('mini-proj-stat').innerHTML = '<span class="live-num">'+projCount+'</span> projects tracked across Africa';
+      if (document.getElementById('proj-page-count')) document.getElementById('proj-page-count').textContent = projCount;
 
       // policy summary counts
       const counts = {operational:0,'agreement-signed':0,'in-negotiation':0,'framework-only':0,'no-framework':0};
@@ -701,16 +1191,147 @@
       document.getElementById('policy-disclaimer').textContent = 'Data last updated '+pold.updated+'. '+pold.note;
 
       renderProjectsFull(); renderInstFull(); renderPolicyGrid(); renderIntelFull();
+      renderPolicyMap();
       document.querySelector('.policy-stat').classList.add('active');
+
+      // mini maps on home - only if D3 script has loaded
+      if (typeof renderMiniProjMap === 'function') {
+        renderMiniProjMap();
+        renderMiniPolicyMap();
+      }
+      document.getElementById('mini-proj-stat').textContent = allProjects.length + ' projects tracked';
 
     } catch(e) { console.error(e); }
   }
+
+  // SEARCH
+  const searchInput   = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  function normalise(str) {
+    return str.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+  }
+
+  function matches(query, ...fields) {
+    const q = normalise(query);
+    return fields.some(f => f && normalise(f).includes(q));
+  }
+
+  function runSearch(query) {
+    if (!query || query.length < 2) {
+      searchResults.classList.remove('visible');
+      return;
+    }
+
+    const projHits = allProjects.filter(p =>
+      matches(query, p.name, p.country, p.region, p.methodology, p.certification, ...p.tags)
+    ).slice(0, 5);
+
+    const instHits = allInstruments.filter(i =>
+      matches(query, i.name, i.description)
+    ).slice(0, 3);
+
+    const policyHits = allPolicy.filter(c =>
+      matches(query, c.name, c.region, c.notes, c.itmo_buyer)
+    ).slice(0, 3);
+
+    const total = projHits.length + instHits.length + policyHits.length;
+
+    if (total === 0) {
+      searchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
+      searchResults.classList.add('visible');
+      return;
+    }
+
+    let html = '';
+
+    if (projHits.length) {
+      html += '<div class="search-group-title">Projects</div>';
+      html += projHits.map(p =>
+        '<div class="search-result" onclick=\'searchSelectProject('+safeJSON(p)+')\'>' +
+        '<div class="search-result-name">'+p.name+'</div>' +
+        '<div class="search-result-sub">'+p.country+' - '+p.methodology+'</div>' +
+        '</div>'
+      ).join('');
+    }
+
+    if (instHits.length) {
+      html += '<div class="search-group-title">Funding instruments</div>';
+      html += instHits.map(i =>
+        '<div class="search-result" onclick=\'searchSelectInst('+safeJSON(i)+')\'>' +
+        '<div class="search-result-name">'+i.name+'</div>' +
+        '<div class="search-result-sub">'+(instCatLabel[i.category]||i.category)+'</div>' +
+        '</div>'
+      ).join('');
+    }
+
+    if (policyHits.length) {
+      html += '<div class="search-group-title">Policy tracker</div>';
+      html += policyHits.map(c =>
+        '<div class="search-result" onclick=\'searchSelectPolicy('+safeJSON(c)+')\'>' +
+        '<div class="search-result-name">'+c.name+'</div>' +
+        '<div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div>' +
+        '</div>'
+      ).join('');
+    }
+
+    searchResults.innerHTML = html;
+    searchResults.classList.add('visible');
+  }
+
+  function clearSearch() {
+    searchInput.value = '';
+    searchResults.classList.remove('visible');
+  }
+
+  function searchSelectProject(p) {
+    clearSearch();
+    showView('projects');
+    setTimeout(() => openProjectDetail(p), 50);
+  }
+
+  function searchSelectInst(i) {
+    clearSearch();
+    showView('instruments');
+    setTimeout(() => openInstDetail(i), 50);
+  }
+
+  function searchSelectPolicy(c) {
+    clearSearch();
+    showView('policy');
+    setTimeout(() => openPolicyDetail(c), 50);
+  }
+
+  searchInput.addEventListener('input', e => runSearch(e.target.value.trim()));
+  searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
+  });
 
   load();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
+  const tooltip = document.getElementById('map-tooltip');
+
+  function showTooltip(event, html) {
+    tooltip.innerHTML = html;
+    tooltip.classList.add('visible');
+    moveTooltip(event);
+  }
+
+  function moveTooltip(event) {
+    const x = event.clientX + 14;
+    const y = event.clientY - 10;
+    tooltip.style.left = x + 'px';
+    tooltip.style.top  = y + 'px';
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('visible');
+  }
+
   // ISO numeric -> our country ID mapping
   const isoToId = {
     12:'algeria',24:'angola',72:'botswana',108:'burundi',120:'cameroon',
@@ -755,9 +1376,9 @@
   function getProjection(svgEl) {
     const w = 700, h = 750;
     return d3.geoNaturalEarth1()
-      .scale(620)
-      .center([25, 0])
-      .translate([w / 2 - 30, h / 2 + 60]);
+      .scale(400)
+      .center([17, 2])
+      .translate([w / 2, h / 2]);
   }
 
   // RENDER POLICY MAP
@@ -783,6 +1404,14 @@
         return riskOverride(c) || policyColor[c.status] || '#e8e8e5';
       })
       .attr('title', f => isoToId[+f.id] || '')
+      .on('mouseover', (event, f) => {
+        const id = isoToId[+f.id];
+        const c = policyById[id];
+        if (!c) return;
+        showTooltip(event, '<strong>'+c.name+'</strong><br>'+(statusLabel[c.status]||c.status));
+      })
+      .on('mousemove', moveTooltip)
+      .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
         const id = isoToId[+f.id];
         const c = policyById[id];
@@ -838,17 +1467,39 @@
       })
       .attr('stroke', '#fff')
       .attr('stroke-width', 0.5)
+      .on('mouseover', (event, f) => {
+        const id = isoToId[+f.id];
+        if (!id) return;
+        const count = projCountryMap[id] || 0;
+        const countryName = allProjects.find(p => {
+          const pid = p.country.toLowerCase()
+            .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+            .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+            .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+            .replace('central african republic','central-african-republic')
+            .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+            .replace('sao tome and principe','sao-tome-principe')
+            .replace(/\s+/g,'-');
+          return pid === id;
+        });
+        const name = countryName ? countryName.country : id;
+        const label = count === 0 ? 'No projects tracked yet' : count+' project'+(count!==1?'s':'');
+        showTooltip(event, '<strong>'+name+'</strong><br>'+label);
+      })
+      .on('mousemove', moveTooltip)
+      .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
         const id = isoToId[+f.id];
         if (!id) return;
+        hideTooltip();
         if (selectedProjCountry === id) {
           selectedProjCountry = null;
           svg.selectAll('path').attr('opacity', 1);
-          renderProjectsFull();
+          closeDetail();
         } else {
           selectedProjCountry = id;
           svg.selectAll('path').attr('opacity', d => isoToId[+d.id] === id ? 1 : 0.35);
-          filterProjByCountry(id);
+          openCountryDetail(id, projCountryMap);
         }
       });
 
@@ -886,6 +1537,46 @@
       : '<div class="empty">No projects found for this country.</div>';
   }
 
+  function openCountryDetail(countryId, projCountryMap) {
+    const projects = allProjects.filter(p => {
+      const id = p.country.toLowerCase()
+        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+        .replace('central african republic','central-african-republic')
+        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+        .replace('sao tome and principe','sao-tome-principe')
+        .replace(/\s+/g,'-');
+      return id === countryId;
+    });
+
+    const countryName = projects.length ? projects[0].country : countryId;
+    const count = projects.length;
+
+    if (count === 0) {
+      openDetail(countryName, '', '<div class="detail-desc" style="color:var(--text-dim)">No projects tracked in this country yet.</div>');
+      return;
+    }
+
+    const projectRows = projects.map(p => {
+      const dc = statusDotClass(p.status);
+      return '<div style="padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;" onclick=\'closeDetail();setTimeout(()=>openProjectDetail('+safeJSON(p)+'),50)\'>' +
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">' +
+        '<span class="status-dot '+dc+'" style="flex-shrink:0"></span>' +
+        '<span style="font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.01em">'+p.name+'</span>' +
+        '</div>' +
+        '<div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;padding-left:14px">'+p.methodology+' - '+p.status+'</div>' +
+        '<div style="font-size:12px;color:var(--text-dim);padding-left:14px">'+p.credits+' - '+p.area+'</div>' +
+        '</div>';
+    }).join('');
+
+    openDetail(
+      countryName,
+      '<span style="font-size:12px;color:var(--text-dim)">'+count+' project'+(count!==1?'s':'')+' tracked</span>',
+      '<div class="detail-section-title" style="margin-top:0">Projects</div>' + projectRows
+    );
+  }
+
   // TOGGLE FUNCTIONS
   function setProjView(mode, btn) {
     document.querySelectorAll('#view-projects .toggle-btn').forEach(b=>b.classList.remove('active'));
@@ -914,12 +1605,174 @@
     }
   }
 
-  // Render policy map when policy view is first shown
-  const _origShowView = showView;
-  function showView(name) {
-    _origShowView(name);
-    if (name === 'policy' && allPolicy.length) renderPolicyMap();
-    if (name === 'projects' && allProjects.length && !projMapActive) {}
+  // RENDER MINI PROJ MAP - sequential reveal + hover tooltips
+  async function renderMiniProjMap() {
+    const svg = d3.select('#mini-proj-map');
+    svg.selectAll('*').remove();
+    const topo = await loadWorldData();
+    const projection = getProjection(svg.node());
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+
+    const projCountryMap = {};
+    allProjects.forEach(p => {
+      const id = p.country.toLowerCase()
+        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+        .replace('guinea-bissau','guinea-bissau').replace('central african republic','central-african-republic')
+        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+        .replace('sao tome and principe','sao-tome-principe')
+        .replace(/\s+/g,'-');
+      if (!projCountryMap[id]) projCountryMap[id] = 0;
+      projCountryMap[id]++;
+    });
+
+    const maxCount = Math.max(...Object.values(projCountryMap), 1);
+    const colorScale = d3.scaleSequential()
+      .domain([0, maxCount])
+      .interpolator(d3.interpolate('#c8e6d0','#1a4a2e'));
+
+    // Sort north to south for reveal
+    const features = countries.features
+      .filter(f => africaISO.has(+f.id))
+      .sort((a, b) => {
+        const centA = d3.geoCentroid(a);
+        const centB = d3.geoCentroid(b);
+        return centB[1] - centA[1];
+      });
+
+    const paths = svg.selectAll('path')
+      .data(features)
+      .join('path')
+      .attr('d', path)
+      .attr('fill', '#e8e8e5')
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.8)
+      .style('cursor', 'default');
+
+    // Sequential reveal - north to south
+    paths.each(function(f, i) {
+      const id = isoToId[+f.id];
+      const count = projCountryMap[id] || 0;
+      const targetFill = count > 0 ? colorScale(count) : '#e8e8e5';
+      d3.select(this)
+        .transition()
+        .delay(i * 28)
+        .duration(320)
+        .attr('fill', targetFill);
+    });
+
+    // Hover tooltips
+    paths
+      .on('mouseover', function(event, f) {
+        const id = isoToId[+f.id];
+        if (!id) return;
+        const count = projCountryMap[id] || 0;
+        const proj = allProjects.find(p => {
+          const pid = p.country.toLowerCase()
+            .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+            .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+            .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+            .replace('central african republic','central-african-republic')
+            .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+            .replace('sao tome and principe','sao-tome-principe')
+            .replace(/\s+/g,'-');
+          return pid === id;
+        });
+        const name = proj ? proj.country : id;
+        const label = count === 0 ? 'No projects tracked' : count + ' project' + (count !== 1 ? 's' : '');
+        showTooltip(event, '<strong>' + name + '</strong><br>' + label);
+        d3.select(this).attr('opacity', 0.75);
+      })
+      .on('mousemove', moveTooltip)
+      .on('mouseout', function() {
+        hideTooltip();
+        d3.select(this).attr('opacity', 1);
+      });
+  }
+
+  // RENDER MINI POLICY MAP - sequential reveal + hover tooltips
+  async function renderMiniPolicyMap() {
+    const svg = d3.select('#mini-policy-map');
+    svg.selectAll('*').remove();
+    const topo = await loadWorldData();
+    const projection = getProjection(svg.node());
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+    const policyById = {};
+    allPolicy.forEach(c => { policyById[c.id] = c; });
+
+    // Sort north to south for reveal
+    const features = countries.features
+      .filter(f => africaISO.has(+f.id))
+      .sort((a, b) => {
+        const centA = d3.geoCentroid(a);
+        const centB = d3.geoCentroid(b);
+        return centB[1] - centA[1];
+      });
+
+    const paths = svg.selectAll('path')
+      .data(features)
+      .join('path')
+      .attr('d', path)
+      .attr('fill', '#e8e8e5')
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.8)
+      .style('cursor', 'default');
+
+    // Sequential reveal - north to south
+    paths.each(function(f, i) {
+      const id = isoToId[+f.id];
+      const c = policyById[id];
+      const targetFill = c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
+      d3.select(this)
+        .transition()
+        .delay(i * 28)
+        .duration(320)
+        .attr('fill', targetFill);
+    });
+
+    // Hover tooltips
+    paths
+      .on('mouseover', function(event, f) {
+        const id = isoToId[+f.id];
+        const c = policyById[id];
+        if (!c) return;
+        showTooltip(event, '<strong>' + c.name + '</strong><br>' + (statusLabel[c.status] || c.status));
+        d3.select(this).attr('opacity', 0.75);
+      })
+      .on('mousemove', moveTooltip)
+      .on('mouseout', function() {
+        hideTooltip();
+        d3.select(this).attr('opacity', 1);
+      });
+  }
+
+  function activateProjMap() {
+    setTimeout(() => {
+      document.getElementById('proj-map-wrap').classList.remove('map-hidden');
+      document.getElementById('proj-grid-wrap').classList.add('map-hidden');
+      document.querySelectorAll('#view-projects .toggle-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#view-projects .toggle-btn')[1].classList.add('active');
+      renderProjMap();
+    }, 50);
+  }
+
+  function activatePolicyMap() {
+    setTimeout(() => {
+      renderPolicyMap();
+    }, 50);
+  }
+
+  // Trigger policy map on nav click
+  document.querySelector('[onclick="showView(\'policy\')"]')
+    .addEventListener('click', () => { if (allPolicy.length) renderPolicyMap(); });
+
+  // If data loaded before D3, render mini maps now
+  if (allProjects.length) {
+    renderMiniProjMap();
+    renderMiniPolicyMap();
   }
 </script>
 </body>

@@ -3,18 +3,20 @@
     {
       "id": "sa-article-62-2026-04-10",
       "domain": "Carbon markets",
-      "headline": "South Africa advances Article 6.2 bilateral framework — ITMO eligibility criteria published",
+      "headline": "South Africa advances Article 6.2 bilateral framework - ITMO eligibility criteria published",
       "date": "2026-04-10",
       "url": null,
-      "status": "approved"
+      "status": "approved",
+      "summary": "South Africa's Department of Forestry, Fisheries and the Environment has published formal eligibility criteria for Internationally Transferred Mitigation Outcomes under Article 6.2. The criteria confirm ARR methodology VM0047 as a qualifying activity, with corresponding adjustments required from project developers. This is a material development for South African carbon projects seeking compliance-grade offtake, including the Save the Sand pipeline in Mpumalanga."
     },
     {
       "id": "bezos-biodiversity-2026-04-08",
       "domain": "Funding",
-      "headline": "Bezos Earth Fund opens $200M African biodiversity round — applications open May 2026",
+      "headline": "Bezos Earth Fund opens $200M African biodiversity round - applications open May 2026",
       "date": "2026-04-08",
       "url": null,
-      "status": "approved"
+      "status": "approved",
+      "summary": "The Bezos Earth Fund has announced a $200M funding round focused on African biodiversity, with applications opening May 2026. The round targets landscape-scale projects with demonstrable community co-governance structures and third-party certification. Grants are expected to range from $5M to $40M with a 5-year commitment horizon. This is one of the largest single philanthropic allocations to African conservation in the current cycle."
     },
     {
       "id": "worldbank-debt-nature-2026-04-06",
@@ -22,7 +24,8 @@
       "headline": "World Bank approves $500M debt-for-nature framework for Sub-Saharan Africa",
       "date": "2026-04-06",
       "url": null,
-      "status": "approved"
+      "status": "approved",
+      "summary": "The World Bank has approved a $500M debt-for-nature swap framework targeting Sub-Saharan Africa, with Kenya and Zambia confirmed as pilot countries. The mechanism allows eligible sovereigns to retire a portion of external debt in exchange for ring-fenced conservation spending commitments. Structuring is being led by the IFC with Conservation Finance Alliance as technical advisor. Further country applications are expected in Q3 2026."
     },
     {
       "id": "community-lands-meta-2026-04-03",
@@ -30,7 +33,9 @@
       "headline": "New meta-analysis confirms community-managed lands match state protected areas on biodiversity outcomes",
       "date": "2026-04-03",
       "url": null,
-      "status": "approved"
+      "status": "approved",
+      "summary": "A meta-analysis published in Nature Sustainability covering 600 sites across 40 countries found that community-managed lands perform equivalently to state protected areas on key biodiversity outcome measures, at 60% lower per-hectare cost. The findings challenge the dominant NGO-led, state-backed conservation model and add significant weight to community co-ownership structures as a financing and governance standard. CCB Gold certification was identified as the strongest proxy indicator for community governance quality."
     }
-  ]
+  ],
+  "updated": "2026-04-10"
 }
