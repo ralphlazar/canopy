@@ -162,6 +162,10 @@
 
   .policy-disclaimer { font-size: 11px; color: var(--text-dim); padding: 16px 40px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); font-style: italic; }
 
+  .intel-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .intel-full { padding: 0 40px; max-width: 1100px; margin: 0 auto; }
+  .intel-full .intel-item:first-child { padding-top: 20px; }
+
   /* DETAIL PANEL */
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
   .overlay.open { opacity: 1; pointer-events: all; }
@@ -234,7 +238,7 @@
     <span class="nav-link" onclick="showView('projects')">Projects</span>
     <span class="nav-link" onclick="showView('instruments')">Funding instruments</span>
     <span class="nav-link" onclick="showView('policy')">Policy tracker</span>
-    <span class="nav-link" onclick="showView('home')">Intelligence</span>
+    <span class="nav-link" onclick="showView('intelligence')">Intelligence</span>
     <button class="nav-cta">Subscribe to brief</button>
   </div>
 </nav>
@@ -266,7 +270,7 @@
   <div class="section">
     <div class="sec-hdr">
       <span class="sec-title">Latest intelligence</span>
-      <span class="sec-all">View all -></span>
+      <span class="sec-all" onclick="showView('intelligence')">View all -></span>
     </div>
     <div class="intel-list" id="intelligence-list"><div class="loading">Loading...</div></div>
   </div>
@@ -370,6 +374,30 @@
   </footer>
 </div>
 
+<!-- INTELLIGENCE -->
+<div id="view-intelligence" class="view">
+  <div class="page-header">
+    <div class="page-back" onclick="showView('home')">- Back</div>
+    <div class="page-title">Intelligence</div>
+    <div class="page-sub">Signals from across the African conservation finance landscape - carbon markets, funding, policy, and science.</div>
+  </div>
+  <div class="cat-tabs" id="intel-tabs">
+    <button class="cat-tab active" onclick="filterIntel('all',this)">All</button>
+    <button class="cat-tab" onclick="filterIntel('Carbon markets',this)">Carbon markets</button>
+    <button class="cat-tab" onclick="filterIntel('Funding',this)">Funding</button>
+    <button class="cat-tab" onclick="filterIntel('Policy',this)">Policy</button>
+    <button class="cat-tab" onclick="filterIntel('Science',this)">Science</button>
+  </div>
+  <div class="intel-count" id="intel-count"></div>
+  <div class="intel-full" id="intelligence-full">
+    <div class="loading" style="padding: 40px">Loading...</div>
+  </div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+  </footer>
+</div>
+
 <!-- DETAIL PANEL -->
 <div class="overlay" id="overlay" onclick="closeDetail()"></div>
 <div class="detail-panel" id="detail-panel">
@@ -384,6 +412,46 @@
 </div>
 
 <script>
+  let allIntelligence = [];
+  let currentIntelFilter = 'all';
+
+  function filterIntel(f, btn) {
+    currentIntelFilter = f;
+    document.querySelectorAll('#intel-tabs .cat-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active');
+    renderIntelFull();
+  }
+
+  function renderIntelFull() {
+    const list = currentIntelFilter === 'all'
+      ? allIntelligence
+      : allIntelligence.filter(i => i.domain === currentIntelFilter);
+    document.getElementById('intel-count').textContent = list.length + ' item' + (list.length !== 1 ? 's' : '');
+    document.getElementById('intelligence-full').innerHTML = list.length
+      ? list.map(i =>
+          '<div class="intel-item" onclick=\'openIntelDetail('+safeJSON(i)+')\'>' +
+          '<span class="intel-dom">'+i.domain+'</span>' +
+          '<span class="intel-hl">'+i.headline+'</span>' +
+          '<span class="intel-age">'+ageLabel(i.date)+'</span>' +
+          '</div>'
+        ).join('')
+      : '<div class="empty">No items match this filter.</div>';
+  }
+
+  function openIntelDetail(i) {
+    const source = i.url
+      ? '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value"><a href="'+i.url+'" target="_blank" style="color:var(--green)">Read original -></a></span></div>'
+      : '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value" style="color:var(--text-dim)">Not linked</span></div>';
+    openDetail(i.domain,
+      '',
+      '<div class="detail-desc">'+i.headline+'</div>'+
+      '<div class="detail-section-title">Details</div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Domain</span><span class="detail-meta-value">'+i.domain+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Date</span><span class="detail-meta-value">'+i.date+'</span></div>'+
+      source
+    );
+  }
+
   let allProjects = [], allInstruments = [], allPolicy = [];
   let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all';
 
@@ -559,6 +627,7 @@
       const [pd,id,instd,pold] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json()]);
 
       allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
+      allIntelligence = id.intelligence.filter(i=>i.status==='approved');
 
       document.getElementById('stat-projects').textContent = allProjects.length;
       document.getElementById('stat-instruments').textContent = allInstruments.length;
@@ -581,7 +650,7 @@
       // disclaimer
       document.getElementById('policy-disclaimer').textContent = 'Data last updated '+pold.updated+'. '+pold.note;
 
-      renderProjectsFull(); renderInstFull(); renderPolicyGrid();
+      renderProjectsFull(); renderInstFull(); renderPolicyGrid(); renderIntelFull();
       document.querySelector('.policy-stat').classList.add('active');
 
     } catch(e) { console.error(e); }
