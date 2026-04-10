@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canopy · African Conservation Finance</title>
+<meta name="description" content="The complete resource for conservation finance in Africa. Every project. Every funding instrument. Every policy development.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg2: #fafaf8;
+    --bg3: #f5f5f2;
+    --border: #e8e8e5;
+    --green: #1a4a2e;
+    --green-bright: #1a4a2e;
+    --green-light: #1a4a2e;
+    --green-pale: #e8f5e0;
+    --green-text: #27500a;
+    --text: #1a1a18;
+    --text-muted: #5f5e5a;
+    --text-dim: #999896;
+    --vol-bg: #eaf3de;
+    --vol-text: #27500a;
+    --comp-bg: #e6f1fb;
+    --comp-text: #0c447c;
+    --sov-bg: #faeeda;
+    --sov-text: #633806;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 30px;
+    height: 30px;
+    background: var(--green);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .logo-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color 0.15s;
+    cursor: pointer;
+  }
+
+  .nav-link:hover { color: var(--text); }
+
+  .nav-cta {
+    font-size: 12px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.15s;
+  }
+
+  .nav-cta:hover { background: var(--green-pale); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 72px 40px 56px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-eye {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    margin-bottom: 18px;
+  }
+
+  .hero-h {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    max-width: 640px;
+    margin-bottom: 18px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-size: 13px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    background: var(--green);
+    color: #e8f5e0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; }
+
+  .btn-secondary {
+    font-size: 13px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
+
+  /* ── STATS ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .stat {
+    padding: 24px 40px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-n {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: -0.025em;
+    margin-bottom: 4px;
+  }
+
+  .stat-l {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 32px 40px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .sec-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+
+  .sec-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
+  .sec-all {
+    font-size: 12px;
+    color: var(--green-bright);
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .sec-all:hover { color: var(--green-bright); }
+
+  /* ── PROJECTS ── */
+  .proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .proj-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    background: var(--bg2);
+    transition: border-color 0.15s;
+    cursor: pointer;
+  }
+
+  .proj-card:hover { border-color: var(--text-dim); }
+
+  .proj-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+
+  .proj-country {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+
+  .proj-method {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--vol-bg);
+    color: var(--vol-text);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .proj-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .proj-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .proj-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .proj-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--bg3);
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+
+  /* ── INTELLIGENCE ── */
+  .intel-list { display: flex; flex-direction: column; }
+
+  .intel-item {
+    display: grid;
+    grid-template-columns: 110px 1fr 90px;
+    gap: 16px;
+    align-items: start;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+
+  .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .intel-dom {
+    font-size: 11px;
+    color: var(--text-dim);
+    padding-top: 2px;
+  }
+
+  .intel-hl {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.45;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .intel-hl:hover { color: var(--green); }
+
+  .intel-age {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+    padding-top: 2px;
+    white-space: nowrap;
+  }
+
+  /* ── INSTRUMENTS ── */
+  .inst-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .inst-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    background: var(--bg2);
+    transition: border-color 0.15s;
+    cursor: pointer;
+  }
+
+  .inst-card:hover { border-color: var(--text-dim); }
+
+  .inst-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 7px;
+    letter-spacing: -0.01em;
+  }
+
+  .inst-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .inst-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  .b-vol { background: var(--vol-bg); color: var(--vol-text); }
+  .b-comp { background: var(--comp-bg); color: var(--comp-text); }
+  .b-sov { background: var(--sov-bg); color: var(--sov-text); }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-note { font-size: 12px; color: var(--text-dim); }
+
+  .footer-links { display: flex; gap: 24px; }
+
+  .footer-link {
+    font-size: 12px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .footer-link:hover { color: var(--text-muted); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 40px 20px 32px; }
+    .hero-h { font-size: 26px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat { padding: 18px 20px; }
+    .stat:nth-child(2) { border-right: none; }
+    .section { padding: 24px 20px; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .inst-grid { grid-template-columns: 1fr; }
+    .intel-item { grid-template-columns: 80px 1fr; }
+    .intel-age { display: none; }
+    footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(odd) { border-right: 1px solid var(--border); }
+    .stat:nth-child(even) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1.5C5.5 1.5 3 4 3 8c0 2.2 1.3 4 3.2 5C6.8 11.2 7.4 9 8 7.5c.6 1.5 1.2 3.7 1.8 5.5C11.7 12 13 10.2 13 8c0-4-2.5-6.5-5-6.5z" fill="#9FE1CB"/>
+        <line x1="8" y1="7.5" x2="8" y2="14.5" stroke="#e8f5e0" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <span class="logo-name">Canopy</span>
+      <span class="logo-sub"> · African Conservation Finance</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#instruments">Funding instruments</a>
+    <a class="nav-link" href="#policy">Policy tracker</a>
+    <a class="nav-link" href="#intelligence">Intelligence</a>
+    <button class="nav-cta">Subscribe to brief</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eye">African Conservation Finance · Est. 2026</div>
+  <h1 class="hero-h">The complete resource for conservation finance in Africa</h1>
+  <p class="hero-sub">Every project. Every funding instrument. Every policy development. Tracked, organised, and explained for funders, developers, and policymakers working at the frontier of conservation finance.</p>
+  <div class="hero-btns">
+    <button class="btn-primary">Explore projects</button>
+    <button class="btn-secondary">Subscribe to weekly brief</button>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">147</div><div class="stat-l">Active projects tracked</div></div>
+  <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
+  <div class="stat"><div class="stat-n">23</div><div class="stat-l">Funding instruments indexed</div></div>
+  <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
+</div>
+
+<div class="section" id="projects">
+  <div class="sec-hdr">
+    <span class="sec-title">Featured projects</span>
+    <span class="sec-all">View all 147 →</span>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-top">
+        <span class="proj-country">South Africa · Mpumalanga</span>
+        <span class="proj-method">ARR · VM0047</span>
+      </div>
+      <div class="proj-name">Save the Sand</div>
+      <div class="proj-meta">7.3M tCO₂e · 40,000 ha · CCB Gold</div>
+      <div class="proj-tags">
+        <span class="proj-tag">Article 6.2 pathway</span>
+        <span class="proj-tag">Community co-owned</span>
+        <span class="proj-tag">Under validation</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-top">
+        <span class="proj-country">Burkina Faso · Sahel</span>
+        <span class="proj-method">ARR · VM0047</span>
+      </div>
+      <div class="proj-name">Tond Tenga</div>
+      <div class="proj-meta">3.7M tCO₂e · 12,000 ha · CCP approved</div>
+      <div class="proj-tags">
+        <span class="proj-tag">Great Green Wall</span>
+        <span class="proj-tag">185 villages</span>
+        <span class="proj-tag">Issuance 2027</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-top">
+        <span class="proj-country">Kenya · Lamu</span>
+        <span class="proj-method">Blue Carbon</span>
+      </div>
+      <div class="proj-name">Mikoko Pamoja</div>
+      <div class="proj-meta">3,000 tCO₂e/yr · 117 ha · Gold Standard</div>
+      <div class="proj-tags">
+        <span class="proj-tag">Mangrove restoration</span>
+        <span class="proj-tag">Community-led</span>
+        <span class="proj-tag">Issuing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="intelligence">
+  <div class="sec-hdr">
+    <span class="sec-title">Latest intelligence</span>
+    <span class="sec-all">View all →</span>
+  </div>
+  <div class="intel-list">
+    <div class="intel-item">
+      <span class="intel-dom">Carbon markets</span>
+      <span class="intel-hl">South Africa advances Article 6.2 bilateral framework — ITMO eligibility criteria published</span>
+      <span class="intel-age">Today</span>
+    </div>
+    <div class="intel-item">
+      <span class="intel-dom">Funding</span>
+      <span class="intel-hl">Bezos Earth Fund opens $200M African biodiversity round — applications open May 2026</span>
+      <span class="intel-age">2 days ago</span>
+    </div>
+    <div class="intel-item">
+      <span class="intel-dom">Policy</span>
+      <span class="intel-hl">World Bank approves $500M debt-for-nature framework for Sub-Saharan Africa</span>
+      <span class="intel-age">4 days ago</span>
+    </div>
+    <div class="intel-item">
+      <span class="intel-dom">Science</span>
+      <span class="intel-hl">New meta-analysis confirms community-managed lands match state protected areas on biodiversity outcomes</span>
+      <span class="intel-age">1 week ago</span>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="instruments">
+  <div class="sec-hdr">
+    <span class="sec-title">Funding instruments</span>
+    <span class="sec-all">View all 23 →</span>
+  </div>
+  <div class="inst-grid">
+    <div class="inst-card">
+      <div class="inst-name">Voluntary carbon credits</div>
+      <div class="inst-desc">VCS, Gold Standard, and CCB-certified credits from nature-based projects. Purchased by corporates for net-zero commitments.</div>
+      <span class="inst-badge b-vol">Voluntary</span>
+    </div>
+    <div class="inst-card">
+      <div class="inst-name">Article 6.2 ITMOs</div>
+      <div class="inst-desc">Internationally transferred mitigation outcomes traded bilaterally between sovereign states under the Paris Agreement.</div>
+      <span class="inst-badge b-comp">Compliance</span>
+    </div>
+    <div class="inst-card">
+      <div class="inst-name">Debt-for-nature swaps</div>
+      <div class="inst-desc">Sovereign debt restructured in exchange for binding conservation commitments. Growing rapidly in Sub-Saharan Africa.</div>
+      <span class="inst-badge b-sov">Sovereign</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-note">Updated daily · Pan-African · Independent</span>
+  <div class="footer-links">
+    <span class="footer-link">About</span>
+    <span class="footer-link">Subscribe</span>
+    <span class="footer-link">Contact</span>
+  </div>
+</footer>
+
+</body>
+</html>
