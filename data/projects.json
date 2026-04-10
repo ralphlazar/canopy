@@ -5,12 +5,16 @@
       "name": "Save the Sand",
       "country": "South Africa",
       "region": "Mpumalanga",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "7.3M tCO2e",
       "area": "40,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Under validation",
-      "tags": ["Article 6.2 pathway", "Community co-owned", "Under validation"],
+      "tags": [
+        "Article 6.2 pathway",
+        "Community co-owned",
+        "Under validation"
+      ],
       "featured": true
     },
     {
@@ -18,12 +22,16 @@
       "name": "Tond Tenga",
       "country": "Burkina Faso",
       "region": "Sahel",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "3.7M tCO2e",
       "area": "12,000 ha",
-      "certification": "VCS · CCP approved",
+      "certification": "VCS \u00b7 CCP approved",
       "status": "Issuance 2027",
-      "tags": ["Great Green Wall", "185 villages", "Issuance 2027"],
+      "tags": [
+        "Great Green Wall",
+        "185 villages",
+        "Issuance 2027"
+      ],
       "featured": true
     },
     {
@@ -31,12 +39,16 @@
       "name": "Mikoko Pamoja",
       "country": "Kenya",
       "region": "Lamu",
-      "methodology": "Blue Carbon · VM0033",
+      "methodology": "Blue Carbon \u00b7 VM0033",
       "credits": "3,000 tCO2e/yr",
       "area": "117 ha",
       "certification": "Gold Standard",
       "status": "Issuing",
-      "tags": ["Mangrove restoration", "Community-led", "Issuing"],
+      "tags": [
+        "Mangrove restoration",
+        "Community-led",
+        "Issuing"
+      ],
       "featured": true
     },
     {
@@ -44,12 +56,16 @@
       "name": "Maloti-Drakensberg Highlands",
       "country": "South Africa",
       "region": "KwaZulu-Natal",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "4.1M tCO2e",
       "area": "98,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Registered",
-      "tags": ["Watershed protection", "Grassland", "PES structure"],
+      "tags": [
+        "Watershed protection",
+        "Grassland",
+        "PES structure"
+      ],
       "featured": false
     },
     {
@@ -57,12 +73,16 @@
       "name": "Cape Floristic REDD+",
       "country": "South Africa",
       "region": "Western Cape",
-      "methodology": "REDD+ · VM0015",
+      "methodology": "REDD+ \u00b7 VM0015",
       "credits": "2.8M tCO2e",
       "area": "55,000 ha",
       "certification": "VCS",
       "status": "Under validation",
-      "tags": ["Biodiversity hotspot", "Fynbos", "Fire management"],
+      "tags": [
+        "Biodiversity hotspot",
+        "Fynbos",
+        "Fire management"
+      ],
       "featured": false
     },
     {
@@ -70,12 +90,16 @@
       "name": "Limpopo Bushveld Restoration",
       "country": "South Africa",
       "region": "Limpopo",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "5.2M tCO2e",
       "area": "62,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Under validation",
-      "tags": ["Bushveld", "Community land", "Article 6.2 pipeline"],
+      "tags": [
+        "Bushveld",
+        "Community land",
+        "Article 6.2 pipeline"
+      ],
       "featured": false
     },
     {
@@ -83,12 +107,16 @@
       "name": "Zululand Savanna Carbon",
       "country": "South Africa",
       "region": "KwaZulu-Natal",
-      "methodology": "Savanna burning · VM0032",
+      "methodology": "Savanna burning \u00b7 VM0032",
       "credits": "180,000 tCO2e/yr",
       "area": "220,000 ha",
       "certification": "VCS",
       "status": "Issuing",
-      "tags": ["Fire management", "Wildlife corridor", "Issuing"],
+      "tags": [
+        "Fire management",
+        "Wildlife corridor",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -96,12 +124,16 @@
       "name": "Namaqualand Dryland Restoration",
       "country": "South Africa",
       "region": "Northern Cape",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "1.9M tCO2e",
       "area": "28,000 ha",
       "certification": "VCS",
       "status": "In development",
-      "tags": ["Dryland restoration", "Succulent Karoo", "Community tenure"],
+      "tags": [
+        "Dryland restoration",
+        "Succulent Karoo",
+        "Community tenure"
+      ],
       "featured": false
     },
     {
@@ -109,12 +141,16 @@
       "name": "Groot Marico Bushveld IFM",
       "country": "South Africa",
       "region": "North West Province",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "2.3M tCO2e",
       "area": "41,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Registered",
-      "tags": ["Private land", "Biodiversity net gain", "Blended finance"],
+      "tags": [
+        "Private land",
+        "Biodiversity net gain",
+        "Blended finance"
+      ],
       "featured": false
     },
     {
@@ -122,12 +158,16 @@
       "name": "Zimbabwe Kariba REDD+",
       "country": "Zimbabwe",
       "region": "Zambezi Valley",
-      "methodology": "REDD+ · VM0009",
+      "methodology": "REDD+ \u00b7 VM0009",
       "credits": "50M tCO2e",
       "area": "785,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Issuing",
-      "tags": ["Large-scale", "Community benefit-sharing", "Issuing"],
+      "tags": [
+        "Large-scale",
+        "Community benefit-sharing",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -135,12 +175,16 @@
       "name": "Gokwe Community Forest",
       "country": "Zimbabwe",
       "region": "Midlands",
-      "methodology": "REDD+ · VM0007",
+      "methodology": "REDD+ \u00b7 VM0007",
       "credits": "3.4M tCO2e",
       "area": "67,000 ha",
       "certification": "VCS",
       "status": "Under validation",
-      "tags": ["Miombo woodland", "Community forestry", "Smallholder"],
+      "tags": [
+        "Miombo woodland",
+        "Community forestry",
+        "Smallholder"
+      ],
       "featured": false
     },
     {
@@ -148,12 +192,16 @@
       "name": "Hwange Wildlife Corridor",
       "country": "Zimbabwe",
       "region": "Matabeleland North",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "2.1M tCO2e",
       "area": "48,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "In development",
-      "tags": ["Wildlife corridor", "Elephant range", "Conservation trust fund"],
+      "tags": [
+        "Wildlife corridor",
+        "Elephant range",
+        "Conservation trust fund"
+      ],
       "featured": false
     },
     {
@@ -161,12 +209,16 @@
       "name": "Zambezia Integrated Landscape",
       "country": "Mozambique",
       "region": "Zambezia Province",
-      "methodology": "REDD+ · VM0009",
+      "methodology": "REDD+ \u00b7 VM0009",
       "credits": "12.6M tCO2e",
       "area": "195,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Issuing",
-      "tags": ["Miombo", "Community co-owned", "Issuing"],
+      "tags": [
+        "Miombo",
+        "Community co-owned",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -174,12 +226,16 @@
       "name": "Quirimbas Blue Carbon",
       "country": "Mozambique",
       "region": "Cabo Delgado",
-      "methodology": "Blue Carbon · VM0033",
+      "methodology": "Blue Carbon \u00b7 VM0033",
       "credits": "480,000 tCO2e",
       "area": "8,400 ha",
       "certification": "VCS",
       "status": "Under validation",
-      "tags": ["Mangrove", "Marine protected area", "Blue economy"],
+      "tags": [
+        "Mangrove",
+        "Marine protected area",
+        "Blue economy"
+      ],
       "featured": false
     },
     {
@@ -187,12 +243,16 @@
       "name": "Niassa Carnivore Project",
       "country": "Mozambique",
       "region": "Niassa Province",
-      "methodology": "REDD+ · VM0015",
+      "methodology": "REDD+ \u00b7 VM0015",
       "credits": "6.8M tCO2e",
       "area": "310,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Registered",
-      "tags": ["Wildlife", "Anti-poaching", "Miombo woodland"],
+      "tags": [
+        "Wildlife",
+        "Anti-poaching",
+        "Miombo woodland"
+      ],
       "featured": false
     },
     {
@@ -200,12 +260,16 @@
       "name": "Luangwa Community Forests",
       "country": "Zambia",
       "region": "Eastern Province",
-      "methodology": "REDD+ · VM0009",
+      "methodology": "REDD+ \u00b7 VM0009",
       "credits": "8.9M tCO2e",
       "area": "172,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Issuing",
-      "tags": ["Community forestry", "Wildlife buffer", "Issuing"],
+      "tags": [
+        "Community forestry",
+        "Wildlife buffer",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -213,12 +277,16 @@
       "name": "Kafue Flats Wetland Restoration",
       "country": "Zambia",
       "region": "Southern Province",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "3.2M tCO2e",
       "area": "44,000 ha",
       "certification": "VCS",
       "status": "Under validation",
-      "tags": ["Wetland", "Floodplain", "Water credits pipeline"],
+      "tags": [
+        "Wetland",
+        "Floodplain",
+        "Water credits pipeline"
+      ],
       "featured": false
     },
     {
@@ -226,12 +294,16 @@
       "name": "Northern Miombo REDD+",
       "country": "Zambia",
       "region": "Northern Province",
-      "methodology": "REDD+ · VM0007",
+      "methodology": "REDD+ \u00b7 VM0007",
       "credits": "11.4M tCO2e",
       "area": "240,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Registered",
-      "tags": ["Miombo", "Customary land", "PES structure"],
+      "tags": [
+        "Miombo",
+        "Customary land",
+        "PES structure"
+      ],
       "featured": false
     },
     {
@@ -239,12 +311,16 @@
       "name": "Lower Zambezi REDD+",
       "country": "Zambia",
       "region": "Lusaka Province",
-      "methodology": "REDD+ · VM0009",
+      "methodology": "REDD+ \u00b7 VM0009",
       "credits": "4.7M tCO2e",
       "area": "88,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Issuing",
-      "tags": ["Riparian forest", "Wildlife corridor", "Issuing"],
+      "tags": [
+        "Riparian forest",
+        "Wildlife corridor",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -252,12 +328,16 @@
       "name": "Okavango Delta Wetland Carbon",
       "country": "Botswana",
       "region": "Ngamiland",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "5.5M tCO2e",
       "area": "380,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Under validation",
-      "tags": ["Ramsar site", "UNESCO", "Community trusts"],
+      "tags": [
+        "Ramsar site",
+        "UNESCO",
+        "Community trusts"
+      ],
       "featured": false
     },
     {
@@ -265,12 +345,16 @@
       "name": "Kgalagadi Savanna Burning",
       "country": "Botswana",
       "region": "Kgalagadi District",
-      "methodology": "Savanna burning · VM0032",
+      "methodology": "Savanna burning \u00b7 VM0032",
       "credits": "220,000 tCO2e/yr",
       "area": "290,000 ha",
       "certification": "VCS",
       "status": "Registered",
-      "tags": ["Fire management", "San community", "Arid savanna"],
+      "tags": [
+        "Fire management",
+        "San community",
+        "Arid savanna"
+      ],
       "featured": false
     },
     {
@@ -278,12 +362,16 @@
       "name": "Chobe Forest Reserve IFM",
       "country": "Botswana",
       "region": "Chobe District",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "2.8M tCO2e",
       "area": "66,000 ha",
       "certification": "VCS",
       "status": "In development",
-      "tags": ["Forest reserve", "Wildlife", "Government partnership"],
+      "tags": [
+        "Forest reserve",
+        "Wildlife",
+        "Government partnership"
+      ],
       "featured": false
     },
     {
@@ -291,12 +379,16 @@
       "name": "Namibia Communal Conservancy Carbon",
       "country": "Namibia",
       "region": "Kunene Region",
-      "methodology": "Savanna burning · VM0032",
+      "methodology": "Savanna burning \u00b7 VM0032",
       "credits": "310,000 tCO2e/yr",
       "area": "460,000 ha",
-      "certification": "VCS · CCB Gold",
+      "certification": "VCS \u00b7 CCB Gold",
       "status": "Issuing",
-      "tags": ["Communal conservancy", "Wildlife revenue", "Issuing"],
+      "tags": [
+        "Communal conservancy",
+        "Wildlife revenue",
+        "Issuing"
+      ],
       "featured": false
     },
     {
@@ -304,12 +396,16 @@
       "name": "Succulent Karoo Restoration",
       "country": "Namibia",
       "region": "Karas Region",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "1.4M tCO2e",
       "area": "22,000 ha",
       "certification": "VCS",
       "status": "In development",
-      "tags": ["Dryland", "Biodiversity hotspot", "Community tenure"],
+      "tags": [
+        "Dryland",
+        "Biodiversity hotspot",
+        "Community tenure"
+      ],
       "featured": false
     },
     {
@@ -317,12 +413,16 @@
       "name": "Caprivi Strip Floodplain",
       "country": "Namibia",
       "region": "Zambezi Region",
-      "methodology": "REDD+ · VM0007",
+      "methodology": "REDD+ \u00b7 VM0007",
       "credits": "3.9M tCO2e",
       "area": "74,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Under validation",
-      "tags": ["Floodplain forest", "Transboundary", "Community forestry"],
+      "tags": [
+        "Floodplain forest",
+        "Transboundary",
+        "Community forestry"
+      ],
       "featured": false
     },
     {
@@ -330,12 +430,16 @@
       "name": "Vwaza Marsh Wildlife Reserve",
       "country": "Malawi",
       "region": "Northern Region",
-      "methodology": "REDD+ · VM0009",
+      "methodology": "REDD+ \u00b7 VM0009",
       "credits": "2.6M tCO2e",
       "area": "98,000 ha",
       "certification": "VCS",
       "status": "Registered",
-      "tags": ["Wildlife reserve", "Miombo", "Buffer zone communities"],
+      "tags": [
+        "Wildlife reserve",
+        "Miombo",
+        "Buffer zone communities"
+      ],
       "featured": false
     },
     {
@@ -343,12 +447,16 @@
       "name": "Shire Highlands Reforestation",
       "country": "Malawi",
       "region": "Southern Region",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "1.8M tCO2e",
       "area": "19,000 ha",
-      "certification": "VCS · CCB",
+      "certification": "VCS \u00b7 CCB",
       "status": "Under validation",
-      "tags": ["Smallholder", "Agroforestry", "Women-led"],
+      "tags": [
+        "Smallholder",
+        "Agroforestry",
+        "Women-led"
+      ],
       "featured": false
     },
     {
@@ -356,12 +464,16 @@
       "name": "Lubombo Conservancy",
       "country": "Eswatini",
       "region": "Lubombo Region",
-      "methodology": "IFM · VM0012",
+      "methodology": "IFM \u00b7 VM0012",
       "credits": "890,000 tCO2e",
       "area": "14,000 ha",
       "certification": "VCS",
       "status": "In development",
-      "tags": ["Transfrontier", "Biodiversity", "Royal Swazi partnership"],
+      "tags": [
+        "Transfrontier",
+        "Biodiversity",
+        "Royal Swazi partnership"
+      ],
       "featured": false
     },
     {
@@ -369,12 +481,16 @@
       "name": "Lesotho Highlands Watershed",
       "country": "Lesotho",
       "region": "Highlands",
-      "methodology": "ARR · VM0047",
+      "methodology": "ARR \u00b7 VM0047",
       "credits": "1.2M tCO2e",
       "area": "16,000 ha",
       "certification": "VCS",
       "status": "In development",
-      "tags": ["Watershed", "Water security", "Alpine grassland"],
+      "tags": [
+        "Watershed",
+        "Water security",
+        "Alpine grassland"
+      ],
       "featured": false
     },
     {
@@ -382,12 +498,531 @@
       "name": "Pongolapoort Wetland Carbon",
       "country": "South Africa",
       "region": "KwaZulu-Natal",
-      "methodology": "Blue Carbon · VM0033",
+      "methodology": "Blue Carbon \u00b7 VM0033",
       "credits": "640,000 tCO2e",
       "area": "9,200 ha",
       "certification": "VCS",
       "status": "Under validation",
-      "tags": ["Wetland", "Riparian", "Community co-owned"],
+      "tags": [
+        "Wetland",
+        "Riparian",
+        "Community co-owned"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-kasigau",
+      "name": "Kasigau Corridor REDD+",
+      "country": "Kenya",
+      "region": "Taita-Taveta",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "1.2M tCO2e/yr",
+      "area": "200,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Wildlife corridor",
+        "Community-led",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-chyulu",
+      "name": "Chyulu Hills REDD+",
+      "country": "Kenya",
+      "region": "Makueni",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "380,000 tCO2e/yr",
+      "area": "103,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Maasai land",
+        "Wildlife",
+        "Carbon pre-finance"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-coastal-mangrove",
+      "name": "Kenya Coastal Mangrove Network",
+      "country": "Kenya",
+      "region": "Coast Province",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "210,000 tCO2e/yr",
+      "area": "4,800 ha",
+      "certification": "VCS",
+      "status": "Registered",
+      "tags": [
+        "Mangrove",
+        "Fisheries co-benefit",
+        "Women-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-mau-forest",
+      "name": "Mau Forest Complex Restoration",
+      "country": "Kenya",
+      "region": "Rift Valley",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "4.8M tCO2e",
+      "area": "76,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Water tower",
+        "Watershed",
+        "Government partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-ol-pejeta",
+      "name": "Ol Pejeta Savanna Carbon",
+      "country": "Kenya",
+      "region": "Laikipia",
+      "methodology": "Savanna burning \u00b7 VM0032",
+      "credits": "95,000 tCO2e/yr",
+      "area": "90,000 ha",
+      "certification": "VCS",
+      "status": "Issuing",
+      "tags": [
+        "Wildlife conservancy",
+        "Rhino sanctuary",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-tana-delta",
+      "name": "Tana River Delta Blue Carbon",
+      "country": "Kenya",
+      "region": "Tana River",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "560,000 tCO2e",
+      "area": "6,900 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Delta",
+        "Mangrove",
+        "Indigenous community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-selous",
+      "name": "Selous-Niassa Wildlife Corridor",
+      "country": "Tanzania",
+      "region": "Lindi Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "9.4M tCO2e",
+      "area": "290,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "UNESCO corridor",
+        "Elephant range",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-southern-highlands",
+      "name": "Southern Highlands Forest",
+      "country": "Tanzania",
+      "region": "Mbeya Region",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "5.1M tCO2e",
+      "area": "118,000 ha",
+      "certification": "VCS",
+      "status": "Registered",
+      "tags": [
+        "Montane forest",
+        "Water catchment",
+        "Village forest reserves"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-zanzibar-blue",
+      "name": "Zanzibar Blue Carbon",
+      "country": "Tanzania",
+      "region": "Zanzibar",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "320,000 tCO2e",
+      "area": "4,100 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Island",
+        "Mangrove",
+        "Seagrass",
+        "Article 6.2 pipeline"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-kilosa",
+      "name": "Kilosa Community REDD+",
+      "country": "Tanzania",
+      "region": "Morogoro Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "3.7M tCO2e",
+      "area": "82,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Community forest management",
+        "Village reserves",
+        "Smallholder"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-ruaha",
+      "name": "Ruaha Carnivore Landscape",
+      "country": "Tanzania",
+      "region": "Iringa Region",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "6.2M tCO2e",
+      "area": "160,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Lion range",
+        "Wildlife",
+        "Anti-poaching",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uganda-bwindi",
+      "name": "Bwindi-Sarambwe Forest Carbon",
+      "country": "Uganda",
+      "region": "Kigezi",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "2.9M tCO2e",
+      "area": "49,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Mountain gorilla",
+        "UNESCO",
+        "Transboundary",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uganda-albertine-rift",
+      "name": "Albertine Rift Reforestation",
+      "country": "Uganda",
+      "region": "Western Uganda",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "3.4M tCO2e",
+      "area": "38,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Biodiversity hotspot",
+        "Smallholder",
+        "Agroforestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uganda-murchison",
+      "name": "Murchison Falls Buffer Zone",
+      "country": "Uganda",
+      "region": "Northern Uganda",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "2.1M tCO2e",
+      "area": "55,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "National park buffer",
+        "Community land",
+        "Wildlife"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uganda-kibale",
+      "name": "Kibale Forest Carbon",
+      "country": "Uganda",
+      "region": "Western Uganda",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "1.8M tCO2e",
+      "area": "31,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Chimpanzee",
+        "Research partnership",
+        "Buffer zone"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rwanda-nyungwe",
+      "name": "Nyungwe Forest Conservation",
+      "country": "Rwanda",
+      "region": "Southern Province",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "1.6M tCO2e",
+      "area": "74,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Montane rainforest",
+        "Chimpanzee",
+        "Water tower",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rwanda-gishwati",
+      "name": "Gishwati-Mukura Restoration",
+      "country": "Rwanda",
+      "region": "Western Province",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "980,000 tCO2e",
+      "area": "8,600 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Forest reconnection",
+        "Golden monkey",
+        "Government-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-humbo",
+      "name": "Humbo Community Reforestation",
+      "country": "Ethiopia",
+      "region": "SNNPR",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "880,000 tCO2e",
+      "area": "2,700 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Community-led",
+        "World Vision",
+        "Smallholder",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-bale",
+      "name": "Bale Mountains Eco-Region",
+      "country": "Ethiopia",
+      "region": "Oromia",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "8.8M tCO2e",
+      "area": "500,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "UNESCO biosphere",
+        "Ethiopian wolf",
+        "Large-scale"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-rift-valley",
+      "name": "Rift Valley Lakes Wetland",
+      "country": "Ethiopia",
+      "region": "Oromia",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.4M tCO2e",
+      "area": "27,000 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "Wetland restoration",
+        "Flamingo habitat",
+        "Water security"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-afar",
+      "name": "Afar Dryland Restoration",
+      "country": "Ethiopia",
+      "region": "Afar Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.7M tCO2e",
+      "area": "21,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Dryland",
+        "Pastoral community",
+        "Great Green Wall"
+      ],
+      "featured": false
+    },
+    {
+      "id": "south-sudan-sudd",
+      "name": "Sudd Wetland Carbon",
+      "country": "South Sudan",
+      "region": "Jonglei State",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "14.2M tCO2e",
+      "area": "900,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "World's largest wetland",
+        "Peatland",
+        "Frontier market"
+      ],
+      "featured": false
+    },
+    {
+      "id": "somalia-jubba",
+      "name": "Jubba Valley Reforestation",
+      "country": "Somalia",
+      "region": "Jubbaland",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.1M tCO2e",
+      "area": "24,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Post-conflict",
+        "Riverine forest",
+        "Community tenure"
+      ],
+      "featured": false
+    },
+    {
+      "id": "eritrea-green-belt",
+      "name": "Eritrea Highland Green Belt",
+      "country": "Eritrea",
+      "region": "Maekel Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.1M tCO2e",
+      "area": "14,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Highland",
+        "Dryland restoration",
+        "State partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "djibouti-day-forest",
+      "name": "Day Forest National Park",
+      "country": "Djibouti",
+      "region": "Arta Region",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "340,000 tCO2e",
+      "area": "3,500 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Relict forest",
+        "Juniper",
+        "Biodiversity"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-loita-hills",
+      "name": "Loita Hills Maasai Forest",
+      "country": "Kenya",
+      "region": "Narok",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "1.9M tCO2e",
+      "area": "44,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Maasai community",
+        "Sacred forest",
+        "Indigenous rights"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tanzania-mahale",
+      "name": "Mahale Mountains Forest",
+      "country": "Tanzania",
+      "region": "Kigoma Region",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "2.3M tCO2e",
+      "area": "63,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Chimpanzee",
+        "Lake Tanganyika",
+        "Remote"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uganda-queen-elizabeth",
+      "name": "Queen Elizabeth Buffer Carbon",
+      "country": "Uganda",
+      "region": "Western Uganda",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.4M tCO2e",
+      "area": "18,000 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "National park buffer",
+        "Hippo corridor",
+        "Community land"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-kafa",
+      "name": "Kafa Biosphere Forest",
+      "country": "Ethiopia",
+      "region": "Southwest Ethiopia",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "4.4M tCO2e",
+      "area": "760,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "Wild coffee",
+        "UNESCO biosphere",
+        "Community forestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-amboseli",
+      "name": "Amboseli Ecosystem Carbon",
+      "country": "Kenya",
+      "region": "Kajiado",
+      "methodology": "Savanna burning \u00b7 VM0032",
+      "credits": "160,000 tCO2e/yr",
+      "area": "180,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Maasai conservancy",
+        "Elephant corridor",
+        "Kilimanjaro"
+      ],
       "featured": false
     }
   ]
