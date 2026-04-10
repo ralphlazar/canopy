@@ -1,0 +1,158 @@
+{
+  "instruments": [
+    {
+      "id": "voluntary-carbon-credits",
+      "name": "Voluntary carbon credits",
+      "description": "VCS, Gold Standard, and CCB-certified credits from nature-based projects. Purchased by corporates for net-zero commitments.",
+      "category": "voluntary",
+      "featured": true
+    },
+    {
+      "id": "article-6-2-itmos",
+      "name": "Article 6.2 ITMOs",
+      "description": "Internationally transferred mitigation outcomes traded bilaterally between sovereign states under the Paris Agreement.",
+      "category": "compliance",
+      "featured": true
+    },
+    {
+      "id": "debt-for-nature-swaps",
+      "name": "Debt-for-nature swaps",
+      "description": "Sovereign debt restructured in exchange for binding conservation commitments. Growing rapidly in Sub-Saharan Africa.",
+      "category": "sovereign",
+      "featured": true
+    },
+    {
+      "id": "vcs-arr-vm0047",
+      "name": "VCS ARR VM0047",
+      "description": "The gold-standard methodology for afforestation, reforestation and revegetation projects. ICVCM Core Carbon Principles approved.",
+      "category": "voluntary",
+      "featured": false
+    },
+    {
+      "id": "gold-standard",
+      "name": "Gold Standard",
+      "description": "Premium certification combining carbon with sustainable development co-benefits. Preferred by European corporate buyers.",
+      "category": "voluntary",
+      "featured": false
+    },
+    {
+      "id": "ccb-standards",
+      "name": "CCB Standards",
+      "description": "Climate, Community and Biodiversity standards. Gold and Verra-verified co-benefit certification stacked on top of VCS.",
+      "category": "voluntary",
+      "featured": false
+    },
+    {
+      "id": "biodiversity-credits",
+      "name": "Biodiversity credits",
+      "description": "Emerging instrument quantifying nature outcomes beyond carbon. Standards still consolidating across GBFF and national frameworks.",
+      "category": "voluntary",
+      "featured": false
+    },
+    {
+      "id": "blue-carbon",
+      "name": "Blue carbon",
+      "description": "Credits from mangrove, seagrass and saltmarsh ecosystems. High co-benefit profile, limited supply. VM0033 and VM0007 methodologies.",
+      "category": "voluntary",
+      "featured": false
+    },
+    {
+      "id": "article-6-4-pacm",
+      "name": "Article 6.4 PACM",
+      "description": "The Paris Agreement Crediting Mechanism — UN-supervised successor to CDM. Methodology approval process now operational.",
+      "category": "compliance",
+      "featured": false
+    },
+    {
+      "id": "corsia",
+      "name": "CORSIA",
+      "description": "Carbon Offsetting and Reduction Scheme for International Aviation. Compliance demand from airlines. Strict eligibility criteria.",
+      "category": "compliance",
+      "featured": false
+    },
+    {
+      "id": "green-bonds",
+      "name": "Green bonds",
+      "description": "Sovereign and corporate debt instruments financing environmental projects. ICMA Green Bond Principles the dominant framework.",
+      "category": "sovereign",
+      "featured": false
+    },
+    {
+      "id": "sovereign-blue-bonds",
+      "name": "Sovereign blue bonds",
+      "description": "Government bonds financing marine and coastal conservation. Seychelles precedent now being replicated across African island states.",
+      "category": "sovereign",
+      "featured": false
+    },
+    {
+      "id": "pes",
+      "name": "Payments for ecosystem services",
+      "description": "Direct payments to land managers for verified ecosystem services — water, biodiversity, carbon. Increasingly formalised in African law.",
+      "category": "blended",
+      "featured": false
+    },
+    {
+      "id": "conservation-trust-funds",
+      "name": "Conservation trust funds",
+      "description": "Endowment vehicles providing long-term stable funding for protected area management. Over 70 active funds across Africa.",
+      "category": "blended",
+      "featured": false
+    },
+    {
+      "id": "first-loss-guarantees",
+      "name": "First-loss guarantees",
+      "description": "DFI and philanthropic capital absorbing first losses to de-risk commercial investment in conservation projects.",
+      "category": "blended",
+      "featured": false
+    },
+    {
+      "id": "pris",
+      "name": "Programme-related investments",
+      "description": "Below-market loans and equity investments by foundations. IRS rules allow US foundations to count these toward payout requirements.",
+      "category": "blended",
+      "featured": false
+    },
+    {
+      "id": "multi-year-grants",
+      "name": "Multi-year grants",
+      "description": "Unrestricted multi-year funding from institutional foundations. Increasingly tied to commercial transition milestones.",
+      "category": "philanthropic",
+      "featured": false
+    },
+    {
+      "id": "dafs",
+      "name": "Donor advised funds",
+      "description": "Vehicles allowing HNWIs to make irrevocable charitable contributions and recommend grants over time. $230B held in US DAFs alone.",
+      "category": "philanthropic",
+      "featured": false
+    },
+    {
+      "id": "impact-first-family-office",
+      "name": "Impact-first family office capital",
+      "description": "Patient capital from family offices accepting below-market returns for measurable conservation outcomes. Growing constituency.",
+      "category": "philanthropic",
+      "featured": false
+    },
+    {
+      "id": "bng-credits",
+      "name": "Biodiversity net gain credits",
+      "description": "Credits generated by habitat creation and restoration. UK BNG now mandatory. African BNG frameworks emerging in Kenya and South Africa.",
+      "category": "emerging",
+      "featured": false
+    },
+    {
+      "id": "water-credits",
+      "name": "Water credits",
+      "description": "Payments for watershed protection and water quality outcomes. Ecoagriculture Partners and Commonland leading African pilots.",
+      "category": "emerging",
+      "featured": false
+    },
+    {
+      "id": "soil-carbon-credits",
+      "name": "Soil carbon credits",
+      "description": "Credits from agricultural land management improving soil organic carbon. Measurement uncertainty remains a barrier to scale.",
+      "category": "emerging",
+      "featured": false
+    }
+  ]
+}

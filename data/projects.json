@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": "save-the-sand",
+      "name": "Save the Sand",
+      "country": "South Africa",
+      "region": "Mpumalanga",
+      "methodology": "ARR · VM0047",
+      "credits": "7.3M tCO₂e",
+      "area": "40,000 ha",
+      "certification": "CCB Gold",
+      "status": "Under validation",
+      "tags": ["Article 6.2 pathway", "Community co-owned", "Under validation"],
+      "featured": true
+    },
+    {
+      "id": "tond-tenga",
+      "name": "Tond Tenga",
+      "country": "Burkina Faso",
+      "region": "Sahel",
+      "methodology": "ARR · VM0047",
+      "credits": "3.7M tCO₂e",
+      "area": "12,000 ha",
+      "certification": "CCP approved",
+      "status": "Issuance 2027",
+      "tags": ["Great Green Wall", "185 villages", "Issuance 2027"],
+      "featured": true
+    },
+    {
+      "id": "mikoko-pamoja",
+      "name": "Mikoko Pamoja",
+      "country": "Kenya",
+      "region": "Lamu",
+      "methodology": "Blue Carbon",
+      "credits": "3,000 tCO₂e/yr",
+      "area": "117 ha",
+      "certification": "Gold Standard",
+      "status": "Issuing",
+      "tags": ["Mangrove restoration", "Community-led", "Issuing"],
+      "featured": true
+    }
+  ]
+}

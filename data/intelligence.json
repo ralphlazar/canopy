@@ -1,0 +1,36 @@
+{
+  "intelligence": [
+    {
+      "id": "sa-article-62-2026-04-10",
+      "domain": "Carbon markets",
+      "headline": "South Africa advances Article 6.2 bilateral framework — ITMO eligibility criteria published",
+      "date": "2026-04-10",
+      "url": null,
+      "status": "approved"
+    },
+    {
+      "id": "bezos-biodiversity-2026-04-08",
+      "domain": "Funding",
+      "headline": "Bezos Earth Fund opens $200M African biodiversity round — applications open May 2026",
+      "date": "2026-04-08",
+      "url": null,
+      "status": "approved"
+    },
+    {
+      "id": "worldbank-debt-nature-2026-04-06",
+      "domain": "Policy",
+      "headline": "World Bank approves $500M debt-for-nature framework for Sub-Saharan Africa",
+      "date": "2026-04-06",
+      "url": null,
+      "status": "approved"
+    },
+    {
+      "id": "community-lands-meta-2026-04-03",
+      "domain": "Science",
+      "headline": "New meta-analysis confirms community-managed lands match state protected areas on biodiversity outcomes",
+      "date": "2026-04-03",
+      "url": null,
+      "status": "approved"
+    }
+  ]
+}
