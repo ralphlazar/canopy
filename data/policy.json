@@ -1,0 +1,546 @@
+{
+  "updated": "2026-04-10",
+  "note": "AI-generated from training data. Requires verification against UNFCCC and bilateral agreement sources before public launch.",
+  "countries": [
+    {
+      "id": "south-africa",
+      "name": "South Africa",
+      "region": "Southern Africa",
+      "status": "operational",
+      "political_risk": "low",
+      "itmo_buyer": "Switzerland",
+      "notes": "Most advanced Article 6.2 framework in Africa. ITMO eligibility criteria for ARR published April 2026. Bilateral agreement with Switzerland operational. Carbon tax creates domestic demand signal.",
+      "updated": "2026-04-10"
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "region": "West Africa",
+      "status": "operational",
+      "political_risk": "low",
+      "itmo_buyer": "Switzerland",
+      "notes": "ITMO agreement with Switzerland operational since 2023. Ghana Carbon Market Office established. Domestic carbon market framework in place. Strong institutional capacity.",
+      "updated": "2026-03-15"
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "region": "East Africa",
+      "status": "operational",
+      "political_risk": "low",
+      "itmo_buyer": "Multiple",
+      "notes": "Carbon markets act passed 2023. Bilateral agreements with Switzerland and Singapore. Article 6.2 ITMO framework operational. Africa Carbon Markets Initiative founding member.",
+      "updated": "2026-04-01"
+    },
+    {
+      "id": "rwanda",
+      "name": "Rwanda",
+      "region": "East Africa",
+      "status": "operational",
+      "political_risk": "low",
+      "itmo_buyer": "Switzerland",
+      "notes": "Bilateral agreement with Switzerland signed. Strong government capacity. Clean development aligned with Vision 2050. ITMO transfer protocol in place.",
+      "updated": "2026-03-01"
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "region": "West Africa",
+      "status": "agreement-signed",
+      "political_risk": "low",
+      "itmo_buyer": "Japan",
+      "notes": "Bilateral agreement signed with Japan under JCM framework. ITMO eligibility criteria under development. Carbon registry being established.",
+      "updated": "2026-02-15"
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "region": "North Africa",
+      "status": "agreement-signed",
+      "political_risk": "low",
+      "itmo_buyer": "Multiple",
+      "notes": "Agreements with multiple bilateral partners. Renewable energy ITMO pathway well-developed. Nature-based solution framework lagging energy sector.",
+      "updated": "2026-01-20"
+    },
+    {
+      "id": "ethiopia",
+      "name": "Ethiopia",
+      "region": "East Africa",
+      "status": "agreement-signed",
+      "political_risk": "medium",
+      "itmo_buyer": "Switzerland",
+      "notes": "Bilateral agreement signed with Switzerland. Framework development ongoing. Tigray conflict aftermath creates implementation risk in northern regions. Strong NDC ambition.",
+      "updated": "2026-02-01"
+    },
+    {
+      "id": "tanzania",
+      "name": "Tanzania",
+      "region": "East Africa",
+      "status": "agreement-signed",
+      "political_risk": "low",
+      "itmo_buyer": "Switzerland",
+      "notes": "Bilateral framework signed. Tanzania Carbon Market Platform established. MRV capacity being built. Blue carbon pathway under development for Zanzibar.",
+      "updated": "2026-03-10"
+    },
+    {
+      "id": "zambia",
+      "name": "Zambia",
+      "region": "Southern Africa",
+      "status": "agreement-signed",
+      "political_risk": "medium",
+      "itmo_buyer": "Sweden",
+      "notes": "Bilateral agreement with Sweden signed. Forest carbon focus. Zambia Carbon Market Framework under development. Currency instability creates transaction risk.",
+      "updated": "2026-01-15"
+    },
+    {
+      "id": "zimbabwe",
+      "name": "Zimbabwe",
+      "region": "Southern Africa",
+      "status": "agreement-signed",
+      "political_risk": "high",
+      "itmo_buyer": "Multiple",
+      "notes": "Government mandated 50% revenue share from carbon projects including Kariba. Bilateral agreements in progress. Political and currency risk remains significant. New carbon regulations creating project uncertainty.",
+      "updated": "2026-03-20"
+    },
+    {
+      "id": "mozambique",
+      "name": "Mozambique",
+      "region": "Southern Africa",
+      "status": "in-negotiation",
+      "political_risk": "medium",
+      "itmo_buyer": "Norway",
+      "notes": "Negotiations with Norway ongoing under REDD+ framework. Northern insurgency in Cabo Delgado creates implementation risk. Strong forestry carbon potential. REDD+ programme well-established.",
+      "updated": "2026-02-10"
+    },
+    {
+      "id": "gabon",
+      "name": "Gabon",
+      "region": "Central Africa",
+      "status": "operational",
+      "political_risk": "medium",
+      "itmo_buyer": "Multiple",
+      "notes": "One of Africa's most advanced blue carbon frameworks. Gabon Blue Carbon sovereign ITMO programme operational. Post-coup political transition creates some uncertainty but carbon programme protected.",
+      "updated": "2026-04-01"
+    },
+    {
+      "id": "ivory-coast",
+      "name": "Ivory Coast",
+      "region": "West Africa",
+      "status": "in-negotiation",
+      "political_risk": "low",
+      "itmo_buyer": "Japan",
+      "notes": "JCM negotiations with Japan ongoing. Carbon market framework under development. Cocoa supply chain decarbonisation creating strong private sector demand. Article 6.4 also being explored.",
+      "updated": "2026-01-30"
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "region": "West Africa",
+      "status": "framework-only",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "National carbon market framework established but bilateral ITMO agreements not yet signed. Regulatory capacity weak. Oil sector dominates policy attention. Large potential market.",
+      "updated": "2026-02-20"
+    },
+    {
+      "id": "cameroon",
+      "name": "Cameroon",
+      "region": "Central Africa",
+      "status": "in-negotiation",
+      "political_risk": "high",
+      "itmo_buyer": "Multiple",
+      "notes": "Bilateral negotiations ongoing. Anglophone conflict in Northwest and Southwest regions creates significant implementation risk. Strong forest carbon potential in east.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "drc",
+      "name": "DR Congo",
+      "region": "Central Africa",
+      "status": "in-negotiation",
+      "political_risk": "very-high",
+      "itmo_buyer": "Multiple",
+      "notes": "Enormous carbon potential. Government increasingly engaged with carbon markets. Eastern conflict remains major risk. CAFI partnership providing framework. Congo Basin forest essential to global climate.",
+      "updated": "2026-03-05"
+    },
+    {
+      "id": "republic-of-congo",
+      "name": "Republic of Congo",
+      "region": "Central Africa",
+      "status": "in-negotiation",
+      "political_risk": "medium",
+      "itmo_buyer": "Multiple",
+      "notes": "CAFI partner country. Bilateral negotiations in progress. Forest carbon framework developing. Oil revenue dependence creates transition complexity.",
+      "updated": "2026-01-25"
+    },
+    {
+      "id": "cameroon",
+      "name": "Cameroon",
+      "region": "Central Africa",
+      "status": "in-negotiation",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "Bilateral negotiations ongoing with multiple parties. Anglophone conflict in SW and NW regions creates risk. Strong forest potential in east and south.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "madagascar",
+      "name": "Madagascar",
+      "region": "Indian Ocean",
+      "status": "in-negotiation",
+      "political_risk": "medium",
+      "itmo_buyer": "Switzerland",
+      "notes": "Negotiations with Switzerland ongoing. Strong voluntary market track record through Makira and Ankeniheny projects. Government capacity limited. Political volatility a recurring concern.",
+      "updated": "2026-02-28"
+    },
+    {
+      "id": "uganda",
+      "name": "Uganda",
+      "region": "East Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "National carbon framework exists. No bilateral ITMO agreements signed. East African regional coordination ongoing. Strong project pipeline but sovereign framework lagging.",
+      "updated": "2026-01-20"
+    },
+    {
+      "id": "namibia",
+      "name": "Namibia",
+      "region": "Southern Africa",
+      "status": "in-negotiation",
+      "political_risk": "low",
+      "itmo_buyer": "Germany",
+      "notes": "Negotiations with Germany in progress. Communal conservancy model well-suited to ITMO. Strong governance institutions. Green hydrogen ambitions also driving carbon market interest.",
+      "updated": "2026-02-15"
+    },
+    {
+      "id": "botswana",
+      "name": "Botswana",
+      "region": "Southern Africa",
+      "status": "framework-only",
+      "political_risk": "low",
+      "itmo_buyer": null,
+      "notes": "Framework under development. Diamond revenue makes carbon less urgent. Strong governance. Okavango ITMO potential recognised but no bilateral agreement yet.",
+      "updated": "2026-01-15"
+    },
+    {
+      "id": "malawi",
+      "name": "Malawi",
+      "region": "Southern Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Framework in early stages. Limited institutional capacity. Strong project pipeline in north. Donor-dependent economy creates alignment opportunities.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "sierra-leone",
+      "name": "Sierra Leone",
+      "region": "West Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Carbon market framework announced. Gola project provides practical foundation. Limited regulatory capacity. Strong civil society engagement.",
+      "updated": "2026-01-05"
+    },
+    {
+      "id": "liberia",
+      "name": "Liberia",
+      "region": "West Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Carbon regulatory framework under development. Strong forestry potential. Norway partnership under REDD+ providing technical support. Institutional capacity building ongoing.",
+      "updated": "2026-01-05"
+    },
+    {
+      "id": "guinea",
+      "name": "Guinea",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "Military government since 2021. Carbon market engagement minimal. Strong forest potential in Ziama and Fouta Djallon. Political transition needed before meaningful framework development.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "mali",
+      "name": "Mali",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Military government. Sahel conflict severely limits implementation capacity. FMNR carbon projects viable in principle but sovereign framework impossible in current context.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "burkina-faso",
+      "name": "Burkina Faso",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Military government since 2022. Jihadist insurgency across much of the country. Tond Tenga project predates current crisis. No meaningful policy framework possible currently.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "niger",
+      "name": "Niger",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Military government since 2023. ECOWAS sanctions. Carbon framework development suspended. FMNR potential significant but sovereign context prohibitive.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "chad",
+      "name": "Chad",
+      "region": "Central Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Transitional military government. Chronic instability. Lake Chad basin carbon potential recognised internationally but implementation impossible in current context.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "central-african-republic",
+      "name": "Central African Republic",
+      "region": "Central Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Ongoing armed conflict. Russian Wagner group presence complicates international engagement. Dzanga-Sangha project isolated from national framework. Enormous forest carbon potential unreachable.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "south-sudan",
+      "name": "South Sudan",
+      "region": "East Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Fragile peace. Sudd wetland represents one of Africa's largest untapped carbon opportunities. No sovereign framework possible until political stability achieved.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "somalia",
+      "name": "Somalia",
+      "region": "East Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Federal government fragile. Al-Shabaab controls significant territory. Carbon framework development not viable. Puntland and Somaliland show more potential as sub-national actors.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "libya",
+      "name": "Libya",
+      "region": "North Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Divided government. No unified authority to negotiate or implement bilateral agreements. Oil state with minimal carbon market interest.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "sudan",
+      "name": "Sudan",
+      "region": "North Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Civil war since April 2023. Humanitarian catastrophe. No policy framework possible. Gum arabic belt carbon potential remains theoretical until conflict resolved.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "tunisia",
+      "name": "Tunisia",
+      "region": "North Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Carbon market framework in early stages. Presidential consolidation of power creates governance uncertainty. EU adjacency drives some alignment. Green belt project in development.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "region": "North Africa",
+      "status": "no-framework",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Hydrocarbon-dependent state. Limited engagement with international carbon markets. Great Green Wall nominal participation. Bilateral ITMO not on policy agenda.",
+      "updated": "2025-12-15"
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "region": "North Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "COP27 host built political capital but domestic framework weak. Voluntary carbon market activity growing. Nature-based solutions limited by geography. Renewable energy ITMO more viable.",
+      "updated": "2026-01-20"
+    },
+    {
+      "id": "eritrea",
+      "name": "Eritrea",
+      "region": "East Africa",
+      "status": "no-framework",
+      "political_risk": "very-high",
+      "itmo_buyer": null,
+      "notes": "Isolated authoritarian state. No international carbon market engagement. Dahlak mangrove potential unreachable in current context.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "djibouti",
+      "name": "Djibouti",
+      "region": "East Africa",
+      "status": "no-framework",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Small state. Strategic port location dominates policy. Limited carbon market engagement. Mangrove and marine potential recognised but no framework.",
+      "updated": "2025-12-15"
+    },
+    {
+      "id": "seychelles",
+      "name": "Seychelles",
+      "region": "Indian Ocean",
+      "status": "operational",
+      "political_risk": "low",
+      "itmo_buyer": "Multiple",
+      "notes": "Blue bond pioneer. Article 6.2 framework operational for marine and coastal carbon. Small land area but significant blue carbon potential. Strong international partnerships.",
+      "updated": "2026-03-01"
+    },
+    {
+      "id": "mauritius",
+      "name": "Mauritius",
+      "region": "Indian Ocean",
+      "status": "framework-only",
+      "political_risk": "low",
+      "itmo_buyer": null,
+      "notes": "Framework under development. Small island state. Blue carbon focus. Strong institutions but limited forest carbon opportunity.",
+      "updated": "2026-01-05"
+    },
+    {
+      "id": "comoros",
+      "name": "Comoros",
+      "region": "Indian Ocean",
+      "status": "no-framework",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "Political instability. Limited institutional capacity. Forest and blue carbon potential on Anjouan. No bilateral framework.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "sao-tome-principe",
+      "name": "Sao Tome and Principe",
+      "region": "Central Africa",
+      "status": "framework-only",
+      "political_risk": "low",
+      "itmo_buyer": null,
+      "notes": "Small island state. Framework in early stages. Obô rainforest carbon potential significant relative to country size. Strong governance but limited capacity.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "cabo-verde",
+      "name": "Cabo Verde",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "low",
+      "itmo_buyer": null,
+      "notes": "Strong governance. Limited land carbon opportunity. Blue carbon and ocean-based solutions more viable. No formal ITMO framework yet despite good institutional base.",
+      "updated": "2025-12-15"
+    },
+    {
+      "id": "guinea-bissau",
+      "name": "Guinea-Bissau",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "Chronic political instability. Bijagos blue carbon significant. Limited institutional capacity to develop sovereign framework.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "gambia",
+      "name": "Gambia",
+      "region": "West Africa",
+      "status": "framework-only",
+      "political_risk": "low",
+      "itmo_buyer": null,
+      "notes": "Small state. Post-Jammeh recovery continues. Framework under development. Mangrove carbon most viable pathway given geography.",
+      "updated": "2026-01-05"
+    },
+    {
+      "id": "togo",
+      "name": "Togo",
+      "region": "West Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Carbon market framework announced. Limited forest base. Fazao-Malfakassa project viable. Institutional capacity developing.",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "benin",
+      "name": "Benin",
+      "region": "West Africa",
+      "status": "in-negotiation",
+      "political_risk": "low",
+      "itmo_buyer": "Switzerland",
+      "notes": "Negotiations with Switzerland progressing. Pendjari biosphere strong candidate for ITMO. Good governance improving. W-Arly-Pendjari transboundary complex creates regional opportunity.",
+      "updated": "2026-02-01"
+    },
+    {
+      "id": "equatorial-guinea",
+      "name": "Equatorial Guinea",
+      "region": "Central Africa",
+      "status": "no-framework",
+      "political_risk": "high",
+      "itmo_buyer": null,
+      "notes": "Oil-dependent autocracy. Limited carbon market engagement despite significant forest cover. Monte Alen project isolated from national policy.",
+      "updated": "2025-12-01"
+    },
+    {
+      "id": "angola",
+      "name": "Angola",
+      "region": "Southern Africa",
+      "status": "framework-only",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Oil transition creating carbon market interest. Framework in early stages. Okavango headwaters carbon significant. Institutional capacity building underway.",
+      "updated": "2026-01-20"
+    },
+    {
+      "id": "eswatini",
+      "name": "Eswatini",
+      "region": "Southern Africa",
+      "status": "no-framework",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Absolute monarchy. Limited carbon market engagement. Lubombo conservancy project in development. No bilateral ITMO framework.",
+      "updated": "2025-12-15"
+    },
+    {
+      "id": "lesotho",
+      "name": "Lesotho",
+      "region": "Southern Africa",
+      "status": "no-framework",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Highland watershed carbon potential. Limited institutional capacity. Political fragility a recurring concern. No bilateral framework.",
+      "updated": "2025-12-15"
+    },
+    {
+      "id": "mauritania",
+      "name": "Mauritania",
+      "region": "West Africa",
+      "status": "no-framework",
+      "political_risk": "medium",
+      "itmo_buyer": null,
+      "notes": "Great Green Wall participant. Limited carbon market engagement. Sahel reforestation potential. No bilateral ITMO framework despite NDC ambition.",
+      "updated": "2025-12-15"
+    }
+  ]
+}

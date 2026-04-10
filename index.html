@@ -10,8 +10,7 @@
 
   :root {
     --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
-    --border: #e8e8e5; --green: #1a4a2e;
-    --green-pale: #e8f5e0;
+    --border: #e8e8e5; --green: #1a4a2e; --green-pale: #e8f5e0;
     --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
     --vol-bg: #eaf3de;   --vol-text: #27500a;
     --comp-bg: #e6f1fb;  --comp-text: #0c447c;
@@ -19,13 +18,18 @@
     --blend-bg: #f3eefb; --blend-text: #5b2d8e;
     --phil-bg: #fde8f0;  --phil-text: #8e1a4a;
     --emerg-bg: #e8f7fb; --emerg-text: #0c6a7c;
+    --op-bg: #e8f5e0;    --op-text: #1a4a2e;
+    --ag-bg: #d4f0ee;    --ag-text: #0c5c58;
+    --neg-bg: #fef3cd;   --neg-text: #7a5000;
+    --fw-bg: #e8eef5;    --fw-text: #3a4f6a;
+    --nf-bg: #f0f0ee;    --nf-text: #6a6a68;
+    --risk-low: #2d9b5a; --risk-med: #e6a020; --risk-high: #d4542a; --risk-vhigh: #8b1a1a;
   }
 
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
   a { color: inherit; text-decoration: none; }
 
-  /* NAV */
   nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
   .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
   .logo-mark { width: 30px; height: 30px; background: var(--green); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -37,11 +41,9 @@
   .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
 
-  /* VIEWS */
   .view { display: none; }
   .view.active { display: block; }
 
-  /* HERO */
   .hero { padding: 72px 40px 56px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .hero-eye { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 18px; }
   .hero-h { font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--text); max-width: 640px; margin-bottom: 18px; }
@@ -52,21 +54,18 @@
   .btn-secondary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
 
-  /* STATS */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
   .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
-  /* SECTIONS */
   .section { padding: 32px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .sec-hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
   .sec-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
   .sec-all { font-size: 12px; color: var(--green); cursor: pointer; transition: opacity 0.15s; }
   .sec-all:hover { opacity: 0.7; }
 
-  /* PROJECT CARDS */
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .proj-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .proj-card:hover { border-color: var(--text-dim); }
@@ -74,20 +73,17 @@
   .proj-country { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
   .proj-method { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--vol-bg); color: var(--vol-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
   .proj-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .proj-status { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .status-dot.issuing     { background: #2d9b5a; }
+  .status-dot.validation  { background: #e6a020; }
+  .status-dot.registered  { background: #4a90d9; }
+  .status-dot.development { background: var(--text-dim); }
+  .status-label { font-size: 11px; color: var(--text-dim); }
   .proj-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
   .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
   .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
 
-  /* STATUS DOTS */
-  .proj-status { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-  .status-dot.issuing      { background: #2d9b5a; }
-  .status-dot.validation   { background: #e6a020; }
-  .status-dot.registered   { background: #4a90d9; }
-  .status-dot.development  { background: var(--text-dim); }
-  .status-label { font-size: 11px; color: var(--text-dim); }
-
-  /* INTELLIGENCE */
   .intel-list { display: flex; flex-direction: column; }
   .intel-item { display: grid; grid-template-columns: 110px 1fr 90px; gap: 16px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
   .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
@@ -96,7 +92,6 @@
   .intel-item:hover .intel-hl { color: var(--green); }
   .intel-age { font-size: 11px; color: var(--text-dim); text-align: right; padding-top: 2px; white-space: nowrap; }
 
-  /* INSTRUMENT CARDS */
   .inst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .inst-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .inst-card:hover { border-color: var(--text-dim); }
@@ -110,28 +105,62 @@
   .b-philanthropic { background: var(--phil-bg);  color: var(--phil-text); }
   .b-emerging      { background: var(--emerg-bg); color: var(--emerg-text); }
 
-  /* PAGE HEADER */
   .page-header { padding: 40px 40px 0; max-width: 1100px; margin: 0 auto; }
   .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
   .page-back:hover { color: var(--text); }
   .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
   .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
 
-  /* FILTER TABS */
   .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
   .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
   .cat-tab:hover { border-color: var(--text-dim); color: var(--text); }
   .cat-tab.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
 
-  /* PROJECTS FULL PAGE */
   .proj-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 28px 40px; max-width: 1100px; margin: 0 auto; }
   .proj-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
 
-  /* INSTRUMENT CATEGORY GROUPS */
   .cat-group { padding: 28px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .cat-group:last-child { border-bottom: none; }
   .cat-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 16px; }
   .cat-group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+  /* POLICY TRACKER */
+  .policy-summary { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .policy-stat { padding: 20px 40px; border-right: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
+  .policy-stat:last-child { border-right: none; }
+  .policy-stat:hover { background: var(--bg2); }
+  .policy-stat.active { background: var(--bg2); }
+  .policy-stat-n { font-size: 24px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 4px; }
+  .policy-stat-l { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+  .n-op  { color: var(--op-text); }
+  .n-ag  { color: var(--ag-text); }
+  .n-neg { color: var(--neg-text); }
+  .n-fw  { color: var(--fw-text); }
+  .n-nf  { color: var(--text-dim); }
+
+  .policy-grid { padding: 28px 40px; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+  .policy-row { display: grid; grid-template-columns: 180px 140px 120px 1fr; gap: 16px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s; }
+  .policy-row:last-child { border-bottom: none; }
+  .policy-row:hover { background: var(--bg2); margin: 0 -40px; padding: 14px 40px; }
+  .policy-name { font-size: 14px; font-weight: 600; color: var(--text); }
+  .policy-region { font-size: 11px; color: var(--text-dim); padding-top: 2px; }
+
+  .status-pill { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: inline-block; white-space: nowrap; }
+  .s-operational     { background: var(--op-bg);  color: var(--op-text); }
+  .s-agreement-signed { background: var(--ag-bg); color: var(--ag-text); }
+  .s-in-negotiation  { background: var(--neg-bg); color: var(--neg-text); }
+  .s-framework-only  { background: var(--fw-bg);  color: var(--fw-text); }
+  .s-no-framework    { background: var(--nf-bg);  color: var(--nf-text); }
+
+  .risk-pill { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: inline-block; }
+  .r-low      { background: #e8f5e0; color: var(--risk-low); }
+  .r-medium   { background: #fef3cd; color: var(--risk-med); }
+  .r-high     { background: #fde8e0; color: var(--risk-high); }
+  .r-very-high { background: #f5e0e0; color: var(--risk-vhigh); }
+
+  .policy-notes-preview { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+  .policy-disclaimer { font-size: 11px; color: var(--text-dim); padding: 16px 40px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); font-style: italic; }
 
   /* DETAIL PANEL */
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
@@ -141,7 +170,7 @@
   .detail-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 1; }
   .detail-close { font-size: 22px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
   .detail-close:hover { color: var(--text); }
-  .detail-badge { margin-bottom: 12px; }
+  .detail-badge { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
   .detail-name { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
   .detail-body { padding: 24px 28px; }
   .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px; }
@@ -166,15 +195,17 @@
     .nav-links { display: none; }
     .hero { padding: 40px 20px 32px; }
     .hero-h { font-size: 26px; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    .stat { padding: 18px 20px; }
-    .stat:nth-child(2) { border-right: none; }
-    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count { padding-left: 20px; padding-right: 20px; }
+    .stats, .policy-summary { grid-template-columns: repeat(2, 1fr); }
+    .stat, .policy-stat { padding: 18px 20px; }
+    .stat:nth-child(2), .policy-stat:nth-child(2) { border-right: none; }
+    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count, .policy-grid { padding-left: 20px; padding-right: 20px; }
     .proj-grid, .inst-grid, .cat-group-grid, .proj-full-grid { grid-template-columns: 1fr; }
     .intel-item { grid-template-columns: 80px 1fr; }
     .intel-age { display: none; }
     footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
     .detail-panel { width: 100%; }
+    .policy-row { grid-template-columns: 1fr 1fr; }
+    .policy-notes-preview { display: none; }
   }
   @media (max-width: 480px) {
     .stats { grid-template-columns: 1fr 1fr; }
@@ -202,7 +233,7 @@
   <div class="nav-links">
     <span class="nav-link" onclick="showView('projects')">Projects</span>
     <span class="nav-link" onclick="showView('instruments')">Funding instruments</span>
-    <span class="nav-link">Policy tracker</span>
+    <span class="nav-link" onclick="showView('policy')">Policy tracker</span>
     <span class="nav-link" onclick="showView('home')">Intelligence</span>
     <button class="nav-cta">Subscribe to brief</button>
   </div>
@@ -220,7 +251,7 @@
     </div>
   </div>
   <div class="stats">
-    <div class="stat"><div class="stat-n" id="stat-projects">147</div><div class="stat-l">Active projects tracked</div></div>
+    <div class="stat"><div class="stat-n" id="stat-projects">148</div><div class="stat-l">Active projects tracked</div></div>
     <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
     <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
     <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
@@ -256,7 +287,7 @@
   </footer>
 </div>
 
-<!-- PROJECTS PAGE -->
+<!-- PROJECTS -->
 <div id="view-projects" class="view">
   <div class="page-header">
     <div class="page-back" onclick="showView('home')">- Back</div>
@@ -275,15 +306,11 @@
   <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links">
-      <span class="footer-link">About</span>
-      <span class="footer-link">Subscribe</span>
-      <span class="footer-link">Contact</span>
-    </div>
+    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
 
-<!-- INSTRUMENTS PAGE -->
+<!-- INSTRUMENTS -->
 <div id="view-instruments" class="view">
   <div class="page-header">
     <div class="page-back" onclick="showView('home')">- Back</div>
@@ -302,11 +329,44 @@
   <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
-    <div class="footer-links">
-      <span class="footer-link">About</span>
-      <span class="footer-link">Subscribe</span>
-      <span class="footer-link">Contact</span>
+    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+  </footer>
+</div>
+
+<!-- POLICY TRACKER -->
+<div id="view-policy" class="view">
+  <div class="page-header">
+    <div class="page-back" onclick="showView('home')">- Back</div>
+    <div class="page-title">Policy tracker</div>
+    <div class="page-sub">Article 6.2 readiness across all 54 African nations - status, political risk, and what is actually happening on the ground.</div>
+  </div>
+  <div class="policy-summary" id="policy-summary">
+    <div class="policy-stat" onclick="filterPolicy('all',this)">
+      <div class="policy-stat-n" id="ps-all">-</div>
+      <div class="policy-stat-l">All countries</div>
     </div>
+    <div class="policy-stat" onclick="filterPolicy('operational',this)">
+      <div class="policy-stat-n n-op" id="ps-op">-</div>
+      <div class="policy-stat-l">Operational</div>
+    </div>
+    <div class="policy-stat" onclick="filterPolicy('agreement-signed',this)">
+      <div class="policy-stat-n n-ag" id="ps-ag">-</div>
+      <div class="policy-stat-l">Agreement signed</div>
+    </div>
+    <div class="policy-stat" onclick="filterPolicy('in-negotiation',this)">
+      <div class="policy-stat-n n-neg" id="ps-neg">-</div>
+      <div class="policy-stat-l">In negotiation</div>
+    </div>
+    <div class="policy-stat" onclick="filterPolicy('no-framework',this)">
+      <div class="policy-stat-n n-nf" id="ps-nf">-</div>
+      <div class="policy-stat-l">No framework</div>
+    </div>
+  </div>
+  <div class="policy-grid" id="policy-grid"><div class="loading">Loading...</div></div>
+  <div class="policy-disclaimer" id="policy-disclaimer"></div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
 
@@ -324,39 +384,69 @@
 </div>
 
 <script>
-  let allProjects    = [];
-  let allInstruments = [];
-  let currentProjFilter = 'all';
-  let currentInstFilter = 'all';
+  let allProjects = [], allInstruments = [], allPolicy = [];
+  let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all';
 
-  const instCatLabel = {
-    voluntary:'Voluntary market', compliance:'Compliance market',
-    sovereign:'Sovereign', blended:'Blended finance',
-    philanthropic:'Philanthropic', emerging:'Emerging'
-  };
+  const instCatLabel = { voluntary:'Voluntary market', compliance:'Compliance market', sovereign:'Sovereign', blended:'Blended finance', philanthropic:'Philanthropic', emerging:'Emerging' };
   const instCatOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
 
-  // VIEWS
+  const statusLabel = { 'operational':'Operational', 'agreement-signed':'Agreement signed', 'in-negotiation':'In negotiation', 'framework-only':'Framework only', 'no-framework':'No framework' };
+  const riskLabel   = { 'low':'Low risk', 'medium':'Medium risk', 'high':'High risk', 'very-high':'Very high risk' };
+
   function showView(name) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-'+name).classList.add('active');
-    window.scrollTo(0,0);
-    closeDetail();
+    window.scrollTo(0,0); closeDetail();
   }
 
-  // DETAIL PANEL
   function closeDetail() {
     document.getElementById('overlay').classList.remove('open');
     document.getElementById('detail-panel').classList.remove('open');
     document.body.style.overflow = '';
   }
 
+  function openDetail(name, badgeHTML, bodyHTML) {
+    document.getElementById('detail-name').textContent = name;
+    document.getElementById('detail-badge').innerHTML = badgeHTML;
+    document.getElementById('detail-body').innerHTML = bodyHTML;
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function statusDotClass(s) {
+    if (!s) return 'development';
+    const sl = s.toLowerCase();
+    if (sl.includes('issuing')) return 'issuing';
+    if (sl.includes('validation')) return 'validation';
+    if (sl.includes('registered')) return 'registered';
+    return 'development';
+  }
+
+  function safeJSON(o) { return JSON.stringify(o).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+
+  function ageLabel(d) {
+    const days = Math.floor((new Date()-new Date(d))/86400000);
+    if(days===0) return 'Today'; if(days===1) return 'Yesterday';
+    if(days<7) return days+' days ago'; if(days<14) return '1 week ago';
+    if(days<30) return Math.floor(days/7)+' weeks ago';
+    return Math.floor(days/30)+' months ago';
+  }
+
+  // PROJECT CARDS
+  function projCardHTML(p) {
+    const dc = statusDotClass(p.status);
+    return '<div class="proj-card" onclick=\'openProjectDetail('+safeJSON(p)+')\'>' +
+      '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
+      '<div class="proj-name">'+p.name+'</div>'+
+      '<div class="proj-status"><span class="status-dot '+dc+'"></span><span class="status-label">'+p.status+'</span></div>'+
+      '<div class="proj-meta">'+p.credits+' - '+p.area+'</div>'+
+      '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div></div>';
+  }
+
   function openProjectDetail(p) {
-    const statusClass = statusDotClass(p.status);
-    document.getElementById('detail-name').textContent = p.name;
-    document.getElementById('detail-badge').innerHTML =
-      '<span class="proj-method">'+p.methodology+'</span>';
-    document.getElementById('detail-body').innerHTML =
+    openDetail(p.name,
+      '<span class="proj-method">'+p.methodology+'</span>',
       '<div class="detail-section-title">Project details</div>'+
       '<div class="detail-meta-row"><span class="detail-meta-label">Country</span><span class="detail-meta-value">'+p.country+'</span></div>'+
       '<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+p.region+'</span></div>'+
@@ -365,147 +455,134 @@
       '<div class="detail-meta-row"><span class="detail-meta-label">Certification</span><span class="detail-meta-value">'+p.certification+'</span></div>'+
       '<div class="detail-meta-row"><span class="detail-meta-label">Status</span><span class="detail-meta-value">'+p.status+'</span></div>'+
       '<div class="detail-section-title" style="margin-top:24px">Tags</div>'+
-      '<div class="detail-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>';
-    document.getElementById('overlay').classList.add('open');
-    document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
+      '<div class="detail-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>'
+    );
+  }
+
+  // INSTRUMENT CARDS
+  function instCardHTML(i) {
+    return '<div class="inst-card" onclick=\'openInstDetail('+safeJSON(i)+')\'>' +
+      '<div class="inst-name">'+i.name+'</div>'+
+      '<div class="inst-desc">'+i.description+'</div>'+
+      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span></div>';
   }
 
   function openInstDetail(i) {
-    document.getElementById('detail-name').textContent = i.name;
-    document.getElementById('detail-badge').innerHTML =
-      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>';
-    document.getElementById('detail-body').innerHTML =
-      '<div class="detail-desc">'+i.description+'</div>';
-    document.getElementById('overlay').classList.add('open');
-    document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
+    openDetail(i.name,
+      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>',
+      '<div class="detail-desc">'+i.description+'</div>'
+    );
   }
 
-  // STATUS
-  function statusDotClass(status) {
-    if (!status) return 'development';
-    const s = status.toLowerCase();
-    if (s.includes('issuing')) return 'issuing';
-    if (s.includes('validation')) return 'validation';
-    if (s.includes('registered')) return 'registered';
-    return 'development';
+  // POLICY ROWS
+  function policyRowHTML(c) {
+    const notes = c.notes.length > 120 ? c.notes.substring(0,120)+'...' : c.notes;
+    return '<div class="policy-row" onclick=\'openPolicyDetail('+safeJSON(c)+')\'>' +
+      '<div><div class="policy-name">'+c.name+'</div><div class="policy-region">'+c.region+'</div></div>'+
+      '<span class="status-pill s-'+c.status+'">'+(statusLabel[c.status]||c.status)+'</span>'+
+      '<span class="risk-pill r-'+c.political_risk+'">'+(riskLabel[c.political_risk]||c.political_risk)+'</span>'+
+      '<div class="policy-notes-preview">'+notes+'</div></div>';
   }
 
-  // PROJECT CARD HTML
-  function projCardHTML(p) {
-    const safe = JSON.stringify(p).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    const dotClass = statusDotClass(p.status);
-    return '<div class="proj-card" onclick=\'openProjectDetail('+safe+')\'>' +
-      '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
-      '<div class="proj-name">'+p.name+'</div>'+
-      '<div class="proj-status"><span class="status-dot '+dotClass+'"></span><span class="status-label">'+p.status+'</span></div>'+
-      '<div class="proj-meta">'+p.credits+' - '+p.area+'</div>'+
-      '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>'+
-      '</div>';
+  function openPolicyDetail(c) {
+    const buyer = c.itmo_buyer ? c.itmo_buyer : 'None confirmed';
+    openDetail(c.name,
+      '<span class="status-pill s-'+c.status+'">'+(statusLabel[c.status]||c.status)+'</span>' +
+      '<span class="risk-pill r-'+c.political_risk+'">'+(riskLabel[c.political_risk]||c.political_risk)+'</span>',
+      '<div class="detail-desc">'+c.notes+'</div>'+
+      '<div class="detail-section-title">Key facts</div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+c.region+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Article 6.2 status</span><span class="detail-meta-value">'+(statusLabel[c.status]||c.status)+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Political risk</span><span class="detail-meta-value">'+(riskLabel[c.political_risk]||c.political_risk)+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">ITMO buyer</span><span class="detail-meta-value">'+buyer+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Last updated</span><span class="detail-meta-value">'+c.updated+'</span></div>'
+    );
   }
 
-  // INSTRUMENT CARD HTML
-  function instCardHTML(i) {
-    const safe = JSON.stringify(i).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    return '<div class="inst-card" onclick=\'openInstDetail('+safe+')\'>' +
-      '<div class="inst-name">'+i.name+'</div>'+
-      '<div class="inst-desc">'+i.description+'</div>'+
-      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>'+
-      '</div>';
-  }
-
-  // FILTER PROJECTS
+  // FILTERS
   function filterProj(f, btn) {
     currentProjFilter = f;
     document.querySelectorAll('#proj-tabs .cat-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    renderProjectsFull();
+    btn.classList.add('active'); renderProjectsFull();
   }
 
   function renderProjectsFull() {
     let list = allProjects;
-    if (currentProjFilter === 'arr')        list = list.filter(p => p.methodology.toLowerCase().includes('arr'));
-    else if (currentProjFilter === 'blue-carbon') list = list.filter(p => p.methodology.toLowerCase().includes('blue'));
-    else if (currentProjFilter === 'redd')  list = list.filter(p => p.methodology.toLowerCase().includes('redd'));
-    else if (currentProjFilter === 'issuing')    list = list.filter(p => p.status && p.status.toLowerCase().includes('issuing'));
-    else if (currentProjFilter === 'validation') list = list.filter(p => p.status && p.status.toLowerCase().includes('validation'));
-
-    document.getElementById('proj-count').textContent = list.length + ' project' + (list.length !== 1 ? 's' : '');
-    document.getElementById('projects-full').innerHTML = list.length
-      ? list.map(projCardHTML).join('')
-      : '<div class="empty">No projects match this filter.</div>';
+    if (currentProjFilter==='arr') list = list.filter(p=>p.methodology.toLowerCase().includes('arr'));
+    else if (currentProjFilter==='blue-carbon') list = list.filter(p=>p.methodology.toLowerCase().includes('blue'));
+    else if (currentProjFilter==='redd') list = list.filter(p=>p.methodology.toLowerCase().includes('redd'));
+    else if (currentProjFilter==='issuing') list = list.filter(p=>p.status&&p.status.toLowerCase().includes('issuing'));
+    else if (currentProjFilter==='validation') list = list.filter(p=>p.status&&p.status.toLowerCase().includes('validation'));
+    document.getElementById('proj-count').textContent = list.length+' project'+(list.length!==1?'s':'');
+    document.getElementById('projects-full').innerHTML = list.length ? list.map(projCardHTML).join('') : '<div class="empty">No projects match this filter.</div>';
   }
 
-  // FILTER INSTRUMENTS
   function filterInst(f, btn) {
     currentInstFilter = f;
-    document.querySelectorAll('#view-instruments .cat-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    renderInstFull();
+    document.querySelectorAll('#view-instruments .cat-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active'); renderInstFull();
   }
 
   function renderInstFull() {
-    const list = currentInstFilter === 'all' ? allInstruments : allInstruments.filter(i => i.category === currentInstFilter);
+    const list = currentInstFilter==='all' ? allInstruments : allInstruments.filter(i=>i.category===currentInstFilter);
     const container = document.getElementById('instruments-full');
-    if (currentInstFilter === 'all') {
-      const grouped = {};
-      instCatOrder.forEach(c => grouped[c] = []);
-      list.forEach(i => { if(grouped[i.category]) grouped[i.category].push(i); });
-      container.innerHTML = instCatOrder.filter(c => grouped[c].length)
-        .map(c => '<div class="cat-group"><div class="cat-group-title">'+instCatLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(instCardHTML).join('')+'</div></div>')
-        .join('');
+    if (currentInstFilter==='all') {
+      const grouped = {}; instCatOrder.forEach(c=>grouped[c]=[]);
+      list.forEach(i=>{if(grouped[i.category])grouped[i.category].push(i);});
+      container.innerHTML = instCatOrder.filter(c=>grouped[c].length)
+        .map(c=>'<div class="cat-group"><div class="cat-group-title">'+instCatLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(instCardHTML).join('')+'</div></div>').join('');
     } else {
       container.innerHTML = '<div class="cat-group"><div class="cat-group-title">'+instCatLabel[currentInstFilter]+'</div><div class="cat-group-grid">'+list.map(instCardHTML).join('')+'</div></div>';
     }
   }
 
-  // AGE LABEL
-  function ageLabel(d) {
-    const days = Math.floor((new Date()-new Date(d))/86400000);
-    if(days===0) return 'Today';
-    if(days===1) return 'Yesterday';
-    if(days<7)   return days+' days ago';
-    if(days<14)  return '1 week ago';
-    if(days<30)  return Math.floor(days/7)+' weeks ago';
-    return Math.floor(days/30)+' months ago';
+  function filterPolicy(f, btn) {
+    currentPolicyFilter = f;
+    document.querySelectorAll('.policy-stat').forEach(s=>s.classList.remove('active'));
+    btn.classList.add('active'); renderPolicyGrid();
+  }
+
+  function renderPolicyGrid() {
+    let list = allPolicy;
+    if (currentPolicyFilter !== 'all') list = list.filter(c=>c.status===currentPolicyFilter);
+    const grid = document.getElementById('policy-grid');
+    grid.innerHTML = list.length ? list.map(policyRowHTML).join('') : '<div class="empty">No countries match this filter.</div>';
   }
 
   // LOAD
   async function load() {
     try {
-      const [pR,iR,instR] = await Promise.all([
-        fetch('data/projects.json'),
-        fetch('data/intelligence.json'),
-        fetch('data/instruments.json')
+      const [pR,iR,instR,polR] = await Promise.all([
+        fetch('data/projects.json'), fetch('data/intelligence.json'),
+        fetch('data/instruments.json'), fetch('data/policy.json')
       ]);
-      const [pd,id,instd] = await Promise.all([pR.json(),iR.json(),instR.json()]);
+      const [pd,id,instd,pold] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json()]);
 
-      allProjects    = pd.projects;
-      allInstruments = instd.instruments;
+      allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
 
-      document.getElementById('stat-projects').textContent    = allProjects.length;
+      document.getElementById('stat-projects').textContent = allProjects.length;
       document.getElementById('stat-instruments').textContent = allInstruments.length;
 
       // home previews
-      document.getElementById('projects-preview').innerHTML =
-        allProjects.filter(p=>p.featured).map(projCardHTML).join('');
+      document.getElementById('projects-preview').innerHTML = allProjects.filter(p=>p.featured).map(projCardHTML).join('');
+      document.getElementById('intelligence-list').innerHTML = id.intelligence.filter(i=>i.status==='approved').map(i=>
+        '<div class="intel-item"><span class="intel-dom">'+i.domain+'</span><span class="intel-hl">'+i.headline+'</span><span class="intel-age">'+ageLabel(i.date)+'</span></div>').join('');
+      document.getElementById('instruments-preview').innerHTML = allInstruments.filter(i=>i.featured).map(instCardHTML).join('');
 
-      document.getElementById('intelligence-list').innerHTML =
-        id.intelligence.filter(i=>i.status==='approved').map(i=>
-          '<div class="intel-item">'+
-          '<span class="intel-dom">'+i.domain+'</span>'+
-          '<span class="intel-hl">'+i.headline+'</span>'+
-          '<span class="intel-age">'+ageLabel(i.date)+'</span>'+
-          '</div>'
-        ).join('');
+      // policy summary counts
+      const counts = {operational:0,'agreement-signed':0,'in-negotiation':0,'framework-only':0,'no-framework':0};
+      allPolicy.forEach(c=>{if(counts[c.status]!==undefined)counts[c.status]++;});
+      document.getElementById('ps-all').textContent  = allPolicy.length;
+      document.getElementById('ps-op').textContent   = counts['operational'];
+      document.getElementById('ps-ag').textContent   = counts['agreement-signed'];
+      document.getElementById('ps-neg').textContent  = counts['in-negotiation'];
+      document.getElementById('ps-nf').textContent   = counts['no-framework']+counts['framework-only'];
 
-      document.getElementById('instruments-preview').innerHTML =
-        allInstruments.filter(i=>i.featured).map(instCardHTML).join('');
+      // disclaimer
+      document.getElementById('policy-disclaimer').textContent = 'Data last updated '+pold.updated+'. '+pold.note;
 
-      // full pages
-      renderProjectsFull();
-      renderInstFull();
+      renderProjectsFull(); renderInstFull(); renderPolicyGrid();
+      document.querySelector('.policy-stat').classList.add('active');
 
     } catch(e) { console.error(e); }
   }
