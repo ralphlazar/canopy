@@ -11,7 +11,7 @@
   :root {
     --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
     --border: #e8e8e5; --green: #1a4a2e;
-    --green-pale: #e8f5e0; --green-text: #27500a;
+    --green-pale: #e8f5e0;
     --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
     --vol-bg: #eaf3de;   --vol-text: #27500a;
     --comp-bg: #e6f1fb;  --comp-text: #0c447c;
@@ -25,6 +25,7 @@
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
   a { color: inherit; text-decoration: none; }
 
+  /* NAV */
   nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
   .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
   .logo-mark { width: 30px; height: 30px; background: var(--green); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -36,9 +37,11 @@
   .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
 
+  /* VIEWS */
   .view { display: none; }
   .view.active { display: block; }
 
+  /* HERO */
   .hero { padding: 72px 40px 56px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .hero-eye { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 18px; }
   .hero-h { font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--text); max-width: 640px; margin-bottom: 18px; }
@@ -49,18 +52,21 @@
   .btn-secondary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
 
+  /* STATS */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
   .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
+  /* SECTIONS */
   .section { padding: 32px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .sec-hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
   .sec-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
   .sec-all { font-size: 12px; color: var(--green); cursor: pointer; transition: opacity 0.15s; }
   .sec-all:hover { opacity: 0.7; }
 
+  /* PROJECT CARDS */
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .proj-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .proj-card:hover { border-color: var(--text-dim); }
@@ -72,6 +78,16 @@
   .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
   .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
 
+  /* STATUS DOTS */
+  .proj-status { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .status-dot.issuing      { background: #2d9b5a; }
+  .status-dot.validation   { background: #e6a020; }
+  .status-dot.registered   { background: #4a90d9; }
+  .status-dot.development  { background: var(--text-dim); }
+  .status-label { font-size: 11px; color: var(--text-dim); }
+
+  /* INTELLIGENCE */
   .intel-list { display: flex; flex-direction: column; }
   .intel-item { display: grid; grid-template-columns: 110px 1fr 90px; gap: 16px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
   .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
@@ -80,6 +96,7 @@
   .intel-item:hover .intel-hl { color: var(--green); }
   .intel-age { font-size: 11px; color: var(--text-dim); text-align: right; padding-top: 2px; white-space: nowrap; }
 
+  /* INSTRUMENT CARDS */
   .inst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .inst-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
   .inst-card:hover { border-color: var(--text-dim); }
@@ -93,35 +110,50 @@
   .b-philanthropic { background: var(--phil-bg);  color: var(--phil-text); }
   .b-emerging      { background: var(--emerg-bg); color: var(--emerg-text); }
 
+  /* PAGE HEADER */
   .page-header { padding: 40px 40px 0; max-width: 1100px; margin: 0 auto; }
   .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
   .page-back:hover { color: var(--text); }
   .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
   .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
 
+  /* FILTER TABS */
   .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
   .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
   .cat-tab:hover { border-color: var(--text-dim); color: var(--text); }
   .cat-tab.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
 
+  /* PROJECTS FULL PAGE */
+  .proj-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 28px 40px; max-width: 1100px; margin: 0 auto; }
+  .proj-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
+
+  /* INSTRUMENT CATEGORY GROUPS */
   .cat-group { padding: 28px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .cat-group:last-child { border-bottom: none; }
   .cat-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 16px; }
   .cat-group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
+  /* DETAIL PANEL */
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
   .overlay.open { opacity: 1; pointer-events: all; }
   .detail-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; background: var(--bg); z-index: 201; overflow-y: auto; transform: translateX(100%); transition: transform 0.25s ease; border-left: 1px solid var(--border); }
   .detail-panel.open { transform: translateX(0); }
   .detail-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 1; }
-  .detail-close { font-size: 20px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
+  .detail-close { font-size: 22px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
   .detail-close:hover { color: var(--text); }
   .detail-badge { margin-bottom: 12px; }
   .detail-name { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
   .detail-body { padding: 24px 28px; }
-  .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; }
+  .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px; }
+  .detail-meta-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .detail-meta-row:last-child { border-bottom: none; }
+  .detail-meta-label { font-size: 12px; color: var(--text-dim); }
+  .detail-meta-value { font-size: 12px; color: var(--text); font-weight: 500; text-align: right; }
+  .detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 20px; }
+  .detail-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 12px; margin-top: 24px; }
 
   .loading { color: var(--text-dim); font-size: 13px; padding: 20px 0; }
+  .empty { color: var(--text-dim); font-size: 13px; padding: 40px; text-align: center; }
 
   footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .footer-note { font-size: 12px; color: var(--text-dim); }
@@ -137,8 +169,8 @@
     .stats { grid-template-columns: repeat(2, 1fr); }
     .stat { padding: 18px 20px; }
     .stat:nth-child(2) { border-right: none; }
-    .section, .page-header, .cat-tabs, .cat-group { padding-left: 20px; padding-right: 20px; }
-    .proj-grid, .inst-grid, .cat-group-grid { grid-template-columns: 1fr; }
+    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count { padding-left: 20px; padding-right: 20px; }
+    .proj-grid, .inst-grid, .cat-group-grid, .proj-full-grid { grid-template-columns: 1fr; }
     .intel-item { grid-template-columns: 80px 1fr; }
     .intel-age { display: none; }
     footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
@@ -168,7 +200,7 @@
     </div>
   </div>
   <div class="nav-links">
-    <span class="nav-link" onclick="showView('home')">Projects</span>
+    <span class="nav-link" onclick="showView('projects')">Projects</span>
     <span class="nav-link" onclick="showView('instruments')">Funding instruments</span>
     <span class="nav-link">Policy tracker</span>
     <span class="nav-link" onclick="showView('home')">Intelligence</span>
@@ -183,12 +215,12 @@
     <h1 class="hero-h">The complete resource for conservation finance in Africa</h1>
     <p class="hero-sub">Every project. Every funding instrument. Every policy development. Tracked, organised, and explained for funders, developers, and policymakers working at the frontier of conservation finance.</p>
     <div class="hero-btns">
-      <button class="btn-primary">Explore projects</button>
+      <button class="btn-primary" onclick="showView('projects')">Explore projects</button>
       <button class="btn-secondary" onclick="showView('instruments')">Browse funding instruments</button>
     </div>
   </div>
   <div class="stats">
-    <div class="stat"><div class="stat-n">147</div><div class="stat-l">Active projects tracked</div></div>
+    <div class="stat"><div class="stat-n" id="stat-projects">147</div><div class="stat-l">Active projects tracked</div></div>
     <div class="stat"><div class="stat-n">54</div><div class="stat-l">Countries covered</div></div>
     <div class="stat"><div class="stat-n" id="stat-instruments">22</div><div class="stat-l">Funding instruments indexed</div></div>
     <div class="stat"><div class="stat-n">$4.2B</div><div class="stat-l">Capital flows tracked</div></div>
@@ -196,9 +228,9 @@
   <div class="section">
     <div class="sec-hdr">
       <span class="sec-title">Featured projects</span>
-      <span class="sec-all">View all 147 -></span>
+      <span class="sec-all" onclick="showView('projects')">View all -></span>
     </div>
-    <div class="proj-grid" id="projects-grid"><div class="loading">Loading...</div></div>
+    <div class="proj-grid" id="projects-preview"><div class="loading">Loading...</div></div>
   </div>
   <div class="section">
     <div class="sec-hdr">
@@ -210,7 +242,7 @@
   <div class="section">
     <div class="sec-hdr">
       <span class="sec-title">Funding instruments</span>
-      <span class="sec-all" id="instruments-all" onclick="showView('instruments')" style="cursor:pointer">View all 22 -></span>
+      <span class="sec-all" onclick="showView('instruments')">View all -></span>
     </div>
     <div class="inst-grid" id="instruments-preview"><div class="loading">Loading...</div></div>
   </div>
@@ -224,21 +256,48 @@
   </footer>
 </div>
 
+<!-- PROJECTS PAGE -->
+<div id="view-projects" class="view">
+  <div class="page-header">
+    <div class="page-back" onclick="showView('home')">- Back</div>
+    <div class="page-title">Projects</div>
+    <div class="page-sub">Conservation finance projects across Africa - tracked, verified, and explained.</div>
+  </div>
+  <div class="cat-tabs" id="proj-tabs">
+    <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
+    <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
+    <button class="cat-tab" onclick="filterProj('blue-carbon',this)">Blue carbon</button>
+    <button class="cat-tab" onclick="filterProj('redd',this)">REDD+</button>
+    <button class="cat-tab" onclick="filterProj('issuing',this)">Issuing</button>
+    <button class="cat-tab" onclick="filterProj('validation',this)">Under validation</button>
+  </div>
+  <div class="proj-count" id="proj-count"></div>
+  <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links">
+      <span class="footer-link">About</span>
+      <span class="footer-link">Subscribe</span>
+      <span class="footer-link">Contact</span>
+    </div>
+  </footer>
+</div>
+
 <!-- INSTRUMENTS PAGE -->
 <div id="view-instruments" class="view">
   <div class="page-header">
-    <div class="page-back" onclick="showView('home')">← Back</div>
+    <div class="page-back" onclick="showView('home')">- Back</div>
     <div class="page-title">Funding instruments</div>
     <div class="page-sub">Every instrument used to finance conservation in Africa - how each works, who uses it, and where it fits.</div>
   </div>
   <div class="cat-tabs">
-    <button class="cat-tab active" onclick="filterCat('all',this)">All</button>
-    <button class="cat-tab" onclick="filterCat('voluntary',this)">Voluntary market</button>
-    <button class="cat-tab" onclick="filterCat('compliance',this)">Compliance market</button>
-    <button class="cat-tab" onclick="filterCat('sovereign',this)">Sovereign</button>
-    <button class="cat-tab" onclick="filterCat('blended',this)">Blended finance</button>
-    <button class="cat-tab" onclick="filterCat('philanthropic',this)">Philanthropic</button>
-    <button class="cat-tab" onclick="filterCat('emerging',this)">Emerging</button>
+    <button class="cat-tab active" onclick="filterInst('all',this)">All</button>
+    <button class="cat-tab" onclick="filterInst('voluntary',this)">Voluntary market</button>
+    <button class="cat-tab" onclick="filterInst('compliance',this)">Compliance market</button>
+    <button class="cat-tab" onclick="filterInst('sovereign',this)">Sovereign</button>
+    <button class="cat-tab" onclick="filterInst('blended',this)">Blended finance</button>
+    <button class="cat-tab" onclick="filterInst('philanthropic',this)">Philanthropic</button>
+    <button class="cat-tab" onclick="filterInst('emerging',this)">Emerging</button>
   </div>
   <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
   <footer>
@@ -261,22 +320,23 @@
     </div>
     <button class="detail-close" onclick="closeDetail()">x</button>
   </div>
-  <div class="detail-body">
-    <div class="detail-desc" id="detail-desc"></div>
-  </div>
+  <div class="detail-body" id="detail-body"></div>
 </div>
 
 <script>
+  let allProjects    = [];
   let allInstruments = [];
-  let currentCat = 'all';
+  let currentProjFilter = 'all';
+  let currentInstFilter = 'all';
 
-  const catLabel = {
+  const instCatLabel = {
     voluntary:'Voluntary market', compliance:'Compliance market',
     sovereign:'Sovereign', blended:'Blended finance',
     philanthropic:'Philanthropic', emerging:'Emerging'
   };
-  const catOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
+  const instCatOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
 
+  // VIEWS
   function showView(name) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-'+name).classList.add('active');
@@ -284,53 +344,123 @@
     closeDetail();
   }
 
-  function filterCat(cat, btn) {
-    currentCat = cat;
-    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    renderFull();
-  }
-
-  function openDetail(inst) {
-    document.getElementById('detail-name').textContent = inst.name;
-    document.getElementById('detail-desc').textContent = inst.description;
-    document.getElementById('detail-badge').innerHTML =
-      '<span class="inst-badge b-'+inst.category+'">'+(catLabel[inst.category]||inst.category)+'</span>';
-    document.getElementById('overlay').classList.add('open');
-    document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
+  // DETAIL PANEL
   function closeDetail() {
     document.getElementById('overlay').classList.remove('open');
     document.getElementById('detail-panel').classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  function cardHTML(i) {
-    const safe = JSON.stringify(i).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    return '<div class="inst-card" onclick=\'openDetail('+safe+')\'>'+
-      '<div class="inst-name">'+i.name+'</div>'+
-      '<div class="inst-desc">'+i.description+'</div>'+
-      '<span class="inst-badge b-'+i.category+'">'+(catLabel[i.category]||i.category)+'</span>'+
+  function openProjectDetail(p) {
+    const statusClass = statusDotClass(p.status);
+    document.getElementById('detail-name').textContent = p.name;
+    document.getElementById('detail-badge').innerHTML =
+      '<span class="proj-method">'+p.methodology+'</span>';
+    document.getElementById('detail-body').innerHTML =
+      '<div class="detail-section-title">Project details</div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Country</span><span class="detail-meta-value">'+p.country+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+p.region+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Credits</span><span class="detail-meta-value">'+p.credits+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Area</span><span class="detail-meta-value">'+p.area+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Certification</span><span class="detail-meta-value">'+p.certification+'</span></div>'+
+      '<div class="detail-meta-row"><span class="detail-meta-label">Status</span><span class="detail-meta-value">'+p.status+'</span></div>'+
+      '<div class="detail-section-title" style="margin-top:24px">Tags</div>'+
+      '<div class="detail-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>';
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openInstDetail(i) {
+    document.getElementById('detail-name').textContent = i.name;
+    document.getElementById('detail-badge').innerHTML =
+      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>';
+    document.getElementById('detail-body').innerHTML =
+      '<div class="detail-desc">'+i.description+'</div>';
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // STATUS
+  function statusDotClass(status) {
+    if (!status) return 'development';
+    const s = status.toLowerCase();
+    if (s.includes('issuing')) return 'issuing';
+    if (s.includes('validation')) return 'validation';
+    if (s.includes('registered')) return 'registered';
+    return 'development';
+  }
+
+  // PROJECT CARD HTML
+  function projCardHTML(p) {
+    const safe = JSON.stringify(p).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    const dotClass = statusDotClass(p.status);
+    return '<div class="proj-card" onclick=\'openProjectDetail('+safe+')\'>' +
+      '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
+      '<div class="proj-name">'+p.name+'</div>'+
+      '<div class="proj-status"><span class="status-dot '+dotClass+'"></span><span class="status-label">'+p.status+'</span></div>'+
+      '<div class="proj-meta">'+p.credits+' - '+p.area+'</div>'+
+      '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>'+
       '</div>';
   }
 
-  function renderFull() {
-    const list = currentCat === 'all' ? allInstruments : allInstruments.filter(i => i.category === currentCat);
+  // INSTRUMENT CARD HTML
+  function instCardHTML(i) {
+    const safe = JSON.stringify(i).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    return '<div class="inst-card" onclick=\'openInstDetail('+safe+')\'>' +
+      '<div class="inst-name">'+i.name+'</div>'+
+      '<div class="inst-desc">'+i.description+'</div>'+
+      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>'+
+      '</div>';
+  }
+
+  // FILTER PROJECTS
+  function filterProj(f, btn) {
+    currentProjFilter = f;
+    document.querySelectorAll('#proj-tabs .cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    renderProjectsFull();
+  }
+
+  function renderProjectsFull() {
+    let list = allProjects;
+    if (currentProjFilter === 'arr')        list = list.filter(p => p.methodology.toLowerCase().includes('arr'));
+    else if (currentProjFilter === 'blue-carbon') list = list.filter(p => p.methodology.toLowerCase().includes('blue'));
+    else if (currentProjFilter === 'redd')  list = list.filter(p => p.methodology.toLowerCase().includes('redd'));
+    else if (currentProjFilter === 'issuing')    list = list.filter(p => p.status && p.status.toLowerCase().includes('issuing'));
+    else if (currentProjFilter === 'validation') list = list.filter(p => p.status && p.status.toLowerCase().includes('validation'));
+
+    document.getElementById('proj-count').textContent = list.length + ' project' + (list.length !== 1 ? 's' : '');
+    document.getElementById('projects-full').innerHTML = list.length
+      ? list.map(projCardHTML).join('')
+      : '<div class="empty">No projects match this filter.</div>';
+  }
+
+  // FILTER INSTRUMENTS
+  function filterInst(f, btn) {
+    currentInstFilter = f;
+    document.querySelectorAll('#view-instruments .cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    renderInstFull();
+  }
+
+  function renderInstFull() {
+    const list = currentInstFilter === 'all' ? allInstruments : allInstruments.filter(i => i.category === currentInstFilter);
     const container = document.getElementById('instruments-full');
-    if (currentCat === 'all') {
+    if (currentInstFilter === 'all') {
       const grouped = {};
-      catOrder.forEach(c => grouped[c] = []);
+      instCatOrder.forEach(c => grouped[c] = []);
       list.forEach(i => { if(grouped[i.category]) grouped[i.category].push(i); });
-      container.innerHTML = catOrder.filter(c => grouped[c].length)
-        .map(c => '<div class="cat-group"><div class="cat-group-title">'+catLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(cardHTML).join('')+'</div></div>')
+      container.innerHTML = instCatOrder.filter(c => grouped[c].length)
+        .map(c => '<div class="cat-group"><div class="cat-group-title">'+instCatLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(instCardHTML).join('')+'</div></div>')
         .join('');
     } else {
-      container.innerHTML = '<div class="cat-group"><div class="cat-group-title">'+catLabel[currentCat]+'</div><div class="cat-group-grid">'+list.map(cardHTML).join('')+'</div></div>';
+      container.innerHTML = '<div class="cat-group"><div class="cat-group-title">'+instCatLabel[currentInstFilter]+'</div><div class="cat-group-grid">'+list.map(instCardHTML).join('')+'</div></div>';
     }
   }
 
+  // AGE LABEL
   function ageLabel(d) {
     const days = Math.floor((new Date()-new Date(d))/86400000);
     if(days===0) return 'Today';
@@ -341,6 +471,7 @@
     return Math.floor(days/30)+' months ago';
   }
 
+  // LOAD
   async function load() {
     try {
       const [pR,iR,instR] = await Promise.all([
@@ -350,35 +481,31 @@
       ]);
       const [pd,id,instd] = await Promise.all([pR.json(),iR.json(),instR.json()]);
 
+      allProjects    = pd.projects;
       allInstruments = instd.instruments;
-      const total = allInstruments.length;
-      document.getElementById('stat-instruments').textContent = total;
-      document.getElementById('instruments-all').textContent = 'View all '+total+' ->';
 
-      // projects
-      document.getElementById('projects-grid').innerHTML = pd.projects.filter(p=>p.featured).map(p=>
-        '<div class="proj-card">'+
-        '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
-        '<div class="proj-name">'+p.name+'</div>'+
-        '<div class="proj-meta">'+p.credits+' - '+p.area+' - '+p.certification+'</div>'+
-        '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>'+
-        '</div>'
-      ).join('');
+      document.getElementById('stat-projects').textContent    = allProjects.length;
+      document.getElementById('stat-instruments').textContent = allInstruments.length;
 
-      // intelligence
-      document.getElementById('intelligence-list').innerHTML = id.intelligence.filter(i=>i.status==='approved').map(i=>
-        '<div class="intel-item">'+
-        '<span class="intel-dom">'+i.domain+'</span>'+
-        '<span class="intel-hl">'+i.headline+'</span>'+
-        '<span class="intel-age">'+ageLabel(i.date)+'</span>'+
-        '</div>'
-      ).join('');
+      // home previews
+      document.getElementById('projects-preview').innerHTML =
+        allProjects.filter(p=>p.featured).map(projCardHTML).join('');
 
-      // instruments preview (featured only)
-      document.getElementById('instruments-preview').innerHTML = allInstruments.filter(i=>i.featured).map(cardHTML).join('');
+      document.getElementById('intelligence-list').innerHTML =
+        id.intelligence.filter(i=>i.status==='approved').map(i=>
+          '<div class="intel-item">'+
+          '<span class="intel-dom">'+i.domain+'</span>'+
+          '<span class="intel-hl">'+i.headline+'</span>'+
+          '<span class="intel-age">'+ageLabel(i.date)+'</span>'+
+          '</div>'
+        ).join('');
 
-      // instruments full page
-      renderFull();
+      document.getElementById('instruments-preview').innerHTML =
+        allInstruments.filter(i=>i.featured).map(instCardHTML).join('');
+
+      // full pages
+      renderProjectsFull();
+      renderInstFull();
 
     } catch(e) { console.error(e); }
   }
