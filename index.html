@@ -217,6 +217,28 @@
     .stat:nth-child(even) { border-right: none; }
     .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
   }
+
+  /* MAP */
+  .view-toggle { display: flex; gap: 0; padding: 24px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; }
+  .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+  .toggle-btn:last-child  { border-radius: 0 6px 6px 0; border-left: none; }
+  .toggle-btn.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
+
+  .map-container { padding: 24px 40px; max-width: 1100px; margin: 0 auto; }
+  .map-container svg { width: 100%; height: auto; display: block; }
+  .map-hint { font-size: 12px; color: var(--text-dim); margin-top: 12px; }
+
+  .country-path { stroke: #fff; stroke-width: 0.5; cursor: pointer; transition: opacity 0.15s; }
+  .country-path:hover { opacity: 0.75; }
+  .country-dot { cursor: pointer; transition: opacity 0.15s; }
+  .country-dot:hover { opacity: 0.75; }
+
+  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  .map-hidden { display: none; }
 </style>
 </head>
 <body>
@@ -298,16 +320,29 @@
     <div class="page-title">Projects</div>
     <div class="page-sub">Conservation finance projects across Africa - tracked, verified, and explained.</div>
   </div>
-  <div class="cat-tabs" id="proj-tabs">
-    <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
-    <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
-    <button class="cat-tab" onclick="filterProj('blue-carbon',this)">Blue carbon</button>
-    <button class="cat-tab" onclick="filterProj('redd',this)">REDD+</button>
-    <button class="cat-tab" onclick="filterProj('issuing',this)">Issuing</button>
-    <button class="cat-tab" onclick="filterProj('validation',this)">Under validation</button>
+  <div class="view-toggle">
+    <button class="toggle-btn active" onclick="setProjView('grid',this)">Grid</button>
+    <button class="toggle-btn" onclick="setProjView('map',this)">Map</button>
   </div>
-  <div class="proj-count" id="proj-count"></div>
-  <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
+  <div id="proj-map-wrap" class="map-hidden">
+    <div class="map-container">
+      <svg id="proj-map" viewBox="0 0 700 750"></svg>
+      <div class="map-legend" id="proj-legend"></div>
+      <div class="map-hint">Click a country to filter projects. Click again to clear.</div>
+    </div>
+  </div>
+  <div id="proj-grid-wrap">
+    <div class="cat-tabs" id="proj-tabs">
+      <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
+      <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
+      <button class="cat-tab" onclick="filterProj('blue-carbon',this)">Blue carbon</button>
+      <button class="cat-tab" onclick="filterProj('redd',this)">REDD+</button>
+      <button class="cat-tab" onclick="filterProj('issuing',this)">Issuing</button>
+      <button class="cat-tab" onclick="filterProj('validation',this)">Under validation</button>
+    </div>
+    <div class="proj-count" id="proj-count"></div>
+    <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
+  </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
     <div class="footer-links"><span class="footer-link">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
@@ -344,29 +379,44 @@
     <div class="page-title">Policy tracker</div>
     <div class="page-sub">Article 6.2 readiness across all 54 African nations - status, political risk, and what is actually happening on the ground.</div>
   </div>
-  <div class="policy-summary" id="policy-summary">
-    <div class="policy-stat" onclick="filterPolicy('all',this)">
-      <div class="policy-stat-n" id="ps-all">-</div>
-      <div class="policy-stat-l">All countries</div>
-    </div>
-    <div class="policy-stat" onclick="filterPolicy('operational',this)">
-      <div class="policy-stat-n n-op" id="ps-op">-</div>
-      <div class="policy-stat-l">Operational</div>
-    </div>
-    <div class="policy-stat" onclick="filterPolicy('agreement-signed',this)">
-      <div class="policy-stat-n n-ag" id="ps-ag">-</div>
-      <div class="policy-stat-l">Agreement signed</div>
-    </div>
-    <div class="policy-stat" onclick="filterPolicy('in-negotiation',this)">
-      <div class="policy-stat-n n-neg" id="ps-neg">-</div>
-      <div class="policy-stat-l">In negotiation</div>
-    </div>
-    <div class="policy-stat" onclick="filterPolicy('no-framework',this)">
-      <div class="policy-stat-n n-nf" id="ps-nf">-</div>
-      <div class="policy-stat-l">No framework</div>
+  <div class="view-toggle">
+    <button class="toggle-btn active" onclick="setPolicyView('map',this)">Map</button>
+    <button class="toggle-btn" onclick="setPolicyView('list',this)">List</button>
+  </div>
+  <div id="policy-map-wrap">
+    <div class="map-container">
+      <svg id="policy-map" viewBox="0 0 700 750"></svg>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-swatch" style="background:#1a4a2e"></div>Operational</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#0c5c58"></div>Agreement signed</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#c17f00"></div>In negotiation</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#6b7fa3"></div>Framework only</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#c0bdb8"></div>No framework</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#8b1a1a"></div>Very high risk / conflict</div>
+      </div>
+      <div class="map-hint">Click any country to see full Article 6.2 details.</div>
     </div>
   </div>
-  <div class="policy-grid" id="policy-grid"><div class="loading">Loading...</div></div>
+  <div id="policy-list-wrap" class="map-hidden">
+    <div class="policy-summary" id="policy-summary">
+      <div class="policy-stat" onclick="filterPolicy('all',this)">
+        <div class="policy-stat-n" id="ps-all">-</div><div class="policy-stat-l">All countries</div>
+      </div>
+      <div class="policy-stat" onclick="filterPolicy('operational',this)">
+        <div class="policy-stat-n n-op" id="ps-op">-</div><div class="policy-stat-l">Operational</div>
+      </div>
+      <div class="policy-stat" onclick="filterPolicy('agreement-signed',this)">
+        <div class="policy-stat-n n-ag" id="ps-ag">-</div><div class="policy-stat-l">Agreement signed</div>
+      </div>
+      <div class="policy-stat" onclick="filterPolicy('in-negotiation',this)">
+        <div class="policy-stat-n n-neg" id="ps-neg">-</div><div class="policy-stat-l">In negotiation</div>
+      </div>
+      <div class="policy-stat" onclick="filterPolicy('no-framework',this)">
+        <div class="policy-stat-n n-nf" id="ps-nf">-</div><div class="policy-stat-l">No framework</div>
+      </div>
+    </div>
+    <div class="policy-grid" id="policy-grid"><div class="loading">Loading...</div></div>
+  </div>
   <div class="policy-disclaimer" id="policy-disclaimer"></div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
@@ -657,6 +707,220 @@
   }
 
   load();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+  // ISO numeric -> our country ID mapping
+  const isoToId = {
+    12:'algeria',24:'angola',72:'botswana',108:'burundi',120:'cameroon',
+    132:'cabo-verde',140:'central-african-republic',148:'chad',174:'comoros',
+    178:'republic-of-congo',180:'drc',204:'benin',226:'equatorial-guinea',
+    232:'eritrea',231:'ethiopia',266:'gabon',270:'gambia',288:'ghana',
+    324:'guinea',624:'guinea-bissau',384:'ivory-coast',404:'kenya',
+    426:'lesotho',430:'liberia',434:'libya',450:'madagascar',454:'malawi',
+    466:'mali',478:'mauritania',480:'mauritius',504:'morocco',508:'mozambique',
+    516:'namibia',562:'niger',566:'nigeria',646:'rwanda',678:'sao-tome-principe',
+    686:'senegal',694:'sierra-leone',706:'somalia',710:'south-africa',
+    716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
+    788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',
+    894:'zambia',262:'djibouti',686:'senegal'
+  };
+
+  // African ISO codes
+  const africaISO = new Set(Object.keys(isoToId).map(Number));
+
+  const policyColor = {
+    'operational':'#1a4a2e', 'agreement-signed':'#0c5c58',
+    'in-negotiation':'#c17f00', 'framework-only':'#6b7fa3',
+    'no-framework':'#c0bdb8'
+  };
+
+  function riskOverride(c) {
+    return c.political_risk === 'very-high' ? '#8b1a1a' : null;
+  }
+
+  let worldData = null;
+  let projMapActive = false, policyMapActive = true;
+  let selectedProjCountry = null;
+
+  async function loadWorldData() {
+    if (worldData) return worldData;
+    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+    worldData = topo;
+    return topo;
+  }
+
+  // PROJECTION - centred on Africa
+  function getProjection(svgEl) {
+    const w = 700, h = 750;
+    return d3.geoNaturalEarth1()
+      .scale(620)
+      .center([25, 0])
+      .translate([w / 2 - 30, h / 2 + 60]);
+  }
+
+  // RENDER POLICY MAP
+  async function renderPolicyMap() {
+    const svg = d3.select('#policy-map');
+    svg.selectAll('*').remove();
+    const topo = await loadWorldData();
+    const projection = getProjection(svg.node());
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+    const policyById = {};
+    allPolicy.forEach(c => { policyById[c.id] = c; });
+
+    svg.selectAll('path')
+      .data(countries.features.filter(f => africaISO.has(+f.id)))
+      .join('path')
+      .attr('class', 'country-path')
+      .attr('d', path)
+      .attr('fill', f => {
+        const id = isoToId[+f.id];
+        const c = policyById[id];
+        if (!c) return '#e8e8e5';
+        return riskOverride(c) || policyColor[c.status] || '#e8e8e5';
+      })
+      .attr('title', f => isoToId[+f.id] || '')
+      .on('click', (event, f) => {
+        const id = isoToId[+f.id];
+        const c = policyById[id];
+        if (c) openPolicyDetail(c);
+      });
+  }
+
+  // RENDER PROJECTS MAP
+  async function renderProjMap() {
+    const svg = d3.select('#proj-map');
+    svg.selectAll('*').remove();
+    const topo = await loadWorldData();
+    const projection = getProjection(svg.node());
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+
+    // Count projects per country
+    const countByCountry = {};
+    allProjects.forEach(p => {
+      const key = p.country.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z-]/g,'');
+      countByCountry[key] = (countByCountry[key] || 0) + 1;
+    });
+
+    // Map project country names to IDs
+    const projCountryMap = {};
+    allProjects.forEach(p => {
+      const id = p.country.toLowerCase()
+        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+        .replace('guinea-bissau','guinea-bissau').replace('central african republic','central-african-republic')
+        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+        .replace('sao tome and principe','sao-tome-principe')
+        .replace(/\s+/g,'-');
+      if (!projCountryMap[id]) projCountryMap[id] = 0;
+      projCountryMap[id]++;
+    });
+
+    const maxCount = Math.max(...Object.values(projCountryMap), 1);
+    const colorScale = d3.scaleSequential()
+      .domain([0, maxCount])
+      .interpolator(d3.interpolate('#e8f5e0','#1a4a2e'));
+
+    svg.selectAll('path')
+      .data(countries.features.filter(f => africaISO.has(+f.id)))
+      .join('path')
+      .attr('class', 'country-path')
+      .attr('d', path)
+      .attr('fill', f => {
+        const id = isoToId[+f.id];
+        const count = projCountryMap[id] || 0;
+        return count > 0 ? colorScale(count) : '#f0f0ee';
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.5)
+      .on('click', (event, f) => {
+        const id = isoToId[+f.id];
+        if (!id) return;
+        if (selectedProjCountry === id) {
+          selectedProjCountry = null;
+          svg.selectAll('path').attr('opacity', 1);
+          renderProjectsFull();
+        } else {
+          selectedProjCountry = id;
+          svg.selectAll('path').attr('opacity', d => isoToId[+d.id] === id ? 1 : 0.35);
+          filterProjByCountry(id);
+        }
+      });
+
+    // Legend
+    const legend = d3.select('#proj-legend');
+    legend.html('');
+    const steps = [0, 1, 3, 6, 10];
+    steps.forEach(n => {
+      const color = n === 0 ? '#f0f0ee' : colorScale(n);
+      legend.append('div').attr('class','legend-item').html(
+        '<div class="legend-swatch" style="background:'+color+'"></div>' +
+        (n === 0 ? 'No projects' : n === 10 ? '10+ projects' : n+' projects')
+      );
+    });
+  }
+
+  function filterProjByCountry(countryId) {
+    // Match country id back to project country name
+    const idToName = {};
+    Object.entries(isoToId).forEach(([k,v]) => idToName[v] = v);
+    const list = allProjects.filter(p => {
+      const id = p.country.toLowerCase()
+        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+        .replace('central african republic','central-african-republic')
+        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+        .replace('sao tome and principe','sao-tome-principe')
+        .replace(/\s+/g,'-');
+      return id === countryId;
+    });
+    document.getElementById('proj-count').textContent = list.length + ' project' + (list.length !== 1 ? 's' : '');
+    document.getElementById('projects-full').innerHTML = list.length
+      ? list.map(projCardHTML).join('')
+      : '<div class="empty">No projects found for this country.</div>';
+  }
+
+  // TOGGLE FUNCTIONS
+  function setProjView(mode, btn) {
+    document.querySelectorAll('#view-projects .toggle-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    if (mode === 'map') {
+      document.getElementById('proj-map-wrap').classList.remove('map-hidden');
+      document.getElementById('proj-grid-wrap').classList.add('map-hidden');
+      renderProjMap();
+    } else {
+      document.getElementById('proj-map-wrap').classList.add('map-hidden');
+      document.getElementById('proj-grid-wrap').classList.remove('map-hidden');
+      selectedProjCountry = null;
+    }
+  }
+
+  function setPolicyView(mode, btn) {
+    document.querySelectorAll('#view-policy .toggle-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    if (mode === 'map') {
+      document.getElementById('policy-map-wrap').classList.remove('map-hidden');
+      document.getElementById('policy-list-wrap').classList.add('map-hidden');
+      renderPolicyMap();
+    } else {
+      document.getElementById('policy-map-wrap').classList.add('map-hidden');
+      document.getElementById('policy-list-wrap').classList.remove('map-hidden');
+    }
+  }
+
+  // Render policy map when policy view is first shown
+  const _origShowView = showView;
+  function showView(name) {
+    _origShowView(name);
+    if (name === 'policy' && allPolicy.length) renderPolicyMap();
+    if (name === 'projects' && allProjects.length && !projMapActive) {}
+  }
 </script>
 </body>
 </html>
