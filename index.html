@@ -645,8 +645,18 @@
     border-bottom: 1px solid var(--border);
     max-height: 60vh;
     overflow-y: auto;
+    position: relative;
+    z-index: 98;
   }
   .mobile-search-results.visible { display: block; }
+  .mobile-search-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 97;
+  }
+  .mobile-search-overlay.open { display: block; }
 
   @media (max-width: 768px) {
     .mobile-search-btn { display: block; }
@@ -759,6 +769,7 @@
   <input class="mobile-search-input" id="mobile-search-input" type="text" placeholder="Search projects, instruments, countries..." autocomplete="off">
 </div>
 <div class="mobile-search-results" id="mobile-search-results"></div>
+<div class="mobile-search-overlay" id="mobile-search-overlay" onclick="closeMobileSearch()"></div>
 
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
@@ -1124,6 +1135,9 @@
     bar.classList.toggle('open');
     if (bar.classList.contains('open')) {
       document.getElementById('mobile-search-input').focus();
+      document.getElementById('mobile-search-overlay').classList.add('open');
+    } else {
+      closeMobileSearch();
     }
     // close hamburger if open
     document.getElementById('mobile-menu').classList.remove('open');
@@ -1522,6 +1536,7 @@
     mobileSearchResults.innerHTML = '';
     mobileSearchResults.classList.remove('visible');
     document.getElementById('mobile-search-bar').classList.remove('open');
+    document.getElementById('mobile-search-overlay').classList.remove('open');
   }
 
   function mobilSearchSelectProject(p) {
