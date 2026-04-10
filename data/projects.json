@@ -2087,6 +2087,482 @@
         "Remote"
       ],
       "featured": false
+    },
+    {
+      "id": "madagascar-makira",
+      "name": "Makira Natural Park REDD+",
+      "country": "Madagascar",
+      "region": "SAVA Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "2.8M tCO2e/yr",
+      "area": "372,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Lemur",
+        "Biodiversity hotspot",
+        "WCS partnership",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-ankeniheny",
+      "name": "Ankeniheny-Zahamena Corridor",
+      "country": "Madagascar",
+      "region": "Alaotra-Mangoro",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "1.9M tCO2e/yr",
+      "area": "234,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Rainforest corridor",
+        "Lemur",
+        "CI partnership",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-blue-carbon",
+      "name": "Madagascar Mangrove Arc",
+      "country": "Madagascar",
+      "region": "Melaky Region",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "1.4M tCO2e",
+      "area": "21,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Mangrove",
+        "Dugong habitat",
+        "Community-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-dry-forest",
+      "name": "Menabe Antimena Dry Forest",
+      "country": "Madagascar",
+      "region": "Menabe Region",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "980,000 tCO2e",
+      "area": "127,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Dry deciduous forest",
+        "Baobab",
+        "Fosa habitat"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-tsaratanana",
+      "name": "Tsaratanana Massif Restoration",
+      "country": "Madagascar",
+      "region": "Diana Region",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.1M tCO2e",
+      "area": "28,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Highland",
+        "Water tower",
+        "Community co-owned"
+      ],
+      "featured": false
+    },
+    {
+      "id": "comoros-anjouan",
+      "name": "Anjouan Forest Restoration",
+      "country": "Comoros",
+      "region": "Anjouan Island",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "320,000 tCO2e",
+      "area": "4,100 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Island",
+        "Mongoose lemur",
+        "Agroforestry",
+        "Community-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "seychelles-blue-carbon",
+      "name": "Seychelles National Blue Carbon",
+      "country": "Seychelles",
+      "region": "Inner Islands",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "740,000 tCO2e",
+      "area": "9,800 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Sovereign blue bond",
+        "Article 6.2",
+        "Seagrass",
+        "Mangrove"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mauritius-native-restoration",
+      "name": "Mauritius Native Forest Restoration",
+      "country": "Mauritius",
+      "region": "Black River District",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "180,000 tCO2e",
+      "area": "2,400 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Issuing",
+      "tags": [
+        "Island endemic",
+        "Native species",
+        "Invasive removal",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "reunion-tamarin-restoration",
+      "name": "Reunion Highland Restoration",
+      "country": "Reunion",
+      "region": "Hauts de Reunion",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "240,000 tCO2e",
+      "area": "3,100 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Island",
+        "Tamarin des Hauts",
+        "French territory",
+        "UNESCO"
+      ],
+      "featured": false
+    },
+    {
+      "id": "morocco-atlas-reforestation",
+      "name": "High Atlas Reforestation",
+      "country": "Morocco",
+      "region": "Marrakech-Safi",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.8M tCO2e",
+      "area": "22,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Mountain",
+        "Cedar forest",
+        "Berber community",
+        "Water security"
+      ],
+      "featured": false
+    },
+    {
+      "id": "morocco-argan-landscape",
+      "name": "Argan Biosphere Landscape",
+      "country": "Morocco",
+      "region": "Souss-Massa",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "1.4M tCO2e",
+      "area": "830,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "UNESCO biosphere",
+        "Argan tree",
+        "Women cooperative",
+        "Agroforestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tunisia-green-belt",
+      "name": "Tunisia Green Belt",
+      "country": "Tunisia",
+      "region": "Kasserine Governorate",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.1M tCO2e",
+      "area": "14,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Dryland",
+        "Anti-desertification",
+        "Government-led",
+        "Great Green Wall"
+      ],
+      "featured": false
+    },
+    {
+      "id": "egypt-sinai-reforestation",
+      "name": "Sinai Peninsula Reforestation",
+      "country": "Egypt",
+      "region": "South Sinai",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "680,000 tCO2e",
+      "area": "8,400 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Dryland",
+        "Desert greening",
+        "Government partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "algeria-sahara-arr",
+      "name": "Algerian Sahara Edge Reforestation",
+      "country": "Algeria",
+      "region": "Bechar Province",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "2.4M tCO2e",
+      "area": "29,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Great Green Wall",
+        "Desert edge",
+        "State-led",
+        "Oasis communities"
+      ],
+      "featured": false
+    },
+    {
+      "id": "libya-green-mountains",
+      "name": "Green Mountain Restoration",
+      "country": "Libya",
+      "region": "Jabal al Akhdar",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "890,000 tCO2e",
+      "area": "11,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Mediterranean forest",
+        "Dryland",
+        "Post-conflict"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sudan-gum-arabic",
+      "name": "Gum Arabic Belt Restoration",
+      "country": "Sudan",
+      "region": "North Kordofan",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "4.2M tCO2e",
+      "area": "51,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Gum arabic",
+        "Sahel",
+        "Smallholder",
+        "Great Green Wall"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-corridor-ranobe",
+      "name": "Ranobe PES Forest",
+      "country": "Madagascar",
+      "region": "Atsimo-Andrefana",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "760,000 tCO2e",
+      "area": "42,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Spiny forest",
+        "Endemic",
+        "PES structure",
+        "Community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "somalia-puntland-arr",
+      "name": "Puntland Dryland Restoration",
+      "country": "Somalia",
+      "region": "Puntland State",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.6M tCO2e",
+      "area": "19,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Dryland",
+        "Frankincense",
+        "Pastoral community",
+        "Frontier market"
+      ],
+      "featured": false
+    },
+    {
+      "id": "djibouti-mangrove-tadjourah",
+      "name": "Tadjourah Bay Mangroves",
+      "country": "Djibouti",
+      "region": "Tadjourah Region",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "190,000 tCO2e",
+      "area": "2,300 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Mangrove",
+        "Gulf of Aden",
+        "Community-led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "eritrea-dahlak-blue",
+      "name": "Dahlak Archipelago Blue Carbon",
+      "country": "Eritrea",
+      "region": "Northern Red Sea",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "420,000 tCO2e",
+      "area": "5,600 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Island",
+        "Red Sea",
+        "Mangrove",
+        "Seagrass"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ethiopia-gambella",
+      "name": "Gambella Wetland Forest",
+      "country": "Ethiopia",
+      "region": "Gambella Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "5.4M tCO2e",
+      "area": "420,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Nuer community",
+        "Floodplain forest",
+        "Wildlife migration"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-fort-dauphin",
+      "name": "Fort Dauphin Littoral Forest",
+      "country": "Madagascar",
+      "region": "Anosy Region",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "640,000 tCO2e",
+      "area": "18,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Littoral forest",
+        "Endemic",
+        "Mining buffer",
+        "Community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "comoros-grande-comore",
+      "name": "Grande Comore Reforestation",
+      "country": "Comoros",
+      "region": "Grande Comore",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "280,000 tCO2e",
+      "area": "3,400 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Volcano island",
+        "Ylang-ylang agroforestry",
+        "Community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "morocco-rif-mountains",
+      "name": "Rif Mountains Forest Restoration",
+      "country": "Morocco",
+      "region": "Taza-Al Hoceima",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "1.3M tCO2e",
+      "area": "16,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Cork oak",
+        "Mediterranean",
+        "Community tenure",
+        "Fire recovery"
+      ],
+      "featured": false
+    },
+    {
+      "id": "seychelles-aldabra",
+      "name": "Aldabra Atoll Marine Carbon",
+      "country": "Seychelles",
+      "region": "Outer Islands",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "580,000 tCO2e",
+      "area": "7,200 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO",
+        "Seagrass",
+        "Giant tortoise",
+        "Remote atoll"
+      ],
+      "featured": false
+    },
+    {
+      "id": "kenya-tiwi-coast",
+      "name": "Tiwi Coastal Forest",
+      "country": "Kenya",
+      "region": "Kwale County",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "1.1M tCO2e",
+      "area": "30,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Coastal forest",
+        "Community land",
+        "Biodiversity"
+      ],
+      "featured": false
+    },
+    {
+      "id": "madagascar-vondrozo",
+      "name": "Vondrozo Corridor",
+      "country": "Madagascar",
+      "region": "Atsimo-Atsinanana",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "1.2M tCO2e",
+      "area": "62,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Rainforest",
+        "Lemur corridor",
+        "Community forestry"
+      ],
+      "featured": false
     }
   ]
 }
