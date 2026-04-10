@@ -1544,6 +1544,549 @@
         "City partnership"
       ],
       "featured": false
+    },
+    {
+      "id": "drc-mai-ndombe",
+      "name": "Mai Ndombe REDD+",
+      "country": "DRC",
+      "region": "Mai-Ndombe Province",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "28.4M tCO2e",
+      "area": "1,200,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Congo Basin",
+        "Large-scale",
+        "Community benefit-sharing",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-isangi",
+      "name": "Isangi Community Forests",
+      "country": "DRC",
+      "region": "Tshopo Province",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "9.6M tCO2e",
+      "area": "490,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Congo Basin",
+        "Community forestry",
+        "Pygmy community"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-virunga",
+      "name": "Virunga Landscape Carbon",
+      "country": "DRC",
+      "region": "North Kivu",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "6.8M tCO2e",
+      "area": "280,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Under validation",
+      "tags": [
+        "Mountain gorilla",
+        "UNESCO",
+        "Conflict-affected",
+        "Transboundary"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-salonga",
+      "name": "Salonga National Park Buffer",
+      "country": "DRC",
+      "region": "Sankuru Province",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "14.2M tCO2e",
+      "area": "680,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "UNESCO",
+        "Bonobo",
+        "Congo Basin",
+        "Buffer zone"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-ituri",
+      "name": "Ituri Forest People's Reserve",
+      "country": "DRC",
+      "region": "Ituri Province",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "11.3M tCO2e",
+      "area": "530,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Under validation",
+      "tags": [
+        "Mbuti community",
+        "Indigenous rights",
+        "Okapi reserve"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-luki",
+      "name": "Luki Biosphere Reserve",
+      "country": "DRC",
+      "region": "Kongo Central",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "2.1M tCO2e",
+      "area": "33,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "UNESCO biosphere",
+        "Congo lowland",
+        "Research station"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-campo-maan",
+      "name": "Campo-Ma'an Rainforest",
+      "country": "Cameroon",
+      "region": "South Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "7.9M tCO2e",
+      "area": "270,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Rainforest",
+        "Gorilla",
+        "Logging concession boundary",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-dja-reserve",
+      "name": "Dja Biosphere REDD+",
+      "country": "Cameroon",
+      "region": "East Region",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "9.4M tCO2e",
+      "area": "526,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO",
+        "Baka community",
+        "Gorilla",
+        "Forest elephant"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-lobeke",
+      "name": "Lobeke National Park Buffer",
+      "country": "Cameroon",
+      "region": "East Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "4.3M tCO2e",
+      "area": "186,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Trinational park",
+        "Forest elephant",
+        "WWF partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-mangrove-littoral",
+      "name": "Cameroon Littoral Mangroves",
+      "country": "Cameroon",
+      "region": "Littoral Region",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "920,000 tCO2e",
+      "area": "13,600 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "Mangrove",
+        "Coastal protection",
+        "Wouri estuary"
+      ],
+      "featured": false
+    },
+    {
+      "id": "republic-congo-odzala",
+      "name": "Odzala-Kokoua Landscape",
+      "country": "Republic of Congo",
+      "region": "Cuvette-Ouest",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "16.8M tCO2e",
+      "area": "1,350,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Congo Basin",
+        "Forest elephant",
+        "Large-scale",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "republic-congo-conkouati",
+      "name": "Conkouati-Douli Marine Buffer",
+      "country": "Republic of Congo",
+      "region": "Kouilou Department",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "1.4M tCO2e",
+      "area": "19,200 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Coastal forest",
+        "Mangrove",
+        "Marine protected area"
+      ],
+      "featured": false
+    },
+    {
+      "id": "republic-congo-bateke",
+      "name": "Bateke Plateau Community Forest",
+      "country": "Republic of Congo",
+      "region": "Pool Department",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "3.8M tCO2e",
+      "area": "89,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Registered",
+      "tags": [
+        "Community forestry",
+        "Savanna-forest mosaic",
+        "Gorilla reintroduction"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gabon-moukalaba",
+      "name": "Moukalaba-Doudou REDD+",
+      "country": "Gabon",
+      "region": "Nyanga Province",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "5.2M tCO2e",
+      "area": "500,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Issuing",
+      "tags": [
+        "Gorilla",
+        "Forest elephant",
+        "Low deforestation baseline",
+        "Issuing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gabon-lop\u00e9",
+      "name": "Lop\u00e9 National Park Carbon",
+      "country": "Gabon",
+      "region": "Ogooue-Ivindo",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "7.6M tCO2e",
+      "area": "490,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "UNESCO",
+        "Forest elephant",
+        "Mandrill",
+        "Gabon Article 6.2"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gabon-blue-carbon",
+      "name": "Gabon National Blue Carbon",
+      "country": "Gabon",
+      "region": "Estuaire Province",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "2.8M tCO2e",
+      "area": "42,000 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "Sovereign",
+        "Article 6.2",
+        "State-led",
+        "Mangrove"
+      ],
+      "featured": false
+    },
+    {
+      "id": "car-dzanga-sangha",
+      "name": "Dzanga-Sangha Forest Reserve",
+      "country": "Central African Republic",
+      "region": "Sangha-Mbaere",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "8.1M tCO2e",
+      "area": "359,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "Trinational",
+        "Bongo antelope",
+        "Forest elephant",
+        "WWF"
+      ],
+      "featured": false
+    },
+    {
+      "id": "car-manovo-gounda",
+      "name": "Manovo-Gounda Restoration",
+      "country": "Central African Republic",
+      "region": "Bamingui-Bangoran",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "4.7M tCO2e",
+      "area": "174,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "UNESCO",
+        "Post-conflict",
+        "Savanna",
+        "Anti-poaching"
+      ],
+      "featured": false
+    },
+    {
+      "id": "equatorial-guinea-monte-alen",
+      "name": "Monte Alen National Park",
+      "country": "Equatorial Guinea",
+      "region": "Centro-Sur Province",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "3.2M tCO2e",
+      "area": "140,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Gorilla",
+        "Rainforest",
+        "Oil revenue transition"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sao-tome-ob\u00f4",
+      "name": "Ob\u00f4 Natural Park Carbon",
+      "country": "Sao Tome and Principe",
+      "region": "Sao Tome Island",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "840,000 tCO2e",
+      "area": "29,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Island endemic",
+        "Rainforest",
+        "Biodiversity hotspot"
+      ],
+      "featured": false
+    },
+    {
+      "id": "chad-lake-chad-basin",
+      "name": "Lake Chad Basin Reforestation",
+      "country": "Chad",
+      "region": "Lake Province",
+      "methodology": "ARR \u00b7 VM0047",
+      "credits": "3.9M tCO2e",
+      "area": "46,000 ha",
+      "certification": "VCS",
+      "status": "In development",
+      "tags": [
+        "Great Green Wall",
+        "Shrinking lake",
+        "Sahel",
+        "Multi-country"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-yangambi",
+      "name": "Yangambi Biosphere Reserve",
+      "country": "DRC",
+      "region": "Tshopo Province",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "8.9M tCO2e",
+      "area": "235,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO biosphere",
+        "Congo Basin",
+        "Research hub"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-boumba-bek",
+      "name": "Boumba Bek National Park",
+      "country": "Cameroon",
+      "region": "East Region",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "5.6M tCO2e",
+      "area": "238,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Forest elephant",
+        "Baka community",
+        "Logging boundary"
+      ],
+      "featured": false
+    },
+    {
+      "id": "republic-congo-ntokou",
+      "name": "Ntokou-Pikounda National Park",
+      "country": "Republic of Congo",
+      "region": "Sangha Department",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "7.2M tCO2e",
+      "area": "457,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "Western lowland gorilla",
+        "Congo Basin",
+        "WCS partnership"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gabon-ivindo",
+      "name": "Ivindo National Park IFM",
+      "country": "Gabon",
+      "region": "Ogooue-Ivindo",
+      "methodology": "IFM \u00b7 VM0012",
+      "credits": "4.1M tCO2e",
+      "area": "300,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "UNESCO",
+        "Kongou Falls",
+        "Forest elephant",
+        "Research"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-lomami",
+      "name": "Lomami National Park",
+      "country": "DRC",
+      "region": "Maniema Province",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "10.4M tCO2e",
+      "area": "887,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Lesula monkey",
+        "Congo Basin",
+        "Newly gazetted"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cameroon-takamanda",
+      "name": "Takamanda-Mone Forest",
+      "country": "Cameroon",
+      "region": "Southwest Region",
+      "methodology": "REDD+ \u00b7 VM0015",
+      "credits": "2.8M tCO2e",
+      "area": "68,000 ha",
+      "certification": "VCS \u00b7 CCB Gold",
+      "status": "Registered",
+      "tags": [
+        "Cross River gorilla",
+        "Transboundary",
+        "Community forestry"
+      ],
+      "featured": false
+    },
+    {
+      "id": "republic-congo-lefini",
+      "name": "Lefini Wildlife Reserve",
+      "country": "Republic of Congo",
+      "region": "Plateaux Department",
+      "methodology": "Savanna burning \u00b7 VM0032",
+      "credits": "290,000 tCO2e/yr",
+      "area": "630,000 ha",
+      "certification": "VCS",
+      "status": "Under validation",
+      "tags": [
+        "Savanna",
+        "Fire management",
+        "Buffalo",
+        "Gorilla reintroduction"
+      ],
+      "featured": false
+    },
+    {
+      "id": "drc-tumba-lediima",
+      "name": "Tumba-Lediima Nature Reserve",
+      "country": "DRC",
+      "region": "Equateur Province",
+      "methodology": "REDD+ \u00b7 VM0007",
+      "credits": "6.3M tCO2e",
+      "area": "760,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Bonobo",
+        "Swamp forest",
+        "Congo Basin",
+        "Peatland"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gabon-pongara",
+      "name": "Pongara National Park Blue Carbon",
+      "country": "Gabon",
+      "region": "Estuaire Province",
+      "methodology": "Blue Carbon \u00b7 VM0033",
+      "credits": "1.6M tCO2e",
+      "area": "22,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "Under validation",
+      "tags": [
+        "Mangrove",
+        "Leatherback turtle",
+        "Coastal park"
+      ],
+      "featured": false
+    },
+    {
+      "id": "car-chinko",
+      "name": "Chinko Nature Reserve",
+      "country": "Central African Republic",
+      "region": "Haut-Mbomou",
+      "methodology": "REDD+ \u00b7 VM0009",
+      "credits": "5.9M tCO2e",
+      "area": "1,760,000 ha",
+      "certification": "VCS \u00b7 CCB",
+      "status": "In development",
+      "tags": [
+        "Savanna",
+        "Anti-poaching",
+        "Elephant corridor",
+        "Remote"
+      ],
+      "featured": false
     }
   ]
 }
