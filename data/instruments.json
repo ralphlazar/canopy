@@ -5,154 +5,264 @@
       "name": "Voluntary carbon credits",
       "description": "VCS, Gold Standard, and CCB-certified credits from nature-based projects. Purchased by corporates for net-zero commitments.",
       "category": "voluntary",
-      "featured": true
+      "featured": true,
+      "who_uses": "Corporate net-zero buyers - consumer brands, airlines, financial institutions",
+      "deal_size": "$1M-$50M",
+      "time_horizon": "Medium-term (5-15 years)",
+      "africa_status": "Active",
+      "africa_example": "Save the Sand, South Africa - 7.3M VCUs over 40 years, structured as a carbon pre-sale not a grant"
     },
     {
       "id": "article-6-2-itmos",
       "name": "Article 6.2 ITMOs",
       "description": "Internationally transferred mitigation outcomes traded bilaterally between sovereign states under the Paris Agreement.",
       "category": "compliance",
-      "featured": true
+      "featured": true,
+      "who_uses": "Sovereign states trading mitigation outcomes bilaterally under Paris Agreement frameworks",
+      "deal_size": "$50M-$500M",
+      "time_horizon": "Long-term (15+ years)",
+      "africa_status": "Active",
+      "africa_example": "South Africa advancing bilateral ITMO framework - ARR eligibility criteria published April 2026, multiple buyer nations in discussion"
     },
     {
       "id": "debt-for-nature-swaps",
       "name": "Debt-for-nature swaps",
       "description": "Sovereign debt restructured in exchange for binding conservation commitments. Growing rapidly in Sub-Saharan Africa.",
       "category": "sovereign",
-      "featured": true
+      "featured": true,
+      "who_uses": "Sovereign governments, multilateral development banks, conservation NGOs structuring the covenant",
+      "deal_size": "$100M-$2B",
+      "time_horizon": "Long-term (15-30 years)",
+      "africa_status": "Active",
+      "africa_example": "Zambia $1.36B debt restructuring with conservation covenant, 2023 - World Bank $500M Sub-Saharan framework now scaling the model to Kenya and Zambia"
     },
     {
       "id": "vcs-arr-vm0047",
       "name": "VCS ARR VM0047",
       "description": "The gold-standard methodology for afforestation, reforestation and revegetation projects. ICVCM Core Carbon Principles approved.",
       "category": "voluntary",
-      "featured": false
+      "featured": false,
+      "who_uses": "Project developers, carbon registries, corporate buyers requiring highest-quality nature-based credits",
+      "deal_size": "$5M-$100M",
+      "time_horizon": "Long-term (30-40 years)",
+      "africa_status": "Active",
+      "africa_example": "Save the Sand, Mpumalanga - 2.5M trees across 40,000 ha certified VM0047, ICVCM Core Carbon Principles approved and CORSIA eligibility pending"
     },
     {
       "id": "gold-standard",
       "name": "Gold Standard",
       "description": "Premium certification combining carbon with sustainable development co-benefits. Preferred by European corporate buyers.",
       "category": "voluntary",
-      "featured": false
+      "featured": false,
+      "who_uses": "European corporate buyers, impact investors, development finance institutions with SDG reporting requirements",
+      "deal_size": "$1M-$20M",
+      "time_horizon": "Medium to long-term (10-30 years)",
+      "africa_status": "Active",
+      "africa_example": "Livelihoods Venture cookstove and agroforestry projects across East Africa - Gold Standard certified, sold to European FMCG corporates"
     },
     {
       "id": "ccb-standards",
       "name": "CCB Standards",
       "description": "Climate, Community and Biodiversity standards. Gold and Verra-verified co-benefit certification stacked on top of VCS.",
       "category": "voluntary",
-      "featured": false
+      "featured": false,
+      "who_uses": "Project developers seeking premium credit pricing; buyers requiring verified community and biodiversity co-benefits",
+      "deal_size": "$1M-$50M",
+      "time_horizon": "Long-term (20-40 years)",
+      "africa_status": "Active",
+      "africa_example": "Wildlife Works REDD+ projects, Kenya - CCB Gold certified, stacked on VCS credits, cited as benchmark for community governance quality"
     },
     {
       "id": "biodiversity-credits",
       "name": "Biodiversity credits",
       "description": "Emerging instrument quantifying nature outcomes beyond carbon. Standards still consolidating across GBFF and national frameworks.",
       "category": "voluntary",
-      "featured": false
+      "featured": false,
+      "who_uses": "Corporates with nature commitments, impact investors, governments working toward Kunming-Montreal GBF targets",
+      "deal_size": "$500K-$10M",
+      "time_horizon": "Medium to long-term (10-25 years)",
+      "africa_status": "Emerging",
+      "africa_example": "Wallacea Trust pilot in Madagascar generating biodiversity units aligned with GBFF framework - one of the first African projects to trial the emerging standard"
     },
     {
       "id": "blue-carbon",
       "name": "Blue carbon",
       "description": "Credits from mangrove, seagrass and saltmarsh ecosystems. High co-benefit profile, limited supply. VM0033 and VM0007 methodologies.",
       "category": "voluntary",
-      "featured": false
+      "featured": false,
+      "who_uses": "Corporates with net-zero commitments, conservation funds, coastal governments with mangrove restoration mandates",
+      "deal_size": "$1M-$30M",
+      "time_horizon": "Long-term (20-40 years)",
+      "africa_status": "Active",
+      "africa_example": "Mikoko Pamoja mangrove project, Kenya - the first blue carbon project globally to sell credits on the voluntary market, community-owned and managed"
     },
     {
       "id": "article-6-4-pacm",
       "name": "Article 6.4 PACM",
-      "description": "The Paris Agreement Crediting Mechanism — UN-supervised successor to CDM. Methodology approval process now operational.",
+      "description": "The Paris Agreement Crediting Mechanism - UN-supervised successor to CDM. Methodology approval process now operational.",
       "category": "compliance",
-      "featured": false
+      "featured": false,
+      "who_uses": "Sovereign states and project developers seeking UN-supervised carbon credits for compliance market use",
+      "deal_size": "$10M-$200M",
+      "time_horizon": "Long-term (15+ years)",
+      "africa_status": "Pilot stage",
+      "africa_example": "Rwanda among the first African nations to submit project concepts under the new PACM methodology process following COP29 operationalisation"
     },
     {
       "id": "corsia",
       "name": "CORSIA",
       "description": "Carbon Offsetting and Reduction Scheme for International Aviation. Compliance demand from airlines. Strict eligibility criteria.",
       "category": "compliance",
-      "featured": false
+      "featured": false,
+      "who_uses": "International airlines offsetting emissions above 2019 baseline levels under ICAO rules",
+      "deal_size": "$5M-$100M",
+      "time_horizon": "Medium-term (to 2035 and beyond)",
+      "africa_status": "Emerging",
+      "africa_example": "VM0047 CORSIA eligibility decision pending - approval would open Save the Sand and similar ARR projects to airline compliance demand at scale"
     },
     {
       "id": "green-bonds",
       "name": "Green bonds",
       "description": "Sovereign and corporate debt instruments financing environmental projects. ICMA Green Bond Principles the dominant framework.",
       "category": "sovereign",
-      "featured": false
+      "featured": false,
+      "who_uses": "Institutional investors, pension funds, sovereign wealth funds seeking ESG-labelled fixed income",
+      "deal_size": "$100M-$2B",
+      "time_horizon": "Medium-term (5-15 years)",
+      "africa_status": "Active",
+      "africa_example": "Kenya $1B green sovereign bond, 2024 - first by an East African government, proceeds allocated to climate-resilient infrastructure and conservation"
     },
     {
       "id": "sovereign-blue-bonds",
       "name": "Sovereign blue bonds",
       "description": "Government bonds financing marine and coastal conservation. Seychelles precedent now being replicated across African island states.",
       "category": "sovereign",
-      "featured": false
+      "featured": false,
+      "who_uses": "Sovereign coastal governments, multilateral development banks, marine conservation funders",
+      "deal_size": "$15M-$200M",
+      "time_horizon": "Long-term (10-20 years)",
+      "africa_status": "Emerging",
+      "africa_example": "Seychelles $15M blue bond, 2018 - the first sovereign blue bond globally, now being replicated by Gabon and other African coastal states"
     },
     {
       "id": "pes",
       "name": "Payments for ecosystem services",
-      "description": "Direct payments to land managers for verified ecosystem services — water, biodiversity, carbon. Increasingly formalised in African law.",
+      "description": "Direct payments to land managers for verified ecosystem services - water, biodiversity, carbon. Increasingly formalised in African law.",
       "category": "blended",
-      "featured": false
+      "featured": false,
+      "who_uses": "Governments, water utilities, agricultural companies, conservation NGOs paying for upstream land stewardship",
+      "deal_size": "$100K-$20M",
+      "time_horizon": "Medium to long-term (5-20 years)",
+      "africa_status": "Active",
+      "africa_example": "Nairobi Water Fund - downstream water users funding upstream catchment protection in the Tana River watershed, Kenya; one of Africa largest PES schemes"
     },
     {
       "id": "conservation-trust-funds",
       "name": "Conservation trust funds",
       "description": "Endowment vehicles providing long-term stable funding for protected area management. Over 70 active funds across Africa.",
       "category": "blended",
-      "featured": false
+      "featured": false,
+      "who_uses": "Bilateral donors, foundations, governments seeking stable long-term protected area financing without grant dependency",
+      "deal_size": "$10M-$500M endowment",
+      "time_horizon": "Permanent (endowment model)",
+      "africa_status": "Active",
+      "africa_example": "Table Mountain Fund, South Africa - endowment-backed trust funding fynbos conservation since 1996; template for more than 70 similar funds now active across Africa"
     },
     {
       "id": "first-loss-guarantees",
       "name": "First-loss guarantees",
       "description": "DFI and philanthropic capital absorbing first losses to de-risk commercial investment in conservation projects.",
       "category": "blended",
-      "featured": false
+      "featured": false,
+      "who_uses": "DFIs, foundations, impact-first family offices providing the guarantee; institutional investors taking the senior tranche",
+      "deal_size": "$5M-$100M",
+      "time_horizon": "Medium-term (5-12 years)",
+      "africa_status": "Active",
+      "africa_example": "Mirova Sustainable Ocean Fund - first-loss tranche from blended finance facility unlocking institutional capital for African blue economy projects"
     },
     {
       "id": "pris",
       "name": "Programme-related investments",
       "description": "Below-market loans and equity investments by foundations. IRS rules allow US foundations to count these toward payout requirements.",
       "category": "blended",
-      "featured": false
+      "featured": false,
+      "who_uses": "US private foundations deploying capital that counts toward their 5% annual payout requirement at below-market returns",
+      "deal_size": "$500K-$20M",
+      "time_horizon": "Medium-term (3-10 years)",
+      "africa_status": "Emerging",
+      "africa_example": "MacArthur Foundation PRI supporting African Wildlife Capital - below-market debt for conservation enterprises in East Africa"
     },
     {
       "id": "multi-year-grants",
       "name": "Multi-year grants",
       "description": "Unrestricted multi-year funding from institutional foundations. Increasingly tied to commercial transition milestones.",
       "category": "philanthropic",
-      "featured": false
+      "featured": false,
+      "who_uses": "Conservation NGOs, community-based organisations, research institutions with multi-year programme commitments",
+      "deal_size": "$500K-$10M",
+      "time_horizon": "Short to medium-term (2-5 years)",
+      "africa_status": "Active",
+      "africa_example": "Bezos Earth Fund $200M African biodiversity round open May 2026 - multi-year grants to African Wildlife Foundation and community land trusts"
     },
     {
       "id": "dafs",
       "name": "Donor advised funds",
       "description": "Vehicles allowing HNWIs to make irrevocable charitable contributions and recommend grants over time. $230B held in US DAFs alone.",
       "category": "philanthropic",
-      "featured": false
+      "featured": false,
+      "who_uses": "HNWIs batching charitable contributions into a DAF vehicle and deploying grants over time with tax efficiency",
+      "deal_size": "$100K-$5M per grant recommendation",
+      "time_horizon": "Short to medium-term",
+      "africa_status": "Active",
+      "africa_example": "Fidelity Charitable and Schwab Charitable DAFs regularly fund African conservation via intermediary grantmakers including African Parks and WWF"
     },
     {
       "id": "impact-first-family-office",
       "name": "Impact-first family office capital",
       "description": "Patient capital from family offices accepting below-market returns for measurable conservation outcomes. Growing constituency.",
       "category": "philanthropic",
-      "featured": false
+      "featured": false,
+      "who_uses": "Family offices with values-aligned mandates accepting below-market returns for verified conservation and community outcomes",
+      "deal_size": "$1M-$50M",
+      "time_horizon": "Long-term (10+ years)",
+      "africa_status": "Active",
+      "africa_example": "Conservation Capital channelling family office capital into private conservation estates and community concession models across southern Africa"
     },
     {
       "id": "bng-credits",
       "name": "Biodiversity net gain credits",
       "description": "Credits generated by habitat creation and restoration. UK BNG now mandatory. African BNG frameworks emerging in Kenya and South Africa.",
       "category": "emerging",
-      "featured": false
+      "featured": false,
+      "who_uses": "Property developers and infrastructure companies with mandatory or voluntary BNG obligations; corporates with nature targets",
+      "deal_size": "$100K-$10M",
+      "time_horizon": "Long-term (30+ years)",
+      "africa_status": "Emerging",
+      "africa_example": "South Africa piloting BNG framework in Limpopo - early-stage habitat bank for mining offset credits, aligned with the Kunming-Montreal Global Biodiversity Framework"
     },
     {
       "id": "water-credits",
       "name": "Water credits",
       "description": "Payments for watershed protection and water quality outcomes. Ecoagriculture Partners and Commonland leading African pilots.",
       "category": "emerging",
-      "featured": false
+      "featured": false,
+      "who_uses": "Water utilities, agribusinesses, governments managing watershed catchments and downstream water security",
+      "deal_size": "$500K-$15M",
+      "time_horizon": "Medium-term (5-15 years)",
+      "africa_status": "Pilot stage",
+      "africa_example": "Commonland watershed restoration in South Africa - Baviaanskloof and Maloti-Drakensberg catchments generating measurable water yield improvements for downstream users"
     },
     {
       "id": "soil-carbon-credits",
       "name": "Soil carbon credits",
       "description": "Credits from agricultural land management improving soil organic carbon. Measurement uncertainty remains a barrier to scale.",
       "category": "emerging",
-      "featured": false
+      "featured": false,
+      "who_uses": "Agricultural companies and food brands with Scope 3 commitments; impact investors backing regenerative agriculture",
+      "deal_size": "$500K-$20M",
+      "time_horizon": "Medium-term (5-15 years)",
+      "africa_status": "Pilot stage",
+      "africa_example": "Soil Capital running smallholder soil carbon programmes in East Africa - measurement protocols and permanence verification remain the primary barriers to scale"
     }
   ]
 }

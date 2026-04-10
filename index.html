@@ -281,7 +281,10 @@
     .intel-age { display: none; }
     footer { padding: 16px 20px; flex-direction: column; gap: 12px; text-align: center; }
     .detail-panel { width: 100%; }
-    .policy-row { grid-template-columns: 1fr 1fr; }
+    .policy-row { display: block; padding: 14px 0; }
+    .policy-row:hover { margin: 0 -20px; padding: 14px 20px; }
+    .policy-row > div:first-child { margin-bottom: 8px; }
+    .policy-row .status-pill { margin-right: 6px; }
     .policy-notes-preview { display: none; }
   }
   @media (max-width: 480px) {
