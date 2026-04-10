@@ -608,7 +608,38 @@
     .home-grid { grid-template-columns: 1fr; padding: 0 20px 32px; }
   }
 
-  .live-num {
+  .mobile-search-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 4px;
+  }
+  .mobile-search-bar {
+    display: none;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .mobile-search-bar.open { display: block; }
+  .mobile-search-input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-search-btn { display: block; }
+  }
     color: #1a4a2e;
     font-weight: 700;
     animation: pulse-opacity 2.5s ease-in-out infinite;
@@ -710,7 +741,12 @@
   <button class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
+  <button class="mobile-search-btn" id="mobile-search-btn" onclick="toggleMobileSearch()">&#9906;</button>
 </nav>
+
+<div class="mobile-search-bar" id="mobile-search-bar">
+  <input class="mobile-search-input" id="mobile-search-input" type="text" placeholder="Search projects, instruments, countries..." autocomplete="off">
+</div>
 
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
@@ -1071,6 +1107,17 @@
   const statusLabel = { 'operational':'Operational', 'agreement-signed':'Agreement signed', 'in-negotiation':'In negotiation', 'framework-only':'Framework only', 'no-framework':'No framework' };
   const riskLabel   = { 'low':'Low risk', 'medium':'Medium risk', 'high':'High risk', 'very-high':'Very high risk' };
 
+  function toggleMobileSearch() {
+    const bar = document.getElementById('mobile-search-bar');
+    bar.classList.toggle('open');
+    if (bar.classList.contains('open')) {
+      document.getElementById('mobile-search-input').focus();
+    }
+    // close hamburger if open
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
   function toggleMenu() {
     const menu = document.getElementById('mobile-menu');
     const btn = document.getElementById('hamburger');
@@ -1404,6 +1451,15 @@
 
   searchInput.addEventListener('input', e => runSearch(e.target.value.trim()));
   searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
+
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  mobileSearchInput.addEventListener('input', e => {
+    const q = e.target.value.trim();
+    searchInput.value = q;
+    runSearch(q);
+    if (q.length > 1) searchResults.style.position = 'fixed';
+  });
+  mobileSearchInput.addEventListener('keydown', e => { if (e.key === 'Escape') { clearSearch(); document.getElementById('mobile-search-bar').classList.remove('open'); } });
   document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
     if (!e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
