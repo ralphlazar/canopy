@@ -766,6 +766,7 @@
   .ww-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
 
   .ww-org-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
+  .ww-alpha-break { font-size: 11px; font-weight: 700; color: var(--text-dim); letter-spacing: 0.08em; padding: 14px 0 4px; border-bottom: 1px solid var(--border); margin-bottom: 2px; }
   .ww-fund       { background: var(--comp-bg);  color: var(--comp-text); }
   .ww-dfi        { background: var(--blend-bg); color: var(--blend-text); }
   .ww-ngo        { background: var(--vol-bg);   color: var(--vol-text); }
@@ -800,10 +801,12 @@
   @media (max-width: 768px) {
     .ww-grid { padding-left: 24px; padding-right: 24px; }
     .ww-count { padding-left: 24px; padding-right: 24px; }
-    .ww-card { grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+    .ww-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2px 12px; }
     .ww-card:hover { margin: 0 -24px; padding: 2px 24px; }
     .ww-org { display: none; }
-    .ww-tags { justify-content: flex-start; }
+    .ww-name { grid-column: 1; grid-row: 1 / 3; display: flex; align-items: center; }
+    .ww-role { grid-column: 2; grid-row: 1; }
+    .ww-tags { grid-column: 2; grid-row: 2; justify-content: flex-start; }
   }
 </style>
 </head>
@@ -1813,9 +1816,20 @@
     });
     wwRenderedList = list;
     document.getElementById('ww-count').textContent = list.length + ' profile' + (list.length !== 1 ? 's' : '');
-    document.getElementById('whowho-full').innerHTML = list.length
-      ? list.map((p, i) => wwCardHTML(p, i)).join('')
-      : '<div class="empty">No profiles match.</div>';
+    const showAlpha = wwSortCol === 'name' && !wwSearchQuery;
+    let html = '';
+    let lastLetter = '';
+    list.forEach((p, i) => {
+      if (showAlpha) {
+        const letter = surname(p.name).charAt(0).toUpperCase();
+        if (letter !== lastLetter) {
+          html += '<div class="ww-alpha-break">' + letter + '</div>';
+          lastLetter = letter;
+        }
+      }
+      html += wwCardHTML(p, i);
+    });
+    document.getElementById('whowho-full').innerHTML = list.length ? html : '<div class="empty">No profiles match.</div>';
   }
 
   function wwCardHTML(p, i) {
