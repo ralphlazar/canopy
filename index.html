@@ -866,17 +866,23 @@
   .ww-search-input:focus { border-color: var(--teal); background: var(--bg); width: 320px; }
   @media (max-width: 768px) { .ww-search-bar { padding-left: 24px; padding-right: 24px; } .ww-search-input { width: 100%; } .ww-search-input:focus { width: 100%; } }
 
-  .ww-suggest { border-bottom: 1px solid var(--border); margin-bottom: 0; padding: 24px 40px 28px; max-width: 1100px; margin-left: auto; margin-right: auto; }
-  .ww-suggest-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-  .ww-suggest-sub { font-size: 12px; color: var(--text-dim); margin-bottom: 20px; }
+  .ww-suggest { border: 1px solid var(--border); border-radius: 10px; margin: 0 auto 16px; max-width: 1100px; background: var(--bg2); overflow: hidden; }
+  .ww-suggest-header { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; cursor: pointer; user-select: none; }
+  .ww-suggest-header:hover { background: var(--bg); }
+  .ww-suggest-title { font-size: 13px; font-weight: 600; color: var(--text); }
+  .ww-suggest-sub { font-size: 12px; color: var(--text-dim); }
+  .ww-suggest-chevron { font-size: 11px; color: var(--text-dim); transition: transform 0.2s; }
+  .ww-suggest.open .ww-suggest-chevron { transform: rotate(180deg); }
+  .ww-suggest-body { display: none; padding: 16px 18px 20px; border-top: 1px solid var(--border); }
+  .ww-suggest.open .ww-suggest-body { display: block; }
   .ww-suggest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 560px; }
-  .ww-suggest-input { font-size: 13px; padding: 8px 12px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
-  .ww-suggest-input:focus { border-color: var(--teal); background: var(--bg); }
+  .ww-suggest-input { font-size: 13px; padding: 8px 12px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
+  .ww-suggest-input:focus { border-color: var(--teal); }
   .ww-suggest-input.full { grid-column: 1 / -1; }
   .ww-suggest-btn { grid-column: 1 / -1; justify-self: start; font-size: 12px; padding: 8px 20px; border-radius: 7px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; font-weight: 500; font-family: inherit; transition: background 0.15s; }
   .ww-suggest-btn:hover { background: var(--teal-pale); }
   .ww-suggest-thanks { font-size: 13px; color: var(--teal); display: none; padding-top: 4px; }
-  @media (max-width: 768px) { .ww-suggest { padding: 28px 24px 36px; } .ww-suggest-form { grid-template-columns: 1fr; } .ww-suggest-input.full { grid-column: 1; } .ww-suggest-btn { grid-column: 1; } }
+  @media (max-width: 768px) { .ww-suggest { margin: 0 0 16px; } .ww-suggest-form { grid-template-columns: 1fr; } .ww-suggest-input.full { grid-column: 1; } .ww-suggest-btn { grid-column: 1; } }
   .home-ww-list { display: flex; flex-direction: column; padding: 0 20px 4px; flex: 1; }
   .home-ww-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
   .home-ww-item:last-child { border-bottom: none; }
@@ -1239,17 +1245,24 @@
     <input class="ww-search-input" id="ww-search-input" type="text" placeholder="Search by name or organisation..." autocomplete="off">
   </div>
   <div class="ww-count" id="ww-count"></div>
-  <div class="ww-suggest">
-    <div class="ww-suggest-title">Know someone who belongs here?</div>
-    <div class="ww-suggest-sub">Suggestions take 30 seconds. We write the profile.</div>
-    <div class="ww-suggest-form" id="ww-suggest-form">
-      <input class="ww-suggest-input" id="ww-s-name" type="text" placeholder="Name" required>
-      <input class="ww-suggest-input" id="ww-s-org" type="text" placeholder="Organisation" required>
-      <input class="ww-suggest-input" id="ww-s-role" type="text" placeholder="Role" required>
-      <input class="ww-suggest-input" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL">
-      <button class="ww-suggest-btn" onclick="submitWWSuggest()">Suggest this person</button>
+  <div class="ww-suggest" id="ww-suggest-box">
+    <div class="ww-suggest-header" onclick="toggleWWSuggest()">
+      <div>
+        <span class="ww-suggest-title">Know someone who belongs here?</span>
+        <span class="ww-suggest-sub" style="margin-left:10px;">Suggestions take 30 seconds. We write the profile.</span>
+      </div>
+      <span class="ww-suggest-chevron">&#9660;</span>
     </div>
-    <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
+    <div class="ww-suggest-body">
+      <div class="ww-suggest-form" id="ww-suggest-form">
+        <input class="ww-suggest-input" id="ww-s-name" type="text" placeholder="Name" required>
+        <input class="ww-suggest-input" id="ww-s-org" type="text" placeholder="Organisation" required>
+        <input class="ww-suggest-input" id="ww-s-role" type="text" placeholder="Role" required>
+        <input class="ww-suggest-input" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL">
+        <button class="ww-suggest-btn" onclick="submitWWSuggest()">Suggest this person</button>
+      </div>
+      <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
+    </div>
   </div>
   <div class="ww-list-header">
     <div class="ww-col ww-col-active" data-col="name" onclick="setWWSort('name')">Name <span class="ww-arrow">↑</span></div>
@@ -2018,6 +2031,10 @@
       notable +
       footprint
     );
+  }
+
+  function toggleWWSuggest() {
+    document.getElementById('ww-suggest-box').classList.toggle('open');
   }
 
   async function submitWWSuggest() {
