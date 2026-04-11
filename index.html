@@ -895,23 +895,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo" onclick="showView('home')">
-    <div class="logo-mark">
-      <svg id="logo-policy-map" width="30" height="30" viewBox="0 0 700 750" preserveAspectRatio="xMidYMid meet"></svg>
-    </div>
-    <div>
-      <div class="logo-name">Canopy</div>
-      <div class="logo-sub">African Conservation Finance</div>
-    </div>
-  </div>
-  <div class="nav-right">
-    <button class="nav-cta">Subscribe to brief</button>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+<div id="nav-mount"></div>
 
 <div style="display:none;">
   <input id="search-input" type="text" autocomplete="off">
@@ -924,18 +908,7 @@
 <div class="mobile-search-results" id="mobile-search-results"></div>
 <div class="mobile-search-overlay" id="mobile-search-overlay" onclick="closeMobileSearch()"></div>
 
-<div class="mobile-menu" id="mobile-menu">
-  <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
-  <div class="mobile-menu-item" onclick="mobileNav('projects')"><span class="mobile-menu-num" style="background:#1a4a2e">2</span>Projects</div>
-  <div class="mobile-menu-item" onclick="window.location.href='keystones.html'"><span class="mobile-menu-num" style="background:#5c3317">3</span>Keystone Protected Areas</div>
-  <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">4</span>Intelligence</div>
-  <div class="mobile-menu-item" onclick="mobileNav('whowho')"><span class="mobile-menu-num" style="background:#1a5c5c">5</span>Who's Who</div>
-  <div class="mobile-menu-item" onclick="window.location.href='cairn.html'"><span class="mobile-menu-num" style="background:#4a2a6b">6</span>CAIRN</div>
-  <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">7</span>Funding Instruments</div>
-  <div class="mobile-menu-divider"></div>
-  <div class="mobile-menu-sub" onclick="mobileNav('about')">About</div>
-  <div class="mobile-menu-sub">Subscribe to brief</div>
-</div>
+
 
 <!-- HOME -->
 <div id="view-home" class="view active">
@@ -2673,7 +2646,7 @@
   }
 
   async function renderLogoMap() {
-    const svg = d3.select('#logo-policy-map');
+    const svg = d3.select('#logo-map');
     const topo = await loadWorldData();
     const projection = getProjection(svg.node());
     const path = d3.geoPath().projection(projection);
@@ -2720,5 +2693,6 @@
     renderLogoMap();
   }
 </script>
+<script src="nav.js" defer></script>
 </body>
 </html>

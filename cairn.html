@@ -42,6 +42,8 @@
   .mobile-menu-item:hover { background: var(--bg2); }
   .mobile-menu-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
   .mobile-menu-divider { height: 1px; background: var(--border); margin: 8px 24px; }
+  .mobile-menu-sub { padding: 10px 24px; font-size: 13px; color: var(--text-muted); cursor: pointer; transition: background 0.1s; text-decoration: none; display: block; }
+  .mobile-menu-sub:hover { background: var(--bg2); }
 
   /* INTRO */
   .intro-wrap { max-width: 720px; margin: 0 auto; padding: 52px 40px 36px; border-bottom: 1px solid var(--border); }
@@ -208,6 +210,8 @@
     .gate-row { flex-direction: column; align-items: stretch; }
     .gate-input { width: 100%; }
     .meth-bar { padding: 12px 24px; }
+    .grade-summary { justify-content: flex-start; }
+    .grade-stat { padding: 12px 10px; }
     .toolbar { padding: 10px 24px; }
     .search-input { width: 100%; }
     .search-input:focus { width: 100%; }
@@ -227,34 +231,7 @@
 
 <div class="map-tooltip" id="map-tooltip"></div>
 
-<nav>
-  <a class="nav-logo" href="index.html">
-    <div class="logo-mark">
-      <svg id="logo-map" width="30" height="30" viewBox="0 0 700 750" preserveAspectRatio="xMidYMid meet"></svg>
-    </div>
-    <div>
-      <div class="logo-name">Canopy</div>
-      <div class="logo-sub">African Conservation Finance</div>
-    </div>
-  </a>
-  <div class="nav-right">
-    <button class="nav-cta">Subscribe to brief</button>
-    <button class="hamburger" id="hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open');">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<div class="mobile-menu" id="mobile-menu">
-  <a class="mobile-menu-item" href="index.html"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</a>
-  <a class="mobile-menu-item" href="index.html"><span class="mobile-menu-num" style="background:#1a4a2e">2</span>Projects</a>
-  <a class="mobile-menu-item" href="keystones.html"><span class="mobile-menu-num" style="background:#5c3317">3</span>Keystone Protected Areas</a>
-  <a class="mobile-menu-item" href="index.html"><span class="mobile-menu-num" style="background:#4a6fa3">4</span>Intelligence</a>
-  <a class="mobile-menu-item" href="index.html"><span class="mobile-menu-num" style="background:#1a5c5c">5</span>Who's Who</a>
-  <a class="mobile-menu-item" href="cairn.html"><span class="mobile-menu-num" style="background:#4a2a6b">6</span>CAIRN</a>
-  <a class="mobile-menu-item" href="index.html"><span class="mobile-menu-num" style="background:#c17f00">7</span>Funding Instruments</a>
-  <div class="mobile-menu-divider"></div>
-</div>
+<div id="nav-mount"></div>
 
 <!-- INTRO -->
 <div class="intro-wrap">
@@ -840,7 +817,8 @@
     svg.selectAll('path').data(features).join('path')
       .attr('d', path).attr('fill', '#c8dfc8').attr('stroke', '#fff').attr('stroke-width', 0.5);
   }
-  renderLogoMap();
+
 </script>
+<script src="nav.js" defer></script>
 </body>
 </html>
