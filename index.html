@@ -37,9 +37,10 @@
   .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); overflow: hidden; }
   .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
   .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links { display: none; }
   .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
   .nav-link:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
   .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
 
@@ -197,7 +198,7 @@
   .footer-link:hover { color: var(--text-muted); }
 
   .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -270,8 +271,6 @@
 
   @media (max-width: 768px) {
     nav { padding: 14px 24px; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
     .hero { padding: 40px 24px 32px; }
     .hero-h { font-size: 26px; }
     .stats, .policy-summary { grid-template-columns: repeat(2, 1fr); }
@@ -461,7 +460,7 @@
   }
   .home-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 16px;
     max-width: 1100px;
     margin: 0 auto;
@@ -475,6 +474,7 @@
     transition: border-color 0.15s, box-shadow 0.15s;
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
   .home-card:hover {
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -617,7 +617,7 @@
   }
   @media (max-width: 768px) {
     .home-hero { padding: 32px 24px 24px; }
-    .home-grid { grid-template-columns: 1fr; padding: 0 24px 32px; }
+    .home-grid { grid-template-columns: minmax(0, 1fr); padding: 0 24px 32px; }
     .home-card-7 { grid-column: span 1; }
     .home-card-1, .home-card-2, .home-card-3, .home-card-4 { height: auto; overflow: visible; }
     .home-card-map { height: 210px; display: flex; align-items: center; justify-content: flex-end; }
@@ -853,7 +853,7 @@
     .ww-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2px 12px; }
     .ww-card:hover { margin: 0 -24px; padding: 2px 24px; }
     .ww-org { display: none; }
-    .ww-name { grid-column: 1; grid-row: 1 / 3; display: flex; align-items: center; }
+    .ww-name { grid-column: 1; grid-row: 1 / 3; display: flex; align-items: flex-start; padding-top: 2px; }
     .ww-role { grid-column: 2; grid-row: 1; }
     .ww-tags { grid-column: 2; grid-row: 2; justify-content: flex-start; }
   }
@@ -871,26 +871,18 @@
       <div class="logo-sub">African Conservation Finance</div>
     </div>
   </div>
-  <div class="nav-links">
-    <span class="nav-link" onclick="showView('policy'); activatePolicyMap();">Policy</span>
-    <span class="nav-link" onclick="showView('projects'); activateProjMap();">Projects</span>
-    <span class="nav-link" onclick="window.location.href='keystones.html'">Keystones</span>
-    <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
-    <span class="nav-link" onclick="showView('whowho')">Who's Who</span>
-    <span class="nav-link" onclick="window.location.href='cairn.html'" style="color:#4a2a6b;font-weight:600;">CAIRN</span>
-    <span class="nav-link" onclick="showView('instruments')">Funding</span>
-    <div class="search-wrap">
-      <span class="search-icon">&#9906;</span>
-      <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
-      <div class="search-results" id="search-results"></div>
-    </div>
+  <div class="nav-right">
     <button class="nav-cta">Subscribe to brief</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
-  <button class="mobile-search-btn" id="mobile-search-btn" onclick="toggleMobileSearch()">&#9906;</button>
 </nav>
+
+<div style="display:none;">
+  <input id="search-input" type="text" autocomplete="off">
+  <div id="search-results"></div>
+</div>
 
 <div class="mobile-search-bar" id="mobile-search-bar">
   <input class="mobile-search-input" id="mobile-search-input" type="text" placeholder="Search projects, instruments, countries..." autocomplete="off">

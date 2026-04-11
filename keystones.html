@@ -25,13 +25,14 @@
   .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); overflow: hidden; }
   .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
   .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links { display: none; }
   .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; text-decoration: none; }
   .nav-link:hover { color: var(--text); }
   .nav-link.active { color: var(--ks); font-weight: 600; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
   .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
   .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.2s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -160,8 +161,6 @@
 
   @media (max-width: 768px) {
     nav { padding: 14px 24px; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
     .hero { padding: 36px 24px 28px; }
     .hero-title { font-size: 26px; }
     .stats { grid-template-columns: 1fr 1fr; }
@@ -204,19 +203,12 @@
       <div class="logo-sub">African Conservation Finance</div>
     </div>
   </a>
-  <div class="nav-links">
-    <a class="nav-link" href="index.html">Policy</a>
-    <a class="nav-link" href="index.html">Projects</a>
-    <span class="nav-link active">Keystones</span>
-    <a class="nav-link" href="index.html">Intel.</a>
-    <a class="nav-link" href="index.html">Who's Who</a>
-    <a class="nav-link" href="cairn.html">CAIRN</a>
-    <a class="nav-link" href="index.html">Funding</a>
+  <div class="nav-right">
     <button class="nav-cta">Subscribe to brief</button>
+    <button class="hamburger" id="hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open');">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="hamburger" id="hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open');">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
