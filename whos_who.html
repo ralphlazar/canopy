@@ -54,8 +54,33 @@
   .page-header { padding: 16px 40px 0; max-width: 1100px; margin: 0 auto; }
   .page-back { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; text-decoration: none; }
   .page-back:hover { color: var(--text); }
-  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
+  .page-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 4px; }
+  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
   .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+
+  .add-btn { font-size: 12px; padding: 6px 14px; border-radius: 8px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; font-weight: 500; font-family: inherit; transition: background 0.15s; white-space: nowrap; flex-shrink: 0; }
+  .add-btn:hover { background: var(--teal-pale); }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 400; display: none; align-items: center; justify-content: center; padding: 24px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--bg); border-radius: 14px; width: 100%; max-width: 480px; box-shadow: 0 16px 48px rgba(0,0,0,0.18); overflow: hidden; }
+  .modal-header { padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: flex-start; }
+  .modal-title { font-size: 18px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .modal-sub { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+  .modal-close { font-size: 20px; color: var(--text-dim); cursor: pointer; background: none; border: none; padding: 0; line-height: 1; transition: color 0.15s; }
+  .modal-close:hover { color: var(--text); }
+  .modal-body { padding: 20px 24px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .modal-input { font-size: 13px; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
+  .modal-input:focus { border-color: var(--teal); background: var(--bg); }
+  .modal-input.full { grid-column: 1 / -1; }
+  .modal-submit { grid-column: 1 / -1; font-size: 13px; padding: 10px 20px; border-radius: 8px; border: none; background: var(--teal); color: #fff; cursor: pointer; font-weight: 600; font-family: inherit; transition: opacity 0.15s; }
+  .modal-submit:hover { opacity: 0.88; }
+  .modal-thanks { grid-column: 1 / -1; font-size: 14px; color: var(--teal); text-align: center; padding: 8px 0 4px; display: none; }
+  @media (max-width: 480px) {
+    .modal-body { grid-template-columns: 1fr; }
+    .modal-input.full, .modal-submit, .modal-thanks { grid-column: 1; }
+  }
 
   .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
   .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
@@ -94,28 +119,6 @@
   .footer-link:hover { color: var(--text-muted); }
 
   .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
-  .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
-  .b-voluntary { background: var(--vol-bg); color: var(--vol-text); }
-  .b-compliance { background: var(--comp-bg); color: var(--comp-text); }
-  .b-sovereign { background: var(--sov-bg); color: var(--sov-text); }
-  .b-blended { background: var(--blend-bg); color: var(--blend-text); }
-  .b-philanthropic { background: var(--phil-bg); color: var(--phil-text); }
-  .b-emerging { background: var(--emerg-bg); color: var(--emerg-text); }
-  .proj-method { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--vol-bg); color: var(--vol-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-  .status-dot.issuing { background: #1a4a2e; }
-  .status-dot.validation { background: #e6a020; }
-  .status-dot.registered { background: #4a90d9; }
-  .status-dot.development { background: var(--text-dim); }
-  .status-label { font-size: 11px; color: var(--text-dim); }
-
-  @media (max-width: 768px) {
-    nav { padding: 14px 24px; }
-    .page-header, .cat-tabs { padding-left: 24px; padding-right: 24px; }
-    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
-    .detail-panel { width: 100%; }
-  }
-
 
   .ww-list-header { display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; padding: 10px 40px; max-width: 1100px; margin: 0 auto; border-bottom: 2px solid var(--border); background: var(--bg3); border-top: 1px solid var(--border); }
   .ww-col { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
@@ -146,24 +149,15 @@
   .ww-search-bar { padding: 12px 40px 0; max-width: 1100px; margin: 0 auto; }
   .ww-search-input { font-size: 13px; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); width: 260px; outline: none; font-family: inherit; transition: border-color 0.15s, width 0.2s; }
   .ww-search-input:focus { border-color: var(--teal); background: var(--bg); width: 320px; }
-  .ww-suggest { border: 1px solid var(--border); border-radius: 10px; margin: 12px auto 16px; max-width: 1100px; background: var(--bg2); overflow: hidden; }
-  .ww-suggest-header { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; cursor: pointer; user-select: none; }
-  .ww-suggest-header:hover { background: var(--bg); }
-  .ww-suggest-title { font-size: 13px; font-weight: 600; color: var(--text); }
-  .ww-suggest-sub { font-size: 12px; color: var(--text-dim); }
-  .ww-suggest-chevron { font-size: 11px; color: var(--text-dim); transition: transform 0.2s; }
-  .ww-suggest.open .ww-suggest-chevron { transform: rotate(180deg); }
-  .ww-suggest-body { display: none; padding: 16px 18px 20px; border-top: 1px solid var(--border); }
-  .ww-suggest.open .ww-suggest-body { display: block; }
-  .ww-suggest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 560px; }
-  .ww-suggest-input { font-size: 13px; padding: 8px 12px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
-  .ww-suggest-input:focus { border-color: var(--teal); }
-  .ww-suggest-btn { grid-column: 1/-1; justify-self: start; font-size: 12px; padding: 8px 20px; border-radius: 7px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; font-weight: 500; font-family: inherit; transition: background 0.15s; }
-  .ww-suggest-btn:hover { background: var(--teal-pale); }
-  .ww-suggest-thanks { font-size: 13px; color: var(--teal); display: none; padding-top: 4px; }
+  .ww-disclaimer { font-size: 11px; color: var(--text-dim); line-height: 1.6; padding: 20px 40px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); }
+
   @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .page-header, .cat-tabs { padding-left: 24px; padding-right: 24px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+    .detail-panel { width: 100%; }
     .ww-list-header { display: none; }
-    .ww-grid, .ww-count, .ww-search-bar { padding-left: 24px; padding-right: 24px; }
+    .ww-grid, .ww-count, .ww-search-bar, .ww-disclaimer { padding-left: 24px; padding-right: 24px; }
     .ww-search-input { width: 100%; }
     .ww-search-input:focus { width: 100%; }
     .ww-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2px 12px; }
@@ -172,14 +166,13 @@
     .ww-name { grid-column: 1; grid-row: 1/3; display: flex; align-items: flex-start; padding-top: 2px; }
     .ww-role { grid-column: 2; grid-row: 1; }
     .ww-tags { grid-column: 2; grid-row: 2; justify-content: flex-start; }
-    .ww-suggest-form { grid-template-columns: 1fr; }
-    .ww-suggest-btn { grid-column: 1; }
   }
-
 </style>
 </head>
 <body>
 <div class="map-tooltip" id="map-tooltip"></div>
+
+<!-- Profile detail panel -->
 <div class="overlay" id="overlay" onclick="closeDetail()"></div>
 <div class="detail-panel" id="detail-panel">
   <div class="detail-header">
@@ -191,13 +184,39 @@
   </div>
   <div class="detail-body" id="detail-body"></div>
 </div>
+
+<!-- Add someone modal -->
+<div class="modal-overlay" id="suggest-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Add someone</div>
+        <div class="modal-sub">Suggestions take 30 seconds. We write the profile.</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <input class="modal-input" id="ww-s-name" type="text" placeholder="Name" required>
+      <input class="modal-input" id="ww-s-org" type="text" placeholder="Organisation" required>
+      <input class="modal-input full" id="ww-s-role" type="text" placeholder="Role" required>
+      <input class="modal-input full" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL (optional)">
+      <button class="modal-submit" onclick="submitWWSuggest()">Submit suggestion</button>
+      <div class="modal-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
+    </div>
+  </div>
+</div>
+
 <div id="nav-mount"></div>
+
 <div class="page-header">
   <a class="page-back" href="index.html">&#8592; Back</a>
-  <div class="page-title">Who's Who</div>
+  <div class="page-title-row">
+    <div class="page-title">Who's Who</div>
+    <button class="add-btn" onclick="openModal()">+ Add someone</button>
+  </div>
   <div class="page-sub">The people who matter in African conservation finance - funders, developers, standard-setters, and the officials who make deals happen.</div>
-  <p style="font-size:12px;color:var(--text-dim);margin-top:8px;margin-bottom:4px;line-height:1.6;max-width:700px">All profiles are compiled from publicly available sources - organisational websites, conference programmes, registry filings, and published interviews. No personal contact details are included. Canopy does not hold or process private data about any individual listed here. If you are listed and would like to update or remove your profile, contact us.</p>
 </div>
+
 <div class="cat-tabs" id="ww-tabs">
   <button class="cat-tab active" onclick="filterWW('all',this)">All</button>
   <button class="cat-tab" onclick="filterWW('fund',this)">Funds</button>
@@ -213,25 +232,6 @@
   <input class="ww-search-input" id="ww-search-input" type="text" placeholder="Search by name or organisation..." autocomplete="off">
 </div>
 <div class="ww-count" id="ww-count"></div>
-<div class="ww-suggest" id="ww-suggest-box">
-  <div class="ww-suggest-header" onclick="toggleWWSuggest()">
-    <div>
-      <span class="ww-suggest-title">Know someone who belongs here?</span>
-      <span class="ww-suggest-sub" style="margin-left:10px;">Suggestions take 30 seconds. We write the profile.</span>
-    </div>
-    <span class="ww-suggest-chevron">&#9660;</span>
-  </div>
-  <div class="ww-suggest-body">
-    <div class="ww-suggest-form" id="ww-suggest-form">
-      <input class="ww-suggest-input" id="ww-s-name" type="text" placeholder="Name" required>
-      <input class="ww-suggest-input" id="ww-s-org" type="text" placeholder="Organisation" required>
-      <input class="ww-suggest-input" id="ww-s-role" type="text" placeholder="Role" required>
-      <input class="ww-suggest-input" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL">
-      <button class="ww-suggest-btn" onclick="submitWWSuggest()">Suggest this person</button>
-    </div>
-    <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
-  </div>
-</div>
 <div class="ww-list-header">
   <div class="ww-col ww-col-active" data-col="name" onclick="setWWSort('name')">Name <span class="ww-arrow">&#8593;</span></div>
   <div class="ww-col" data-col="role" onclick="setWWSort('role')">Role <span class="ww-arrow">&#8593;&#8595;</span></div>
@@ -239,6 +239,9 @@
   <div class="ww-col" data-col="type" onclick="setWWSort('type')">Type <span class="ww-arrow">&#8593;&#8595;</span></div>
 </div>
 <div id="whowho-full" class="ww-grid"><div class="loading">Loading...</div></div>
+
+<div class="ww-disclaimer">All profiles are compiled from publicly available sources - organisational websites, conference programmes, registry filings, and published interviews. No personal contact details are included. Canopy does not hold or process private data about any individual listed here. If you are listed and would like to update or remove your profile, contact us.</div>
+
 <footer>
   <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
   <div class="footer-links">
@@ -246,32 +249,42 @@
     <a class="footer-link" href="index.html#about">About</a>
   </div>
 </footer>
-<script>
 
+<script>
   let allWhosWho = [];
   let currentWWFilter = 'all';
   let wwSearchQuery = '';
   let wwSortCol = 'name';
   let wwSortDir = 1;
   let wwRenderedList = [];
-
   const wwOrgLabel = { fund:'Fund', dfi:'DFI', standard_body:'Standard body', developer:'Developer', government:'Government', ngo:'NGO', buyer:'Buyer', advisory:'Advisory' };
+
   function safeJSON(o) { return JSON.stringify(o).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+
+  function openModal() {
+    document.getElementById('suggest-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('ww-s-name').focus();
+  }
+  function closeModal() {
+    document.getElementById('suggest-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   function formatName(name) {
-    const honorifics = ['Dr.','Prof.','Sir','Dame'];
-    let honorific = null; let n = name;
-    for (const h of honorifics) { if (name.startsWith(h+' ')) { honorific=h; n=name.slice(h.length+1); break; } }
-    const parts = n.trim().split(' '); const sur=parts.pop(); const rest=parts.join(' ');
-    const display = sur+(rest?', '+rest:'');
-    return honorific ? display+' ('+honorific.replace('.','.')+')' : display;
+    const honorifics=['Dr.','Prof.','Sir','Dame']; let honorific=null; let n=name;
+    for(const h of honorifics){if(name.startsWith(h+' ')){honorific=h;n=name.slice(h.length+1);break;}}
+    const parts=n.trim().split(' '); const sur=parts.pop(); const rest=parts.join(' ');
+    const display=sur+(rest?', '+rest:'');
+    return honorific?display+' ('+honorific.replace('.','.')+')':display;
   }
   function surname(name) {
     const honorifics=['Dr.','Prof.','Sir','Dame']; let n=name;
-    for (const h of honorifics) { if(n.startsWith(h+' ')){n=n.slice(h.length+1);break;} }
+    for(const h of honorifics){if(n.startsWith(h+' ')){n=n.slice(h.length+1);break;}}
     return n.trim().split(' ').pop().toLowerCase();
   }
   function setWWSort(col) {
-    if (wwSortCol===col){wwSortDir*=-1;}else{wwSortCol=col;wwSortDir=1;}
+    if(wwSortCol===col){wwSortDir*=-1;}else{wwSortCol=col;wwSortDir=1;}
     document.querySelectorAll('.ww-col').forEach(h=>{
       const isActive=h.dataset.col===wwSortCol;
       h.classList.toggle('ww-col-active',isActive);
@@ -285,8 +298,8 @@
     btn.classList.add('active'); renderWhosWho();
   }
   function renderWhosWho() {
-    let list = currentWWFilter==='all' ? allWhosWho : allWhosWho.filter(p=>p.organisation_type===currentWWFilter);
-    if (wwSearchQuery) {
+    let list=currentWWFilter==='all'?allWhosWho:allWhosWho.filter(p=>p.organisation_type===currentWWFilter);
+    if(wwSearchQuery){
       const q=wwSearchQuery.toLowerCase();
       list=list.filter(p=>p.name.toLowerCase().includes(q)||p.organisation.toLowerCase().includes(q)||p.role.toLowerCase().includes(q));
     }
@@ -341,72 +354,70 @@
       focusAreas+instruments+geos+notable+footprint
     );
   }
-  function toggleWWSuggest() {
-    document.getElementById('ww-suggest-box').classList.toggle('open');
-  }
+
   async function submitWWSuggest() {
     const name=document.getElementById('ww-s-name').value.trim();
     const org=document.getElementById('ww-s-org').value.trim();
     const role=document.getElementById('ww-s-role').value.trim();
     const linkedin=document.getElementById('ww-s-linkedin').value.trim();
-    if (!name||!org||!role){document.getElementById('ww-s-name').focus();return;}
+    if(!name||!org||!role){document.getElementById('ww-s-name').focus();return;}
     try {
       await fetch('https://formspree.io/f/mpqogvgk',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,organisation:org,role,linkedin})});
     } catch(e){}
-    document.getElementById('ww-suggest-form').style.display='none';
+    document.querySelector('.modal-submit').style.display='none';
     document.getElementById('ww-suggest-thanks').style.display='block';
+    setTimeout(closeModal, 2200);
   }
 
   function openDetail(name, badgeHTML, bodyHTML) {
-    document.getElementById('detail-name').textContent = name;
-    document.getElementById('detail-badge').innerHTML = badgeHTML;
-    document.getElementById('detail-body').innerHTML = bodyHTML;
+    document.getElementById('detail-name').textContent=name;
+    document.getElementById('detail-badge').innerHTML=badgeHTML;
+    document.getElementById('detail-body').innerHTML=bodyHTML;
     document.getElementById('overlay').classList.add('open');
     document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow='hidden';
   }
   function closeDetail() {
     document.getElementById('overlay').classList.remove('open');
     document.getElementById('detail-panel').classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.style.overflow='';
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+  document.addEventListener('keydown', e => {
+    if(e.key==='Escape'){
+      if(document.getElementById('suggest-modal').classList.contains('open')) closeModal();
+      else closeDetail();
+    }
+  });
 
   document.getElementById('ww-search-input').addEventListener('input', e=>{
     wwSearchQuery=e.target.value.trim(); renderWhosWho();
   });
+
   async function load() {
     try {
-      const res = await fetch('data/whos_who.json');
-      const data = await res.json();
-      allWhosWho = data.profiles;
+      const res=await fetch('data/whos_who.json');
+      const data=await res.json();
+      allWhosWho=data.profiles;
       renderWhosWho();
-    } catch(e) { console.error(e); }
+    } catch(e){ console.error(e); }
   }
   load();
-
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
-
-  // Standalone logo map - Africa silhouette, no data dependency
-  let _lc = null;
-  const _aISO = new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,232,231,266,270,288,324,624,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,646,678,686,694,706,710,716,728,729,748,768,788,800,818,834,854,894,262]);
+  let _lc=null;
+  const _aISO=new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,232,231,266,270,288,324,624,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,646,678,686,694,706,710,716,728,729,748,768,788,800,818,834,854,894,262]);
   async function renderLogoMap() {
-    const svg = d3.select('#logo-map');
-    if (svg.empty()) return;
-    if (!_lc) { _lc = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'); }
+    const svg=d3.select('#logo-map'); if(svg.empty()) return;
+    if(!_lc){_lc=await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');}
     svg.selectAll('*').remove();
-    const w=700,h=750;
-    const proj = d3.geoNaturalEarth1().scale(400).center([17,2]).translate([w/2,h/2+42]);
-    const path = d3.geoPath().projection(proj);
-    const countries = topojson.feature(_lc, _lc.objects.countries);
-    svg.selectAll('path')
-      .data(countries.features.filter(f => _aISO.has(+f.id)))
-      .join('path').attr('d', path).attr('fill','#c8dfc8').attr('stroke','#fff').attr('stroke-width',0.3);
+    const proj=d3.geoNaturalEarth1().scale(400).center([17,2]).translate([350,417]);
+    const path=d3.geoPath().projection(proj);
+    const countries=topojson.feature(_lc,_lc.objects.countries);
+    svg.selectAll('path').data(countries.features.filter(f=>_aISO.has(+f.id))).join('path')
+      .attr('d',path).attr('fill','#c8dfc8').attr('stroke','#fff').attr('stroke-width',0.3);
   }
-
 </script>
 <script src="nav.js" defer></script>
 </body>
