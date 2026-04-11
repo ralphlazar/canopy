@@ -15,7 +15,7 @@
     --cairn-border: rgba(74,42,107,0.25);
   }
   html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
 
   /* NAV */
@@ -88,7 +88,7 @@
   .meth-link { font-size: 13px; color: var(--cairn); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 
   /* GRADE FILTER */
-  .grade-summary { display: flex; border-bottom: 1px solid var(--border); overflow-x: auto; justify-content: center; }
+  .grade-summary { display: flex; border-bottom: 1px solid var(--border); overflow-x: auto; justify-content: center; max-width: 100%; -webkit-overflow-scrolling: touch; }
   .grade-stat { padding: 16px 18px; border-right: 1px solid var(--border); cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
   .grade-stat:last-child { border-right: none; }
   .grade-stat:hover { background: var(--bg2); }

@@ -21,7 +21,12 @@
       "country": "Angola",
       "country_code": "AGO",
       "name": "Cameia",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast wetland and miombo woodland park in central Angola, centred on Lake Cameia and the Zambezi headwaters. The park supports hippos, sitatunga, and large waterbird colonies, and is one of the most significant freshwater ecosystems in southern Angola.",
+      "ecosystem": "Wetland",
+      "manager": "Instituto Nacional da Biodiversidade e Areas de Conservacao",
+      "size_km2": 14450,
+      "wdpa_url": "https://www.protectedplanet.net/cameia-national-park"
     },
     {
       "country": "Angola",
@@ -38,13 +43,23 @@
       "country": "Angola",
       "country_code": "AGO",
       "name": "Luando",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "An integral nature reserve in central Angola protecting one of the last strongholds of the giant sable antelope, Angola's national animal. Dense miombo woodland and riverine corridors define the landscape, which remains among the least disturbed in the region.",
+      "ecosystem": "Miombo",
+      "manager": "Instituto Nacional da Biodiversidade e Areas de Conservacao",
+      "size_km2": 8280,
+      "wdpa_url": "https://www.protectedplanet.net/luando-integral-nature-reserve"
     },
     {
       "country": "Angola",
       "country_code": "AGO",
       "name": "Luengue-Luiana",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "One of Angola's largest protected areas, spanning vast miombo woodlands and wetlands along the Cuando and Luiana rivers in the southeast. Managed by African Parks since 2018, it is being restored after decades of civil war, with elephant and buffalo populations recovering steadily.",
+      "ecosystem": "Miombo",
+      "manager": "African Parks",
+      "size_km2": 24490,
+      "wdpa_url": "https://www.protectedplanet.net/luengue-luiana-national-park"
     },
     {
       "country": "Benin",
@@ -83,19 +98,34 @@
       "country": "Botswana",
       "country_code": "BWA",
       "name": "Chobe",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Botswana's first national park and one of Africa's most celebrated wildlife destinations, home to the continent's highest concentration of elephants. The Chobe River floodplain draws enormous herds during the dry season, supporting lions, leopards, wild dogs, and exceptional birdlife.",
+      "ecosystem": "Savanna",
+      "manager": "Department of Wildlife and National Parks Botswana",
+      "size_km2": 11700,
+      "wdpa_url": "https://www.protectedplanet.net/chobe-national-park"
     },
     {
       "country": "Botswana",
       "country_code": "BWA",
       "name": "Gemsbok",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "The Botswana portion of the Kgalagadi Transfrontier Park, one of the world's great desert conservation areas straddling the Kalahari. Gemsbok, springbok, lions, and black-maned Kalahari lions roam ancient fossilised riverbeds in one of Africa's largest unfenced protected areas.",
+      "ecosystem": "Desert",
+      "manager": "South African National Parks / Department of Wildlife and National Parks Botswana",
+      "size_km2": 24800,
+      "wdpa_url": "https://www.protectedplanet.net/gemsbok-national-park"
     },
     {
       "country": "Central African Republic",
       "country_code": "CAF",
       "name": "Bamingui-Bangoran",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage component in northern CAR protecting savanna and gallery forest ecosystems at the Sahel-Sudan transition zone. The park harbours elephants, lions, leopards, and cheetahs, though populations have been severely impacted by poaching and armed conflict.",
+      "ecosystem": "Savanna",
+      "manager": "Government of Central African Republic",
+      "size_km2": 10700,
+      "wdpa_url": "https://www.protectedplanet.net/bamingui-bangoran-national-park"
     },
     {
       "country": "Central African Republic",
@@ -112,19 +142,34 @@
       "country": "Central African Republic",
       "country_code": "CAF",
       "name": "Dzanga-Sangha",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage rainforest reserve in the southwest CAR, famous for the Dzanga bai forest clearing where hundreds of forest elephants gather to drink mineral-rich water. The reserve protects western lowland gorillas, bongo, and one of the most biodiverse forest ecosystems in Central Africa.",
+      "ecosystem": "Rainforest",
+      "manager": "WWF / Government of Central African Republic",
+      "size_km2": 4590,
+      "wdpa_url": "https://www.protectedplanet.net/dzanga-sangha-special-dense-forest-reserve"
     },
     {
       "country": "Central African Republic",
       "country_code": "CAF",
       "name": "Manovo-Gounda St Floris",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage site in northern CAR encompassing sweeping savanna, wetlands, and gallery forests along the Bahr Aouk and Bahr Kameur rivers. Once supporting exceptional wildlife including black rhinos, the park is listed as World Heritage in Danger due to poaching and armed conflict.",
+      "ecosystem": "Savanna",
+      "manager": "Government of Central African Republic",
+      "size_km2": 17400,
+      "wdpa_url": "https://www.protectedplanet.net/manovo-gounda-st-floris-national-park"
     },
     {
       "country": "Ivory Coast",
       "country_code": "CIV",
       "name": "Comoe",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Ivory Coast's largest protected area and a UNESCO World Heritage site, spanning a transition zone from Sahel to rainforest along the Comoe River. The park supports unusual ecological diversity including forest patches within savanna, harbouring chimpanzees, elephants, lions, and over 500 bird species.",
+      "ecosystem": "Savanna",
+      "manager": "Office Ivoirien des Parcs et Reserves",
+      "size_km2": 11500,
+      "wdpa_url": "https://www.protectedplanet.net/comoe-national-park"
     },
     {
       "country": "Ivory Coast",
@@ -141,25 +186,45 @@
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Bouba Ndjida",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northern Cameroon along the Cameroon-Chad border, part of the Cameroon Highlands savanna ecosystem. The park has suffered significant elephant losses to poaching but retains populations of lions, giraffes, and roan antelope in its broad floodplains and woodland savannas.",
+      "ecosystem": "Savanna",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 2200,
+      "wdpa_url": "https://www.protectedplanet.net/bouba-ndjida-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Boumba Bek",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A dense rainforest national park in southeastern Cameroon within the Congo Basin forest complex, adjoining Nki National Park. The park protects western lowland gorillas, forest elephants, and chimpanzees in a largely intact forest landscape that forms part of the Dja-Odzala-Minkebe transfrontier complex.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 2380,
+      "wdpa_url": "https://www.protectedplanet.net/boumba-bek-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Boumba-Djombi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A proposed protected area in southeastern Cameroon forming a wildlife corridor within the Congo Basin rainforest. The zone links Boumba Bek and Nki national parks and is critical for the movement of forest elephants and great apes across the broader Dja ecosystem.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 680,
+      "wdpa_url": "https://www.protectedplanet.net/boumba-djombi-proposed-protected-area"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Campo-Ma'an",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A coastal rainforest national park in southwestern Cameroon, encompassing the transition between Atlantic coastal forest and the Congo Basin. The park protects chimpanzees, forest elephants, and African grey parrots, with mangrove systems and offshore islands adding exceptional marine biodiversity.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 2640,
+      "wdpa_url": "https://www.protectedplanet.net/campo-ma-an-national-park"
     },
     {
       "country": "Cameroon",
@@ -176,55 +241,100 @@
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Faro",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in the Adamawa highlands of northern Cameroon, protecting Guinea savanna and gallery forest habitats along the Faro River. The park supports elephants, lions, hippopotamuses, and diverse antelope species, and is contiguous with the Benoue protected area complex.",
+      "ecosystem": "Savanna",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 3300,
+      "wdpa_url": "https://www.protectedplanet.net/faro-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Lobeke",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A Congo Basin rainforest park in southeast Cameroon, renowned for its network of forest clearings (bais) where western lowland gorillas, forest elephants, and bongo congregate. Lobeke forms part of the Sangha Trinational UNESCO World Heritage site alongside Dzanga-Sangha and Nouabale-Ndoki.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 2170,
+      "wdpa_url": "https://www.protectedplanet.net/lobeke-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Mbam et Djerem",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Cameroon's largest national park, straddling the transition between the Congo Basin rainforest and the Guinea savanna in the country's centre. The park protects a mosaic of habitats supporting western lowland gorillas, chimpanzees, elephants, and bongos in a largely roadless wilderness.",
+      "ecosystem": "Forest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 4165,
+      "wdpa_url": "https://www.protectedplanet.net/mbam-et-djerem-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Mont Cameroun",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "West Africa's highest peak at 4,095m, an active volcano on the Gulf of Guinea coast whose slopes pass through montane forest, sub-alpine heathland, and lava fields. The mountain is a centre of plant endemism and supports forest elephants, chimpanzees, and drill monkeys in its lower forest zones.",
+      "ecosystem": "Mountain",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 583,
+      "wdpa_url": "https://www.protectedplanet.net/mont-cameroun-proposed-protected-area"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Nki",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote rainforest national park in the southeastern corner of Cameroon, part of the Dja-Odzala-Minkebe transfrontier conservation complex. Nki protects one of the least disturbed forest areas in Central Africa, with healthy populations of gorillas, forest elephants, and chimpanzees.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 3060,
+      "wdpa_url": "https://www.protectedplanet.net/nki-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Takamanda",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A small but critically important rainforest park on the Cameroon-Nigeria border, home to one of the last populations of the Cross River gorilla, the world's most endangered great ape subspecies. The park connects with Nigeria's Cross River National Park, forming a vital transboundary refuge.",
+      "ecosystem": "Rainforest",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 676,
+      "wdpa_url": "https://www.protectedplanet.net/takamanda-national-park"
     },
     {
       "country": "Cameroon",
       "country_code": "CMR",
       "name": "Waza",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO biosphere reserve in northern Cameroon at the southern edge of the Sahara, protecting Sahelian savanna and floodplain habitats around Lake Chad. Waza is renowned for its lion population and extraordinary concentrations of waterbirds, giraffes, and elephants during the wet season.",
+      "ecosystem": "Sahel",
+      "manager": "Ministry of Forestry and Wildlife Cameroon",
+      "size_km2": 1700,
+      "wdpa_url": "https://www.protectedplanet.net/waza-national-park"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Abumonbazi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A managed resource protected area in northwestern DRC within the Congo Basin forest, protecting a mosaic of lowland rainforest and swamp forest. The area supports forest elephants, bonobos, and diverse primate communities in one of the world's largest contiguous tropical forest blocks.",
+      "ecosystem": "Forest",
+      "manager": "Institut Congolais pour la Conservation de la Nature",
+      "size_km2": 7770,
+      "wdpa_url": "https://www.protectedplanet.net/abumonbazi-managed-resource-protected-area"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Bili-Uere",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast and remote protected hunting domain in northern DRC, famous for a population of unusually large chimpanzees known as Bili apes that display behaviours intermediate between chimpanzees and gorillas. The area encompasses forest-savanna mosaic and is one of the least-studied large protected areas in Africa.",
+      "ecosystem": "Forest",
+      "manager": "Institut Congolais pour la Conservation de la Nature",
+      "size_km2": 16700,
+      "wdpa_url": "https://www.protectedplanet.net/bili-uere-hunting-domain"
     },
     {
       "country": "DRC",
@@ -241,7 +351,12 @@
       "country": "DRC",
       "country_code": "COD",
       "name": "Itombwe",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A high-altitude nature reserve in eastern DRC protecting the Itombwe Massif, one of Africa's most important montane forest blocks. The massif is a centre of exceptional endemism for birds, amphibians, and plants, and shelters the world's largest population of Grauer's gorillas alongside chimpanzees and forest elephants.",
+      "ecosystem": "Mountain",
+      "manager": "Institut Congolais pour la Conservation de la Nature",
+      "size_km2": 6520,
+      "wdpa_url": "https://www.protectedplanet.net/itombwe-nature-reserve"
     },
     {
       "country": "DRC",
@@ -258,25 +373,45 @@
       "country": "DRC",
       "country_code": "COD",
       "name": "Kundelungu",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park on the Kundelungu Plateau in southeastern DRC, protecting high-altitude grasslands, miombo woodland, and the dramatic Lofoï waterfall, one of Africa's tallest. The park is part of the Upper Lualaba watershed and harbours roan antelope, buffalo, and significant bird diversity.",
+      "ecosystem": "Grassland",
+      "manager": "Institut Congolais pour la Conservation de la Nature",
+      "size_km2": 7600,
+      "wdpa_url": "https://www.protectedplanet.net/kundelungu-national-park"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Lomami",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A newly established national park in central DRC managed by African Parks, protecting a vast expanse of intact Congo Basin rainforest around the Lomami River. The park was the discovery site of the lesula monkey, a species new to science identified in 2007, and harbours bonobos and forest elephants.",
+      "ecosystem": "Rainforest",
+      "manager": "African Parks",
+      "size_km2": 8870,
+      "wdpa_url": "https://www.protectedplanet.net/lomami-national-park"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Maiko",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote and largely inaccessible national park in northeastern DRC protecting dense Congo Basin rainforest. Maiko is one of only three parks in Africa where okapi, Grauer's gorillas, and forest elephants coexist, making it a globally significant biodiversity stronghold despite serious conservation challenges.",
+      "ecosystem": "Rainforest",
+      "manager": "Institut Congolais pour la Conservation de la Nature",
+      "size_km2": 10830,
+      "wdpa_url": "https://www.protectedplanet.net/maiko-national-park"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Okapis",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage reserve in the Ituri Forest of northeastern DRC, protecting the primary habitat of the okapi, one of Africa's most enigmatic mammals. The reserve covers roughly one fifth of the Ituri Forest and shelters forest elephants, chimpanzees, and over 330 bird species in pristine lowland rainforest.",
+      "ecosystem": "Rainforest",
+      "manager": "Institut Congolais pour la Conservation de la Nature / Okapi Conservation Project",
+      "size_km2": 13726,
+      "wdpa_url": "https://www.protectedplanet.net/okapi-wildlife-reserve"
     },
     {
       "country": "DRC",
@@ -293,13 +428,23 @@
       "country": "DRC",
       "country_code": "COD",
       "name": "Tumba-Lediima",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast wetland and flooded forest reserve in western DRC adjoining the Republic of Congo border, protecting one of the world's most significant freshwater swamp forest systems. The area is a stronghold for bonobos and supports rare swamp-specialist species in a largely intact landscape.",
+      "ecosystem": "Wetland",
+      "manager": "Institut Congolais pour la Conservation de la Nature / WWF",
+      "size_km2": 7600,
+      "wdpa_url": "https://www.protectedplanet.net/tumba-lediima-nature-reserve"
     },
     {
       "country": "DRC",
       "country_code": "COD",
       "name": "Upemba",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in southeastern DRC encompassing the Upemba wetland system, Lake Upemba, and surrounding miombo woodland, now managed by African Parks. Once harbouring extraordinary wildlife, the park is undergoing intensive restoration after decades of conflict and poaching, with elephant populations beginning to recover.",
+      "ecosystem": "Wetland",
+      "manager": "African Parks",
+      "size_km2": 11730,
+      "wdpa_url": "https://www.protectedplanet.net/upemba-national-park"
     },
     {
       "country": "DRC",
@@ -317,38 +462,68 @@
       "country_code": "COG",
       "name": "Conkouati-Douli",
       "carbon_project": true,
-      "carbon_project_id": "conkouati-douli-national-park-redd-project"
+      "carbon_project_id": "conkouati-douli-national-park-redd-project",
+      "description": "A national park on the Atlantic coast of the Republic of Congo, protecting a rare combination of marine, mangrove, lagoon, and rainforest ecosystems. The park harbours nesting leatherback turtles, forest elephants, western lowland gorillas, and chimpanzees in a landscape that spans from ocean to deep forest.",
+      "ecosystem": "Coastal",
+      "manager": "Government of Republic of Congo / WCS",
+      "size_km2": 5040,
+      "wdpa_url": "https://www.protectedplanet.net/conkouati-douli-national-park"
     },
     {
       "country": "Republic of Congo",
       "country_code": "COG",
       "name": "Lac Tele",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote community reserve in the northern Congo Basin, centred on Lake Tele and its surrounding swamp forest - one of the most intact freshwater ecosystems in Central Africa. The reserve is famous in folklore as the supposed home of the Mokele-mbembe and genuinely supports forest elephants, bonobos, and vast waterbird colonies.",
+      "ecosystem": "Wetland",
+      "manager": "Government of Republic of Congo",
+      "size_km2": 4380,
+      "wdpa_url": "https://www.protectedplanet.net/lac-tele-community-reserve"
     },
     {
       "country": "Republic of Congo",
       "country_code": "COG",
       "name": "Lessio-Louna",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A wildlife reserve in the Bateke Plateau of the Republic of Congo, known internationally as a reintroduction site for western lowland gorillas by the Aspinall Foundation. The plateau savanna and gallery forest landscape supports reintroduced gorilla groups that have successfully bred in the wild.",
+      "ecosystem": "Savanna",
+      "manager": "The Aspinall Foundation / Government of Republic of Congo",
+      "size_km2": 3440,
+      "wdpa_url": "https://www.protectedplanet.net/lessio-louna-wildlife-reserve"
     },
     {
       "country": "Republic of Congo",
       "country_code": "COG",
       "name": "Lefini",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A faunal reserve on the Bateke Plateau north of Brazzaville protecting savanna grasslands, gallery forest, and the Lefini River valley. The reserve supports buffalos, sitatunga, and large primate populations, and is part of the broader Bateke Plateau conservation landscape.",
+      "ecosystem": "Savanna",
+      "manager": "Government of Republic of Congo",
+      "size_km2": 6300,
+      "wdpa_url": "https://www.protectedplanet.net/lefini-reserve"
     },
     {
       "country": "Republic of Congo",
       "country_code": "COG",
       "name": "Nouabale-Ndoki",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A pristine Congo Basin rainforest national park in northern Republic of Congo, widely regarded as one of the most intact forest ecosystems in Africa. Part of the Sangha Trinational UNESCO World Heritage site, the park protects western lowland gorillas, forest elephants, and chimpanzees in a forest that shows virtually no sign of human disturbance.",
+      "ecosystem": "Rainforest",
+      "manager": "Wildlife Conservation Society / Government of Republic of Congo",
+      "size_km2": 4200,
+      "wdpa_url": "https://www.protectedplanet.net/nouabale-ndoki-national-park"
     },
     {
       "country": "Republic of Congo",
       "country_code": "COG",
       "name": "Ntokou-Pikounda",
       "carbon_project": true,
-      "carbon_project_id": "north-pikounda-redd"
+      "carbon_project_id": "north-pikounda-redd",
+      "description": "A recently established national park in northern Republic of Congo protecting one of the highest-density western lowland gorilla populations ever recorded. The park's swamp forest and terra firma rainforest form a corridor connecting Nouabale-Ndoki and Odzala-Kokoua, cementing a landscape-scale conservation block.",
+      "ecosystem": "Rainforest",
+      "manager": "Wildlife Conservation Society / Government of Republic of Congo",
+      "size_km2": 4570,
+      "wdpa_url": "https://www.protectedplanet.net/ntokou-pikounda-national-park"
     },
     {
       "country": "Republic of Congo",
@@ -365,7 +540,12 @@
       "country": "Algeria",
       "country_code": "DZA",
       "name": "Ahaggar",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast national park in southern Algeria encompassing the Ahaggar Mountains, a dramatic volcanic massif rising from the Sahara with peaks exceeding 2,900m. The park protects Saharan endemic flora and fauna including Barbary sheep, sand gazelles, and Saharan cheetahs in one of the world's largest protected areas.",
+      "ecosystem": "Desert",
+      "manager": "Office du Parc National de l'Ahaggar",
+      "size_km2": 450000,
+      "wdpa_url": "https://www.protectedplanet.net/ahaggar-national-park"
     },
     {
       "country": "Ethiopia",
@@ -382,7 +562,12 @@
       "country": "Ethiopia",
       "country_code": "ETH",
       "name": "Borana",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A private conservancy in northern Kenya's Laikipia Plateau, part of the broader Laikipia wildlife ecosystem that supports the second-largest wildlife population in Kenya outside the Mara-Serengeti. Borana has been instrumental in the translocation and recovery of critically endangered black rhinos and Grevy's zebras.",
+      "ecosystem": "Savanna",
+      "manager": "Borana Conservancy",
+      "size_km2": 360,
+      "wdpa_url": "https://www.protectedplanet.net/borana-conservancy"
     },
     {
       "country": "Ethiopia",
@@ -399,13 +584,23 @@
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Ivindo",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northeast Gabon protecting dense Congo Basin rainforest and the Ivindo River, home to the spectacular Kongou and Mingouli waterfalls. The park harbours large populations of forest elephants, western lowland gorillas, and chimpanzees, and is considered one of Gabon's most biologically rich landscapes.",
+      "ecosystem": "Rainforest",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 3000,
+      "wdpa_url": "https://www.protectedplanet.net/ivindo-national-park"
     },
     {
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Loango",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remarkable coastal national park in western Gabon where rainforest meets the Atlantic Ocean, creating a mosaic of beach, lagoon, savanna, and forest. Loango is famous for surfing hippos, forest elephants on the beach, and nesting sea turtles, earning its reputation as Africa's last Eden.",
+      "ecosystem": "Coastal",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 1550,
+      "wdpa_url": "https://www.protectedplanet.net/loango-national-park"
     },
     {
       "country": "Gabon",
@@ -433,55 +628,100 @@
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Monts Birougou",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A montane forest national park in southern Gabon protecting the Birougou Hills, an isolated massif with high plant endemism and diverse wildlife. The park shelters western lowland gorillas, chimpanzees, and forest elephants within a forest that remains largely unexplored by scientists.",
+      "ecosystem": "Mountain",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 679,
+      "wdpa_url": "https://www.protectedplanet.net/monts-birougou-national-park"
     },
     {
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Monts de Cristal",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northwestern Gabon protecting the Crystal Mountains, a Pre-Cambrian highland with exceptional botanical diversity and one of the highest levels of plant endemism in Central Africa. The park is critical habitat for mandrills, western lowland gorillas, and numerous endemic bird species.",
+      "ecosystem": "Mountain",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 1200,
+      "wdpa_url": "https://www.protectedplanet.net/monts-de-cristal-national-park"
     },
     {
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Moukalaba-Doudou",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in southwestern Gabon protecting lowland rainforest, savanna, and mangrove systems along the Atlantic coast. The park is known for habituated western lowland gorilla groups and forest elephants, and forms part of a broader landscape connecting to Conkouati-Douli in the Republic of Congo.",
+      "ecosystem": "Rainforest",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 4500,
+      "wdpa_url": "https://www.protectedplanet.net/moukalaba-doudou-national-park"
     },
     {
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Plateaux Batek",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park on the Bateke Plateau in southeastern Gabon protecting savanna, gallery forest, and intact rainforest at the Congo Basin fringe. The park is an important refuge for western lowland gorillas and forest elephants within a landscape that has faced pressure from agriculture and logging.",
+      "ecosystem": "Rainforest",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 1075,
+      "wdpa_url": "https://www.protectedplanet.net/plateaux-bateke-national-park"
     },
     {
       "country": "Gabon",
       "country_code": "GAB",
       "name": "Wonga-Wongue",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A presidential reserve on Gabon's Atlantic coast protecting coastal forest, wetlands, and lagoons with exceptional biodiversity. The reserve serves as a personal hunting ground historically and remains one of the best-preserved coastal ecosystems in Central Africa, with large forest elephant herds and nesting sea turtles.",
+      "ecosystem": "Coastal",
+      "manager": "Agence Nationale des Parcs Nationaux Gabon",
+      "size_km2": 3800,
+      "wdpa_url": "https://www.protectedplanet.net/wonga-wongue-presidential-reserve"
     },
     {
       "country": "Ghana",
       "country_code": "GHA",
       "name": "Mole",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Ghana's largest national park, protecting Guinea savanna woodland and gallery forest in the northwest of the country. Mole is home to Ghana's largest elephant population alongside lions, leopards, kobs, and over 300 bird species, and represents the most significant wildlife area in West Africa's drier savanna zone.",
+      "ecosystem": "Savanna",
+      "manager": "Wildlife Division Ghana",
+      "size_km2": 4840,
+      "wdpa_url": "https://www.protectedplanet.net/mole-national-park"
     },
     {
       "country": "Equatorial Guinea",
       "country_code": "GNQ",
       "name": "Monte Alen",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "The largest protected area on Equatorial Guinea's mainland, Bioko, protecting dense equatorial rainforest on the slopes of Monte Mitra and Monte Alen. The park harbours western lowland gorillas, chimpanzees, and forest elephants in one of Central Africa's lesser-known but biologically significant forest landscapes.",
+      "ecosystem": "Rainforest",
+      "manager": "Government of Equatorial Guinea",
+      "size_km2": 1400,
+      "wdpa_url": "https://www.protectedplanet.net/monte-alen-national-park"
     },
     {
       "country": "Equatorial Guinea",
       "country_code": "GNQ",
       "name": "Reserva de la Paz",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A biosphere reserve on Bioko Island, Equatorial Guinea, protecting montane forest and cloud forest habitats on the slopes of an extinct volcano. The island is globally significant for endemic primates including the drill and Bioko red colobus, and hosts important nesting populations of sea turtles on its southern beaches.",
+      "ecosystem": "Forest",
+      "manager": "Government of Equatorial Guinea",
+      "size_km2": 330,
+      "wdpa_url": "https://www.protectedplanet.net/reserva-de-la-biosfera-de-la-paz"
     },
     {
       "country": "Kenya",
       "country_code": "KEN",
       "name": "Aberdare",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park protecting the Aberdare Mountain Range in central Kenya, encompassing bamboo forest, moorland, and the Kinangop Plateau above 3,000m. The park forms part of the Central Kenya corridor for elephants and black rhinos, and is famous for its tree hotels where wildlife congregates at waterholes.",
+      "ecosystem": "Mountain",
+      "manager": "Kenya Wildlife Service",
+      "size_km2": 767,
+      "wdpa_url": "https://www.protectedplanet.net/aberdare-national-park"
     },
     {
       "country": "Kenya",
@@ -498,7 +738,12 @@
       "country": "Kenya",
       "country_code": "KEN",
       "name": "Melako Community Conservancy",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A community-managed conservancy in northern Kenya's Samburu-Isiolo region, established by the Borana community to protect wildlife and secure land rights. The conservancy is a key corridor for elephants and Grevy's zebras and demonstrates the effectiveness of community-led conservation in northern Kenya's drylands.",
+      "ecosystem": "Savanna",
+      "manager": "Melako Community Conservancy",
+      "size_km2": 2480,
+      "wdpa_url": "https://www.protectedplanet.net/melako-community-conservancy"
     },
     {
       "country": "Kenya",
@@ -515,13 +760,23 @@
       "country": "Kenya",
       "country_code": "KEN",
       "name": "Sera Community Conservancy",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Kenya's first community conservancy to successfully reintroduce black rhinos, with a rhino sanctuary established in 2015 now holding a growing population. Managed by the Samburu community with support from the Northern Rangelands Trust, Sera is a leading example of community conservation generating both wildlife recovery and livelihood benefits.",
+      "ecosystem": "Savanna",
+      "manager": "Sera Community Conservancy / Northern Rangelands Trust",
+      "size_km2": 3490,
+      "wdpa_url": "https://www.protectedplanet.net/sera-wildlife-conservancy"
     },
     {
       "country": "Kenya",
       "country_code": "KEN",
       "name": "Sibiloi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park on the northeastern shore of Lake Turkana, a UNESCO World Heritage site and the world's largest permanent desert lake. Sibiloi is globally significant for its fossil record, with discoveries including Homo rudolfensis and Australopithecus anamensis, and protects Nile crocodiles, hippos, and specialist desert fauna.",
+      "ecosystem": "Desert",
+      "manager": "Kenya Wildlife Service",
+      "size_km2": 1570,
+      "wdpa_url": "https://www.protectedplanet.net/sibiloi-national-park"
     },
     {
       "country": "Kenya",
@@ -549,7 +804,12 @@
       "country": "Liberia",
       "country_code": "LBR",
       "name": "Sapo",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Liberia's only national park and the second-largest protected rainforest in West Africa, sheltering a remarkable assemblage of Upper Guinea forest species. Sapo protects pygmy hippos, forest elephants, chimpanzees, and zebra duikers in an intact primary forest that has survived despite decades of civil conflict.",
+      "ecosystem": "Rainforest",
+      "manager": "Forestry Development Authority Liberia",
+      "size_km2": 1800,
+      "wdpa_url": "https://www.protectedplanet.net/sapo-national-park"
     },
     {
       "country": "Lesotho",
@@ -566,25 +826,45 @@
       "country": "Mali",
       "country_code": "MLI",
       "name": "Gourma",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A Sahelian reserve in eastern Mali protecting the southernmost population of desert-adapted elephants on Earth, which undertake the longest elephant migration recorded in Africa - over 600km annually in search of water. The herd's survival in this harsh landscape represents one of conservation's most extraordinary stories.",
+      "ecosystem": "Sahel",
+      "manager": "Government of Mali / IUCN",
+      "size_km2": 1200,
+      "wdpa_url": "https://www.protectedplanet.net/gourma-reserve"
     },
     {
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Banhine",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote national park in southern Mozambique's Gaza Province, protecting seasonal pans, grasslands, and woodland in the Limpopo basin. Part of the Great Limpopo Transfrontier Conservation Area, Banhine is being restocked with wildlife and forms a critical link in a vast cross-border ecosystem spanning Mozambique, Zimbabwe, and South Africa.",
+      "ecosystem": "Wetland",
+      "manager": "Administracao Nacional das Areas de Conservacao Mozambique",
+      "size_km2": 7000,
+      "wdpa_url": "https://www.protectedplanet.net/banhine-national-park"
     },
     {
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Chimanimani",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A compact but spectacular national park in eastern Zimbabwe protecting the Chimanimani Mountains, a quartzite massif of great botanical significance on the Mozambique border. The park's diverse habitats from river gorges to high plateaux support sable antelope, leopards, and exceptionally high plant endemism within the Eastern Highlands.",
+      "ecosystem": "Mountain",
+      "manager": "Zimbabwe Parks and Wildlife Management Authority",
+      "size_km2": 171,
+      "wdpa_url": "https://www.protectedplanet.net/chimanimani-national-park"
     },
     {
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Gile",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national reserve in Zambezia Province, Mozambique, protecting miombo woodland and the Molócue River system. Gile holds one of Mozambique's most important elephant populations and is being rehabilitated following years of conflict and poaching, with support from international conservation organisations.",
+      "ecosystem": "Miombo",
+      "manager": "Administracao Nacional das Areas de Conservacao Mozambique",
+      "size_km2": 2100,
+      "wdpa_url": "https://www.protectedplanet.net/gilé-national-reserve"
     },
     {
       "country": "Mozambique",
@@ -601,7 +881,12 @@
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Limpopo",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "The Mozambican component of the Great Limpopo Transfrontier Park, connecting to South Africa's Kruger National Park and Zimbabwe's Gonarezhou. Fences between Limpopo and Kruger have been removed, allowing elephants and lions to roam freely across the international border in one of Africa's largest conservation areas.",
+      "ecosystem": "Savanna",
+      "manager": "Administracao Nacional das Areas de Conservacao Mozambique",
+      "size_km2": 10000,
+      "wdpa_url": "https://www.protectedplanet.net/limpopo-national-park"
     },
     {
       "country": "Mozambique",
@@ -618,13 +903,23 @@
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Tchuma Tchato",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A community-based multiple use area on the Zambezi River in Tete Province, Mozambique, one of Africa's pioneering community conservation projects since the 1990s. Local communities share in wildlife revenues and manage resource use, with hippos, crocodiles, and diverse waterbirds in the Zambezi corridor.",
+      "ecosystem": "Miombo",
+      "manager": "Government of Mozambique",
+      "size_km2": 2300,
+      "wdpa_url": "https://www.protectedplanet.net/tchuma-tchato-multiple-use-area"
     },
     {
       "country": "Mozambique",
       "country_code": "MOZ",
       "name": "Zinave",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in southern Mozambique managed by African Parks since 2017, undergoing comprehensive wildlife restoration after being emptied of large mammals during the civil war. Lions, elephants, hippos, nyala, and wild dogs have been reintroduced and populations are growing in this expanding Great Limpopo landscape.",
+      "ecosystem": "Savanna",
+      "manager": "African Parks",
+      "size_km2": 4180,
+      "wdpa_url": "https://www.protectedplanet.net/zinave-national-park"
     },
     {
       "country": "Malawi",
@@ -641,7 +936,12 @@
       "country": "Malawi",
       "country_code": "MWI",
       "name": "Mulanje Mountain",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A forest reserve protecting the Mulanje Massif in southern Malawi, an inselberg rising dramatically to 3,002m - the highest point in south-central Africa. The mountain is a centre of plant endemism including the Mulanje cedar, Malawi's national tree, and supports endemic chameleons, birds, and a rich montane forest community.",
+      "ecosystem": "Mountain",
+      "manager": "Malawi Department of Forestry",
+      "size_km2": 648,
+      "wdpa_url": "https://www.protectedplanet.net/mount-mulanje-forest-reserve"
     },
     {
       "country": "Malawi",
@@ -658,13 +958,23 @@
       "country": "Namibia",
       "country_code": "NAM",
       "name": "Ai-Ais Hot Springs",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A desert national park in southern Namibia's Fish River Canyon region, famed for the natural hot springs at Ai-Ais and the dramatic Fish River Canyon - Africa's largest canyon. The park forms part of the Ai-Ais/Richtersveld Transfrontier Park with South Africa and supports desert-adapted wildlife including Hartmann's mountain zebra and klipspringer.",
+      "ecosystem": "Desert",
+      "manager": "Namibia Ministry of Environment and Tourism",
+      "size_km2": 6100,
+      "wdpa_url": "https://www.protectedplanet.net/ai-ais-richtersveld-transfrontier-park"
     },
     {
       "country": "Namibia",
       "country_code": "NAM",
       "name": "Bwabwata",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in the Caprivi Strip of northeastern Namibia, protecting Kavango and Zambezi floodplain ecosystems within the Kavango-Zambezi Transfrontier Conservation Area. The park supports African wild dogs, elephants, hippos, and exceptional birdlife, and is managed with local Khwe San communities who live within its boundaries.",
+      "ecosystem": "Wetland",
+      "manager": "Namibia Ministry of Environment and Tourism",
+      "size_km2": 6100,
+      "wdpa_url": "https://www.protectedplanet.net/bwabwata-national-park"
     },
     {
       "country": "Namibia",
@@ -681,7 +991,12 @@
       "country": "Namibia",
       "country_code": "NAM",
       "name": "Namib-Naukluft",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "One of the world's largest national parks, protecting the ancient Namib Desert and the Naukluft Mountains along Namibia's Atlantic coast. The park encompasses the iconic red dunes of Sossusvlei, Sandwich Harbour lagoon, and extraordinary desert-adapted life including oryx, springbok, brown hyenas, and endemic Welwitschia plants.",
+      "ecosystem": "Desert",
+      "manager": "Namibia Ministry of Environment and Tourism",
+      "size_km2": 49768,
+      "wdpa_url": "https://www.protectedplanet.net/namib-naukluft-national-park"
     },
     {
       "country": "Namibia",
@@ -698,25 +1013,45 @@
       "country": "Niger",
       "country_code": "NER",
       "name": "Termit et Tin-Toumma",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "One of Africa's largest protected areas, safeguarding Saharan and Sahelian habitats in eastern Niger. The reserve is a critical refuge for the world's last wild population of addax antelope, alongside dorcas gazelles, Saharan cheetahs, and Barbary sheep in a remote and largely pristine desert landscape.",
+      "ecosystem": "Desert",
+      "manager": "Government of Niger",
+      "size_km2": 97000,
+      "wdpa_url": "https://www.protectedplanet.net/termit-and-tin-toumma-national-nature-reserve"
     },
     {
       "country": "Nigeria",
       "country_code": "NGA",
       "name": "Cross River",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Nigeria's most biodiverse national park, protecting Upper Guinea and Congo Basin transitional rainforest in southeastern Nigeria. Cross River is the primary refuge for the critically endangered Cross River gorilla, with fewer than 300 individuals remaining, and connects with Cameroon's Takamanda National Park across the border.",
+      "ecosystem": "Rainforest",
+      "manager": "National Park Service Nigeria",
+      "size_km2": 4000,
+      "wdpa_url": "https://www.protectedplanet.net/cross-river-national-park"
     },
     {
       "country": "Nigeria",
       "country_code": "NGA",
       "name": "Gashaka-Gumti",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Nigeria's largest national park, encompassing forest, savanna, and montane habitats on the Cameroon highland border, including Chappal Waddi - Nigeria's highest peak. The park supports chimpanzees, lions, African wild dogs, and diverse antelope in a landscape that spans multiple ecological zones.",
+      "ecosystem": "Savanna",
+      "manager": "National Park Service Nigeria",
+      "size_km2": 6731,
+      "wdpa_url": "https://www.protectedplanet.net/gashaka-gumti-national-park"
     },
     {
       "country": "Nigeria",
       "country_code": "NGA",
       "name": "Kainji Lake",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northwestern Nigeria centred on Lake Kainji reservoir on the Niger River, protecting Guinea savanna and riparian habitats. The park harbours lions, leopards, elephants, and hippos, and provides critical ecosystem services including water regulation for one of West Africa's largest artificial lakes.",
+      "ecosystem": "Wetland",
+      "manager": "National Park Service Nigeria",
+      "size_km2": 5340,
+      "wdpa_url": "https://www.protectedplanet.net/kainji-lake-national-park"
     },
     {
       "country": "Nigeria",
@@ -766,7 +1101,12 @@
       "country": "Sudan",
       "country_code": "SDN",
       "name": "Dinder",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Sudan's largest national park and a UNESCO biosphere reserve on the Ethiopian border, protecting Sahelian savanna and the seasonal Dinder and Rahad river systems. The park supports large-scale wildlife migrations including tiang, roan antelope, and reedbuck, with significant lion, leopard, and wild dog populations.",
+      "ecosystem": "Savanna",
+      "manager": "Wildlife Conservation General Administration Sudan",
+      "size_km2": 10291,
+      "wdpa_url": "https://www.protectedplanet.net/dinder-national-park"
     },
     {
       "country": "Senegal",
@@ -805,7 +1145,12 @@
       "country": "South Sudan",
       "country_code": "SSD",
       "name": "Southern",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "South Sudan's largest national park and one of Africa's most significant yet least-known wildlife areas, protecting vast floodplains and savanna in the Sudd basin. The park encompasses the world's second-largest mammal migration, with millions of white-eared kob, tiang, and Mongalla gazelle moving seasonally across its plains.",
+      "ecosystem": "Savanna",
+      "manager": "Government of South Sudan",
+      "size_km2": 22930,
+      "wdpa_url": "https://www.protectedplanet.net/southern-national-park"
     },
     {
       "country": "South Sudan",
@@ -822,7 +1167,12 @@
       "country": "Chad",
       "country_code": "TCD",
       "name": "Aouk",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in southeastern Chad protecting Sudan-Guinea savanna and gallery forest along the Aouk River on the Central African Republic border. Part of the broader Zakouma-Aouk landscape, the park forms a corridor for elephants and other migratory wildlife moving between protected areas across this region.",
+      "ecosystem": "Savanna",
+      "manager": "Government of Chad",
+      "size_km2": 7720,
+      "wdpa_url": "https://www.protectedplanet.net/aouk-national-park"
     },
     {
       "country": "Chad",
@@ -839,7 +1189,12 @@
       "country": "Chad",
       "country_code": "TCD",
       "name": "Ouadi Rime-Ouadi Achim",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "One of Africa's largest protected areas, a vast Sahelian game reserve in central Chad that was once the stronghold of the scimitar-horned oryx before its extinction in the wild. International reintroduction efforts are now returning oryx to this sweeping desert-steppe landscape of dry wadis and Saharan grasslands.",
+      "ecosystem": "Sahel",
+      "manager": "Government of Chad",
+      "size_km2": 78000,
+      "wdpa_url": "https://www.protectedplanet.net/ouadi-rime-ouadi-achim-game-reserve"
     },
     {
       "country": "Chad",
@@ -856,7 +1211,12 @@
       "country": "Togo",
       "country_code": "TGO",
       "name": "Fazao-Malfakassa",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Togo's largest national park, protecting Guinea savanna, rocky outcrops, and gallery forest in the country's centre. The park supports elephants, buffalos, and diverse primate communities, and forms a critical wildlife area in one of West Africa's most densely populated regions where natural habitat is increasingly fragmented.",
+      "ecosystem": "Forest",
+      "manager": "Government of Togo",
+      "size_km2": 1920,
+      "wdpa_url": "https://www.protectedplanet.net/fazao-malfakassa-national-park"
     },
     {
       "country": "Tanzania",
@@ -873,61 +1233,111 @@
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Kilimanjaro",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage site protecting Africa's highest mountain at 5,895m and the world's largest freestanding volcanic peak. The park's ecological zones rise from montane forest through moorland and alpine desert to the glaciated summit, forming a globally iconic landscape and critical water tower for northern Tanzania and Kenya.",
+      "ecosystem": "Mountain",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 1688,
+      "wdpa_url": "https://www.protectedplanet.net/kilimanjaro-national-park"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Kilombero",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast game-controlled area protecting the Kilombero Valley floodplain in south-central Tanzania, one of Africa's most important freshwater wetlands and a Ramsar site. The valley's seasonal flooding supports enormous herds of puku antelope, hippos, crocodiles, and the globally threatened wattled crane.",
+      "ecosystem": "Wetland",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 13000,
+      "wdpa_url": "https://www.protectedplanet.net/kilombero-game-controlled-area"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Kitulo Plateau",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A high-altitude national park in the Southern Highlands of Tanzania, often called the Serengeti of Flowers for its extraordinary seasonal displays of wild orchids, aloes, and mountain flowers. The plateau supports endemic lizards and birds, and is a critical breeding ground for the endangered Kipunji monkey.",
+      "ecosystem": "Grassland",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 413,
+      "wdpa_url": "https://www.protectedplanet.net/kitulo-national-park"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Kitwai",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A game-controlled area in northern Tanzania between Tarangire and the Masaai Steppe, forming a critical dry-season dispersal area for elephants and wildebeest from Tarangire National Park. The area's intact connectivity allows one of East Africa's last great seasonal wildlife migrations to continue across unfenced landscape.",
+      "ecosystem": "Savanna",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 4200,
+      "wdpa_url": "https://www.protectedplanet.net/kitwai-game-controlled-area"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Luasi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A game reserve in western Tanzania protecting miombo woodland and connecting habitats between Katavi and Mahale Mountains national parks. The reserve forms a vital corridor for elephants and other large mammals moving between two of Tanzania's most remote and pristine protected areas.",
+      "ecosystem": "Miombo",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 2100,
+      "wdpa_url": "https://www.protectedplanet.net/luasi-game-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Luganzo-Tongwe",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A game reserve in western Tanzania protecting forest and woodland habitats adjacent to Mahale Mountains National Park on Lake Tanganyika. The area provides critical buffer and corridor habitat for chimpanzees and other forest species in one of Tanzania's most biologically rich but least-studied western landscapes.",
+      "ecosystem": "Forest",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 1500,
+      "wdpa_url": "https://www.protectedplanet.net/luganzo-game-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Mahale Mountains",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote national park on the eastern shore of Lake Tanganyika protecting montane forest, miombo, and lakeshore habitats. Mahale is world-famous for its fully habituated wild chimpanzee communities, offering unparalleled observation of chimpanzee behaviour, and is accessible only by boat or small aircraft in one of Africa's most pristine settings.",
+      "ecosystem": "Forest",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 1613,
+      "wdpa_url": "https://www.protectedplanet.net/mahale-mountains-national-park"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Mkomazi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northeastern Tanzania contiguous with Kenya's Tsavo West, protecting semi-arid Acacia-Commiphora savanna and the Pare and Usambara mountain foothills. Mkomazi is home to a successful black rhino sanctuary and wild dog breeding programme, and forms part of the Tsavo-Mkomazi ecosystem.",
+      "ecosystem": "Savanna",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 3234,
+      "wdpa_url": "https://www.protectedplanet.net/mkomazi-national-park"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Moyowosi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A vast game reserve in western Tanzania protecting the Moyowosi and Malagarasi wetland systems, among Africa's most extensive inland freshwater ecosystems. The area supports shoebills, sitatunga, hippos, and large elephant herds, and connects Gombe and Mahale national parks within a broader western Tanzania conservation landscape.",
+      "ecosystem": "Wetland",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 6000,
+      "wdpa_url": "https://www.protectedplanet.net/moyowosi-game-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Mpanga-Kipengere",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A game reserve in the Southern Highlands of Tanzania protecting the Kipengere Range and Mpanga Forest, part of the Eastern Afromontane biodiversity hotspot. The reserve supports the endemic Kipunji monkey, the last large primate discovered in Africa, alongside other montane forest specialists.",
+      "ecosystem": "Mountain",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 1860,
+      "wdpa_url": "https://www.protectedplanet.net/mpanga-kipengere-game-reserve"
     },
     {
       "country": "Tanzania",
@@ -944,7 +1354,12 @@
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Nyerere",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Africa's largest national park, carved from the northern section of the former Selous Game Reserve and named after Tanzania's founding president. Nyerere protects an immense miombo woodland and riverine landscape supporting Africa's largest elephant population in a single protected area, alongside lions, wild dogs, and hippos.",
+      "ecosystem": "Miombo",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 30893,
+      "wdpa_url": "https://www.protectedplanet.net/nyerere-national-park"
     },
     {
       "country": "Tanzania",
@@ -961,19 +1376,34 @@
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Rungwa",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A game reserve in central Tanzania forming part of the Rungwa-Kizigo-Muhesi ecosystem, one of Tanzania's largest miombo woodland conservation areas. The reserve connects Ruaha National Park to the broader central Tanzania ecosystem and supports large elephant herds, wild dogs, and lions in intact woodland.",
+      "ecosystem": "Miombo",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 9000,
+      "wdpa_url": "https://www.protectedplanet.net/rungwa-game-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Saadani",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Tanzania's only coastal national park, uniquely placing wildlife on the beach where lions, elephants, and giraffes roam alongside the Indian Ocean. The park protects mangroves, coastal forest, and savanna, with green turtle nesting beaches and dhow sailing traditions forming part of its living cultural landscape.",
+      "ecosystem": "Coastal",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 1062,
+      "wdpa_url": "https://www.protectedplanet.net/saadani-national-park"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Selous",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "The southern portion of what was once Africa's largest protected area and a UNESCO World Heritage site, now designated for photographic tourism and trophy hunting blocks. The remaining Selous Game Reserve adjoins Nyerere National Park and continues to protect vast miombo ecosystems with significant wildlife populations.",
+      "ecosystem": "Miombo",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 54600,
+      "wdpa_url": "https://www.protectedplanet.net/selous-game-reserve"
     },
     {
       "country": "Tanzania",
@@ -990,7 +1420,12 @@
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Tarangire",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northern Tanzania's safari circuit, famous for its ancient baobab trees and the largest elephant concentration in the world outside Botswana during the dry season. The Tarangire River is a lifeline for wildlife across a broader ecosystem that includes critical dispersal areas extending to the Masaai Steppe.",
+      "ecosystem": "Savanna",
+      "manager": "Tanzania National Parks Authority",
+      "size_km2": 2850,
+      "wdpa_url": "https://www.protectedplanet.net/tarangire-national-park"
     },
     {
       "country": "Tanzania",
@@ -1007,19 +1442,34 @@
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Ugalla",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A remote game reserve in western Tanzania protecting miombo woodland along the Ugalla River, one of Tanzania's least-visited but biologically important protected areas. The reserve harbours elephants, lions, African wild dogs, and sable antelope, and connects the western Tanzania conservation landscape.",
+      "ecosystem": "Miombo",
+      "manager": "Tanzania Wildlife Management Authority",
+      "size_km2": 5000,
+      "wdpa_url": "https://www.protectedplanet.net/ugalla-game-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Uluguru",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A forest reserve in the Eastern Arc Mountains of Tanzania, protecting one of the world's highest densities of endemic species per unit area. The Uluguru Mountains' mist forests harbour dozens of endemic chameleons, frogs, birds, and plants found nowhere else on Earth, and supply water to Dar es Salaam's growing population.",
+      "ecosystem": "Mountain",
+      "manager": "Tanzania Forest Services Agency",
+      "size_km2": 240,
+      "wdpa_url": "https://www.protectedplanet.net/uluguru-mountains-forest-reserve"
     },
     {
       "country": "Tanzania",
       "country_code": "TZA",
       "name": "Uzungwa Scarp",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A forest reserve protecting the dramatic scarp face of the Udzungwa Mountains, part of the Eastern Arc Mountains biodiversity hotspot. The reserve protects the Sanje mangabey and Udzungwa red colobus - primates found nowhere else on Earth - alongside extraordinary levels of plant and amphibian endemism.",
+      "ecosystem": "Forest",
+      "manager": "Tanzania Forest Services Agency",
+      "size_km2": 2000,
+      "wdpa_url": "https://www.protectedplanet.net/udzungwa-scarp-forest-reserve"
     },
     {
       "country": "Uganda",
@@ -1048,7 +1498,12 @@
       "country": "Uganda",
       "country_code": "UGA",
       "name": "Mount Elgon",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park straddling the Uganda-Kenya border protecting Africa's largest volcanic caldera and the ancient Elgon Forest, a critical water tower for both nations. The park harbours elephants who excavate salt caves for minerals, alongside forest duikers, black-and-white colobus monkeys, and spectacular afromontane flora.",
+      "ecosystem": "Mountain",
+      "manager": "Uganda Wildlife Authority",
+      "size_km2": 1279,
+      "wdpa_url": "https://www.protectedplanet.net/mount-elgon-national-park"
     },
     {
       "country": "Uganda",
@@ -1065,25 +1520,45 @@
       "country": "Uganda",
       "country_code": "UGA",
       "name": "Pian Upe",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Uganda's largest wildlife reserve, protecting semi-arid savanna and rocky terrain in the Karamoja region of northeastern Uganda. The reserve is home to Uganda's only population of roan antelope, alongside cheetahs, ostriches, and Grevy's zebras in a landscape more akin to Kenya's drylands than Uganda's typical green terrain.",
+      "ecosystem": "Savanna",
+      "manager": "Uganda Wildlife Authority",
+      "size_km2": 2788,
+      "wdpa_url": "https://www.protectedplanet.net/pian-upe-wildlife-reserve"
     },
     {
       "country": "Uganda",
       "country_code": "UGA",
       "name": "Queen Elizabeth",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Uganda's most visited national park, protecting savanna, wetlands, and tropical forest across a landscape that includes the Kazinga Channel linking Lakes Edward and George. The park is famous for tree-climbing lions in the Ishasha sector, vast hippo and buffalo herds, and the Kyambura Gorge chimpanzee community.",
+      "ecosystem": "Savanna",
+      "manager": "Uganda Wildlife Authority",
+      "size_km2": 1978,
+      "wdpa_url": "https://www.protectedplanet.net/queen-elizabeth-national-park"
     },
     {
       "country": "Uganda",
       "country_code": "UGA",
       "name": "Rwenzori Mountains",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage site protecting the Rwenzori range, Ptolemy's legendary Mountains of the Moon straddling the Uganda-DRC border with peaks permanently glaciated above 4,500m. The park's afroalpine zone harbours giant heathers, lobelias, and groundsels of extraordinary scale, with the rare Rwenzori turaco among its endemic birds.",
+      "ecosystem": "Mountain",
+      "manager": "Uganda Wildlife Authority",
+      "size_km2": 1010,
+      "wdpa_url": "https://www.protectedplanet.net/rwenzori-mountains-national-park"
     },
     {
       "country": "South Africa",
       "country_code": "ZAF",
       "name": "Kalahari Gemsbok",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "The South African half of the Kgalagadi Transfrontier Park, the first formal transfrontier conservation area in southern Africa. The park's red dunes, dry riverbeds, and blue skies create one of Africa's most dramatic landscapes, with black-maned lions, cheetahs, meerkats, and massive raptor concentrations.",
+      "ecosystem": "Desert",
+      "manager": "South African National Parks",
+      "size_km2": 9591,
+      "wdpa_url": "https://www.protectedplanet.net/kalahari-gemsbok-national-park"
     },
     {
       "country": "South Africa",
@@ -1100,25 +1575,45 @@
       "country": "South Africa",
       "country_code": "ZAF",
       "name": "Mountain Zebra-Camdeboo",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Two adjacent national parks in the Eastern Cape protecting Karoo shrubland and mountain ecosystems, combined as a conservation unit. Mountain Zebra National Park saved the Cape mountain zebra from extinction and now holds a recovered population, while Camdeboo protects the Valley of Desolation and classic Karoo landscapes.",
+      "ecosystem": "Grassland",
+      "manager": "South African National Parks",
+      "size_km2": 856,
+      "wdpa_url": "https://www.protectedplanet.net/mountain-zebra-national-park"
     },
     {
       "country": "South Africa",
       "country_code": "ZAF",
       "name": "Namaqua",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park on South Africa's Namaqualand coast protecting one of the world's most spectacular wildflower displays, when orange and yellow daisies carpet the semi-desert after spring rains. The park encompasses the unique Succulent Karoo biome, one of only two globally recognised biodiversity hotspots that are arid.",
+      "ecosystem": "Fynbos",
+      "manager": "South African National Parks",
+      "size_km2": 1040,
+      "wdpa_url": "https://www.protectedplanet.net/namaqua-national-park"
     },
     {
       "country": "South Africa",
       "country_code": "ZAF",
       "name": "Richtersveld",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage site in South Africa's Northern Cape protecting the Succulent Karoo in its most rugged and intact form, where the Orange River meets the Namibian border. The park has the highest plant diversity of any arid region on Earth, with extraordinary succulents and the ancient quiver tree.",
+      "ecosystem": "Desert",
+      "manager": "South African National Parks",
+      "size_km2": 1624,
+      "wdpa_url": "https://www.protectedplanet.net/richtersveld-national-park"
     },
     {
       "country": "South Africa",
       "country_code": "ZAF",
       "name": "Cederberg",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A wilderness area in the Western Cape protecting the Cederberg range, whose dramatic sandstone formations and unique fynbos vegetation form one of South Africa's most beloved mountain landscapes. The area is a centre of Cape Floral Kingdom endemism and contains significant San rock art sites among its weathered rock formations.",
+      "ecosystem": "Fynbos",
+      "manager": "CapeNature",
+      "size_km2": 710,
+      "wdpa_url": "https://www.protectedplanet.net/cederberg-wilderness-area"
     },
     {
       "country": "Zambia",
@@ -1183,13 +1678,23 @@
       "country": "Zambia",
       "country_code": "ZMB",
       "name": "Musalangu",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A large game management area in northern Zambia's Luapula Province, protecting miombo woodland and connecting habitats between Zambia's northern parks. The area harbours elephants, lions, and leopards within a broader landscape that links North Luangwa and Lusenga Plain national parks.",
+      "ecosystem": "Miombo",
+      "manager": "Department of National Parks and Wildlife Zambia",
+      "size_km2": 16400,
+      "wdpa_url": "https://www.protectedplanet.net/musalangu-game-management-area"
     },
     {
       "country": "Zambia",
       "country_code": "ZMB",
       "name": "Mweru Wantipa",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park in northern Zambia on the shores of Lake Mweru Wantipa, protecting wetland and miombo woodland habitats in one of Zambia's least-visited conservation areas. The park's lake and surrounding marshes support hippos, crocodiles, and significant waterbird concentrations including shoebills.",
+      "ecosystem": "Wetland",
+      "manager": "Department of National Parks and Wildlife Zambia",
+      "size_km2": 3134,
+      "wdpa_url": "https://www.protectedplanet.net/mweru-wantipa-national-park"
     },
     {
       "country": "Zambia",
@@ -1207,7 +1712,12 @@
       "country": "Zambia",
       "country_code": "ZMB",
       "name": "Nsumbu",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A national park on the southern shores of Lake Tanganyika in northern Zambia, protecting one of the world's oldest and most biodiverse lakes alongside miombo woodland. The park's clear waters harbour hundreds of endemic cichlid fish species, while its shores support elephants, hippos, and lions in an increasingly remote wilderness.",
+      "ecosystem": "Lake",
+      "manager": "Department of National Parks and Wildlife Zambia",
+      "size_km2": 2020,
+      "wdpa_url": "https://www.protectedplanet.net/nsumbu-national-park"
     },
     {
       "country": "Zambia",
@@ -1225,13 +1735,23 @@
       "country": "Zimbabwe",
       "country_code": "ZWE",
       "name": "Chimanimani",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A compact but spectacular national park in eastern Zimbabwe protecting the Chimanimani Mountains, a quartzite massif of great botanical significance on the Mozambique border. The park's diverse habitats from river gorges to high plateaux support sable antelope, leopards, and exceptionally high plant endemism within the Eastern Highlands.",
+      "ecosystem": "Mountain",
+      "manager": "Zimbabwe Parks and Wildlife Management Authority",
+      "size_km2": 171,
+      "wdpa_url": "https://www.protectedplanet.net/chimanimani-national-park"
     },
     {
       "country": "Zimbabwe",
       "country_code": "ZWE",
       "name": "Chizarira",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "Zimbabwe's most remote national park, perched on the Zambezi escarpment with dramatic gorges and miombo woodland overlooking Lake Kariba. Chizarira protects significant populations of elephants, lions, leopards, and the endangered black rhino in a wilderness that sees very few visitors, preserving its wild character.",
+      "ecosystem": "Miombo",
+      "manager": "Zimbabwe Parks and Wildlife Management Authority",
+      "size_km2": 1910,
+      "wdpa_url": "https://www.protectedplanet.net/chizarira-national-park"
     },
     {
       "country": "Zimbabwe",
@@ -1259,13 +1779,23 @@
       "country": "Zimbabwe",
       "country_code": "ZWE",
       "name": "Mana Pools",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A UNESCO World Heritage site on the Zambezi River floodplain in northern Zimbabwe, famous for elephants that stand on their hind legs to reach winter thorn pods and for exceptional predator-prey interactions. Mana Pools allows walking safaris without a guide, creating one of Africa's most elemental wildlife experiences in a landscape of pools, riverine forest, and baobabs.",
+      "ecosystem": "Wetland",
+      "manager": "Zimbabwe Parks and Wildlife Management Authority",
+      "size_km2": 2196,
+      "wdpa_url": "https://www.protectedplanet.net/mana-pools-national-park"
     },
     {
       "country": "Zimbabwe",
       "country_code": "ZWE",
       "name": "Matetsi",
-      "carbon_project": false
+      "carbon_project": false,
+      "description": "A safari area in northwestern Zimbabwe between Hwange National Park and Victoria Falls, forming a critical part of the Kavango-Zambezi Transfrontier Conservation Area. The area supports significant wildlife including the world's largest free-roaming elephant population as part of the broader Kavango-Zambezi ecosystem.",
+      "ecosystem": "Savanna",
+      "manager": "Matetsi Safari Area",
+      "size_km2": 2900,
+      "wdpa_url": "https://www.protectedplanet.net/matetsi-safari-area"
     },
     {
       "country": "Zimbabwe",
