@@ -5830,6 +5830,54 @@
       "last_updated": "2026-04-10",
       "_draft": true,
       "_note": "SVP role confirmed from WWF-US website. Verify current title."
+    },
+    {
+      "id": "peter-lindsey",
+      "name": "Peter Lindsey",
+      "role": "Director, Lion Recovery Fund",
+      "organisation": "Wildlife Conservation Network",
+      "organisation_type": "ngo",
+      "location": "Harare, Zimbabwe",
+      "geography": [
+        "Sub-Saharan Africa",
+        "East Africa",
+        "Southern Africa"
+      ],
+      "focus_areas": [
+        "protected_areas",
+        "wildlife_conservation",
+        "community_conservation",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance"
+      ],
+      "deal_size": null,
+      "summary": "Zimbabwean conservation biologist directing the Lion Recovery Fund, an initiative of the Wildlife Conservation Network. Based in Harare and active across the savannah regions of Africa. Research and practice focus on funding mechanisms for protected areas, wildlife-based land uses, and community-private sector partnerships. Trained at Oxford and the Mammal Research Institute, University of Pretoria. Named as proposed director of the WCN Keystone Fund in the Africa Keystone Protected Areas Partnership framework.",
+      "notable_work": [
+        {
+          "description": "Director of the Lion Recovery Fund, coordinating investment in lion conservation across the African continent through WCN",
+          "year": 2016,
+          "source_url": "https://wildnet.org/tag/peter-lindsey/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/peter-lindsey-9615412a/"
+        },
+        {
+          "type": "profile",
+          "title": "IUCN Cat Specialist Group",
+          "url": "https://www.catsg.org/team-3/peter-lindsey"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-11"
     }
   ]
 }
