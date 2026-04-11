@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Tracker - Canopy</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5; --green: #1a4a2e; --green-pale: #e8f5e0;
+    --teal: #1a5c5c; --teal-pale: #e0f0ef;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --vol-bg: #eaf3de;   --vol-text: #27500a;
+    --comp-bg: #e6f1fb;  --comp-text: #0c447c;
+    --sov-bg: #faeeda;   --sov-text: #633806;
+    --blend-bg: #f3eefb; --blend-text: #5b2d8e;
+    --phil-bg: #fde8f0;  --phil-text: #8e1a4a;
+    --emerg-bg: #e8f7fb; --emerg-text: #0c6a7c;
+    --op-bg: #e8f5e0;    --op-text: #1a4a2e;
+    --ag-bg: #d4f0ee;    --ag-text: #0c5c58;
+    --neg-bg: #fef3cd;   --neg-text: #7a5000;
+    --fw-bg: #e8eef5;    --fw-text: #3a4f6a;
+    --nf-bg: #f0f0ee;    --nf-text: #6a6a68;
+    --risk-low: #2d9b5a; --risk-med: #e6a020; --risk-high: #d4542a; --risk-vhigh: #8b1a1a;
+  }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); overflow: hidden; }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
+  .nav-links { display: none; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
+  .nav-cta:hover { background: var(--green-pale); }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.2s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 99; padding: 8px 0 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu-item { display: flex; align-items: center; gap: 12px; padding: 13px 24px; font-size: 15px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.1s; text-decoration: none; }
+  .mobile-menu-item:hover { background: var(--bg2); }
+  .mobile-menu-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .mobile-menu-divider { height: 1px; background: var(--border); margin: 8px 24px; }
+  .mobile-menu-sub { padding: 10px 24px; font-size: 13px; color: var(--text-muted); cursor: pointer; transition: background 0.1s; text-decoration: none; display: block; }
+  .mobile-menu-sub:hover { background: var(--bg2); }
+
+  .page-header { padding: 16px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .page-back { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; text-decoration: none; }
+  .page-back:hover { color: var(--text); }
+  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
+  .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+
+  .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
+  .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
+  .cat-tab:hover { border-color: var(--text-dim); color: var(--text); }
+  .cat-tab.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
+
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+  .overlay.open { opacity: 1; pointer-events: all; }
+  .detail-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; background: var(--bg); z-index: 201; overflow-y: auto; transform: translateX(100%); transition: transform 0.25s ease; border-left: 1px solid var(--border); }
+  .detail-panel.open { transform: translateX(0); }
+  .detail-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 1; }
+  .detail-close { font-size: 22px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
+  .detail-close:hover { color: var(--text); }
+  .detail-badge { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .detail-name { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
+  .detail-body { padding: 24px 28px; }
+  .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px; }
+  .detail-meta-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .detail-meta-row:last-child { border-bottom: none; }
+  .detail-meta-label { font-size: 12px; color: var(--text-dim); }
+  .detail-meta-value { font-size: 12px; color: var(--text); font-weight: 500; text-align: right; }
+  .detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 20px; }
+  .detail-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 12px; margin-top: 24px; }
+
+  .loading { color: var(--text-dim); font-size: 13px; padding: 20px 0; }
+  .empty { color: var(--text-dim); font-size: 13px; padding: 40px; text-align: center; }
+  .map-tooltip { position: fixed; background: var(--text); color: #fff; font-size: 12px; padding: 6px 10px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.1s; white-space: nowrap; z-index: 300; line-height: 1.5; }
+  .map-tooltip.visible { opacity: 1; }
+
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .footer-blessing { font-size: 12px; color: var(--text-dim); cursor: default; position: relative; display: inline-block; }
+  .footer-blessing .blessing-tip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 12px; line-height: 1.55; color: var(--text); white-space: normal; width: max-content; max-width: min(360px, 90vw); box-shadow: 0 4px 16px rgba(0,0,0,0.08); z-index: 100; pointer-events: none; }
+  .footer-blessing:hover .blessing-tip { display: block; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; text-decoration: none; display: inline-block; }
+  .footer-link:hover { color: var(--text-muted); }
+
+  .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
+  .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
+  .b-voluntary { background: var(--vol-bg); color: var(--vol-text); }
+  .b-compliance { background: var(--comp-bg); color: var(--comp-text); }
+  .b-sovereign { background: var(--sov-bg); color: var(--sov-text); }
+  .b-blended { background: var(--blend-bg); color: var(--blend-text); }
+  .b-philanthropic { background: var(--phil-bg); color: var(--phil-text); }
+  .b-emerging { background: var(--emerg-bg); color: var(--emerg-text); }
+  .proj-method { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--vol-bg); color: var(--vol-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .status-dot.issuing { background: #1a4a2e; }
+  .status-dot.validation { background: #e6a020; }
+  .status-dot.registered { background: #4a90d9; }
+  .status-dot.development { background: var(--text-dim); }
+  .status-label { font-size: 11px; color: var(--text-dim); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .page-header, .cat-tabs { padding-left: 24px; padding-right: 24px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+    .detail-panel { width: 100%; }
+  }
+
+
+  .view-toggle { display: flex; gap: 0; padding: 6px 40px 16px; max-width: 1100px; margin: 0 auto; }
+  .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; }
+  .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+  .toggle-btn:last-child  { border-radius: 0 6px 6px 0; border-left: none; }
+  .toggle-btn.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
+  .map-container { padding: 8px 40px 12px; max-width: 1100px; margin: 0 auto; }
+  .map-container svg { width: 100%; height: auto; max-height: 106vh; display: block; }
+  .map-hint { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+  .country-path { stroke: #fff; stroke-width: 0.5; cursor: pointer; transition: opacity 0.15s; }
+  .country-path:hover { opacity: 0.75; }
+  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .map-hidden { display: none; }
+  .proj-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .proj-full-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; padding: 28px 40px; max-width: 1100px; margin: 0 auto; }
+  .proj-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
+  .proj-card:hover { border-color: var(--text-dim); }
+  .proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 8px; }
+  .proj-country { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
+  .proj-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .proj-status { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+  .proj-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+  .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  @media (max-width: 768px) {
+    .view-toggle { padding: 6px 24px 0; }
+    .map-container { padding: 8px 24px 12px; }
+    .proj-full-grid { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+    .proj-count { padding-left: 24px; padding-right: 24px; }
+    .cat-tabs { padding-left: 24px; padding-right: 24px; }
+  }
+
+</style>
+</head>
+<body>
+<div class="map-tooltip" id="map-tooltip"></div>
+<div class="overlay" id="overlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detail-panel">
+  <div class="detail-header">
+    <div>
+      <div class="detail-badge" id="detail-badge"></div>
+      <div class="detail-name" id="detail-name"></div>
+    </div>
+    <button class="detail-close" onclick="closeDetail()">&#10005;</button>
+  </div>
+  <div class="detail-body" id="detail-body"></div>
+</div>
+<div id="nav-mount"></div>
+<div class="page-header">
+  <a class="page-back" href="index.html">&#8592; Back</a>
+  <div class="page-title">Projects Tracker</div>
+  <div class="page-sub"><span id="proj-page-count">-</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
+</div>
+<div class="view-toggle">
+  <button class="toggle-btn active" onclick="setProjView('map',this)">Map</button>
+  <button class="toggle-btn" onclick="setProjView('grid',this)">Grid</button>
+</div>
+<div id="proj-map-wrap">
+  <div class="map-container">
+    <svg id="proj-map" viewBox="0 80 700 600"></svg>
+    <div class="map-legend" id="proj-legend"></div>
+    <div class="map-hint">Click a country to see projects. Click again to clear.</div>
+  </div>
+</div>
+<div id="proj-grid-wrap" class="map-hidden">
+  <div class="cat-tabs" id="proj-tabs">
+    <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
+    <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
+    <button class="cat-tab" onclick="filterProj('blue-carbon',this)">Blue carbon</button>
+    <button class="cat-tab" onclick="filterProj('redd',this)">REDD+</button>
+    <button class="cat-tab" onclick="filterProj('issuing',this)">Issuing</button>
+    <button class="cat-tab" onclick="filterProj('validation',this)">Under validation</button>
+  </div>
+  <div class="proj-count" id="proj-count"></div>
+  <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
+</div>
+<footer>
+  <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
+  <div class="footer-links">
+    <a class="footer-link" href="index.html">Home</a>
+    <a class="footer-link" href="index.html#about">About</a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+
+  let allProjects = [];
+  let currentProjFilter = 'all';
+  let selectedProjCountry = null;
+  function safeJSON(o) { return JSON.stringify(o).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+  function statusDotClass(s) {
+    if(!s) return 'development';
+    const sl=s.toLowerCase();
+    if(sl.includes('issuing')) return 'issuing';
+    if(sl.includes('validation')) return 'validation';
+    if(sl.includes('registered')) return 'registered';
+    return 'development';
+  }
+  function projCardHTML(p) {
+    const dc=statusDotClass(p.status);
+    return '<div class="proj-card" onclick=\'openProjectDetail('+safeJSON(p)+')\'>' +
+      '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
+      '<div class="proj-name">'+p.name+'</div>'+
+      '<div class="proj-status"><span class="status-dot '+dc+'"></span><span class="status-label">'+p.status+'</span></div>'+
+      '<div class="proj-meta">'+p.credits+' - '+p.area+'</div>'+
+      '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div></div>';
+  }
+  function openProjectDetail(p) {
+    let body='';
+    if(p.description) body+='<div class="detail-desc">'+p.description+'</div>';
+    body+='<div class="detail-section-title" style="margin-top:16px">Project details</div>';
+    if(p.developer) body+='<div class="detail-meta-row"><span class="detail-meta-label">Developer</span><span class="detail-meta-value">'+p.developer+'</span></div>';
+    body+='<div class="detail-meta-row"><span class="detail-meta-label">Country</span><span class="detail-meta-value">'+p.country+'</span></div>';
+    if(p.region) body+='<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+p.region+'</span></div>';
+    if(p.credits) body+='<div class="detail-meta-row"><span class="detail-meta-label">Credits</span><span class="detail-meta-value">'+p.credits+'</span></div>';
+    if(p.area) body+='<div class="detail-meta-row"><span class="detail-meta-label">Area</span><span class="detail-meta-value">'+p.area+'</span></div>';
+    body+='<div class="detail-meta-row"><span class="detail-meta-label">Certification</span><span class="detail-meta-value">'+p.certification+'</span></div>';
+    body+='<div class="detail-meta-row"><span class="detail-meta-label">Status</span><span class="detail-meta-value">'+p.status+'</span></div>';
+    if(p.status_note) body+='<div style="font-size:12px;color:var(--text-dim);margin:-4px 0 8px 0">'+p.status_note+'</div>';
+    if(p.tags&&p.tags.length) body+='<div class="detail-section-title" style="margin-top:20px">Tags</div><div class="detail-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>';
+    const links=[];
+    if(p.verra_url) links.push('<a href="'+p.verra_url+'" target="_blank" rel="noopener" style="color:#1a4a2e;text-decoration:none;font-size:13px">Verra registry &rarr;</a>');
+    if(p.plan_vivo_url) links.push('<a href="'+p.plan_vivo_url+'" target="_blank" rel="noopener" style="color:#1a4a2e;text-decoration:none;font-size:13px">Plan Vivo registry &rarr;</a>');
+    if(p.project_url) links.push('<a href="'+p.project_url+'" target="_blank" rel="noopener" style="color:#1a4a2e;text-decoration:none;font-size:13px">Project website &rarr;</a>');
+    if(links.length) body+='<div style="margin-top:20px;display:flex;flex-direction:column;gap:8px">'+links.join('')+'</div>';
+    openDetail(p.name,'<span class="proj-method">'+p.methodology+'</span>',body);
+  }
+  function filterProj(f, btn) {
+    currentProjFilter=f;
+    document.querySelectorAll('#proj-tabs .cat-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active'); renderProjectsFull();
+  }
+  function renderProjectsFull() {
+    let list=allProjects;
+    if(currentProjFilter==='arr') list=list.filter(p=>p.methodology.toLowerCase().includes('arr'));
+    else if(currentProjFilter==='blue-carbon') list=list.filter(p=>p.methodology.toLowerCase().includes('blue'));
+    else if(currentProjFilter==='redd') list=list.filter(p=>p.methodology.toLowerCase().includes('redd'));
+    else if(currentProjFilter==='issuing') list=list.filter(p=>p.status&&p.status.toLowerCase().includes('issuing'));
+    else if(currentProjFilter==='validation') list=list.filter(p=>p.status&&p.status.toLowerCase().includes('validation'));
+    document.getElementById('proj-count').textContent=list.length+' project'+(list.length!==1?'s':'');
+    document.getElementById('projects-full').innerHTML=list.length?list.map(projCardHTML).join(''):'<div class="empty">No projects match this filter.</div>';
+  }
+  function setProjView(mode, btn) {
+    document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    if(mode==='map'){
+      document.getElementById('proj-map-wrap').style.display='block';
+      document.getElementById('proj-grid-wrap').style.display='none';
+      renderProjMap();
+    } else {
+      document.getElementById('proj-map-wrap').style.display='none';
+      document.getElementById('proj-grid-wrap').style.display='block';
+      selectedProjCountry=null;
+    }
+  }
+
+  function openDetail(name, badgeHTML, bodyHTML) {
+    document.getElementById('detail-name').textContent = name;
+    document.getElementById('detail-badge').innerHTML = badgeHTML;
+    document.getElementById('detail-body').innerHTML = bodyHTML;
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('detail-panel').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDetail() {
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('detail-panel').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+  async function load() {
+    try {
+      const res = await fetch('data/projects.json');
+      const data = await res.json();
+      allProjects = data.projects;
+      document.getElementById('proj-page-count').textContent = allProjects.length;
+      renderProjectsFull();
+      renderProjMap();
+    } catch(e) { console.error(e); }
+  }
+  load();
+
+
+  const tooltip = document.getElementById('map-tooltip');
+  function showTooltip(event, html) {
+    if(window.matchMedia('(hover: none)').matches) return;
+    tooltip.innerHTML=html; tooltip.classList.add('visible'); moveTooltip(event);
+  }
+  function moveTooltip(event) { tooltip.style.left=(event.clientX+14)+'px'; tooltip.style.top=(event.clientY-10)+'px'; }
+  function hideTooltip() { tooltip.classList.remove('visible'); }
+
+  const isoToId = {
+    12:'algeria',24:'angola',72:'botswana',108:'burundi',120:'cameroon',132:'cabo-verde',
+    140:'central-african-republic',148:'chad',174:'comoros',178:'republic-of-congo',180:'drc',
+    204:'benin',226:'equatorial-guinea',232:'eritrea',231:'ethiopia',266:'gabon',270:'gambia',
+    288:'ghana',324:'guinea',624:'guinea-bissau',384:'ivory-coast',404:'kenya',426:'lesotho',
+    430:'liberia',434:'libya',450:'madagascar',454:'malawi',466:'mali',478:'mauritania',
+    480:'mauritius',504:'morocco',508:'mozambique',516:'namibia',562:'niger',566:'nigeria',
+    646:'rwanda',678:'sao-tome-principe',686:'senegal',694:'sierra-leone',706:'somalia',
+    710:'south-africa',716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
+    788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',894:'zambia',262:'djibouti'
+  };
+  const africaISO = new Set(Object.keys(isoToId).map(Number));
+  function isSomaliland(f) {
+    if(f.properties&&f.properties.name==='Somaliland') return true;
+    if(f.id) return false;
+    try{const c=d3.geoCentroid(f);return c[0]>42&&c[0]<49&&c[1]>7&&c[1]<12;}catch(e){return false;}
+  }
+
+  function normaliseCountryId(name) {
+    return name.toLowerCase()
+      .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
+      .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
+      .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
+      .replace('guinea-bissau','guinea-bissau').replace('central african republic','central-african-republic')
+      .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
+      .replace('sao tome and principe','sao-tome-principe')
+      .replace(/\s+/g,'-');
+  }
+
+  let worldData = null;
+  async function loadWorldData() {
+    if(worldData) return worldData;
+    worldData = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+    return worldData;
+  }
+
+  async function renderProjMap() {
+    const svg=d3.select('#proj-map');
+    svg.selectAll('*').remove();
+    const topo=await loadWorldData();
+    const proj=d3.geoNaturalEarth1().scale(400).center([17,2]).translate([350,417]);
+    const path=d3.geoPath().projection(proj);
+    const countries=topojson.feature(topo,topo.objects.countries);
+    const projCountryMap={};
+    allProjects.forEach(p=>{const id=normaliseCountryId(p.country);projCountryMap[id]=(projCountryMap[id]||0)+1;});
+    const maxCount=Math.max(...Object.values(projCountryMap),1);
+    const colorScale=d3.scaleSequential().domain([0,maxCount]).interpolator(d3.interpolate('#e8f5e0','#1a4a2e'));
+    svg.selectAll('path')
+      .data(countries.features.filter(f=>africaISO.has(+f.id)||isSomaliland(f)))
+      .join('path').attr('class','country-path').attr('d',path)
+      .attr('fill',f=>{
+        const id=isSomaliland(f)?'somalia':isoToId[+f.id];
+        const count=projCountryMap[id]||0;
+        return count>0?colorScale(count):'#f0f0ee';
+      })
+      .attr('stroke','#fff').attr('stroke-width',0.5)
+      .on('mouseover',(event,f)=>{
+        const id=isSomaliland(f)?'somalia':isoToId[+f.id]; if(!id) return;
+        const count=projCountryMap[id]||0;
+        const proj2=allProjects.find(p=>normaliseCountryId(p.country)===id);
+        const name=proj2?proj2.country:id;
+        const label=count===0?'No projects tracked yet':count+' project'+(count!==1?'s':'');
+        showTooltip(event,'<strong>'+name+'</strong><br>'+label);
+      })
+      .on('mousemove',moveTooltip).on('mouseout',hideTooltip)
+      .on('click',(event,f)=>{
+        const id=isSomaliland(f)?'somalia':isoToId[+f.id]; if(!id) return;
+        hideTooltip();
+        if(selectedProjCountry===id){
+          selectedProjCountry=null;
+          svg.selectAll('path').attr('opacity',1); closeDetail();
+        } else {
+          selectedProjCountry=id;
+          svg.selectAll('path').attr('opacity',d=>isoToId[+d.id]===id?1:0.35);
+          openCountryDetail(id,projCountryMap);
+        }
+      });
+    // Legend
+    const legend=d3.select('#proj-legend');
+    legend.html('');
+    [0,1,3,6,10].forEach(n=>{
+      const color=n===0?'#f0f0ee':colorScale(n);
+      legend.append('div').attr('class','legend-item').html('<div class="legend-swatch" style="background:'+color+'"></div>'+(n===0?'No projects':n===10?'10+ projects':n+' projects'));
+    });
+  }
+
+  function openCountryDetail(countryId, projCountryMap) {
+    const projects=allProjects.filter(p=>normaliseCountryId(p.country)===countryId);
+    const countryName=projects.length?projects[0].country:countryId;
+    const count=projects.length;
+    if(count===0){openDetail(countryName,'','<div class="detail-desc" style="color:var(--text-dim)">No projects tracked in this country yet.</div>');return;}
+    const projectRows=projects.map(p=>{
+      const dc=statusDotClass(p.status);
+      return '<div style="padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;" onclick=\'closeDetail();setTimeout(()=>openProjectDetail('+safeJSON(p)+'),50)\'>' +
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">' +
+        '<span class="status-dot '+dc+'" style="flex-shrink:0"></span>' +
+        '<span style="font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.01em">'+p.name+'</span></div>' +
+        '<div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;padding-left:14px">'+p.methodology+' - '+p.status+'</div>' +
+        '<div style="font-size:12px;color:var(--text-dim);padding-left:14px">'+p.credits+' - '+p.area+'</div></div>';
+    }).join('');
+    openDetail(countryName,'<span style="font-size:12px;color:var(--text-dim)">'+count+' project'+(count!==1?'s':'')+' tracked</span>',
+      '<div class="detail-section-title" style="margin-top:0">Projects</div>'+projectRows);
+  }
+
+  // Standalone logo map - Africa silhouette, no data dependency
+  let _lc = null;
+  const _aISO = new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,232,231,266,270,288,324,624,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,646,678,686,694,706,710,716,728,729,748,768,788,800,818,834,854,894,262]);
+  async function renderLogoMap() {
+    const svg = d3.select('#logo-map');
+    if (svg.empty()) return;
+    if (!_lc) { _lc = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'); }
+    svg.selectAll('*').remove();
+    const w=700,h=750;
+    const proj = d3.geoNaturalEarth1().scale(400).center([17,2]).translate([w/2,h/2+42]);
+    const path = d3.geoPath().projection(proj);
+    const countries = topojson.feature(_lc, _lc.objects.countries);
+    svg.selectAll('path')
+      .data(countries.features.filter(f => _aISO.has(+f.id)))
+      .join('path').attr('d', path).attr('fill','#c8dfc8').attr('stroke','#fff').attr('stroke-width',0.3);
+  }
+
+</script>
+<script src="nav.js" defer></script>
+</body>
+</html>

@@ -128,6 +128,12 @@
   .sb-section { margin-bottom: 24px; }
   .sb-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 6px; }
 
+  .sb-maps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .sb-map-block { }
+  .sb-map-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 5px; }
+  .sb-map-frame { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); height: 160px; background: var(--bg3); }
+  .sb-map-frame svg { width: 100%; height: 100%; display: block; }
+
   /* AP Manager callout */
   .sb-ap-callout { background: var(--ap-pale); border: 1px solid rgba(42,74,122,0.2); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; display: flex; gap: 12px; align-items: flex-start; }
   .sb-ap-icon { font-size: 20px; flex-shrink: 0; }
@@ -281,6 +287,7 @@
   let currentSort = { key: 'name', dir: 1 };
   let searchTerm = '';
   let activeId = null;
+  let topoCache = null;
 
   // Carbon project display names (id -> friendly name)
   const CARBON_PROJECT_NAMES = {
@@ -330,6 +337,97 @@
     return '#f0d5b8';
   }
 
+  // Country name aliases: keystones.json name -> isoToName name
+  const countryAlias = {
+    'DRC': 'Dem. Rep. Congo',
+    'Republic of Congo': 'Republic of Congo',
+    'Ivory Coast': 'Ivory Coast',
+  };
+
+  function sizeToZoom(km2) {
+    if (!km2) return 8;
+    if (km2 > 80000) return 5;
+    if (km2 > 20000) return 6;
+    if (km2 > 5000) return 7;
+    if (km2 > 1000) return 8;
+    return 9;
+  }
+
+  function renderSbLocator(countryRaw, lat, lng) {
+    const el = document.getElementById('sb-locator-svg');
+    if (!el || !topoCache) return;
+    const country = countryAlias[countryRaw] || countryRaw;
+    const nameToISO = {};
+    Object.entries(isoToName).forEach(function(e) { nameToISO[e[1]] = +e[0]; });
+    const targetISO = nameToISO[country];
+
+    const w = 320, h = 320;
+    const svg = d3.select(el).attr('viewBox', '0 0 ' + w + ' ' + h);
+    svg.selectAll('*').remove();
+    const projection = d3.geoNaturalEarth1().scale(230).center([17, 2]).translate([w/2, h/2 + 10]);
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topoCache, topoCache.objects.countries);
+    const features = countries.features.filter(function(f) {
+      return africaISO.has(+f.id) || (f.properties && f.properties.name === 'Somaliland');
+    });
+
+    svg.selectAll('path')
+      .data(features)
+      .join('path')
+      .attr('d', path)
+      .attr('fill', function(f) {
+        return (+f.id === targetISO) ? '#5c3317' : '#d8d4ce';
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.5);
+
+    if (lat !== undefined && lng !== undefined) {
+      const pt = projection([lng, lat]);
+      if (pt) {
+        svg.append('circle')
+          .attr('cx', pt[0]).attr('cy', pt[1]).attr('r', 4)
+          .attr('fill', '#fff').attr('stroke', '#5c3317').attr('stroke-width', 1.5);
+      }
+    }
+  }
+
+  function renderSbCountry(countryRaw, lat, lng) {
+    const el = document.getElementById('sb-country-svg');
+    if (!el || !topoCache) return;
+    const country = countryAlias[countryRaw] || countryRaw;
+    const nameToISO = {};
+    Object.entries(isoToName).forEach(function(e) { nameToISO[e[1]] = +e[0]; });
+    const targetISO = nameToISO[country];
+
+    const w = 320, h = 320;
+    const pad = 20;
+    const svg = d3.select(el).attr('viewBox', '0 0 ' + w + ' ' + h);
+    svg.selectAll('*').remove();
+
+    const countries = topojson.feature(topoCache, topoCache.objects.countries);
+    const feature = countries.features.find(function(f) { return +f.id === targetISO; });
+    if (!feature) return;
+
+    const projection = d3.geoMercator().fitExtent([[pad, pad], [w - pad, h - pad]], feature);
+    const path = d3.geoPath().projection(projection);
+
+    svg.append('path')
+      .datum(feature)
+      .attr('d', path)
+      .attr('fill', '#f0d5b8')
+      .attr('stroke', '#5c3317')
+      .attr('stroke-width', 1);
+
+    if (lat !== undefined && lng !== undefined) {
+      const pt = projection([lng, lat]);
+      if (pt) {
+        svg.append('circle')
+          .attr('cx', pt[0]).attr('cy', pt[1]).attr('r', 5)
+          .attr('fill', '#5c3317').attr('stroke', '#fff').attr('stroke-width', 1.5);
+      }
+    }
+  }
+
   // ── SIDEBAR ──────────────────────────────────────────────────────────────────
 
   function openSidebar(k) {
@@ -349,6 +447,12 @@
 
     // Body
     let html = '';
+
+    // Maps row
+    html += '<div class="sb-maps">';
+    html += '<div class="sb-map-block"><div class="sb-map-label">Africa</div><div class="sb-map-frame"><svg id="sb-locator-svg"></svg></div></div>';
+    html += '<div class="sb-map-block"><div class="sb-map-label">Country</div><div class="sb-map-frame"><svg id="sb-country-svg"></svg></div></div>';
+    html += '</div>';
 
     // AP callout
     if (k.manager === 'African Parks') {
@@ -409,6 +513,10 @@
     html += '</div>';
 
     document.getElementById('sb-body').innerHTML = html;
+
+    // Render sidebar maps
+    renderSbLocator(k.country, k.lat, k.lng);
+    renderSbCountry(k.country, k.lat, k.lng);
 
     document.getElementById('sidebar').classList.add('open');
     document.getElementById('sb-overlay').classList.add('open');
@@ -513,6 +621,7 @@
   async function renderMap(countByCountry) {
     const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
     const topo = await res.json();
+    topoCache = topo;
     const svg = d3.select('#ks-map');
     svg.selectAll('*').remove();
     const w = 700, h = 750;

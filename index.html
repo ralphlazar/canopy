@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canopy · African Conservation Finance</title>
+<title>Canopy - African Conservation Finance</title>
 <meta name="description" content="Conservation finance in Africa, distilled. Every project. Every funding instrument. Every policy development.">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
     --border: #e8e8e5; --green: #1a4a2e; --green-pale: #e8f5e0;
@@ -26,494 +25,49 @@
     --nf-bg: #f0f0ee;    --nf-text: #6a6a68;
     --risk-low: #2d9b5a; --risk-med: #e6a020; --risk-high: #d4542a; --risk-vhigh: #8b1a1a;
   }
-
   html { scroll-behavior: smooth; overflow-x: hidden; }
-  body { overflow-x: hidden; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
-
   nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
   .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
   .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); overflow: hidden; }
   .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
   .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
   .nav-links { display: none; }
-  .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; }
-  .nav-link:hover { color: var(--text); }
   .nav-right { display: flex; align-items: center; gap: 12px; }
   .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
   .nav-cta:hover { background: var(--green-pale); }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.2s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 99; padding: 8px 0 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu-item { display: flex; align-items: center; gap: 12px; padding: 13px 24px; font-size: 15px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.1s; text-decoration: none; }
+  .mobile-menu-item:hover { background: var(--bg2); }
+  .mobile-menu-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .mobile-menu-divider { height: 1px; background: var(--border); margin: 8px 24px; }
+  .mobile-menu-sub { padding: 10px 24px; font-size: 13px; color: var(--text-muted); cursor: pointer; transition: background 0.1s; }
+  .mobile-menu-sub:hover { background: var(--bg2); }
 
   .view { display: none; }
   .view.active { display: block; }
 
-  .hero { padding: 72px 40px 56px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .hero-eye { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 18px; }
-  .hero-h { font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--text); max-width: 640px; margin-bottom: 18px; }
-  .hero-sub { font-size: 15px; color: var(--text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 32px; }
-  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-primary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: none; background: var(--green); color: #e8f5e0; font-weight: 600; cursor: pointer; transition: opacity 0.15s; }
-  .btn-primary:hover { opacity: 0.85; }
-  .btn-secondary { font-size: 13px; padding: 10px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
-  .btn-secondary:hover { border-color: var(--text-dim); color: var(--text); }
-
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
-  .stat:last-child { border-right: none; }
-  .stat-n { font-size: 28px; font-weight: 700; color: var(--green); letter-spacing: -0.025em; margin-bottom: 4px; }
-  .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
-
-  .section { padding: 32px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .sec-hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
-  .sec-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
-  .sec-all { font-size: 12px; color: var(--green); cursor: pointer; transition: opacity 0.15s; }
-  .sec-all:hover { opacity: 0.7; }
-
-  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .proj-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
-  .proj-card:hover { border-color: var(--text-dim); }
-  .proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 8px; }
-  .proj-country { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
-  .proj-method { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--vol-bg); color: var(--vol-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-  .proj-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
-  .proj-status { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-  .status-dot.issuing     { background: #2d9b5a; }
-  .status-dot.validation  { background: #e6a020; }
-  .status-dot.registered  { background: #4a90d9; }
-  .status-dot.development { background: var(--text-dim); }
-  .status-label { font-size: 11px; color: var(--text-dim); }
-  .proj-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
-  .proj-tags { display: flex; gap: 5px; flex-wrap: wrap; }
-  .proj-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
-
-  .intel-list { display: flex; flex-direction: column; }
-  .intel-item { display: grid; grid-template-columns: 110px 1fr 90px; gap: 16px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
-  .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .intel-dom { font-size: 11px; color: var(--text-dim); padding-top: 2px; }
-  .intel-hl { font-size: 14px; color: var(--text); line-height: 1.45; transition: color 0.15s; }
-  .intel-item:hover .intel-hl { color: var(--green); }
-  .intel-age { font-size: 11px; color: var(--text-dim); text-align: right; padding-top: 2px; white-space: nowrap; }
-
-  .inst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .inst-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--bg2); transition: border-color 0.15s; cursor: pointer; }
-  .inst-card:hover { border-color: var(--text-dim); }
-  .inst-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 7px; letter-spacing: -0.01em; }
-  .inst-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
-  .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
-  .b-voluntary     { background: var(--vol-bg);   color: var(--vol-text); }
-  .b-compliance    { background: var(--comp-bg);  color: var(--comp-text); }
-  .b-sovereign     { background: var(--sov-bg);   color: var(--sov-text); }
-  .b-blended       { background: var(--blend-bg); color: var(--blend-text); }
-  .b-philanthropic { background: var(--phil-bg);  color: var(--phil-text); }
-  .b-emerging      { background: var(--emerg-bg); color: var(--emerg-text); }
-
-  .page-header { padding: 16px 40px 0; max-width: 1100px; margin: 0 auto; }
-  .page-back { font-size: 12px; color: var(--text-dim); cursor: pointer; margin-bottom: 8px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
-  .page-back:hover { color: var(--text); }
-  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
-  .page-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
-
-  .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 40px 24px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border); }
-  .cat-tab { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
-  .cat-tab:hover { border-color: var(--text-dim); color: var(--text); }
-  .cat-tab.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
-
-  .proj-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 28px 40px; max-width: 1100px; margin: 0 auto; }
-  .proj-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
-
-  .cat-group { padding: 28px 40px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .cat-group:last-child { border-bottom: none; }
-  .cat-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 16px; }
-  .cat-group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-
-  /* POLICY TRACKER */
-  .policy-summary { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .policy-stat { padding: 20px 40px; border-right: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
-  .policy-stat:last-child { border-right: none; }
-  .policy-stat:hover { background: var(--bg2); }
-  .policy-stat.active { background: var(--bg2); }
-  .policy-stat-n { font-size: 24px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 4px; }
-  .policy-stat-l { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
-  .n-op  { color: var(--op-text); }
-  .n-ag  { color: var(--ag-text); }
-  .n-neg { color: var(--neg-text); }
-  .n-fw  { color: var(--fw-text); }
-  .n-nf  { color: var(--text-dim); }
-
-  .policy-grid { padding: 28px 40px; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-  .policy-row { display: grid; grid-template-columns: 180px 140px 120px 1fr; gap: 16px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s; }
-  .policy-row:last-child { border-bottom: none; }
-  .policy-row:hover { background: var(--bg2); margin: 0 -40px; padding: 14px 40px; }
-  .policy-name { font-size: 14px; font-weight: 600; color: var(--text); }
-  .policy-region { font-size: 11px; color: var(--text-dim); padding-top: 2px; }
-
-  .status-pill { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: inline-block; white-space: nowrap; }
-  .s-operational     { background: var(--op-bg);  color: var(--op-text); }
-  .s-agreement-signed { background: var(--ag-bg); color: var(--ag-text); }
-  .s-in-negotiation  { background: var(--neg-bg); color: var(--neg-text); }
-  .s-framework-only  { background: var(--fw-bg);  color: var(--fw-text); }
-  .s-no-framework    { background: var(--nf-bg);  color: var(--nf-text); }
-
-  .risk-pill { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: inline-block; }
-  .r-low      { background: #e8f5e0; color: var(--risk-low); }
-  .r-medium   { background: #fef3cd; color: var(--risk-med); }
-  .r-high     { background: #fde8e0; color: var(--risk-high); }
-  .r-very-high { background: #f5e0e0; color: var(--risk-vhigh); }
-
-  .policy-notes-preview { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-
-  .policy-disclaimer { font-size: 11px; color: var(--text-dim); padding: 8px 40px 12px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); font-style: italic; }
-
-  .intel-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
-  .intel-full { padding: 0 40px; max-width: 1100px; margin: 0 auto; }
-  .intel-full .intel-item:first-child { padding-top: 20px; }
-
-  /* DETAIL PANEL */
-  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
-  .overlay.open { opacity: 1; pointer-events: all; }
-  .detail-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; background: var(--bg); z-index: 201; overflow-y: auto; transform: translateX(100%); transition: transform 0.25s ease; border-left: 1px solid var(--border); }
-  .detail-panel.open { transform: translateX(0); }
-  .detail-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 1; }
-  .detail-close { font-size: 22px; color: var(--text-dim); cursor: pointer; line-height: 1; transition: color 0.15s; background: none; border: none; padding: 0; }
-  .detail-close:hover { color: var(--text); }
-  .detail-badge { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .detail-name { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
-  .detail-body { padding: 24px 28px; }
-  .detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px; }
-  .detail-meta-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
-  .detail-meta-row:last-child { border-bottom: none; }
-  .detail-meta-label { font-size: 12px; color: var(--text-dim); }
-  .detail-meta-value { font-size: 12px; color: var(--text); font-weight: 500; text-align: right; }
-  .detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 20px; }
-  .detail-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 12px; margin-top: 24px; }
-
-  .loading { color: var(--text-dim); font-size: 13px; padding: 20px 0; }
-  .empty { color: var(--text-dim); font-size: 13px; padding: 40px; text-align: center; }
-
-  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
-  .footer-note { font-size: 12px; color: var(--text-dim); }
-  .footer-blessing {
-    font-size: 12px; color: var(--text-dim);
-    cursor: default;
-    position: relative;
-    display: inline-block;
-  }
-  .footer-blessing .blessing-tip {
-    display: none;
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 12px;
-    line-height: 1.55;
-    color: var(--text);
-    white-space: normal;
-    width: max-content;
-    max-width: min(360px, 90vw);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    z-index: 100;
-    pointer-events: none;
-  }
-  .footer-blessing:hover .blessing-tip { display: block; }
-  .footer-links { display: flex; gap: 24px; }
-  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
-  .footer-link:hover { color: var(--text-muted); }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-    background: none;
-    border: none;
-  }
-  .hamburger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--text);
-    border-radius: 2px;
-    transition: all 0.2s;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 57px;
-    left: 0;
-    right: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    z-index: 99;
-    padding: 8px 0 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-  .mobile-menu.open { display: block; }
-  .mobile-menu-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 13px 24px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text);
-    cursor: pointer;
-    transition: background 0.1s;
-  }
-  .mobile-menu-item:hover { background: var(--bg2); }
-  .mobile-menu-num {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-    color: #fff;
-    flex-shrink: 0;
-  }
-  .mobile-menu-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 8px 24px;
-  }
-  .mobile-menu-sub {
-    padding: 10px 24px;
-    font-size: 13px;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: background 0.1s;
-  }
-  .mobile-menu-sub:hover { background: var(--bg2); }
-
-  @media (max-width: 768px) {
-    nav { padding: 14px 24px; }
-    .hero { padding: 40px 24px 32px; }
-    .hero-h { font-size: 26px; }
-    .stats, .policy-summary { grid-template-columns: repeat(2, 1fr); }
-    .stat, .policy-stat { padding: 18px 24px; }
-    .stat:nth-child(2), .policy-stat:nth-child(2) { border-right: none; }
-    .section, .page-header, .cat-tabs, .cat-group, .proj-full-grid, .proj-count, .policy-grid { padding-left: 24px; padding-right: 24px; }
-    .proj-grid, .inst-grid, .cat-group-grid, .proj-full-grid { grid-template-columns: 1fr; }
-    .intel-item { grid-template-columns: 80px 1fr; }
-    .intel-age { display: none; }
-    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
-    .detail-panel { width: 100%; }
-    .policy-row { display: block; padding: 14px 0; }
-    .policy-row:hover { margin: 0 -24px; padding: 14px 24px; }
-    .policy-row > div:first-child { margin-bottom: 8px; }
-    .policy-row .status-pill { margin-right: 6px; }
-    .policy-notes-preview { display: none; }
-    .view-toggle { padding: 6px 24px 0; }
-    .map-container { padding: 8px 24px 12px; }
-  }
-  @media (max-width: 480px) {
-    .stats { grid-template-columns: 1fr 1fr; }
-    .stat:nth-child(odd) { border-right: 1px solid var(--border); }
-    .stat:nth-child(even) { border-right: none; }
-    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
-  }
-
-  .map-tooltip {
-    position: fixed;
-    background: var(--text);
-    color: #fff;
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.1s;
-    white-space: nowrap;
-    z-index: 300;
-    line-height: 1.5;
-  }
-  .map-tooltip.visible { opacity: 1; }
-
-  /* ABOUT */
-  .about-body {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 40px 40px 60px;
-  }
-  .about-lead {
-    font-size: 18px;
-    line-height: 1.65;
-    color: var(--text);
-    font-weight: 500;
-    margin-bottom: 40px;
-    letter-spacing: -0.01em;
-  }
-  .about-h {
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-    margin-bottom: 14px;
-    margin-top: 36px;
-  }
-  .about-p {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 16px;
-  }
-
-  .about-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 8px;
-  }
-  .about-list li {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    padding: 4px 0 4px 16px;
-    position: relative;
-  }
-  .about-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 14px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--green);
-  }
-
-  /* SEARCH */
-  .search-wrap {
-    position: relative;
-    margin-left: 8px;
-  }
-  .search-input {
-    font-size: 12px;
-    padding: 6px 12px 6px 30px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg2);
-    color: var(--text);
-    width: 180px;
-    transition: width 0.2s, border-color 0.15s;
-    outline: none;
-    font-family: inherit;
-  }
-  .search-input:focus {
-    width: 240px;
-    border-color: var(--green);
-    background: var(--bg);
-  }
-  .search-icon {
-    position: absolute;
-    left: 9px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-dim);
-    font-size: 13px;
-    pointer-events: none;
-  }
-  .search-results {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    width: 360px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    z-index: 500;
-    max-height: 480px;
-    overflow-y: auto;
-    display: none;
-  }
-  .search-results.visible { display: block; }
-  .search-group-title {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-    padding: 12px 16px 6px;
-  }
-  .search-result {
-    padding: 10px 16px;
-    cursor: pointer;
-    transition: background 0.1s;
-    border-bottom: 1px solid var(--border);
-  }
-  .search-result:last-child { border-bottom: none; }
-  .search-result:hover { background: var(--bg2); }
-  .search-result-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-  .search-result-sub  { font-size: 11px; color: var(--text-dim); }
-  .search-empty { padding: 20px 16px; font-size: 13px; color: var(--text-dim); text-align: center; }
-
-  /* MAP */
-  .view-toggle { display: flex; gap: 0; padding: 6px 40px 16px; max-width: 1100px; margin: 0 auto; }
-  .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; }
-  .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
-  .toggle-btn:last-child  { border-radius: 0 6px 6px 0; border-left: none; }
-  .toggle-btn.active { background: var(--green); color: #e8f5e0; border-color: var(--green); }
-
-  .map-container { padding: 8px 40px 12px; max-width: 1100px; margin: 0 auto; }
-  .map-container svg { width: 100%; height: auto; max-height: 106vh; display: block; }
-  .map-hint { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
-
-  .country-path { stroke: #fff; stroke-width: 0.5; cursor: pointer; transition: opacity 0.15s; }
-  .country-path:hover { opacity: 0.75; }
-  .country-dot { cursor: pointer; transition: opacity 0.15s; }
-  .country-dot:hover { opacity: 0.75; }
-
-  .map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
-  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
-
   /* HOME GRID */
-  .home-hero {
-    padding: 20px 40px 12px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .home-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px 40px;
-  }
+  .home-hero { padding: 20px 40px 12px; max-width: 1100px; margin: 0 auto; }
+  .hero-h { font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--text); }
+  .home-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 16px; max-width: 1100px; margin: 0 auto; padding: 0 24px 40px; }
   @media (min-width: 769px) {
-    .home-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 0 40px 40px; }
+    .home-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); padding: 0 40px 40px; }
     .home-card-7 { grid-column: span 2; }
   }
   @media (max-width: 768px) {
     .home-grid { grid-template-columns: 1fr !important; padding: 0 16px 32px !important; }
     .home-card-7 { grid-column: span 1 !important; }
   }
-  .home-card {
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-  }
-  .home-card:hover {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  }
+  .home-card { border: 2px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; min-width: 0; }
+  .home-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
   .home-card-1 { border-color: rgba(139,26,26,0.25); background: rgba(139,26,26,0.025); }
   .home-card-2 { border-color: rgba(26,74,46,0.25);  background: rgba(26,74,46,0.025); }
   .home-card-3 { border-color: rgba(92,51,23,0.25);  background: rgba(92,51,23,0.025); }
@@ -522,401 +76,141 @@
   .home-card-2:hover { border-color: rgba(26,74,46,0.5); }
   .home-card-3:hover { border-color: rgba(92,51,23,0.5); }
   .home-card-4:hover { border-color: rgba(74,111,163,0.5); }
-  .card-num-1 { background: #8b1a1a; }
-  .card-num-2 { background: #1a4a2e; }
-  .card-num-3 { background: #5c3317; }
-  .card-num-4 { background: #4a6fa3; }
-  .home-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 18px 20px 14px;
-  }
-  .home-card-1, .home-card-2, .home-card-3, .home-card-4 {
-    height: 340px;
-    overflow: hidden;
-  }
-  .home-card-map {
-    position: relative;
-    overflow: hidden;
-    height: 340px;
-  }
-  .home-card-map svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: var(--bg2);
-  }
-  .home-card-map-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 14px 16px;
-    background: linear-gradient(160deg, rgba(250,250,248,0.6) 0%, transparent 40%, transparent 60%, rgba(250,250,248,0.5) 100%);
-    pointer-events: none;
-  }
-  .home-card-map-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .home-card-map-title {
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.01em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .card-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-  .home-card-map-sub {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 2px;
-    margin-bottom: 16px;
-  }
-  .home-card-map-cta {
-    font-size: 11px;
-    color: var(--text-dim);
-    pointer-events: none;
-  }
+  .card-num-1{background:#8b1a1a;} .card-num-2{background:#1a4a2e;} .card-num-3{background:#5c3317;} .card-num-4{background:#4a6fa3;}
+  .home-card-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 18px 20px 14px; }
+  .home-card-1,.home-card-2,.home-card-3,.home-card-4 { height: 340px; overflow: hidden; }
+  .home-card-map { position: relative; overflow: hidden; height: 340px; }
+  .home-card-map svg { width: 100%; height: 100%; display: block; background: var(--bg2); }
+  .home-card-map-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 14px 16px; background: linear-gradient(160deg,rgba(250,250,248,0.6) 0%,transparent 40%,transparent 60%,rgba(250,250,248,0.5) 100%); pointer-events: none; }
+  .home-card-map-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .home-card-map-title { font-size: 17px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; }
+  .card-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+  .home-card-map-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; margin-bottom: 16px; }
+  .home-card-map-cta { font-size: 11px; color: var(--text-dim); pointer-events: none; }
   .home-card:hover .home-card-map-cta { color: var(--green); }
-  .home-card-map-bottom {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 10px;
-    color: var(--text-muted);
-  }
-  .hcl-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-right: 3px;
-    vertical-align: middle;
-  }
-  .hcl-swatch {
-    display: inline-block;
-    width: 20px;
-    height: 8px;
-    border-radius: 2px;
-    flex-shrink: 0;
-    margin-right: 3px;
-    vertical-align: middle;
-  }
-  .home-card-intel {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px 4px;
-    flex: 1;
-  }
-  .home-intel-item {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 12px;
-    align-items: start;
-  }
+  .home-card-map-bottom { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 10px; color: var(--text-muted); }
+  .hcl-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-right: 3px; vertical-align: middle; }
+  .hcl-swatch { display: inline-block; width: 20px; height: 8px; border-radius: 2px; flex-shrink: 0; margin-right: 3px; vertical-align: middle; }
+  .home-card-intel { display: flex; flex-direction: column; padding: 0 20px 4px; flex: 1; }
+  .home-intel-item { padding: 10px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: start; }
   .home-intel-item:last-child { border-bottom: none; }
   .home-intel-dom { font-size: 10px; color: var(--text-dim); padding-top: 2px; }
   .home-intel-hl  { font-size: 12px; color: var(--text); line-height: 1.45; }
-  .home-card-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0 20px 20px;
-    flex: 1;
-    align-content: flex-start;
-  }
-  .home-card-badges .inst-badge {
-    font-size: 11px;
-    padding: 5px 14px;
-  }
+  .home-card-badges { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 20px; flex: 1; align-content: flex-start; }
+  .home-card-badges .inst-badge { font-size: 11px; padding: 5px 14px; }
   @media (max-width: 768px) {
     .home-hero { padding: 32px 24px 24px; }
-    .home-card-1, .home-card-2, .home-card-3, .home-card-4 { height: auto; overflow: visible; }
+    .home-card-1,.home-card-2,.home-card-3,.home-card-4 { height: auto; overflow: visible; }
     .home-card-map { height: 210px; display: flex; align-items: center; justify-content: flex-end; }
     .home-card-map svg { width: auto; height: 100%; max-width: 55%; }
   }
 
-  .mobile-search-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: var(--text-muted);
-    cursor: pointer;
-    padding: 4px 8px;
-    margin-right: 4px;
-  }
-  .mobile-search-bar {
-    display: none;
-    padding: 10px 24px;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-  }
-  .mobile-search-bar.open { display: block; }
-  .mobile-search-input {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg2);
-    color: var(--text);
-    outline: none;
-    font-family: inherit;
-  }
-  .mobile-search-results {
-    display: none;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    max-height: 60vh;
-    overflow-y: auto;
-    position: relative;
-    z-index: 98;
-  }
-  .mobile-search-results.visible { display: block; }
-  .mobile-search-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 97;
-  }
-  .mobile-search-overlay.open { display: block; }
-
-  @media (max-width: 768px) {
-    .mobile-search-btn { display: block; }
-  }
-  .live-num {
-    color: #1a4a2e;
-    font-weight: 700;
-    animation: pulse-opacity 2.5s ease-in-out infinite;
-  }
-  @keyframes pulse-opacity {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.45; }
-  }
-
-  .ks-sub-break { display: none; }
-  @media (max-width: 768px) { .ks-sub-break { display: inline; } }
-
-  /* MINI MAPS */
-  .mini-maps {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .mini-map-panel {
-    position: relative;
-    background: var(--bg2);
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .mini-map-panel:first-child {
-    border-right: 1px solid var(--border);
-  }
-  .mini-map-panel svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 0.9;
-    transition: opacity 0.2s;
-  }
-  .mini-map-panel:hover svg { opacity: 1; }
-  .mini-map-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 24px;
-    background: linear-gradient(transparent, rgba(250,250,248,0.92));
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .mini-map-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--green);
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-  }
-  .mini-map-stat {
-    font-size: 11px;
-    color: var(--text-dim);
-    margin-top: 3px;
-  }
-  .mini-map-cta {
-    font-size: 11px;
-    color: var(--text-dim);
-    transition: color 0.2s;
-    white-space: nowrap;
-    padding-bottom: 2px;
-  }
-  .mini-map-panel:hover .mini-map-cta { color: var(--green); }
-  @media (max-width: 768px) {
-    .mini-maps { grid-template-columns: 1fr; }
-    .mini-map-panel:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-  }
-
-  /* WHO'S WHO */
+  /* Who's Who card */
   .home-card-5 { border-color: rgba(26,92,92,0.25); background: rgba(26,92,92,0.025); min-height: 340px; }
   .home-card-5:hover { border-color: rgba(26,92,92,0.5); }
   .home-card-5 .home-card-header { padding-bottom: 0; }
   .card-num-5 { background: #1a5c5c; }
 
-  /* CAIRN */
+  /* CAIRN card */
   .home-card-6 { border-color: rgba(74,42,107,0.25); background: rgba(74,42,107,0.025); min-height: 340px; }
   .home-card-6:hover { border-color: rgba(74,42,107,0.5); }
   .card-num-6 { background: #4a2a6b; }
   .cairn-pulse-wrap { position:relative; width:42px; height:42px; display:flex; align-items:center; justify-content:center; }
   .cairn-pulse-core { width:14px; height:14px; border-radius:50%; background:#6a3a9a; position:relative; z-index:3; }
   .cairn-pulse-ring { position:absolute; border-radius:50%; border:1.5px solid #6a3a9a; animation:cairn-pulse 2.4s ease-out infinite; }
-  .cairn-pulse-ring-1 { width:22px; height:22px; animation-delay:0s; }
-  .cairn-pulse-ring-2 { width:32px; height:32px; animation-delay:0.6s; }
-  .cairn-pulse-ring-3 { width:42px; height:42px; animation-delay:1.2s; }
-  @keyframes cairn-pulse {
-    0%   { opacity:0.8; transform:scale(0.6); }
-    70%  { opacity:0; transform:scale(1); }
-    100% { opacity:0; transform:scale(1); }
-  }
-  .cairn-lock {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px;
-    border: 1px solid rgba(74,42,107,0.2);
-    border-radius: 10px;
-    background: rgba(74,42,107,0.04);
-    margin: 0 20px;
-  }
-  .cairn-lock-icon { font-size: 22px; opacity: 0.55; flex-shrink: 0; }
-  .cairn-lock-label { font-size: 13px; font-weight: 600; color: #4a2a6b; }
-  .cairn-lock-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
-  .cairn-tags { display: flex; gap: 6px; flex-wrap: wrap; padding: 14px 20px 20px; }
-  .cairn-tag { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: rgba(74,42,107,0.08); color: #4a2a6b; font-weight: 600; }
+  .cairn-pulse-ring-1{width:22px;height:22px;animation-delay:0s;}
+  .cairn-pulse-ring-2{width:32px;height:32px;animation-delay:0.6s;}
+  .cairn-pulse-ring-3{width:42px;height:42px;animation-delay:1.2s;}
+  @keyframes cairn-pulse{0%{opacity:0.8;transform:scale(0.6);}70%{opacity:0;transform:scale(1);}100%{opacity:0;transform:scale(1);}}
+  .cairn-lock { display:flex; align-items:center; gap:12px; padding:18px; border:1px solid rgba(74,42,107,0.2); border-radius:10px; background:rgba(74,42,107,0.04); margin:0 20px; }
+  .cairn-lock-icon { font-size:22px; opacity:0.55; flex-shrink:0; }
+  .cairn-lock-label { font-size:13px; font-weight:600; color:#4a2a6b; }
+  .cairn-lock-sub { font-size:11px; color:var(--text-dim); margin-top:2px; }
+  .cairn-tags { display:flex; gap:6px; flex-wrap:wrap; padding:14px 20px 20px; }
+  .cairn-tag { font-size:10px; padding:3px 10px; border-radius:20px; background:rgba(74,42,107,0.08); color:#4a2a6b; font-weight:600; }
 
-  /* FUNDING INSTRUMENTS (now card 7) */
+  /* Funding Instruments card */
   .home-card-7 { border-color: rgba(193,127,0,0.25); background: rgba(193,127,0,0.025); }
   .home-card-7:hover { border-color: rgba(193,127,0,0.5); }
   .card-num-7 { background: #c17f00; }
-  .home-card-7 .home-card-badges { flex-direction: row; flex-wrap: wrap; gap: 10px; padding: 0 20px 20px; }
-  .ks-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 0 20px 20px; border-radius: 8px; overflow: hidden; }
-  .ks-stat { background: var(--bg); padding: 12px 14px; }
-  .ks-stat-n { font-size: 18px; font-weight: 700; color: #5c3317; letter-spacing: -0.02em; }
-  .ks-stat-l { font-size: 10px; color: var(--text-dim); line-height: 1.3; margin-top: 2px; }
 
-  .ww-list-header { display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; padding: 10px 40px; max-width: 1100px; margin: 0 auto; border-bottom: 2px solid var(--border); background: var(--bg3); border-top: 1px solid var(--border); }
-  .ww-col { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
-  .ww-col:hover { color: var(--text); }
-  .ww-col.ww-col-active { color: var(--teal); }
-  .ww-arrow { font-size: 10px; opacity: 0.4; }
-  .ww-col:hover .ww-arrow { opacity: 0.7; }
-  .ww-col.ww-col-active .ww-arrow { opacity: 1; }
-  @media (max-width: 768px) { .ww-list-header { display: none; } }
+  /* SEARCH */
+  .search-wrap { position: relative; margin-left: 8px; }
+  .search-input { font-size: 12px; padding: 6px 12px 6px 30px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); width: 180px; transition: width 0.2s, border-color 0.15s; outline: none; font-family: inherit; }
+  .search-input:focus { width: 240px; border-color: var(--green); background: var(--bg); }
+  .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+  .search-results { position: absolute; top: calc(100% + 8px); right: 0; width: 360px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 500; max-height: 480px; overflow-y: auto; display: none; }
+  .search-results.visible { display: block; }
+  .search-group-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); padding: 12px 16px 6px; }
+  .search-result { padding: 10px 16px; cursor: pointer; transition: background 0.1s; border-bottom: 1px solid var(--border); }
+  .search-result:last-child { border-bottom: none; }
+  .search-result:hover { background: var(--bg2); }
+  .search-result-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .search-result-sub  { font-size: 11px; color: var(--text-dim); }
+  .search-empty { padding: 20px 16px; font-size: 13px; color: var(--text-dim); text-align: center; }
 
-  .ww-grid { display: flex; flex-direction: column; padding: 0 40px 28px; max-width: 1100px; margin: 0 auto; }
-  .ww-card { border-bottom: 1px solid var(--border); padding: 2px 0; background: transparent; cursor: pointer; display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; align-items: center; border-radius: 0; transition: background 0.1s; }
-  .ww-card:hover { background: var(--bg2); margin: 0 -40px; padding: 2px 40px; }
-  .ww-card:last-child { border-bottom: none; }
-  .ww-card-top { display: none; }
-  .ww-name { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
-  .ww-role { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
-  .ww-org { font-size: 12px; color: var(--text-dim); margin: 0; }
-  .ww-tags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
-  .ww-verified { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--teal-pale); color: var(--teal); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-  .ww-unverified { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--nf-bg); color: var(--nf-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-  .ww-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
+  /* ABOUT */
+  .about-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 60px; }
+  .about-lead { font-size: 18px; line-height: 1.65; color: var(--text); font-weight: 500; margin-bottom: 40px; letter-spacing: -0.01em; }
+  .about-p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+  .page-header { padding: 16px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .page-back { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; cursor: pointer; }
+  .page-back:hover { color: var(--text); }
+  .page-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
 
-  .ww-org-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
-  .ww-alpha-break { font-size: 11px; font-weight: 700; color: var(--text-dim); letter-spacing: 0.08em; padding: 14px 0 4px; border-bottom: 1px solid var(--border); margin-bottom: 2px; }
-  .ww-fund       { background: var(--comp-bg);  color: var(--comp-text); }
-  .ww-dfi        { background: var(--blend-bg); color: var(--blend-text); }
-  .ww-ngo        { background: var(--vol-bg);   color: var(--vol-text); }
-  .ww-standard_body { background: var(--sov-bg); color: var(--sov-text); }
-  .ww-developer  { background: var(--ag-bg);    color: var(--ag-text); }
-  .ww-government { background: var(--phil-bg);  color: var(--phil-text); }
-  .ww-buyer      { background: var(--nf-bg);    color: var(--nf-text); }
-  .ww-advisory   { background: var(--emerg-bg); color: var(--emerg-text); }
+  /* MOBILE SEARCH */
+  .mobile-search-btn { display: none; background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; padding: 4px 8px; margin-right: 4px; }
+  .mobile-search-bar { display: none; padding: 10px 24px; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .mobile-search-bar.open { display: block; }
+  .mobile-search-input { width: 100%; font-size: 15px; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); outline: none; font-family: inherit; }
+  .mobile-search-results { display: none; background: var(--bg); border-bottom: 1px solid var(--border); max-height: 60vh; overflow-y: auto; position: relative; z-index: 98; }
+  .mobile-search-results.visible { display: block; }
+  .mobile-search-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 97; }
+  .mobile-search-overlay.open { display: block; }
+  @media (max-width: 768px) { .mobile-search-btn { display: block; } }
 
-  .ww-search-bar { padding: 12px 40px 0; max-width: 1100px; margin: 0 auto; }
-  .ww-search-input { font-size: 13px; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); width: 260px; outline: none; font-family: inherit; transition: border-color 0.15s, width 0.2s; }
-  .ww-search-input:focus { border-color: var(--teal); background: var(--bg); width: 320px; }
-  @media (max-width: 768px) { .ww-search-bar { padding-left: 24px; padding-right: 24px; } .ww-search-input { width: 100%; } .ww-search-input:focus { width: 100%; } }
-
-  .ww-suggest { border: 1px solid var(--border); border-radius: 10px; margin: 0 auto 16px; max-width: 1100px; background: var(--bg2); overflow: hidden; }
-  .ww-suggest-header { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; cursor: pointer; user-select: none; }
-  .ww-suggest-header:hover { background: var(--bg); }
-  .ww-suggest-title { font-size: 13px; font-weight: 600; color: var(--text); }
-  .ww-suggest-sub { font-size: 12px; color: var(--text-dim); }
-  .ww-suggest-chevron { font-size: 11px; color: var(--text-dim); transition: transform 0.2s; }
-  .ww-suggest.open .ww-suggest-chevron { transform: rotate(180deg); }
-  .ww-suggest-body { display: none; padding: 16px 18px 20px; border-top: 1px solid var(--border); }
-  .ww-suggest.open .ww-suggest-body { display: block; }
-  .ww-suggest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 560px; }
-  .ww-suggest-input { font-size: 13px; padding: 8px 12px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
-  .ww-suggest-input:focus { border-color: var(--teal); }
-  .ww-suggest-input.full { grid-column: 1 / -1; }
-  .ww-suggest-btn { grid-column: 1 / -1; justify-self: start; font-size: 12px; padding: 8px 20px; border-radius: 7px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; font-weight: 500; font-family: inherit; transition: background 0.15s; }
-  .ww-suggest-btn:hover { background: var(--teal-pale); }
-  .ww-suggest-thanks { font-size: 13px; color: var(--teal); display: none; padding-top: 4px; }
-  @media (max-width: 768px) { .ww-suggest { margin: 0 0 16px; } .ww-suggest-form { grid-template-columns: 1fr; } .ww-suggest-input.full { grid-column: 1; } .ww-suggest-btn { grid-column: 1; } }
-  .home-ww-list { display: flex; flex-direction: column; padding: 0 20px 4px; flex: 1; }
-  .home-ww-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
-  .home-ww-item:last-child { border-bottom: none; }
-  .home-ww-name { font-size: 12px; font-weight: 600; color: var(--text); }
-  .home-ww-role { font-size: 11px; color: var(--text-dim); }
-
+  .live-num { color: #1a4a2e; font-weight: 700; animation: pulse-opacity 2.5s ease-in-out infinite; }
+  @keyframes pulse-opacity { 0%,100%{opacity:1;} 50%{opacity:0.45;} }
+  .ks-sub-break { display: none; }
+  @media (max-width: 768px) { .ks-sub-break { display: inline; } }
+  .inst-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
+  .b-voluntary{background:var(--vol-bg);color:var(--vol-text);}
+  .b-compliance{background:var(--comp-bg);color:var(--comp-text);}
+  .b-sovereign{background:var(--sov-bg);color:var(--sov-text);}
+  .b-blended{background:var(--blend-bg);color:var(--blend-text);}
+  .b-philanthropic{background:var(--phil-bg);color:var(--phil-text);}
+  .b-emerging{background:var(--emerg-bg);color:var(--emerg-text);}
+  .map-tooltip { position: fixed; background: var(--text); color: #fff; font-size: 12px; padding: 6px 10px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.1s; white-space: nowrap; z-index: 300; line-height: 1.5; }
+  .map-tooltip.visible { opacity: 1; }
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .footer-blessing { font-size: 12px; color: var(--text-dim); cursor: default; position: relative; display: inline-block; }
+  .footer-blessing .blessing-tip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 12px; line-height: 1.55; color: var(--text); white-space: normal; width: max-content; max-width: min(360px, 90vw); box-shadow: 0 4px 16px rgba(0,0,0,0.08); z-index: 100; pointer-events: none; }
+  .footer-blessing:hover .blessing-tip { display: block; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
+  .footer-link:hover { color: var(--text-muted); }
   @media (max-width: 768px) {
-    .ww-grid { padding-left: 24px; padding-right: 24px; }
-    .ww-count { padding-left: 24px; padding-right: 24px; }
-    .ww-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2px 12px; }
-    .ww-card:hover { margin: 0 -24px; padding: 2px 24px; }
-    .ww-org { display: none; }
-    .ww-name { grid-column: 1; grid-row: 1 / 3; display: flex; align-items: flex-start; padding-top: 2px; }
-    .ww-role { grid-column: 2; grid-row: 1; }
-    .ww-tags { grid-column: 2; grid-row: 2; justify-content: flex-start; }
+    nav { padding: 14px 24px; }
+    .home-hero { padding: 32px 24px 24px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
   }
+
 </style>
 </head>
 <body>
 
+<div class="map-tooltip" id="map-tooltip"></div>
 <div id="nav-mount"></div>
 
 <div style="display:none;">
   <input id="search-input" type="text" autocomplete="off">
   <div id="search-results"></div>
 </div>
-
 <div class="mobile-search-bar" id="mobile-search-bar">
   <input class="mobile-search-input" id="mobile-search-input" type="text" placeholder="Search projects, instruments, countries..." autocomplete="off">
 </div>
 <div class="mobile-search-results" id="mobile-search-results"></div>
 <div class="mobile-search-overlay" id="mobile-search-overlay" onclick="closeMobileSearch()"></div>
-
-
 
 <!-- HOME -->
 <div id="view-home" class="view active">
@@ -925,8 +219,7 @@
   </div>
   <div class="home-grid">
 
-    <!-- Policy tracker -->
-    <div class="home-card home-card-1" onclick="showView('policy'); activatePolicyMap();">
+    <div class="home-card home-card-1" onclick="window.location.href='policy.html'">
       <div class="home-card-map">
         <svg id="mini-policy-map" viewBox="0 0 700 750"></svg>
         <div class="home-card-map-overlay">
@@ -948,8 +241,7 @@
       </div>
     </div>
 
-    <!-- Projects -->
-    <div class="home-card home-card-2" onclick="showView('projects'); activateProjMap();">
+    <div class="home-card home-card-2" onclick="window.location.href='projects.html'">
       <div class="home-card-map">
         <svg id="mini-proj-map" viewBox="0 0 700 750"></svg>
         <div class="home-card-map-overlay">
@@ -969,7 +261,6 @@
       </div>
     </div>
 
-    <!-- Keystones PA - card 3 with map -->
     <div class="home-card home-card-3" onclick="window.location.href='keystones.html'">
       <div class="home-card-map">
         <svg id="mini-ks-map" viewBox="0 0 700 750"></svg>
@@ -991,8 +282,7 @@
       </div>
     </div>
 
-    <!-- Intelligence - card 4, same height as KPA card -->
-    <div class="home-card home-card-4" onclick="showView('intelligence');">
+    <div class="home-card home-card-4" onclick="window.location.href='intelligence.html'">
       <div class="home-card-header">
         <div>
           <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Intelligence</div>
@@ -1005,8 +295,7 @@
       </div>
     </div>
 
-    <!-- Who's Who - card 5 -->
-    <div class="home-card home-card-5" onclick="showView('whowho');">
+    <div class="home-card home-card-5" onclick="window.location.href='whos_who.html'">
       <div class="home-card-header">
         <div>
           <div class="home-card-map-title"><span class="card-num card-num-5">5</span>Who's Who</div>
@@ -1024,7 +313,6 @@
       </div>
     </div>
 
-    <!-- CAIRN - card 6 -->
     <div class="home-card home-card-6" onclick="window.location.href='cairn.html'">
       <div class="home-card-header">
         <div>
@@ -1057,8 +345,7 @@
       </div>
     </div>
 
-    <!-- Funding Instruments - card 7, full width -->
-    <div class="home-card home-card-7" onclick="showView('instruments');">
+    <div class="home-card home-card-7" onclick="window.location.href='instruments.html'">
       <div class="home-card-header">
         <div>
           <div class="home-card-map-title"><span class="card-num card-num-7">7</span>Funding Instruments</div>
@@ -1087,1289 +374,251 @@
   </footer>
 </div>
 
-<!-- PROJECTS -->
-<div id="view-projects" class="view">
-  <div class="page-header">
-    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
-    <div class="page-title">Projects Tracker</div>
-    <div class="page-sub"><span class="live-num" id="proj-page-count">148</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
-  </div>
-  <div class="view-toggle">
-    <button class="toggle-btn active" onclick="setProjView('map',this)">Map</button>
-    <button class="toggle-btn" onclick="setProjView('grid',this)">Grid</button>
-  </div>
-  <div id="proj-map-wrap">
-    <div class="map-container">
-      <svg id="proj-map" viewBox="0 80 700 600"></svg>
-      <div class="map-legend" id="proj-legend"></div>
-      <div class="map-hint">Click a country to see projects. Click again to clear.</div>
-    </div>
-  </div>
-  <div id="proj-grid-wrap" class="map-hidden">
-    <div class="cat-tabs" id="proj-tabs">
-      <button class="cat-tab active" onclick="filterProj('all',this)">All</button>
-      <button class="cat-tab" onclick="filterProj('arr',this)">ARR</button>
-      <button class="cat-tab" onclick="filterProj('blue-carbon',this)">Blue carbon</button>
-      <button class="cat-tab" onclick="filterProj('redd',this)">REDD+</button>
-      <button class="cat-tab" onclick="filterProj('issuing',this)">Issuing</button>
-      <button class="cat-tab" onclick="filterProj('validation',this)">Under validation</button>
-    </div>
-    <div class="proj-count" id="proj-count"></div>
-    <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
-  </div>
-  <footer>
-    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
-    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
-  </footer>
-</div>
-
-<!-- INSTRUMENTS -->
-<div id="view-instruments" class="view">
-  <div class="page-header">
-    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
-    <div class="page-title">Funding instruments</div>
-    <div class="page-sub">Every instrument used to finance conservation in Africa - how each works, who uses it, and where it fits.</div>
-  </div>
-  <div class="cat-tabs">
-    <button class="cat-tab active" onclick="filterInst('all',this)">All</button>
-    <button class="cat-tab" onclick="filterInst('voluntary',this)">Voluntary market</button>
-    <button class="cat-tab" onclick="filterInst('compliance',this)">Compliance market</button>
-    <button class="cat-tab" onclick="filterInst('sovereign',this)">Sovereign</button>
-    <button class="cat-tab" onclick="filterInst('blended',this)">Blended finance</button>
-    <button class="cat-tab" onclick="filterInst('philanthropic',this)">Philanthropic</button>
-    <button class="cat-tab" onclick="filterInst('emerging',this)">Emerging</button>
-  </div>
-  <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
-  <footer>
-    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
-    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
-  </footer>
-</div>
-
-<!-- POLICY TRACKER -->
-<div id="view-policy" class="view">
-  <div class="page-header">
-    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
-    <div class="page-title">Policy tracker</div>
-    <div class="page-sub">Article 6.2 readiness across all 54 African nations - status, political risk, and what is actually happening on the ground.</div>
-  </div>
-  <div class="view-toggle">
-    <button class="toggle-btn active" onclick="setPolicyView('map',this)">Map</button>
-    <button class="toggle-btn" onclick="setPolicyView('list',this)">List</button>
-  </div>
-  <div id="policy-map-wrap">
-    <div class="map-container">
-      <svg id="policy-map" viewBox="0 80 700 600"></svg>
-      <div class="map-legend">
-        <div class="legend-item"><div class="legend-swatch" style="background:#1a4a2e"></div>Operational</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:#0c5c58"></div>Agreement signed</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:#c17f00"></div>In negotiation</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:#6b7fa3"></div>Framework only</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:#c0bdb8"></div>No framework</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:#8b1a1a"></div>Very high risk / conflict</div>
-      </div>
-      <div class="map-hint">Click any country to see full Article 6.2 details.</div>
-    </div>
-  </div>
-  <div id="policy-list-wrap" class="map-hidden">
-    <div class="policy-summary" id="policy-summary">
-      <div class="policy-stat" onclick="filterPolicy('all',this)">
-        <div class="policy-stat-n" id="ps-all">-</div><div class="policy-stat-l">All countries</div>
-      </div>
-      <div class="policy-stat" onclick="filterPolicy('operational',this)">
-        <div class="policy-stat-n n-op" id="ps-op">-</div><div class="policy-stat-l">Operational</div>
-      </div>
-      <div class="policy-stat" onclick="filterPolicy('agreement-signed',this)">
-        <div class="policy-stat-n n-ag" id="ps-ag">-</div><div class="policy-stat-l">Agreement signed</div>
-      </div>
-      <div class="policy-stat" onclick="filterPolicy('in-negotiation',this)">
-        <div class="policy-stat-n n-neg" id="ps-neg">-</div><div class="policy-stat-l">In negotiation</div>
-      </div>
-      <div class="policy-stat" onclick="filterPolicy('no-framework',this)">
-        <div class="policy-stat-n n-nf" id="ps-nf">-</div><div class="policy-stat-l">No framework</div>
-      </div>
-    </div>
-    <div class="policy-grid" id="policy-grid"><div class="loading">Loading...</div></div>
-  </div>
-  <div class="policy-disclaimer" id="policy-disclaimer"></div>
-  <footer>
-    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
-    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
-  </footer>
-</div>
-
-<!-- INTELLIGENCE -->
-<div id="view-intelligence" class="view">
-  <div class="page-header">
-    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
-    <div class="page-title">Intelligence</div>
-    <div class="page-sub">Signals from across the African conservation finance landscape - carbon markets, funding, policy, and science.</div>
-  </div>
-  <div class="cat-tabs" id="intel-tabs">
-    <button class="cat-tab active" onclick="filterIntel('all',this)">All</button>
-    <button class="cat-tab" onclick="filterIntel('Carbon markets',this)">Carbon markets</button>
-    <button class="cat-tab" onclick="filterIntel('Funding',this)">Funding</button>
-    <button class="cat-tab" onclick="filterIntel('Policy',this)">Policy</button>
-    <button class="cat-tab" onclick="filterIntel('Science',this)">Science</button>
-  </div>
-  <div class="intel-count" id="intel-count"></div>
-  <div class="intel-full" id="intelligence-full">
-    <div class="loading" style="padding: 40px">Loading...</div>
-  </div>
-  <footer>
-    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
-    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
-  </footer>
-</div>
-
-<!-- WHO'S WHO -->
-<div id="view-whowho" class="view">
-  <div class="page-header">
-    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
-    <div class="page-title">Who's Who</div>
-    <div class="page-sub">The people who matter in African conservation finance - funders, developers, standard-setters, and the officials who make deals happen.</div>
-    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;margin-bottom:4px;line-height:1.6;max-width:700px">All profiles are compiled from publicly available sources - organisational websites, conference programmes, registry filings, and published interviews. No personal contact details are included. Canopy does not hold or process private data about any individual listed here. If you are listed and would like to update or remove your profile, contact us.</p>
-  </div>
-  <div class="cat-tabs" id="ww-tabs">
-    <button class="cat-tab active" onclick="filterWW('all',this)">All</button>
-    <button class="cat-tab" onclick="filterWW('fund',this)">Funds</button>
-    <button class="cat-tab" onclick="filterWW('dfi',this)">DFIs</button>
-    <button class="cat-tab" onclick="filterWW('developer',this)">Developers</button>
-    <button class="cat-tab" onclick="filterWW('ngo',this)">NGOs</button>
-    <button class="cat-tab" onclick="filterWW('standard_body',this)">Standard bodies</button>
-    <button class="cat-tab" onclick="filterWW('government',this)">Government</button>
-    <button class="cat-tab" onclick="filterWW('advisory',this)">Advisory</button>
-    <button class="cat-tab" onclick="filterWW('buyer',this)">Buyers</button>
-  </div>
-  <div class="ww-search-bar">
-    <input class="ww-search-input" id="ww-search-input" type="text" placeholder="Search by name or organisation..." autocomplete="off">
-  </div>
-  <div class="ww-count" id="ww-count"></div>
-  <div class="ww-suggest" id="ww-suggest-box">
-    <div class="ww-suggest-header" onclick="toggleWWSuggest()">
-      <div>
-        <span class="ww-suggest-title">Know someone who belongs here?</span>
-        <span class="ww-suggest-sub" style="margin-left:10px;">Suggestions take 30 seconds. We write the profile.</span>
-      </div>
-      <span class="ww-suggest-chevron">&#9660;</span>
-    </div>
-    <div class="ww-suggest-body">
-      <div class="ww-suggest-form" id="ww-suggest-form">
-        <input class="ww-suggest-input" id="ww-s-name" type="text" placeholder="Name" required>
-        <input class="ww-suggest-input" id="ww-s-org" type="text" placeholder="Organisation" required>
-        <input class="ww-suggest-input" id="ww-s-role" type="text" placeholder="Role" required>
-        <input class="ww-suggest-input" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL">
-        <button class="ww-suggest-btn" onclick="submitWWSuggest()">Suggest this person</button>
-      </div>
-      <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
-    </div>
-  </div>
-  <div class="ww-list-header">
-    <div class="ww-col ww-col-active" data-col="name" onclick="setWWSort('name')">Name <span class="ww-arrow">↑</span></div>
-    <div class="ww-col" data-col="role" onclick="setWWSort('role')">Role <span class="ww-arrow">↑↓</span></div>
-    <div class="ww-col" data-col="organisation" onclick="setWWSort('organisation')">Organisation <span class="ww-arrow">↑↓</span></div>
-    <div class="ww-col" data-col="type" onclick="setWWSort('type')">Type <span class="ww-arrow">↑↓</span></div>
-  </div>
-  <div id="whowho-full" class="ww-grid"><div class="loading">Loading...</div></div>
-  <footer>
-    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
-    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
-  </footer>
-</div>
-
 <!-- ABOUT -->
-<div id="view-about" class="view">  <div class="page-header">
+<div id="view-about" class="view">
+  <div class="page-header">
     <div class="page-back" onclick="showView('home')">&#8592; Back</div>
     <div class="page-title">About</div>
   </div>
   <div class="about-body">
     <p class="about-lead">Canopy is a public resource on conservation finance in Africa.</p>
-
     <p class="about-p">It covers <span class="live-num" id="about-proj-count">261</span> tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
-
     <p class="about-p">It is built for funders, family offices, and advisors who need to understand the landscape before committing capital - and for anyone tracking what is actually happening at the frontier of conservation finance.</p>
-
     <p class="about-p">The information infrastructure for this space is fragmented. Data sits across registries, government portals, and specialist publications. Getting a clear picture requires weeks of research most investors do not have time for. Canopy puts it in one place, kept current, explained clearly.</p>
-
     <p class="about-p">Canopy carries no advertising and no sponsored content. It has no commercial relationship with any project developer or registry. Project scorecards, coming in Phase 2, will be independently rated.</p>
   </div>
   <footer>
     <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa in 1897 and now part of five national anthems across the continent. Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links">
-      <span class="footer-link" onclick="showView('about')">About</span>
+      <span class="footer-link" onclick="showView('home')">Home</span>
       <span class="footer-link">Subscribe</span>
       <span class="footer-link">Contact</span>
     </div>
   </footer>
 </div>
 
-<!-- TOOLTIP -->
-<div class="map-tooltip" id="map-tooltip"></div>
-
-<!-- DETAIL PANEL -->
-<div class="overlay" id="overlay" onclick="closeDetail()"></div>
-<div class="detail-panel" id="detail-panel">
-  <div class="detail-header">
-    <div>
-      <div class="detail-badge" id="detail-badge"></div>
-      <div class="detail-name" id="detail-name"></div>
-    </div>
-    <button class="detail-close" onclick="closeDetail()">x</button>
-  </div>
-  <div class="detail-body" id="detail-body"></div>
-</div>
-
 <script>
-  let allIntelligence = [];
-  let currentIntelFilter = 'all';
-
-  function cleanDashes(str) {
-    return str ? str.replace(/\u2014/g, '-').replace(/\u2013/g, '-') : str;
-  }
-
-  function filterIntel(f, btn) {
-    currentIntelFilter = f;
-    document.querySelectorAll('#intel-tabs .cat-tab').forEach(t=>t.classList.remove('active'));
-    btn.classList.add('active');
-    renderIntelFull();
-  }
-
-  function renderIntelFull() {
-    const list = currentIntelFilter === 'all'
-      ? allIntelligence
-      : allIntelligence.filter(i => i.domain === currentIntelFilter);
-    document.getElementById('intel-count').textContent = list.length + ' item' + (list.length !== 1 ? 's' : '');
-    document.getElementById('intelligence-full').innerHTML = list.length
-      ? list.map(i =>
-          '<div class="intel-item" onclick=\'openIntelDetail('+safeJSON(i)+')\'>' +
-          '<span class="intel-dom">'+i.domain+'</span>' +
-          '<span class="intel-hl">'+cleanDashes(i.headline)+'</span>' +
-          '<span class="intel-age">'+ageLabel(i.date)+'</span>' +
-          '</div>'
-        ).join('')
-      : '<div class="empty">No items match this filter.</div>';
-  }
-
-  function openIntelDetail(i) {
-    const source = i.url
-      ? '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value"><a href="'+i.url+'" target="_blank" style="color:var(--green)">Read original -></a></span></div>'
-      : '<div class="detail-meta-row"><span class="detail-meta-label">Source</span><span class="detail-meta-value" style="color:var(--text-dim)">Not linked</span></div>';
-    const summary = i.summary
-      ? '<div class="detail-section-title">Summary</div><p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:20px">'+cleanDashes(i.summary)+'</p>'
-      : '';
-    openDetail(
-      cleanDashes(i.headline),
-      '<span class="proj-tag">'+i.domain+'</span>',
-      summary +
-      '<div class="detail-section-title">Details</div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Domain</span><span class="detail-meta-value">'+i.domain+'</span></div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Date</span><span class="detail-meta-value">'+i.date+'</span></div>'+
-      source
-    );
-  }
-
-  let allProjects = [], allInstruments = [], allPolicy = [], allWhosWho = [], allKeystones = [];
-  let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all', currentWWFilter = 'all';
-
-  const instCatLabel = { voluntary:'Voluntary market', compliance:'Compliance market', sovereign:'Sovereign', blended:'Blended finance', philanthropic:'Philanthropic', emerging:'Emerging' };
-  const instCatOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
-
-  const statusLabel = { 'operational':'Operational', 'agreement-signed':'Agreement signed', 'in-negotiation':'In negotiation', 'framework-only':'Framework only', 'no-framework':'No framework' };
-  const riskLabel   = { 'low':'Low risk', 'medium':'Medium risk', 'high':'High risk', 'very-high':'Very high risk' };
-
-  function toggleMobileSearch() {
-    const bar = document.getElementById('mobile-search-bar');
-    bar.classList.toggle('open');
-    if (bar.classList.contains('open')) {
-      document.getElementById('mobile-search-input').focus();
-      document.getElementById('mobile-search-overlay').classList.add('open');
-    } else {
-      closeMobileSearch();
-    }
-    // close hamburger if open
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-  }
+  let allProjects=[], allInstruments=[], allPolicy=[], allWhosWho=[], allKeystones=[], allIntelligence=[];
+  const instCatLabel = {voluntary:'Voluntary market',compliance:'Compliance market',sovereign:'Sovereign',blended:'Blended finance',philanthropic:'Philanthropic',emerging:'Emerging'};
+  const statusLabel = {'operational':'Operational','agreement-signed':'Agreement signed','in-negotiation':'In negotiation','framework-only':'Framework only','no-framework':'No framework'};
+  function safeJSON(o) { return JSON.stringify(o).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+  function cleanDashes(str) { return str?str.replace(/\u2014/g,'-').replace(/\u2013/g,'-'):str; }
 
   function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const btn = document.getElementById('hamburger');
-    menu.classList.toggle('open');
-    btn.classList.toggle('open');
-  }
-
-  function mobileNav(view) {
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-    showView(view);
-    if (view === 'policy') activatePolicyMap();
-    if (view === 'projects') activateProjMap();
+    const menu=document.getElementById('mobile-menu');
+    const btn=document.getElementById('hamburger');
+    menu.classList.toggle('open'); btn.classList.toggle('open');
   }
 
   function showView(name) {
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
     document.getElementById('view-'+name).classList.add('active');
-    window.scrollTo(0,0); closeDetail();
-    if (name === 'home' && allProjects.length) {
-      renderMiniProjMap();
-      renderMiniPolicyMap();
-      renderLogoMap();
-      initWWNetwork();
-    }
-  }
-
-  function closeDetail() {
-    document.getElementById('overlay').classList.remove('open');
-    document.getElementById('detail-panel').classList.remove('open');
-    document.body.style.overflow = '';
-    if (selectedProjCountry) {
-      selectedProjCountry = null;
-      d3.select('#proj-map').selectAll('path').attr('opacity', 1);
-    }
-  }
-
-  function openDetail(name, badgeHTML, bodyHTML) {
-    document.getElementById('detail-name').textContent = name;
-    document.getElementById('detail-badge').innerHTML = badgeHTML;
-    document.getElementById('detail-body').innerHTML = bodyHTML;
-    document.getElementById('overlay').classList.add('open');
-    document.getElementById('detail-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function statusDotClass(s) {
-    if (!s) return 'development';
-    const sl = s.toLowerCase();
-    if (sl.includes('issuing')) return 'issuing';
-    if (sl.includes('validation')) return 'validation';
-    if (sl.includes('registered')) return 'registered';
-    return 'development';
-  }
-
-  function safeJSON(o) { return JSON.stringify(o).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
-
-  function ageLabel(d) {
-    const days = Math.floor((new Date()-new Date(d))/86400000);
-    if(days===0) return 'Today'; if(days===1) return 'Yesterday';
-    if(days<7) return days+' days ago'; if(days<14) return '1 week ago';
-    if(days<30) return Math.floor(days/7)+' weeks ago';
-    return Math.floor(days/30)+' months ago';
-  }
-
-  // PROJECT CARDS
-  function projCardHTML(p) {
-    const dc = statusDotClass(p.status);
-    return '<div class="proj-card" onclick=\'openProjectDetail('+safeJSON(p)+')\'>' +
-      '<div class="proj-top"><span class="proj-country">'+p.country+' - '+p.region+'</span><span class="proj-method">'+p.methodology+'</span></div>'+
-      '<div class="proj-name">'+p.name+'</div>'+
-      '<div class="proj-status"><span class="status-dot '+dc+'"></span><span class="status-label">'+p.status+'</span></div>'+
-      '<div class="proj-meta">'+p.credits+' - '+p.area+'</div>'+
-      '<div class="proj-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div></div>';
-  }
-
-  function openProjectDetail(p) {
-    let body = '';
-    if (p.description) body += '<div class="detail-desc">'+p.description+'</div>';
-    body += '<div class="detail-section-title" style="margin-top:16px">Project details</div>';
-    if (p.developer) body += '<div class="detail-meta-row"><span class="detail-meta-label">Developer</span><span class="detail-meta-value">'+p.developer+'</span></div>';
-    body += '<div class="detail-meta-row"><span class="detail-meta-label">Country</span><span class="detail-meta-value">'+p.country+'</span></div>';
-    if (p.region) body += '<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+p.region+'</span></div>';
-    if (p.credits) body += '<div class="detail-meta-row"><span class="detail-meta-label">Credits</span><span class="detail-meta-value">'+p.credits+'</span></div>';
-    if (p.area) body += '<div class="detail-meta-row"><span class="detail-meta-label">Area</span><span class="detail-meta-value">'+p.area+'</span></div>';
-    body += '<div class="detail-meta-row"><span class="detail-meta-label">Certification</span><span class="detail-meta-value">'+p.certification+'</span></div>';
-    body += '<div class="detail-meta-row"><span class="detail-meta-label">Status</span><span class="detail-meta-value">'+p.status+'</span></div>';
-    if (p.status_note) body += '<div style="font-size:12px;color:var(--text-light);margin:-4px 0 8px 0">'+p.status_note+'</div>';
-    if (p.tags && p.tags.length) body += '<div class="detail-section-title" style="margin-top:20px">Tags</div><div class="detail-tags">'+p.tags.map(t=>'<span class="proj-tag">'+t+'</span>').join('')+'</div>';
-    const links = [];
-    if (p.verra_url) links.push('<a href="'+p.verra_url+'" target="_blank" rel="noopener" style="color:var(--proj);text-decoration:none;font-size:13px">Verra registry &rarr;</a>');
-    if (p.plan_vivo_url) links.push('<a href="'+p.plan_vivo_url+'" target="_blank" rel="noopener" style="color:var(--proj);text-decoration:none;font-size:13px">Plan Vivo registry &rarr;</a>');
-    if (p.project_url) links.push('<a href="'+p.project_url+'" target="_blank" rel="noopener" style="color:var(--proj);text-decoration:none;font-size:13px">Project website &rarr;</a>');
-    if (links.length) body += '<div style="margin-top:20px;display:flex;flex-direction:column;gap:8px">'+links.join('')+'</div>';
-    openDetail(p.name, '<span class="proj-method">'+p.methodology+'</span>', body);
-  }
-
-  // INSTRUMENT CARDS
-  function instCardHTML(i) {
-    return '<div class="inst-card" onclick=\'openInstDetail('+safeJSON(i)+')\'>' +
-      '<div class="inst-name">'+i.name+'</div>'+
-      '<div class="inst-desc">'+i.description+'</div>'+
-      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span></div>';
-  }
-
-  function openInstDetail(i) {
-    openDetail(i.name,
-      '<span class="inst-badge b-'+i.category+'">'+(instCatLabel[i.category]||i.category)+'</span>',
-      '<div class="detail-desc">'+i.description+'</div>'
-    );
-  }
-
-  // POLICY ROWS
-  function policyRowHTML(c) {
-    const notes = c.notes.length > 120 ? c.notes.substring(0,120)+'...' : c.notes;
-    return '<div class="policy-row" onclick=\'openPolicyDetail('+safeJSON(c)+')\'>' +
-      '<div><div class="policy-name">'+c.name+'</div><div class="policy-region">'+c.region+'</div></div>'+
-      '<span class="status-pill s-'+c.status+'">'+(statusLabel[c.status]||c.status)+'</span>'+
-      '<span class="risk-pill r-'+c.political_risk+'">'+(riskLabel[c.political_risk]||c.political_risk)+'</span>'+
-      '<div class="policy-notes-preview">'+notes+'</div></div>';
-  }
-
-  function openPolicyDetail(c) {
-    const buyer = c.itmo_buyer ? c.itmo_buyer : 'None confirmed';
-    openDetail(c.name,
-      '<span class="status-pill s-'+c.status+'">'+(statusLabel[c.status]||c.status)+'</span>' +
-      '<span class="risk-pill r-'+c.political_risk+'">'+(riskLabel[c.political_risk]||c.political_risk)+'</span>',
-      '<div class="detail-desc">'+c.notes+'</div>'+
-      '<div class="detail-section-title">Key facts</div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Region</span><span class="detail-meta-value">'+c.region+'</span></div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Article 6.2 status</span><span class="detail-meta-value">'+(statusLabel[c.status]||c.status)+'</span></div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Political risk</span><span class="detail-meta-value">'+(riskLabel[c.political_risk]||c.political_risk)+'</span></div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">ITMO buyer</span><span class="detail-meta-value">'+buyer+'</span></div>'+
-      '<div class="detail-meta-row"><span class="detail-meta-label">Last updated</span><span class="detail-meta-value">'+c.updated+'</span></div>'
-    );
-  }
-
-  // FILTERS
-  function filterProj(f, btn) {
-    currentProjFilter = f;
-    document.querySelectorAll('#proj-tabs .cat-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active'); renderProjectsFull();
-  }
-
-  function renderProjectsFull() {
-    let list = allProjects;
-    if (currentProjFilter==='arr') list = list.filter(p=>p.methodology.toLowerCase().includes('arr'));
-    else if (currentProjFilter==='blue-carbon') list = list.filter(p=>p.methodology.toLowerCase().includes('blue'));
-    else if (currentProjFilter==='redd') list = list.filter(p=>p.methodology.toLowerCase().includes('redd'));
-    else if (currentProjFilter==='issuing') list = list.filter(p=>p.status&&p.status.toLowerCase().includes('issuing'));
-    else if (currentProjFilter==='validation') list = list.filter(p=>p.status&&p.status.toLowerCase().includes('validation'));
-    document.getElementById('proj-count').textContent = list.length+' project'+(list.length!==1?'s':'');
-    document.getElementById('projects-full').innerHTML = list.length ? list.map(projCardHTML).join('') : '<div class="empty">No projects match this filter.</div>';
-  }
-
-  function filterInst(f, btn) {
-    currentInstFilter = f;
-    document.querySelectorAll('#view-instruments .cat-tab').forEach(t=>t.classList.remove('active'));
-    btn.classList.add('active'); renderInstFull();
-  }
-
-  function renderInstFull() {
-    const list = currentInstFilter==='all' ? allInstruments : allInstruments.filter(i=>i.category===currentInstFilter);
-    const container = document.getElementById('instruments-full');
-    if (currentInstFilter==='all') {
-      const grouped = {}; instCatOrder.forEach(c=>grouped[c]=[]);
-      list.forEach(i=>{if(grouped[i.category])grouped[i.category].push(i);});
-      container.innerHTML = instCatOrder.filter(c=>grouped[c].length)
-        .map(c=>'<div class="cat-group"><div class="cat-group-title">'+instCatLabel[c]+'</div><div class="cat-group-grid">'+grouped[c].map(instCardHTML).join('')+'</div></div>').join('');
-    } else {
-      container.innerHTML = '<div class="cat-group"><div class="cat-group-title">'+instCatLabel[currentInstFilter]+'</div><div class="cat-group-grid">'+list.map(instCardHTML).join('')+'</div></div>';
-    }
-  }
-
-  function filterPolicy(f, btn) {
-    currentPolicyFilter = f;
-    document.querySelectorAll('.policy-stat').forEach(s=>s.classList.remove('active'));
-    btn.classList.add('active'); renderPolicyGrid();
-  }
-
-  function renderPolicyGrid() {
-    let list = allPolicy;
-    if (currentPolicyFilter !== 'all') list = list.filter(c=>c.status===currentPolicyFilter);
-    const grid = document.getElementById('policy-grid');
-    grid.innerHTML = list.length ? list.map(policyRowHTML).join('') : '<div class="empty">No countries match this filter.</div>';
-  }
-
-  // LOAD
-  async function load() {
-    try {
-      const [pR,iR,instR,polR,wwR,ksR] = await Promise.all([
-        fetch('data/projects.json'), fetch('data/intelligence.json?v='+Date.now()),
-        fetch('data/instruments.json'), fetch('data/policy.json'),
-        fetch('data/whos_who.json'), fetch('data/keystones.json')
-      ]);
-      const [pd,id,instd,pold,wwd,ksd] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json(),wwR.json(),ksR.json()]);
-
-      allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
-      allIntelligence = id.intelligence.filter(i=>i.status==='approved');
-      allWhosWho = wwd.profiles;
-      allKeystones = ksd.keystones;
-
-      // home who's who count
-      const wwCountEl = document.getElementById('home-ww-count');
-      if(wwCountEl) wwCountEl.textContent = allWhosWho.length;
-      document.getElementById('home-ww-stat').textContent = allWhosWho.length + ' profiles - funders, developers, standard-setters';
-
-      // home intel feed
-      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,3);
-      document.getElementById('home-intel-list').innerHTML = homeIntel.length
-        ? homeIntel.map(i =>
-            '<div class="home-intel-item">' +
-            '<span class="home-intel-dom">'+i.domain+'</span>' +
-            '<span class="home-intel-hl">'+cleanDashes(i.headline)+'</span>' +
-            '</div>'
-          ).join('')
-        : '<div class="empty">No items yet.</div>';
-
-      document.getElementById('home-inst-stat').textContent = allInstruments.length + ' instruments indexed';
-      const projCount = allProjects.length;
-      document.querySelector('#mini-proj-stat .live-num').textContent = projCount;
-      document.getElementById('mini-proj-stat').innerHTML = '<span class="live-num">'+projCount+'</span> projects tracked across Africa';
-      if (document.getElementById('proj-page-count')) document.getElementById('proj-page-count').textContent = projCount;
-      if (document.getElementById('about-proj-count')) document.getElementById('about-proj-count').textContent = projCount;
-      if (document.getElementById('cairn-proj-count')) document.getElementById('cairn-proj-count').textContent = projCount;
-
-      // policy summary counts
-      const counts = {operational:0,'agreement-signed':0,'in-negotiation':0,'framework-only':0,'no-framework':0};
-      allPolicy.forEach(c=>{if(counts[c.status]!==undefined)counts[c.status]++;});
-      document.getElementById('ps-all').textContent  = allPolicy.length;
-      document.getElementById('ps-op').textContent   = counts['operational'];
-      document.getElementById('ps-ag').textContent   = counts['agreement-signed'];
-      document.getElementById('ps-neg').textContent  = counts['in-negotiation'];
-      document.getElementById('ps-nf').textContent   = counts['no-framework']+counts['framework-only'];
-
-      // disclaimer
-      document.getElementById('policy-disclaimer').textContent = 'Data last updated '+pold.updated+'. '+pold.note;
-
-      renderProjectsFull(); renderInstFull(); renderPolicyGrid(); renderIntelFull(); renderWhosWho();
-      renderPolicyMap();
-      document.querySelector('.policy-stat').classList.add('active');
-
-      // mini maps on home - only if D3 script has loaded
-      if (typeof renderMiniProjMap === 'function') {
-        renderMiniProjMap();
-        renderMiniPolicyMap();
-        renderMiniKSMap();
-        renderLogoMap();
-        initWWNetwork();
-      }
-
-    } catch(e) { console.error(e); }
+    window.scrollTo(0,0);
+    if(name==='home'&&allProjects.length){renderMiniProjMap();renderMiniPolicyMap();renderLogoMap();initWWNetwork();}
   }
 
   // SEARCH
-  const searchInput   = document.getElementById('search-input');
+  const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
-
-  function normalise(str) {
-    return str.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
-  }
-
-  function matches(query, ...fields) {
-    const q = normalise(query);
-    return fields.some(f => f && normalise(f).includes(q));
-  }
-
+  function normalise(str) { return str.toLowerCase().replace(/[^a-z0-9 ]/g,' '); }
+  function matches(query,...fields) { const q=normalise(query); return fields.some(f=>f&&normalise(f).includes(q)); }
   function runSearch(query) {
-    if (!query || query.length < 2) {
-      searchResults.classList.remove('visible');
-      return;
-    }
-
-    const projHits = allProjects.filter(p =>
-      matches(query, p.name, p.country, p.region, p.methodology, p.certification, ...p.tags)
-    ).slice(0, 5);
-
-    const instHits = allInstruments.filter(i =>
-      matches(query, i.name, i.description)
-    ).slice(0, 3);
-
-    const policyHits = allPolicy.filter(c =>
-      matches(query, c.name, c.region, c.notes, c.itmo_buyer)
-    ).slice(0, 3);
-
-    const wwHits = allWhosWho.filter(p =>
-      matches(query, p.name, p.role, p.organisation, ...(p.focus_areas||[]), ...(p.geography||[]))
-    ).slice(0, 3);
-
-    const total = projHits.length + instHits.length + policyHits.length + wwHits.length;
-
-    if (total === 0) {
-      searchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
-      searchResults.classList.add('visible');
-      return;
-    }
-
-    let html = '';
-
-    if (projHits.length) {
-      html += '<div class="search-group-title">Projects</div>';
-      html += projHits.map(p =>
-        '<div class="search-result" onclick=\'searchSelectProject('+safeJSON(p)+')\'>' +
-        '<div class="search-result-name">'+p.name+'</div>' +
-        '<div class="search-result-sub">'+p.country+' - '+p.methodology+'</div>' +
-        '</div>'
-      ).join('');
-    }
-
-    if (instHits.length) {
-      html += '<div class="search-group-title">Funding instruments</div>';
-      html += instHits.map(i =>
-        '<div class="search-result" onclick=\'searchSelectInst('+safeJSON(i)+')\'>' +
-        '<div class="search-result-name">'+i.name+'</div>' +
-        '<div class="search-result-sub">'+(instCatLabel[i.category]||i.category)+'</div>' +
-        '</div>'
-      ).join('');
-    }
-
-    if (policyHits.length) {
-      html += '<div class="search-group-title">Policy tracker</div>';
-      html += policyHits.map(c =>
-        '<div class="search-result" onclick=\'searchSelectPolicy('+safeJSON(c)+')\'>' +
-        '<div class="search-result-name">'+c.name+'</div>' +
-        '<div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div>' +
-        '</div>'
-      ).join('');
-    }
-
-    if (wwHits.length) {
-      html += '<div class="search-group-title">Who\'s Who</div>';
-      html += wwHits.map(p =>
-        '<div class="search-result" onclick=\'searchSelectWW('+safeJSON(p)+')\'>' +
-        '<div class="search-result-name">'+p.name+'</div>' +
-        '<div class="search-result-sub">'+p.role+', '+p.organisation+'</div>' +
-        '</div>'
-      ).join('');
-    }
-
-    searchResults.innerHTML = html;
-    searchResults.classList.add('visible');
+    if(!query||query.length<2){searchResults.classList.remove('visible');return;}
+    const projHits=allProjects.filter(p=>matches(query,p.name,p.country,p.region,p.methodology,p.certification,...p.tags)).slice(0,5);
+    const instHits=allInstruments.filter(i=>matches(query,i.name,i.description)).slice(0,3);
+    const policyHits=allPolicy.filter(c=>matches(query,c.name,c.region,c.notes,c.itmo_buyer)).slice(0,3);
+    const wwHits=allWhosWho.filter(p=>matches(query,p.name,p.role,p.organisation,...(p.focus_areas||[]),...(p.geography||[]))).slice(0,3);
+    const total=projHits.length+instHits.length+policyHits.length+wwHits.length;
+    if(total===0){searchResults.innerHTML='<div class="search-empty">No results for "'+query+'"</div>';searchResults.classList.add('visible');return;}
+    let html='';
+    if(projHits.length){html+='<div class="search-group-title">Projects</div>';html+=projHits.map(p=>'<div class="search-result" onclick="window.location.href=\'projects.html\'"><div class="search-result-name">'+p.name+'</div><div class="search-result-sub">'+p.country+' - '+p.methodology+'</div></div>').join('');}
+    if(instHits.length){html+='<div class="search-group-title">Funding instruments</div>';html+=instHits.map(i=>'<div class="search-result" onclick="window.location.href=\'instruments.html\'"><div class="search-result-name">'+i.name+'</div><div class="search-result-sub">'+(instCatLabel[i.category]||i.category)+'</div></div>').join('');}
+    if(policyHits.length){html+='<div class="search-group-title">Policy tracker</div>';html+=policyHits.map(c=>'<div class="search-result" onclick="window.location.href=\'policy.html\'"><div class="search-result-name">'+c.name+'</div><div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div></div>').join('');}
+    if(wwHits.length){html+='<div class="search-group-title">Who\'s Who</div>';html+=wwHits.map(p=>'<div class="search-result" onclick="window.location.href=\'whos_who.html\'"><div class="search-result-name">'+p.name+'</div><div class="search-result-sub">'+p.role+', '+p.organisation+'</div></div>').join('');}
+    searchResults.innerHTML=html; searchResults.classList.add('visible');
   }
+  function clearSearch() { searchInput.value=''; searchResults.classList.remove('visible'); }
+  searchInput.addEventListener('input',e=>runSearch(e.target.value.trim()));
+  searchInput.addEventListener('keydown',e=>{if(e.key==='Escape')clearSearch();});
 
-  function clearSearch() {
-    searchInput.value = '';
-    searchResults.classList.remove('visible');
+  // MOBILE SEARCH
+  const mobileSearchInput=document.getElementById('mobile-search-input');
+  const mobileSearchResults=document.getElementById('mobile-search-results');
+  function toggleMobileSearch() {
+    const bar=document.getElementById('mobile-search-bar');
+    bar.classList.toggle('open');
+    if(bar.classList.contains('open')){mobileSearchInput.focus();document.getElementById('mobile-search-overlay').classList.add('open');}
+    else {closeMobileSearch();}
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
   }
-
-  function searchSelectProject(p) {
-    clearSearch();
-    showView('projects');
-    setTimeout(() => openProjectDetail(p), 50);
-  }
-
-  function searchSelectInst(i) {
-    clearSearch();
-    showView('instruments');
-    setTimeout(() => openInstDetail(i), 50);
-  }
-
-  function searchSelectPolicy(c) {
-    clearSearch();
-    showView('policy');
-    setTimeout(() => openPolicyDetail(c), 50);
-  }
-
-  function searchSelectWW(p) {
-    clearSearch();
-    showView('whowho');
-    setTimeout(() => {
-      const i = wwRenderedList.findIndex(x => x.id === p.id);
-      if (i >= 0) openWWDetail(i);
-    }, 50);
-  }
-
-  searchInput.addEventListener('input', e => runSearch(e.target.value.trim()));
-  searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
-
-  const mobileSearchInput = document.getElementById('mobile-search-input');
-  const mobileSearchResults = document.getElementById('mobile-search-results');
-
   function runMobileSearch(query) {
-    if (!query || query.length < 2) {
-      mobileSearchResults.classList.remove('visible');
-      mobileSearchResults.innerHTML = '';
-      return;
-    }
-    const projHits = allProjects.filter(p =>
-      matches(query, p.name, p.country, p.region, p.methodology, p.certification, ...p.tags)
-    ).slice(0, 5);
-    const instHits = allInstruments.filter(i =>
-      matches(query, i.name, i.description)
-    ).slice(0, 3);
-    const policyHits = allPolicy.filter(c =>
-      matches(query, c.name, c.region, c.notes, c.itmo_buyer)
-    ).slice(0, 3);
-    const wwHits = allWhosWho.filter(p =>
-      matches(query, p.name, p.role, p.organisation, ...(p.focus_areas||[]), ...(p.geography||[]))
-    ).slice(0, 3);
-    const total = projHits.length + instHits.length + policyHits.length + wwHits.length;
-    if (total === 0) {
-      mobileSearchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
-      mobileSearchResults.classList.add('visible');
-      return;
-    }
-    let html = '';
-    if (projHits.length) {
-      html += '<div class="search-group-title">Projects</div>';
-      html += projHits.map(p =>
-        '<div class="search-result" onclick=\'mobilSearchSelectProject('+safeJSON(p)+')\'>' +
-        '<div class="search-result-name">'+p.name+'</div>' +
-        '<div class="search-result-sub">'+p.country+' - '+p.methodology+'</div></div>'
-      ).join('');
-    }
-    if (instHits.length) {
-      html += '<div class="search-group-title">Funding instruments</div>';
-      html += instHits.map(i =>
-        '<div class="search-result" onclick=\'mobilSearchSelectInst('+safeJSON(i)+')\'>' +
-        '<div class="search-result-name">'+i.name+'</div>' +
-        '<div class="search-result-sub">'+(instCatLabel[i.category]||i.category)+'</div></div>'
-      ).join('');
-    }
-    if (policyHits.length) {
-      html += '<div class="search-group-title">Policy tracker</div>';
-      html += policyHits.map(c =>
-        '<div class="search-result" onclick=\'mobilSearchSelectPolicy('+safeJSON(c)+')\'>' +
-        '<div class="search-result-name">'+c.name+'</div>' +
-        '<div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div></div>'
-      ).join('');
-    }
-    if (wwHits.length) {
-      html += '<div class="search-group-title">Who\'s Who</div>';
-      html += wwHits.map(p =>
-        '<div class="search-result" onclick=\'mobilSearchSelectWW('+safeJSON(p)+')\'>' +
-        '<div class="search-result-name">'+p.name+'</div>' +
-        '<div class="search-result-sub">'+p.role+', '+p.organisation+'</div></div>'
-      ).join('');
-    }
-    mobileSearchResults.innerHTML = html;
+    if(!query||query.length<2){mobileSearchResults.classList.remove('visible');mobileSearchResults.innerHTML='';return;}
+    const all=[...allProjects.filter(p=>matches(query,p.name,p.country)).slice(0,5).map(p=>({'name':p.name,'sub':p.country+' - '+p.methodology,'url':'projects.html'})),
+      ...allPolicy.filter(c=>matches(query,c.name,c.region)).slice(0,3).map(c=>({'name':c.name,'sub':statusLabel[c.status]||c.status,'url':'policy.html'})),
+      ...allWhosWho.filter(p=>matches(query,p.name,p.role,p.organisation)).slice(0,3).map(p=>({'name':p.name,'sub':p.role+', '+p.organisation,'url':'whos_who.html'}))];
+    if(!all.length){mobileSearchResults.innerHTML='<div class="search-empty">No results</div>';mobileSearchResults.classList.add('visible');return;}
+    mobileSearchResults.innerHTML=all.map(r=>'<div class="search-result" onclick="window.location.href=\''+r.url+'\'"><div class="search-result-name">'+r.name+'</div><div class="search-result-sub">'+r.sub+'</div></div>').join('');
     mobileSearchResults.classList.add('visible');
   }
-
   function closeMobileSearch() {
-    mobileSearchInput.value = '';
-    mobileSearchResults.innerHTML = '';
-    mobileSearchResults.classList.remove('visible');
+    mobileSearchInput.value=''; mobileSearchResults.innerHTML=''; mobileSearchResults.classList.remove('visible');
     document.getElementById('mobile-search-bar').classList.remove('open');
     document.getElementById('mobile-search-overlay').classList.remove('open');
   }
+  mobileSearchInput.addEventListener('input',e=>runMobileSearch(e.target.value.trim()));
+  mobileSearchInput.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileSearch();});
 
-  function mobilSearchSelectProject(p) {
-    closeMobileSearch();
-    showView('projects');
-    setTimeout(() => openProjectDetail(p), 50);
-  }
-  function mobilSearchSelectInst(i) {
-    closeMobileSearch();
-    showView('instruments');
-    setTimeout(() => openInstDetail(i), 50);
-  }
-  function mobilSearchSelectPolicy(c) {
-    closeMobileSearch();
-    showView('policy');
-    setTimeout(() => openPolicyDetail(c), 50);
-  }
-  function mobilSearchSelectWW(p) {
-    closeMobileSearch();
-    showView('whowho');
-    setTimeout(() => {
-      const i = wwRenderedList.findIndex(x => x.id === p.id);
-      if (i >= 0) openWWDetail(i);
-    }, 50);
-  }
-
-  mobileSearchInput.addEventListener('input', e => runMobileSearch(e.target.value.trim()));
-  mobileSearchInput.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileSearch(); });
-
-  document.getElementById('ww-search-input').addEventListener('input', e => {
-    wwSearchQuery = e.target.value.trim();
-    renderWhosWho();
-  });
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
-    if (!e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
+    if(!e.target.closest('#mobile-menu')&&!e.target.closest('#hamburger')){
       document.getElementById('mobile-menu').classList.remove('open');
       document.getElementById('hamburger').classList.remove('open');
     }
   });
 
-  // WHO'S WHO
-  const wwOrgLabel = { fund:'Fund', dfi:'DFI', standard_body:'Standard body', developer:'Developer', government:'Government', ngo:'NGO', buyer:'Buyer', advisory:'Advisory' };
-  let wwSearchQuery = '';
-  let wwSortCol = 'name';
-  let wwSortDir = 1;
-
-  function formatName(name) {
-    const honorifics = ['Dr.', 'Prof.', 'Sir', 'Dame'];
-    let honorific = null;
-    let n = name;
-    for (const h of honorifics) {
-      if (name.startsWith(h + ' ')) { honorific = h; n = name.slice(h.length + 1); break; }
-    }
-    const parts = n.trim().split(' ');
-    const sur = parts.pop();
-    const rest = parts.join(' ');
-    const display = sur + (rest ? ', ' + rest : '');
-    return honorific ? display + ' (' + honorific.replace('.','') + '.)' : display;
-  }
-
-  function surname(name) {
-    const honorifics = ['Dr.', 'Prof.', 'Sir', 'Dame'];
-    let n = name;
-    for (const h of honorifics) { if (n.startsWith(h + ' ')) { n = n.slice(h.length + 1); break; } }
-    return n.trim().split(' ').pop().toLowerCase();
-  }
-
-  function setWWSort(col) {
-    if (wwSortCol === col) { wwSortDir *= -1; } else { wwSortCol = col; wwSortDir = 1; }
-    document.querySelectorAll('.ww-col').forEach(h => {
-      const isActive = h.dataset.col === wwSortCol;
-      h.classList.toggle('ww-col-active', isActive);
-      h.querySelector('.ww-arrow').textContent = isActive ? (wwSortDir === 1 ? '↑' : '↓') : '↑↓';
-    });
-    renderWhosWho();
-  }
-
-  function filterWW(f, btn) {
-    currentWWFilter = f;
-    document.querySelectorAll('#ww-tabs .cat-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    renderWhosWho();
-  }
-
-  let wwRenderedList = [];
-
-  function renderWhosWho() {
-    let list = currentWWFilter === 'all'
-      ? allWhosWho
-      : allWhosWho.filter(p => p.organisation_type === currentWWFilter);
-    if (wwSearchQuery) {
-      const q = wwSearchQuery.toLowerCase();
-      list = list.filter(p =>
-        p.name.toLowerCase().includes(q) ||
-        p.organisation.toLowerCase().includes(q) ||
-        p.role.toLowerCase().includes(q)
-      );
-    }
-    list = list.slice().sort((a, b) => {
-      let vA, vB;
-      if (wwSortCol === 'name')         { vA = surname(a.name); vB = surname(b.name); }
-      else if (wwSortCol === 'role')    { vA = a.role.toLowerCase(); vB = b.role.toLowerCase(); }
-      else if (wwSortCol === 'organisation') { vA = a.organisation.toLowerCase(); vB = b.organisation.toLowerCase(); }
-      else if (wwSortCol === 'type')    { vA = (wwOrgLabel[a.organisation_type]||a.organisation_type).toLowerCase(); vB = (wwOrgLabel[b.organisation_type]||b.organisation_type).toLowerCase(); }
-      return wwSortDir * vA.localeCompare(vB);
-    });
-    wwRenderedList = list;
-    document.getElementById('ww-count').textContent = list.length + ' profile' + (list.length !== 1 ? 's' : '');
-    const showAlpha = wwSortCol === 'name' && !wwSearchQuery;
-    let html = '';
-    let lastLetter = '';
-    list.forEach((p, i) => {
-      if (showAlpha) {
-        const letter = surname(p.name).charAt(0).toUpperCase();
-        if (letter !== lastLetter) {
-          html += '<div class="ww-alpha-break">' + letter + '</div>';
-          lastLetter = letter;
-        }
-      }
-      html += wwCardHTML(p, i);
-    });
-    document.getElementById('whowho-full').innerHTML = list.length ? html : '<div class="empty">No profiles match.</div>';
-  }
-
-  function wwCardHTML(p, i) {
-    const orgBadge = '<span class="ww-org-badge ww-' + p.organisation_type + '">' + (wwOrgLabel[p.organisation_type] || p.organisation_type) + '</span>';
-    const geo = (p.geography || []).slice(0,1).map(g => '<span class="proj-tag">'+g+'</span>').join('');
-    return '<div class="ww-card" onclick="openWWDetail(' + i + ')">' +
-      '<div class="ww-name">'+formatName(p.name)+'</div>' +
-      '<div class="ww-role">'+p.role+'</div>' +
-      '<div class="ww-org">'+p.organisation+'</div>' +
-      '<div class="ww-tags">' + orgBadge + geo + '</div>' +
-      '</div>';
-  }
-
-  function openWWDetail(i) {
-    const p = wwRenderedList[i];
-    const unconfirmedNote = !p.verified
-      ? '<div style="font-size:11px;color:var(--text-dim);margin-top:6px">Role title awaiting confirmation from primary source.</div>'
-      : '';
-    const orgBadge = '<span class="ww-org-badge ww-' + p.organisation_type + '">' + (wwOrgLabel[p.organisation_type] || p.organisation_type) + '</span>';
-
-    const focusAreas = p.focus_areas && p.focus_areas.length
-      ? '<div class="detail-section-title">Focus areas</div>' +
-        '<div class="detail-tags">' + p.focus_areas.map(f => '<span class="proj-tag">'+f+'</span>').join('') + '</div>'
-      : '';
-    const instruments = p.instrument_types && p.instrument_types.length
-      ? '<div class="detail-section-title" style="margin-top:16px">Instruments</div>' +
-        '<div class="detail-tags">' + p.instrument_types.map(i => '<span class="proj-tag">'+i+'</span>').join('') + '</div>'
-      : '';
-    const geos = p.geography && p.geography.length
-      ? '<div class="detail-section-title" style="margin-top:16px">Geography</div>' +
-        '<div class="detail-tags">' + p.geography.map(g => '<span class="proj-tag">'+g+'</span>').join('') + '</div>'
-      : '';
-
-    const notable = p.notable_work && p.notable_work.length
-      ? '<div class="detail-section-title" style="margin-top:24px">Notable work</div>' +
-        p.notable_work.map(w =>
-          '<div style="padding:10px 0;border-bottom:1px solid var(--border)">' +
-          '<div style="font-size:13px;color:var(--text);line-height:1.55;margin-bottom:4px">' + w.description + '</div>' +
-          (w.year ? '<div style="font-size:11px;color:var(--text-dim)">' + w.year + (w.source_url ? ' - <a href="'+w.source_url+'" target="_blank" style="color:var(--teal)">Source -></a>' : '') + '</div>' : '') +
-          '</div>'
-        ).join('')
-      : '';
-
-    const footprint = p.public_footprint && p.public_footprint.length
-      ? '<div class="detail-section-title" style="margin-top:24px">Public footprint</div>' +
-        p.public_footprint.map(f =>
-          '<div class="detail-meta-row"><span class="detail-meta-label">' + f.type + '</span>' +
-          '<span class="detail-meta-value"><a href="'+f.url+'" target="_blank" style="color:var(--teal)">'+f.title+' -></a></span></div>'
-        ).join('')
-      : '';
-
-    const dealSize = p.deal_size
-      ? '<div class="detail-meta-row"><span class="detail-meta-label">Deal size</span><span class="detail-meta-value">'+p.deal_size+'</span></div>'
-      : '';
-
-    openDetail(
-      formatName(p.name),
-      orgBadge,
-      '<div class="detail-section-title">Position</div>' +
-      '<div class="detail-meta-row"><span class="detail-meta-label">Role</span><span class="detail-meta-value">'+p.role+'</span></div>' +
-      unconfirmedNote +
-      '<div class="detail-meta-row"><span class="detail-meta-label">Organisation</span><span class="detail-meta-value">'+p.organisation+'</span></div>' +
-      '<div class="detail-meta-row"><span class="detail-meta-label">Location</span><span class="detail-meta-value">'+p.location+'</span></div>' +
-      dealSize +
-      (p.summary ? '<div class="detail-section-title" style="margin-top:24px">Profile</div><p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:16px">'+p.summary+'</p>' : '') +
-      focusAreas + instruments + geos +
-      notable +
-      footprint
-    );
-  }
-
-  function toggleWWSuggest() {
-    document.getElementById('ww-suggest-box').classList.toggle('open');
-  }
-
-  async function submitWWSuggest() {
-    const name     = document.getElementById('ww-s-name').value.trim();
-    const org      = document.getElementById('ww-s-org').value.trim();
-    const role     = document.getElementById('ww-s-role').value.trim();
-    const linkedin = document.getElementById('ww-s-linkedin').value.trim();
-    if (!name || !org || !role) {
-      document.getElementById('ww-s-name').focus();
-      return;
-    }
+  // LOAD
+  async function load() {
     try {
-      await fetch('https://formspree.io/f/mpqogvgk', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ name, organisation: org, role, linkedin })
-      });
-    } catch(e) {}
-    document.getElementById('ww-suggest-form').style.display = 'none';
-    document.getElementById('ww-suggest-thanks').style.display = 'block';
+      const [pR,iR,instR,polR,wwR,ksR]=await Promise.all([
+        fetch('data/projects.json'),fetch('data/intelligence.json?v='+Date.now()),
+        fetch('data/instruments.json'),fetch('data/policy.json'),
+        fetch('data/whos_who.json'),fetch('data/keystones.json')
+      ]);
+      const [pd,id,instd,pold,wwd,ksd]=await Promise.all([pR.json(),iR.json(),instR.json(),polR.json(),wwR.json(),ksR.json()]);
+      allProjects=pd.projects; allInstruments=instd.instruments; allPolicy=pold.countries;
+      allIntelligence=id.intelligence.filter(i=>i.status==='approved');
+      allWhosWho=wwd.profiles; allKeystones=ksd.keystones;
+
+      const wwCountEl=document.getElementById('home-ww-count');
+      if(wwCountEl) wwCountEl.textContent=allWhosWho.length;
+      document.getElementById('home-ww-stat').textContent=allWhosWho.length+' profiles - funders, developers, standard-setters';
+      const homeIntel=allIntelligence.slice(0,3);
+      document.getElementById('home-intel-list').innerHTML=homeIntel.length
+        ?homeIntel.map(i=>'<div class="home-intel-item"><span class="home-intel-dom">'+i.domain+'</span><span class="home-intel-hl">'+cleanDashes(i.headline)+'</span></div>').join('')
+        :'<div class="loading">No items yet.</div>';
+      document.getElementById('home-inst-stat').textContent=allInstruments.length+' instruments indexed';
+      const projCount=allProjects.length;
+      document.querySelector('#mini-proj-stat .live-num').textContent=projCount;
+      if(document.getElementById('about-proj-count')) document.getElementById('about-proj-count').textContent=projCount;
+      if(document.getElementById('cairn-proj-count')) document.getElementById('cairn-proj-count').textContent=projCount;
+
+      if(typeof renderMiniProjMap==='function'){
+        renderMiniProjMap(); renderMiniPolicyMap(); renderMiniKSMap(); renderLogoMap(); initWWNetwork();
+      }
+    } catch(e) { console.error(e); }
+  }
+
+  let wwNetworkInitialised = false;
+  function initWWNetwork() {
+    if(wwNetworkInitialised) return;
+    wwNetworkInitialised = true;
+    const svg = document.getElementById('home-ww-net');
+    if(!svg) return;
+    const NS = 'http://www.w3.org/2000/svg';
+    const orgs = [
+      {id:'verra', label:'Verra', x:250,y:48, r:26,type:'std'},
+      {id:'tnc',   label:'TNC',  x:110,y:82, r:22,type:'ngo'},
+      {id:'wwf',   label:'WWF',  x:390,y:76, r:21,type:'ngo'},
+      {id:'gcf',   label:'GCF',  x:360,y:145,r:22,type:'fin'},
+      {id:'icvcm', label:'ICVCM',x:140,y:145,r:19,type:'std'},
+      {id:'iucn',  label:'IUCN', x:454,y:118,r:18,type:'pol'},
+      {id:'awf',   label:'AWF',  x:250,y:122,r:17,type:'ngo'},
+      {id:'wcs',   label:'WCS',  x:46, y:48, r:16,type:'ngo'},
+      {id:'unep',  label:'UNEP', x:454,y:36, r:16,type:'pol'},
+    ];
+    const links = [
+      ['verra','tnc'],['verra','icvcm'],['verra','gcf'],['verra','wwf'],
+      ['tnc','awf'],['tnc','icvcm'],['tnc','wcs'],
+      ['wwf','iucn'],['wwf','awf'],
+      ['gcf','iucn'],['gcf','awf'],
+      ['icvcm','awf'],
+      ['unep','iucn'],['unep','wwf'],['wcs','tnc'],
+    ];
+    const typeColor = {std:'#1d6e52',ngo:'#1d5e8a',fin:'#8a6a1a',pol:'#6a2a7a'};
+    const typeFill  = {std:'rgba(29,110,82,0.1)',ngo:'rgba(29,94,138,0.1)',fin:'rgba(138,106,26,0.1)',pol:'rgba(106,42,122,0.1)'};
+    const byId = {};
+    orgs.forEach(o => byId[o.id] = o);
+    const mk = (tag,attrs) => { const el=document.createElementNS(NS,tag); Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v)); return el; };
+    links.forEach(([a,b]) => {
+      const na=byId[a],nb=byId[b];
+      svg.appendChild(mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'rgba(128,128,128,0.12)','stroke-width':'1'}));
+    });
+    const glowLines = {};
+    links.forEach(([a,b]) => {
+      const na=byId[a],nb=byId[b],key=`${a}-${b}`;
+      const line=mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'#2a9a6a','stroke-width':'1.5'});
+      line.style.opacity='0'; svg.appendChild(line); glowLines[key]=line;
+    });
+    orgs.forEach(org => {
+      const g=document.createElementNS(NS,'g');
+      const c=mk('circle',{cx:org.x,cy:org.y,r:org.r,fill:typeFill[org.type],stroke:typeColor[org.type],'stroke-width':'1'});
+      const t=mk('text',{x:org.x,y:org.y+1,'text-anchor':'middle','dominant-baseline':'middle',fill:typeColor[org.type],'font-size':'8.5','font-weight':'600'});
+      t.textContent=org.label; g.appendChild(c); g.appendChild(t); svg.appendChild(g);
+    });
+    const legend=[{c:'#1d6e52',l:'Standards'},{c:'#1d5e8a',l:'NGO'},{c:'#8a6a1a',l:'Finance'},{c:'#6a2a7a',l:'Policy'}];
+    let lx=16;
+    legend.forEach(({c,l}) => {
+      const d=mk('circle',{cx:lx+5,cy:182,r:5,fill:c}); svg.appendChild(d);
+      const t=mk('text',{x:lx+14,y:186,fill:'rgba(128,128,128,0.5)','font-size':'10'}); t.textContent=l; svg.appendChild(t);
+      lx+=90;
+    });
+    const edgeKeys=links.map(([a,b])=>`${a}-${b}`);
+    function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+    function fadeEdge(key,to,dur,cb){
+      const el=glowLines[key]; if(!el)return;
+      const from=parseFloat(el.style.opacity)||0,diff=to-from,t0=performance.now();
+      function step(now){const t=Math.min((now-t0)/dur,1),e=t<0.5?2*t*t:-1+(4-2*t)*t;
+        el.style.opacity=from+diff*e; if(t<1)requestAnimationFrame(step); else if(cb)cb();}
+      requestAnimationFrame(step);
+    }
+    function runLoop(){
+      const order=shuffle(edgeKeys); let i=0;
+      function next(){
+        if(i>=order.length){setTimeout(runLoop,200);return;}
+        const key=order[i++];
+        fadeEdge(key,1,200,()=>{
+          setTimeout(()=>fadeEdge(key,0,350),300+Math.random()*500);
+          setTimeout(next,Math.random()*80+40);
+        });
+      }
+      next();
+    }
+    runLoop();
   }
 
   load();
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
   const tooltip = document.getElementById('map-tooltip');
+  function showTooltip(event,html){if(window.matchMedia('(hover: none)').matches)return;tooltip.innerHTML=html;tooltip.classList.add('visible');moveTooltip(event);}
+  function moveTooltip(event){tooltip.style.left=(event.clientX+14)+'px';tooltip.style.top=(event.clientY-10)+'px';}
+  function hideTooltip(){tooltip.classList.remove('visible');}
 
-  function showTooltip(event, html) {
-    if (window.matchMedia('(hover: none)').matches) return;
-    tooltip.innerHTML = html;
-    tooltip.classList.add('visible');
-    moveTooltip(event);
-  }
-
-  function moveTooltip(event) {
-    const x = event.clientX + 14;
-    const y = event.clientY - 10;
-    tooltip.style.left = x + 'px';
-    tooltip.style.top  = y + 'px';
-  }
-
-  function hideTooltip() {
-    tooltip.classList.remove('visible');
-  }
-
-  // ISO numeric -> our country ID mapping
-  const isoToId = {
-    12:'algeria',24:'angola',72:'botswana',108:'burundi',120:'cameroon',
-    132:'cabo-verde',140:'central-african-republic',148:'chad',174:'comoros',
-    178:'republic-of-congo',180:'drc',204:'benin',226:'equatorial-guinea',
-    232:'eritrea',231:'ethiopia',266:'gabon',270:'gambia',288:'ghana',
-    324:'guinea',624:'guinea-bissau',384:'ivory-coast',404:'kenya',
-    426:'lesotho',430:'liberia',434:'libya',450:'madagascar',454:'malawi',
-    466:'mali',478:'mauritania',480:'mauritius',504:'morocco',508:'mozambique',
-    516:'namibia',562:'niger',566:'nigeria',646:'rwanda',678:'sao-tome-principe',
-    686:'senegal',694:'sierra-leone',706:'somalia',710:'south-africa',
-    716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
-    788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',
-    894:'zambia',262:'djibouti',686:'senegal'
+  const isoToId={
+    12:'algeria',24:'angola',72:'botswana',108:'burundi',120:'cameroon',132:'cabo-verde',
+    140:'central-african-republic',148:'chad',174:'comoros',178:'republic-of-congo',180:'drc',
+    204:'benin',226:'equatorial-guinea',232:'eritrea',231:'ethiopia',266:'gabon',270:'gambia',
+    288:'ghana',324:'guinea',624:'guinea-bissau',384:'ivory-coast',404:'kenya',426:'lesotho',
+    430:'liberia',434:'libya',450:'madagascar',454:'malawi',466:'mali',478:'mauritania',
+    480:'mauritius',504:'morocco',508:'mozambique',516:'namibia',562:'niger',566:'nigeria',
+    646:'rwanda',678:'sao-tome-principe',686:'senegal',694:'sierra-leone',706:'somalia',
+    710:'south-africa',716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
+    788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',894:'zambia',262:'djibouti'
   };
+  const africaISO=new Set(Object.keys(isoToId).map(Number));
+  function isSomaliland(f){if(f.properties&&f.properties.name==='Somaliland')return true;if(f.id)return false;try{const c=d3.geoCentroid(f);return c[0]>42&&c[0]<49&&c[1]>7&&c[1]<12;}catch(e){return false;}}
+  function getProjection(){return d3.geoNaturalEarth1().scale(400).center([17,2]).translate([350,417]);}
 
-  // African ISO codes
-  const africaISO = new Set(Object.keys(isoToId).map(Number));
+  const policyColor={'operational':'#1a4a2e','agreement-signed':'#0c5c58','in-negotiation':'#c17f00','framework-only':'#6b7fa3','no-framework':'#c0bdb8'};
+  function riskOverride(c){return c.political_risk==='very-high'?'#8b1a1a':null;}
 
-  const policyColor = {
-    'operational':'#1a4a2e', 'agreement-signed':'#0c5c58',
-    'in-negotiation':'#c17f00', 'framework-only':'#6b7fa3',
-    'no-framework':'#c0bdb8'
-  };
+  let worldData=null;
+  async function loadWorldData(){if(worldData)return worldData;worldData=await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');return worldData;}
 
-  function riskOverride(c) {
-    return c.political_risk === 'very-high' ? '#8b1a1a' : null;
-  }
-
-  let worldData = null;
-  let projMapActive = false, policyMapActive = true;
-  let selectedProjCountry = null;
-
-  async function loadWorldData() {
-    if (worldData) return worldData;
-    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
-    worldData = topo;
-    return topo;
-  }
-
-  // Somaliland has no numeric id in world-atlas topojson — detect by name property.
-  function isSomaliland(f) {
-    if (f.properties && f.properties.name === 'Somaliland') return true;
-    // Fallback: centroid in NW Somalia region (no id and roughly 44-47°E, 9-11°N)
-    if (f.id) return false;
-    try { const c = d3.geoCentroid(f); return c[0] > 42 && c[0] < 49 && c[1] > 7 && c[1] < 12; }
-    catch(e) { return false; }
-  }
-
-  // PROJECTION - centred on Africa
-  function getProjection(svgEl) {
-    const w = 700, h = 750;
-    return d3.geoNaturalEarth1()
-      .scale(400)
-      .center([17, 2])
-      .translate([w / 2, h / 2 + 42]);
-  }
-
-  // RENDER POLICY MAP
-  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
-
-  async function renderPolicyMap() {
-    const svg = d3.select('#policy-map');
-    svg.selectAll('*').remove();
-    const topo = await loadWorldData();
-    const projection = getProjection(svg.node());
-    const path = d3.geoPath().projection(projection);
-    const countries = topojson.feature(topo, topo.objects.countries);
-    const policyById = {};
-    allPolicy.forEach(c => { policyById[c.id] = c; });
-
-    svg.selectAll('path')
-      .data(countries.features.filter(f => africaISO.has(+f.id) || isSomaliland(f)))
-      .join('path')
-      .attr('class', 'country-path')
-      .attr('d', path)
-      .attr('fill', f => {
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        const c = policyById[id];
-        if (!c) return '#e8e8e5';
-        return riskOverride(c) || policyColor[c.status] || '#e8e8e5';
-      })
-      .attr('title', f => isoToId[+f.id] || '')
-      .on('mouseover', (event, f) => {
-        if (isTouchDevice()) return;
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        const c = policyById[id];
-        if (!c) return;
-        showTooltip(event, '<strong>'+c.name+'</strong><br>'+(statusLabel[c.status]||c.status));
-      })
-      .on('mousemove', moveTooltip)
-      .on('mouseout', hideTooltip)
-      .on('click', (event, f) => {
-        hideTooltip();
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        const c = policyById[id];
-        if (c) openPolicyDetail(c);
-      });
-  }
-
-  // RENDER PROJECTS MAP
-  async function renderProjMap() {
-    const svg = d3.select('#proj-map');
-    svg.selectAll('*').remove();
-    const topo = await loadWorldData();
-    const projection = getProjection(svg.node());
-    const path = d3.geoPath().projection(projection);
-    const countries = topojson.feature(topo, topo.objects.countries);
-
-    // Count projects per country
-    const countByCountry = {};
-    allProjects.forEach(p => {
-      const key = p.country.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z-]/g,'');
-      countByCountry[key] = (countByCountry[key] || 0) + 1;
-    });
-
-    // Map project country names to IDs
-    const projCountryMap = {};
-    allProjects.forEach(p => {
-      const id = p.country.toLowerCase()
-        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
-        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
-        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
-        .replace('guinea-bissau','guinea-bissau').replace('central african republic','central-african-republic')
-        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
-        .replace('sao tome and principe','sao-tome-principe')
-        .replace(/\s+/g,'-');
-      if (!projCountryMap[id]) projCountryMap[id] = 0;
-      projCountryMap[id]++;
-    });
-
-    const maxCount = Math.max(...Object.values(projCountryMap), 1);
-    const colorScale = d3.scaleSequential()
-      .domain([0, maxCount])
-      .interpolator(d3.interpolate('#e8f5e0','#1a4a2e'));
-
-    svg.selectAll('path')
-      .data(countries.features.filter(f => africaISO.has(+f.id) || isSomaliland(f)))
-      .join('path')
-      .attr('class', 'country-path')
-      .attr('d', path)
-      .attr('fill', f => {
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        const count = projCountryMap[id] || 0;
-        return count > 0 ? colorScale(count) : '#f0f0ee';
-      })
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 0.5)
-      .on('mouseover', (event, f) => {
-        if (isTouchDevice()) return;
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        if (!id) return;
-        const count = projCountryMap[id] || 0;
-        const countryName = allProjects.find(p => {
-          const pid = p.country.toLowerCase()
-            .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
-            .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
-            .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
-            .replace('central african republic','central-african-republic')
-            .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
-            .replace('sao tome and principe','sao-tome-principe')
-            .replace(/\s+/g,'-');
-          return pid === id;
-        });
-        const name = countryName ? countryName.country : id;
-        const label = count === 0 ? 'No projects tracked yet' : count+' project'+(count!==1?'s':'');
-        showTooltip(event, '<strong>'+name+'</strong><br>'+label);
-      })
-      .on('mousemove', moveTooltip)
-      .on('mouseout', hideTooltip)
-      .on('click', (event, f) => {
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        if (!id) return;
-        hideTooltip();
-        if (selectedProjCountry === id) {
-          selectedProjCountry = null;
-          svg.selectAll('path').attr('opacity', 1);
-          closeDetail();
-        } else {
-          selectedProjCountry = id;
-          svg.selectAll('path').attr('opacity', d => isoToId[+d.id] === id ? 1 : 0.35);
-          openCountryDetail(id, projCountryMap);
-        }
-      });
-
-    // Legend
-    const legend = d3.select('#proj-legend');
-    legend.html('');
-    const steps = [0, 1, 3, 6, 10];
-    steps.forEach(n => {
-      const color = n === 0 ? '#f0f0ee' : colorScale(n);
-      legend.append('div').attr('class','legend-item').html(
-        '<div class="legend-swatch" style="background:'+color+'"></div>' +
-        (n === 0 ? 'No projects' : n === 10 ? '10+ projects' : n+' projects')
-      );
-    });
-  }
-
-  function filterProjByCountry(countryId) {
-    // Match country id back to project country name
-    const idToName = {};
-    Object.entries(isoToId).forEach(([k,v]) => idToName[v] = v);
-    const list = allProjects.filter(p => {
-      const id = p.country.toLowerCase()
-        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
-        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
-        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
-        .replace('central african republic','central-african-republic')
-        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
-        .replace('sao tome and principe','sao-tome-principe')
-        .replace(/\s+/g,'-');
-      return id === countryId;
-    });
-    document.getElementById('proj-count').textContent = list.length + ' project' + (list.length !== 1 ? 's' : '');
-    document.getElementById('projects-full').innerHTML = list.length
-      ? list.map(projCardHTML).join('')
-      : '<div class="empty">No projects found for this country.</div>';
-  }
-
-  function openCountryDetail(countryId, projCountryMap) {
-    const projects = allProjects.filter(p => {
-      const id = p.country.toLowerCase()
-        .replace('dr congo','drc').replace('republic of congo','republic-of-congo')
-        .replace('ivory coast','ivory-coast').replace('burkina faso','burkina-faso')
-        .replace('south africa','south-africa').replace('sierra leone','sierra-leone')
-        .replace('central african republic','central-african-republic')
-        .replace('south sudan','south-sudan').replace('equatorial guinea','equatorial-guinea')
-        .replace('sao tome and principe','sao-tome-principe')
-        .replace(/\s+/g,'-');
-      return id === countryId;
-    });
-
-    const countryName = projects.length ? projects[0].country : countryId;
-    const count = projects.length;
-
-    if (count === 0) {
-      openDetail(countryName, '', '<div class="detail-desc" style="color:var(--text-dim)">No projects tracked in this country yet.</div>');
-      return;
-    }
-
-    const projectRows = projects.map(p => {
-      const dc = statusDotClass(p.status);
-      return '<div style="padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;" onclick=\'closeDetail();setTimeout(()=>openProjectDetail('+safeJSON(p)+'),50)\'>' +
-        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">' +
-        '<span class="status-dot '+dc+'" style="flex-shrink:0"></span>' +
-        '<span style="font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.01em">'+p.name+'</span>' +
-        '</div>' +
-        '<div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;padding-left:14px">'+p.methodology+' - '+p.status+'</div>' +
-        '<div style="font-size:12px;color:var(--text-dim);padding-left:14px">'+p.credits+' - '+p.area+'</div>' +
-        '</div>';
-    }).join('');
-
-    openDetail(
-      countryName,
-      '<span style="font-size:12px;color:var(--text-dim)">'+count+' project'+(count!==1?'s':'')+' tracked</span>',
-      '<div class="detail-section-title" style="margin-top:0">Projects</div>' + projectRows
-    );
-  }
-
-  // TOGGLE FUNCTIONS
-  function setProjView(mode, btn) {
-    document.querySelectorAll('#view-projects .toggle-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    if (mode === 'map') {
-      document.getElementById('proj-map-wrap').style.display = 'block';
-      document.getElementById('proj-grid-wrap').style.display = 'none';
-      renderProjMap();
-    } else {
-      document.getElementById('proj-map-wrap').style.display = 'none';
-      document.getElementById('proj-grid-wrap').style.display = 'block';
-      selectedProjCountry = null;
-    }
-  }
-
-  function setPolicyView(mode, btn) {
-    document.querySelectorAll('#view-policy .toggle-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    if (mode === 'map') {
-      document.getElementById('policy-map-wrap').style.display = 'block';
-      document.getElementById('policy-list-wrap').style.display = 'none';
-      renderPolicyMap();
-    } else {
-      document.getElementById('policy-map-wrap').style.display = 'none';
-      document.getElementById('policy-list-wrap').style.display = 'block';
-    }
-  }
-
-  // RENDER MINI PROJ MAP - sequential reveal + hover tooltips
   async function renderMiniProjMap() {
     const svg = d3.select('#mini-proj-map');
     svg.selectAll('*').remove();
@@ -2587,131 +836,22 @@
       });
   }
 
-  let wwNetworkInitialised = false;
-  function initWWNetwork() {
-    if(wwNetworkInitialised) return;
-    wwNetworkInitialised = true;
-    const svg = document.getElementById('home-ww-net');
-    if(!svg) return;
-    const NS = 'http://www.w3.org/2000/svg';
-    const orgs = [
-      {id:'verra', label:'Verra', x:250,y:48, r:26,type:'std'},
-      {id:'tnc',   label:'TNC',  x:110,y:82, r:22,type:'ngo'},
-      {id:'wwf',   label:'WWF',  x:390,y:76, r:21,type:'ngo'},
-      {id:'gcf',   label:'GCF',  x:360,y:145,r:22,type:'fin'},
-      {id:'icvcm', label:'ICVCM',x:140,y:145,r:19,type:'std'},
-      {id:'iucn',  label:'IUCN', x:454,y:118,r:18,type:'pol'},
-      {id:'awf',   label:'AWF',  x:250,y:122,r:17,type:'ngo'},
-      {id:'wcs',   label:'WCS',  x:46, y:48, r:16,type:'ngo'},
-      {id:'unep',  label:'UNEP', x:454,y:36, r:16,type:'pol'},
-    ];
-    const links = [
-      ['verra','tnc'],['verra','icvcm'],['verra','gcf'],['verra','wwf'],
-      ['tnc','awf'],['tnc','icvcm'],['tnc','wcs'],
-      ['wwf','iucn'],['wwf','awf'],
-      ['gcf','iucn'],['gcf','awf'],
-      ['icvcm','awf'],
-      ['unep','iucn'],['unep','wwf'],['wcs','tnc'],
-    ];
-    const typeColor = {std:'#1d6e52',ngo:'#1d5e8a',fin:'#8a6a1a',pol:'#6a2a7a'};
-    const typeFill  = {std:'rgba(29,110,82,0.1)',ngo:'rgba(29,94,138,0.1)',fin:'rgba(138,106,26,0.1)',pol:'rgba(106,42,122,0.1)'};
-    const byId = {};
-    orgs.forEach(o => byId[o.id] = o);
-    const mk = (tag,attrs) => { const el=document.createElementNS(NS,tag); Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v)); return el; };
-    links.forEach(([a,b]) => {
-      const na=byId[a],nb=byId[b];
-      svg.appendChild(mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'rgba(128,128,128,0.12)','stroke-width':'1'}));
-    });
-    const glowLines = {};
-    links.forEach(([a,b]) => {
-      const na=byId[a],nb=byId[b],key=`${a}-${b}`;
-      const line=mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'#2a9a6a','stroke-width':'1.5'});
-      line.style.opacity='0'; svg.appendChild(line); glowLines[key]=line;
-    });
-    orgs.forEach(org => {
-      const g=document.createElementNS(NS,'g');
-      const c=mk('circle',{cx:org.x,cy:org.y,r:org.r,fill:typeFill[org.type],stroke:typeColor[org.type],'stroke-width':'1'});
-      const t=mk('text',{x:org.x,y:org.y+1,'text-anchor':'middle','dominant-baseline':'middle',fill:typeColor[org.type],'font-size':'8.5','font-weight':'600'});
-      t.textContent=org.label; g.appendChild(c); g.appendChild(t); svg.appendChild(g);
-    });
-    const legend=[{c:'#1d6e52',l:'Standards'},{c:'#1d5e8a',l:'NGO'},{c:'#8a6a1a',l:'Finance'},{c:'#6a2a7a',l:'Policy'}];
-    let lx=16;
-    legend.forEach(({c,l}) => {
-      const d=mk('circle',{cx:lx+5,cy:182,r:5,fill:c}); svg.appendChild(d);
-      const t=mk('text',{x:lx+14,y:186,fill:'rgba(128,128,128,0.5)','font-size':'10'}); t.textContent=l; svg.appendChild(t);
-      lx+=90;
-    });
-    const edgeKeys=links.map(([a,b])=>`${a}-${b}`);
-    function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-    function fadeEdge(key,to,dur,cb){
-      const el=glowLines[key]; if(!el)return;
-      const from=parseFloat(el.style.opacity)||0,diff=to-from,t0=performance.now();
-      function step(now){const t=Math.min((now-t0)/dur,1),e=t<0.5?2*t*t:-1+(4-2*t)*t;
-        el.style.opacity=from+diff*e; if(t<1)requestAnimationFrame(step); else if(cb)cb();}
-      requestAnimationFrame(step);
-    }
-    function runLoop(){
-      const order=shuffle(edgeKeys); let i=0;
-      function next(){
-        if(i>=order.length){setTimeout(runLoop,200);return;}
-        const key=order[i++];
-        fadeEdge(key,1,200,()=>{
-          setTimeout(()=>fadeEdge(key,0,350),300+Math.random()*500);
-          setTimeout(next,Math.random()*80+40);
-        });
-      }
-      next();
-    }
-    runLoop();
+  async function renderLogoMap(){
+    const svg=d3.select('#logo-map');
+    if(svg.empty())return;
+    const topo=await loadWorldData();
+    const proj=getProjection();
+    const path=d3.geoPath().projection(proj);
+    const countries=topojson.feature(topo,topo.objects.countries);
+    const policyById={};
+    allPolicy.forEach(c=>{policyById[c.id]=c;});
+    const features=countries.features.filter(f=>africaISO.has(+f.id)||isSomaliland(f));
+    svg.selectAll('path').data(features).join('path').attr('d',path)
+      .attr('fill',f=>{const id=isSomaliland(f)?'somalia':isoToId[+f.id];const c=policyById[id];return c?(riskOverride(c)||policyColor[c.status]||'#e8e8e5'):'#e8e8e5';})
+      .attr('stroke','#fff').attr('stroke-width',0.3);
   }
 
-  async function renderLogoMap() {
-    const svg = d3.select('#logo-map');
-    const topo = await loadWorldData();
-    const projection = getProjection(svg.node());
-    const path = d3.geoPath().projection(projection);
-    const countries = topojson.feature(topo, topo.objects.countries);
-    const policyById = {};
-    allPolicy.forEach(c => { policyById[c.id] = c; });
-    const features = countries.features.filter(f => africaISO.has(+f.id) || isSomaliland(f));
-    svg.selectAll('path')
-      .data(features)
-      .join('path')
-      .attr('d', path)
-      .attr('fill', f => {
-        const id = isSomaliland(f) ? 'somalia' : isoToId[+f.id];
-        const c = policyById[id];
-        return c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
-      })
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 0.3);
-  }
-
-  function activateProjMap() {
-    setTimeout(() => {
-      document.getElementById('proj-map-wrap').style.display = 'block';
-      document.getElementById('proj-grid-wrap').style.display = 'none';
-      document.querySelectorAll('#view-projects .toggle-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('#view-projects .toggle-btn')[0].classList.add('active');
-      renderProjMap();
-    }, 50);
-  }
-
-  function activatePolicyMap() {
-    setTimeout(() => {
-      document.getElementById('policy-map-wrap').style.display = 'block';
-      document.getElementById('policy-list-wrap').style.display = 'none';
-      renderPolicyMap();
-    }, 50);
-  }
-
-  // If data loaded before D3, render mini maps now
-  if (allProjects.length) {
-    renderMiniProjMap();
-    renderMiniPolicyMap();
-    if (allKeystones.length) renderMiniKSMap();
-    renderLogoMap();
-  }
+  if(allProjects.length){renderMiniProjMap();renderMiniPolicyMap();if(allKeystones.length)renderMiniKSMap();renderLogoMap();}
 </script>
 <script src="nav.js" defer></script>
 </body>
