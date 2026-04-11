@@ -552,6 +552,7 @@
     font-size: 11px;
     color: var(--text-muted);
     margin-top: 2px;
+    margin-bottom: 16px;
   }
   .home-card-map-cta {
     font-size: 11px;
@@ -745,14 +746,26 @@
   }
 
   /* WHO'S WHO */
-  .home-card-5 { border-color: rgba(26,92,92,0.25); background: rgba(26,92,92,0.025); }
+  .home-card-5 { border-color: rgba(26,92,92,0.25); background: rgba(26,92,92,0.025); min-height: 340px; }
   .home-card-5:hover { border-color: rgba(26,92,92,0.5); }
+  .home-card-5 .home-card-header { padding-bottom: 0; }
   .card-num-5 { background: #1a5c5c; }
 
   /* CAIRN */
-  .home-card-6 { border-color: rgba(74,42,107,0.25); background: rgba(74,42,107,0.025); }
+  .home-card-6 { border-color: rgba(74,42,107,0.25); background: rgba(74,42,107,0.025); min-height: 340px; }
   .home-card-6:hover { border-color: rgba(74,42,107,0.5); }
   .card-num-6 { background: #4a2a6b; }
+  .cairn-pulse-wrap { position:relative; width:42px; height:42px; display:flex; align-items:center; justify-content:center; }
+  .cairn-pulse-core { width:14px; height:14px; border-radius:50%; background:#6a3a9a; position:relative; z-index:3; }
+  .cairn-pulse-ring { position:absolute; border-radius:50%; border:1.5px solid #6a3a9a; animation:cairn-pulse 2.4s ease-out infinite; }
+  .cairn-pulse-ring-1 { width:22px; height:22px; animation-delay:0s; }
+  .cairn-pulse-ring-2 { width:32px; height:32px; animation-delay:0.6s; }
+  .cairn-pulse-ring-3 { width:42px; height:42px; animation-delay:1.2s; }
+  @keyframes cairn-pulse {
+    0%   { opacity:0.8; transform:scale(0.6); }
+    70%  { opacity:0; transform:scale(1); }
+    100% { opacity:0; transform:scale(1); }
+  }
   .cairn-lock {
     display: flex;
     align-items: center;
@@ -861,7 +874,7 @@
   <div class="nav-links">
     <span class="nav-link" onclick="showView('policy'); activatePolicyMap();">Policy</span>
     <span class="nav-link" onclick="showView('projects'); activateProjMap();">Projects</span>
-    <span class="nav-link" onclick="window.location.href='keystones.html'" style="color:#5c3317;font-weight:600;">Keystones</span>
+    <span class="nav-link" onclick="window.location.href='keystones.html'">Keystones</span>
     <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
     <span class="nav-link" onclick="showView('whowho')">Who's Who</span>
     <span class="nav-link" onclick="window.location.href='cairn.html'" style="color:#4a2a6b;font-weight:600;">CAIRN</span>
@@ -994,8 +1007,13 @@
         </div>
         <div class="home-card-map-cta">Open -></div>
       </div>
-      <div class="home-ww-list" id="home-ww-list">
-        <div class="loading">Loading...</div>
+      <div style="position:relative;height:250px;overflow:hidden;">
+        <svg id="home-ww-net" viewBox="0 0 500 210" preserveAspectRatio="xMidYMin meet" style="width:100%;height:100%;display:block;"></svg>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 16px;background:var(--bg);border-top:1px solid var(--border);display:flex;gap:20px;z-index:3;">
+          <div><div style="font-size:16px;font-weight:700;color:#1a5c5c;letter-spacing:-0.02em;" id="home-ww-count">157</div><div style="font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Profiles</div></div>
+          <div><div style="font-size:16px;font-weight:700;color:#1a5c5c;letter-spacing:-0.02em;">34</div><div style="font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Orgs</div></div>
+          <div><div style="font-size:16px;font-weight:700;color:#1a5c5c;letter-spacing:-0.02em;">18</div><div style="font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Countries</div></div>
+        </div>
       </div>
     </div>
 
@@ -1004,9 +1022,17 @@
       <div class="home-card-header">
         <div>
           <div class="home-card-map-title"><span class="card-num card-num-6">6</span>CAIRN</div>
-          <div class="home-card-map-sub">Canopy African Impact &amp; Risk Navigator - proprietary project ratings</div>
+          <div class="home-card-map-sub"><strong style="font-size:14px;">Canopy Africa Impact &amp; Risk Navigator</strong><br>Our proprietary project rating tool</div>
         </div>
-        <div class="home-card-map-cta">Open -></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="home-card-map-cta">Open -></div>
+          <div class="cairn-pulse-wrap">
+            <div class="cairn-pulse-ring cairn-pulse-ring-3"></div>
+            <div class="cairn-pulse-ring cairn-pulse-ring-2"></div>
+            <div class="cairn-pulse-ring cairn-pulse-ring-1"></div>
+            <div class="cairn-pulse-core"></div>
+          </div>
+        </div>
       </div>
       <div class="cairn-lock">
         <div class="cairn-lock-icon">&#128274;</div>
@@ -1374,6 +1400,7 @@
       renderMiniProjMap();
       renderMiniPolicyMap();
       renderLogoMap();
+      initWWNetwork();
     }
   }
 
@@ -1546,20 +1573,13 @@
       allWhosWho = wwd.profiles;
       allKeystones = ksd.keystones;
 
-      // home who's who feed
-      const homeWW = allWhosWho.filter(p=>p.verified).slice().sort((a,b) => surname(a.name).localeCompare(surname(b.name))).slice(0,4);
-      document.getElementById('home-ww-list').innerHTML = homeWW.length
-        ? homeWW.map(p =>
-            '<div class="home-ww-item">' +
-            '<div class="home-ww-name">'+formatName(p.name)+'</div>' +
-            '<div class="home-ww-role">'+p.role+', '+p.organisation+'</div>' +
-            '</div>'
-          ).join('')
-        : '<div style="padding:12px 0;font-size:12px;color:var(--text-dim)">Loading profiles...</div>';
+      // home who's who count
+      const wwCountEl = document.getElementById('home-ww-count');
+      if(wwCountEl) wwCountEl.textContent = allWhosWho.length;
       document.getElementById('home-ww-stat').textContent = allWhosWho.length + ' profiles - funders, developers, standard-setters';
 
-      // home intel feed - more items to fill taller card
-      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,5);
+      // home intel feed
+      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,3);
       document.getElementById('home-intel-list').innerHTML = homeIntel.length
         ? homeIntel.map(i =>
             '<div class="home-intel-item">' +
@@ -1597,6 +1617,7 @@
         renderMiniPolicyMap();
         renderMiniKSMap();
         renderLogoMap();
+        initWWNetwork();
       }
 
     } catch(e) { console.error(e); }
@@ -2090,7 +2111,7 @@
     return d3.geoNaturalEarth1()
       .scale(400)
       .center([17, 2])
-      .translate([w / 2, h / 2]);
+      .translate([w / 2, h / 2 + 42]);
   }
 
   // RENDER POLICY MAP
@@ -2540,9 +2561,86 @@
       });
   }
 
+  let wwNetworkInitialised = false;
+  function initWWNetwork() {
+    if(wwNetworkInitialised) return;
+    wwNetworkInitialised = true;
+    const svg = document.getElementById('home-ww-net');
+    if(!svg) return;
+    const NS = 'http://www.w3.org/2000/svg';
+    const orgs = [
+      {id:'verra', label:'Verra', x:250,y:48, r:26,type:'std'},
+      {id:'tnc',   label:'TNC',  x:110,y:82, r:22,type:'ngo'},
+      {id:'wwf',   label:'WWF',  x:390,y:76, r:21,type:'ngo'},
+      {id:'gcf',   label:'GCF',  x:360,y:145,r:22,type:'fin'},
+      {id:'icvcm', label:'ICVCM',x:140,y:145,r:19,type:'std'},
+      {id:'iucn',  label:'IUCN', x:454,y:118,r:18,type:'pol'},
+      {id:'awf',   label:'AWF',  x:250,y:122,r:17,type:'ngo'},
+      {id:'wcs',   label:'WCS',  x:46, y:48, r:16,type:'ngo'},
+      {id:'unep',  label:'UNEP', x:454,y:36, r:16,type:'pol'},
+    ];
+    const links = [
+      ['verra','tnc'],['verra','icvcm'],['verra','gcf'],['verra','wwf'],
+      ['tnc','awf'],['tnc','icvcm'],['tnc','wcs'],
+      ['wwf','iucn'],['wwf','awf'],
+      ['gcf','iucn'],['gcf','awf'],
+      ['icvcm','awf'],
+      ['unep','iucn'],['unep','wwf'],['wcs','tnc'],
+    ];
+    const typeColor = {std:'#1d6e52',ngo:'#1d5e8a',fin:'#8a6a1a',pol:'#6a2a7a'};
+    const typeFill  = {std:'rgba(29,110,82,0.1)',ngo:'rgba(29,94,138,0.1)',fin:'rgba(138,106,26,0.1)',pol:'rgba(106,42,122,0.1)'};
+    const byId = {};
+    orgs.forEach(o => byId[o.id] = o);
+    const mk = (tag,attrs) => { const el=document.createElementNS(NS,tag); Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v)); return el; };
+    links.forEach(([a,b]) => {
+      const na=byId[a],nb=byId[b];
+      svg.appendChild(mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'rgba(128,128,128,0.12)','stroke-width':'1'}));
+    });
+    const glowLines = {};
+    links.forEach(([a,b]) => {
+      const na=byId[a],nb=byId[b],key=`${a}-${b}`;
+      const line=mk('line',{x1:na.x,y1:na.y,x2:nb.x,y2:nb.y,stroke:'#2a9a6a','stroke-width':'1.5'});
+      line.style.opacity='0'; svg.appendChild(line); glowLines[key]=line;
+    });
+    orgs.forEach(org => {
+      const g=document.createElementNS(NS,'g');
+      const c=mk('circle',{cx:org.x,cy:org.y,r:org.r,fill:typeFill[org.type],stroke:typeColor[org.type],'stroke-width':'1'});
+      const t=mk('text',{x:org.x,y:org.y+1,'text-anchor':'middle','dominant-baseline':'middle',fill:typeColor[org.type],'font-size':'8.5','font-weight':'600'});
+      t.textContent=org.label; g.appendChild(c); g.appendChild(t); svg.appendChild(g);
+    });
+    const legend=[{c:'#1d6e52',l:'Standards'},{c:'#1d5e8a',l:'NGO'},{c:'#8a6a1a',l:'Finance'},{c:'#6a2a7a',l:'Policy'}];
+    let lx=16;
+    legend.forEach(({c,l}) => {
+      const d=mk('circle',{cx:lx+5,cy:182,r:5,fill:c}); svg.appendChild(d);
+      const t=mk('text',{x:lx+14,y:186,fill:'rgba(128,128,128,0.5)','font-size':'10'}); t.textContent=l; svg.appendChild(t);
+      lx+=90;
+    });
+    const edgeKeys=links.map(([a,b])=>`${a}-${b}`);
+    function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+    function fadeEdge(key,to,dur,cb){
+      const el=glowLines[key]; if(!el)return;
+      const from=parseFloat(el.style.opacity)||0,diff=to-from,t0=performance.now();
+      function step(now){const t=Math.min((now-t0)/dur,1),e=t<0.5?2*t*t:-1+(4-2*t)*t;
+        el.style.opacity=from+diff*e; if(t<1)requestAnimationFrame(step); else if(cb)cb();}
+      requestAnimationFrame(step);
+    }
+    function runLoop(){
+      const order=shuffle(edgeKeys); let i=0;
+      function next(){
+        if(i>=order.length){setTimeout(runLoop,200);return;}
+        const key=order[i++];
+        fadeEdge(key,1,200,()=>{
+          setTimeout(()=>fadeEdge(key,0,350),300+Math.random()*500);
+          setTimeout(next,Math.random()*80+40);
+        });
+      }
+      next();
+    }
+    runLoop();
+  }
+
   async function renderLogoMap() {
     const svg = d3.select('#logo-policy-map');
-    svg.selectAll('*').remove();
     const topo = await loadWorldData();
     const projection = getProjection(svg.node());
     const path = d3.geoPath().projection(projection);
