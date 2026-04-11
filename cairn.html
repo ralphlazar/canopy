@@ -163,6 +163,14 @@
   .detail-grade-val { font-size: 24px; font-weight: 700; }
   .detail-composite { font-size: 13px; color: var(--text-dim); }
   .detail-note { font-size: 11px; color: var(--text-dim); margin-top: 8px; font-style: italic; }
+  .detail-profile { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--cairn-border); }
+  .detail-profile-desc { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 14px; }
+  .detail-profile-meta { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 14px; }
+  .detail-profile-meta-item { font-size: 12px; color: var(--text-dim); }
+  .detail-profile-meta-item strong { color: var(--text); font-weight: 600; }
+  .detail-profile-links { display: flex; flex-direction: column; gap: 6px; }
+  .detail-profile-links a { font-size: 13px; color: var(--cairn); text-decoration: none; }
+  .detail-profile-links a:hover { text-decoration: underline; }
 
   /* MAP VIEW */
   .map-wrap { padding: 20px 40px 32px; max-width: 720px; margin: 0 auto; }
@@ -549,6 +557,23 @@
         '<div class="detail-composite">' + sc.composite.toFixed(2) + ' composite</div>' +
         '</div>' +
         '<div class="detail-note">Public registry data only. Sovereign: ' + sovereignNote(p.country) + '.</div>' +
+        (function() {
+          var profile = '<div class="detail-profile">';
+          if (p.description) profile += '<div class="detail-profile-desc">' + p.description + '</div>';
+          var meta = [];
+          if (p.developer) meta.push('<span class="detail-profile-meta-item"><strong>Developer</strong> ' + p.developer + '</span>');
+          if (p.credits)   meta.push('<span class="detail-profile-meta-item"><strong>Credits</strong> ' + p.credits + '</span>');
+          if (p.area)      meta.push('<span class="detail-profile-meta-item"><strong>Area</strong> ' + p.area + '</span>');
+          if (p.certification) meta.push('<span class="detail-profile-meta-item"><strong>Certification</strong> ' + p.certification + '</span>');
+          if (meta.length) profile += '<div class="detail-profile-meta">' + meta.join('') + '</div>';
+          var links = [];
+          if (p.verra_url)     links.push('<a href="' + p.verra_url + '" target="_blank" rel="noopener">Verra registry &rarr;</a>');
+          if (p.plan_vivo_url) links.push('<a href="' + p.plan_vivo_url + '" target="_blank" rel="noopener">Plan Vivo registry &rarr;</a>');
+          if (p.project_url)   links.push('<a href="' + p.project_url + '" target="_blank" rel="noopener">Project website &rarr;</a>');
+          if (links.length) profile += '<div class="detail-profile-links">' + links.join('') + '</div>';
+          profile += '</div>';
+          return profile;
+        })()
         '</div>';
     }).join('');
   }

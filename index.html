@@ -193,6 +193,31 @@
 
   footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
   .footer-note { font-size: 12px; color: var(--text-dim); }
+  .footer-blessing {
+    font-size: 12px; color: var(--text-dim);
+    cursor: default;
+    position: relative;
+    display: inline-block;
+  }
+  .footer-blessing .blessing-tip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text);
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    z-index: 100;
+    pointer-events: none;
+  }
+  .footer-blessing:hover .blessing-tip { display: block; }
   .footer-links { display: flex; gap: 24px; }
   .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
   .footer-link:hover { color: var(--text-muted); }
@@ -1072,7 +1097,7 @@
 
   </div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links">
       <span class="footer-link" onclick="showView('about')">About</span>
       <span class="footer-link">Subscribe</span>
@@ -1112,7 +1137,7 @@
     <div class="proj-full-grid" id="projects-full"><div class="loading">Loading...</div></div>
   </div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
@@ -1135,7 +1160,7 @@
   </div>
   <div id="instruments-full"><div class="loading" style="padding:40px">Loading...</div></div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
@@ -1187,7 +1212,7 @@
   </div>
   <div class="policy-disclaimer" id="policy-disclaimer"></div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
@@ -1211,7 +1236,7 @@
     <div class="loading" style="padding: 40px">Loading...</div>
   </div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
@@ -1259,7 +1284,7 @@
     <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
   </div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
   </footer>
 </div>
@@ -1281,7 +1306,7 @@
     <p class="about-p">Canopy carries no advertising and no sponsored content. It has no commercial relationship with any project developer or registry. Project scorecards, coming in Phase 2, will be independently rated.</p>
   </div>
   <footer>
-    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <span class="footer-blessing">Nkosi Sikelel' iAfrika / Mungu ibariki Afrika<span class="blessing-tip">&ldquo;God bless Africa&rdquo; - the opening words of Nkosi Sikelel' iAfrika, written in Zulu/Xhosa<br>in 1897 and now part of five national anthems across the continent.<br>Mungu ibariki Afrika is the same prayer in Swahili.</span></span>
     <div class="footer-links">
       <span class="footer-link" onclick="showView('about')">About</span>
       <span class="footer-link">Subscribe</span>
