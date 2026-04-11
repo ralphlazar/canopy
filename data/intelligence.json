@@ -1,41 +1,302 @@
 {
   "intelligence": [
     {
-      "id": "sa-article-62-2026-04-10",
-      "domain": "Carbon markets",
-      "headline": "South Africa advances Article 6.2 bilateral framework - ITMO eligibility criteria published",
-      "date": "2026-04-10",
-      "url": null,
-      "status": "approved",
-      "summary": "The South African Department of Forestry, Fisheries and the Environment has published formal eligibility criteria for Internationally Transferred Mitigation Outcomes under Article 6.2. The criteria confirm ARR methodology VM0047 as a qualifying activity, with corresponding adjustments required from project developers. This is a material development for South African carbon projects seeking compliance-grade offtake, including the Save the Sand pipeline in Mpumalanga."
-    },
-    {
-      "id": "bezos-biodiversity-2026-04-08",
+      "id": "arcadia-cycle-closing-2026-04",
       "domain": "Funding",
-      "headline": "Bezos Earth Fund opens $200M African biodiversity round - applications open May 2026",
-      "date": "2026-04-08",
-      "url": null,
+      "headline": "Arcadia Fund closing current grant cycle end April 2026 - African landscape conservation a focus area",
+      "date": "2026-04-01",
+      "url": "https://www.arcadiafund.org.uk",
       "status": "approved",
-      "summary": "The Bezos Earth Fund has announced a $200M funding round focused on African biodiversity, with applications opening May 2026. The round targets landscape-scale projects with demonstrable community co-governance structures and third-party certification. Grants are expected to range from $5M to $40M with a 5-year commitment horizon. This is one of the largest single philanthropic allocations to African conservation in the current cycle."
+      "summary": "The Arcadia Fund, one of the most significant UK-based conservation philanthropies, is closing its current grant cycle at the end of April 2026. Arcadia funds landscape-scale conservation with African protected areas featuring in its recent portfolio. The fund prioritises projects with demonstrable open access commitments alongside conservation outcomes. Organisations seeking Arcadia support for the current cycle face a hard deadline at end of April 2026."
     },
     {
-      "id": "worldbank-debt-nature-2026-04-06",
+      "id": "gabon-infini-pfp-bezos-2026-03",
+      "domain": "Funding",
+      "headline": "Gabon mobilises $200M Project Finance for Permanence backed by Bezos Earth Fund and TNC - protecting 30% of forests, freshwater and ocean",
+      "date": "2026-03-25",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-25/bezos-earth-fund-to-back-gabon-s-200-million-fund-for-nature",
+      "status": "approved",
+      "summary": "Gabon is advancing a $200 million Project Finance for Permanence initiative known as Gabon Infini PFP, with backing from the Bezos Earth Fund and a coalition led by The Nature Conservancy alongside WWF, the Pew Charitable Trusts, and ZomaLab. The initiative targets protection of at least 30% of Gabon's terrestrial, freshwater, and marine ecosystems by 2030. Technical structuring has been completed and the plan presented to government, with final approval pending and a letter of intent already signed. The Gabon Infini PFP builds on the 2023 $500 million blue bond debt-for-nature swap arranged with Bank of America, which directed capital to marine conservation. Gabon holds significant portions of Congo Basin rainforest and 60% of remaining critically endangered forest elephants."
+    },
+    {
+      "id": "tnc-africa-debt-nature-swaps-2026-03",
+      "domain": "Conservation finance",
+      "headline": "TNC confirms three African debt-for-nature swaps in negotiation - combined value upwards of $500M, one deal expected to close in 2026",
+      "date": "2026-03-23",
+      "url": "https://www.cnbcafrica.com/2026/trio-of-african-countries-eyeing-debt-for-nature-swaps-nature-conservancy-says",
+      "status": "approved",
+      "summary": "The Nature Conservancy confirmed to Reuters on 23 March 2026 that it is in active negotiations with three African countries on debt-for-nature swaps totalling upwards of $500 million, with one deal expected to close in 2026 and two more in 2027. Ademola Ajagbe, TNC regional managing director for Africa, confirmed the pipeline from Nairobi but declined to name the countries under confidentiality terms. He noted that no such swaps have been completed in Africa since Trump administration cuts curtailed US support, and that TNC is working with multilateral development banks, private insurers, and investment funds to structure the deals. Kenya and Zambia were cited as examples of TNC long-standing programme countries most affected by climate impacts on tourism, food production, and hydroelectric power."
+    },
+    {
+      "id": "koko-market-implications-2026-03",
+      "domain": "Africa political risk",
+      "headline": "KOKO fallout reshapes Article 6.2 risk calculus for African carbon projects - sovereign authorisation now primary investor concern",
+      "date": "2026-03-01",
+      "url": "https://african.business/2026/02/energy-resources/koko-failure-brings-cookstove-carbon-credit-model-into-question",
+      "status": "approved",
+      "summary": "The collapse of KOKO Networks triggered a significant reassessment of political risk in African carbon market investment. World Bank MIGA guarantee exposure of $179.6M created the most politically sensitive multilateral payout scenario in carbon market history. CORSIA-eligible spot credits fell from $23.10 per tonne in October 2025 to $15.90 by early March 2026 as the Kenya supply disruption and authorisation uncertainty weighed on market confidence. Other cookstove developers with Kenya operations pivoted from CORSIA eligibility toward ICVCM CCP accreditation. The consensus emerging across market participants is that sovereign letter-of-authorisation risk is the primary unpriced exposure in Article 6.2-dependent African project finance - directly material for any project pursuing the Article 6.2 pathway, including the South Africa ARR pipeline."
+    },
+    {
+      "id": "usaid-second-round-africa-exits-2026-02",
+      "domain": "Africa political risk",
+      "headline": "US ends all remaining USAID programmes in seven African countries - Burkina Faso, Cameroon, Malawi, Mali, Niger, Somalia, Zimbabwe",
+      "date": "2026-02-25",
+      "url": "https://www.alliancemagazine.org/blog/us-government-to-pull-plug-on-remaining-lifesaving-aid-across-africa/",
+      "status": "approved",
+      "summary": "The US government announced in February 2026 that all USAID programmes in Burkina Faso, Cameroon, Malawi, Mali, Niger, Somalia, and Zimbabwe would end at programme expiry, describing the move internally as a responsible exit from countries where programmes lacked a strong nexus with US national interests. The decision followed a second round of foreign aid cuts one year after the initial USAID dismantling and effectively ends all US conservation, biodiversity, and forestry programme support in these countries. Malawi is notable as home to African Parks-managed Liwonde National Park. The cuts have prompted conservation organisations across Sub-Saharan Africa to accelerate sovereign and blended finance alternatives."
+    },
+    {
+      "id": "microsoft-sierra-leone-2026-02",
+      "domain": "Carbon markets",
+      "headline": "Microsoft buys 1.8M carbon removal credits from Rainforest Builder Sierra Leone project - one of Africa largest single-project offtakes",
+      "date": "2026-02-24",
+      "url": "https://carbonherald.com/in-a-new-deal-microsoft-buys-forest-restoration-credits-from-rainforest-builder/",
+      "status": "approved",
+      "summary": "Microsoft signed a 15-year agreement with Rainforest Builder to purchase up to 1.8 million carbon removal credits from Project Buffalo, a large-scale ecosystem restoration project in Sierra Leone targeting the Upper Guinean Forest - a biodiversity hotspot that has lost 90% of its original area. The deal is described as one of the largest carbon removal offtakes from a single African project announced to date. Rainforest Builder has planted over 1.8 million trees since 2023 and directly employed 1,200 people in 2025. Microsoft is establishing itself as the dominant corporate buyer of African nature-based removal credits, with Uganda, Sierra Leone, and West Africa now in its active portfolio."
+    },
+    {
+      "id": "auda-nepad-carbon-principles-2026-02",
       "domain": "Policy",
-      "headline": "World Bank approves $500M debt-for-nature framework for Sub-Saharan Africa",
-      "date": "2026-04-06",
-      "url": null,
+      "headline": "African Union launches Africa-led carbon market principles - 54 nations assert continental standards at CAHOSCC summit",
+      "date": "2026-02-14",
+      "url": "https://www.nepad.org/news/africa-sets-new-standard-carbon-markets",
       "status": "approved",
-      "summary": "The World Bank has approved a $500M debt-for-nature swap framework targeting Sub-Saharan Africa, with Kenya and Zambia confirmed as pilot countries. The mechanism allows eligible sovereigns to retire a portion of external debt in exchange for ring-fenced conservation spending commitments. Structuring is being led by the IFC with Conservation Finance Alliance as technical advisor. Further country applications are expected in Q3 2026."
+      "summary": "AUDA-NEPAD officially launched the African Principles for Equity and Integrity in Carbon Markets at the CAHOSCC meeting in Addis Ababa on 14 February 2026. Endorsed by Kenyan President William Ruto as CAHOSCC Coordinator and Tanzanian President Samia Suluhu Hassan, the Principles establish Africa-led governance standards covering free prior and informed consent, transparent benefit-sharing, grievance mechanisms, and social safeguards. They are designed to ensure African countries shape rather than merely participate in global carbon market architecture. The launch is the most significant assertion of African carbon market sovereignty since the Nairobi Declaration and directly responds to KOKO-type authorisation disputes and broader concerns about value extraction."
     },
     {
-      "id": "community-lands-meta-2026-04-03",
+      "id": "koko-collapse-kenya-2026-01",
+      "domain": "Carbon markets",
+      "headline": "KOKO Networks collapses in Kenya after government blocks Article 6.2 authorisation - 1.5M households lose clean cooking access",
+      "date": "2026-01-31",
+      "url": "https://www.ecofinagency.com/news-services/1202-52826-koko-networks-collapses-in-kenya-after-government-blocks-carbon-credit-sales",
+      "status": "approved",
+      "summary": "KOKO Networks, one of Africa largest clean cooking companies, shut down all Kenyan operations on 31 January 2026 after the government refused to issue a Letter of Authorisation required to sell carbon credits into compliance markets under Article 6 of the Paris Agreement. The company - backed by Mirova, Microsoft Climate Innovation Fund, Rand Merchant Bank, and a $179.6M World Bank MIGA guarantee - entered administration the following day. 700 staff were laid off and 1.5 million households lost access to clean bioethanol fuel. The government cited concerns that KOKO crediting volume would absorb Kenya entire carbon market quota. 15 million Gold Standard credits now sit in limbo. The collapse is the most significant demonstration to date of sovereign authorisation risk as the binding constraint on Article 6.2-dependent business models in Africa."
+    },
+    {
+      "id": "microsoft-kijani-uganda-2026-01",
+      "domain": "Carbon markets",
+      "headline": "Microsoft secures 2M ARR carbon removal credits from Uganda - 50,000 smallholder farmers in nine-year deal",
+      "date": "2026-01-14",
+      "url": "https://rubiconcarbon.com/blog/rubicon-carbon-microsoft-kijani/",
+      "status": "approved",
+      "summary": "Microsoft and Rubicon Carbon announced a nine-year agreement on 14 January 2026 to deliver two million ARR carbon removal credits from Kijani Forestry Smallholder Farmer Forestry Project in Northern Uganda - one of the first projects approved under Uganda Climate Change Mechanisms Regulations. The deal is the first executed under a broader framework allowing Microsoft to purchase up to 18 million tonnes of removal credits from Rubicon-managed projects. Kijani works with over 50,000 smallholder farmers across 30 million planted trees. The transaction validates the ARR credit class as attractive to Tier 1 corporate buyers and signals that African smallholder forestry projects can access structured long-term offtake finance."
+    },
+    {
+      "id": "cop30-carbon-markets-nbs-2025-11",
+      "domain": "Carbon markets",
+      "headline": "COP30 Belem: $1.1 billion in carbon market investment announced - 78% directed to nature-based solutions, South Africa leads G20 data standardisation",
+      "date": "2025-11-22",
+      "url": "https://www.sylvera.com/blog/cop30-carbon-markets-article-6-outcomes",
+      "status": "approved",
+      "summary": "COP30 in Belem saw market participants announce $1.1 billion in carbon credit investments between 3 and 21 November 2025 - a 42% increase on COP29 - with 78% directed to nature-based solutions. The Coalition to Grow Carbon Markets, co-chaired by Kenya and Singapore and including Zambia, secured endorsement from 11 governments including South Africa, which is leading a G20 initiative to establish a Common Carbon Credit Data Model to standardise data systems and reduce market friction. Brazil launched the Tropical Forests Forever Facility, raising $5.5 billion with 53 participating countries, with DRC and neighbouring Congo Basin nations identified as key potential beneficiaries. Article 6.4 integrity rules were maintained against attempts by market actors to weaken permanence and baseline requirements for nature-based projects."
+    },
+    {
+      "id": "cop30-adaptation-finance-africa-2025-11",
+      "domain": "Biodiversity policy",
+      "headline": "COP30 agrees to triple adaptation finance to $120bn annually by 2035 - Africa pavilion fire and flooding symbolise continent most at risk",
+      "date": "2025-11-22",
+      "url": "https://african.business/2025/11/energy-resources/mixed-results-for-africa-in-belem-as-brazils-cop30-concludes",
+      "status": "approved",
+      "summary": "COP30 in Belem concluded with an agreement to at least triple adaptation finance by 2035, implying a target of approximately $120 billion annually, partially satisfying developing countries that had sought a tripling by 2030. The summit coincided with a fire at the Africa pavilion and flooding at the Pacific islands pavilion. Hopes for binding fossil fuel phaseout language and a formal deforestation roadmap were not met, with the COP presidency instead planning voluntary roadmap development outside formal negotiations. The Loss and Damage Fund was confirmed for operation with initial grants expected by July 2026. Africa received mixed results: the adaptation finance commitment advances, but the absence of binding deforestation and fossil fuel transition language leaves major gaps in the architecture African conservation finance depends on."
+    },
+    {
+      "id": "arr-permanence-market-signal-2025-11",
       "domain": "Science",
-      "headline": "New meta-analysis confirms community-managed lands match state protected areas on biodiversity outcomes",
-      "date": "2026-04-03",
+      "headline": "Market consensus firms on African ARR permanence risk - 40-year horizons viable across majority of Sub-Saharan geographies",
+      "date": "2025-11-01",
       "url": null,
       "status": "approved",
-      "summary": "A meta-analysis published in Nature Sustainability covering 600 sites across 40 countries found that community-managed lands perform equivalently to state protected areas on key biodiversity outcome measures, at 60% lower per-hectare cost. The findings challenge the dominant NGO-led, state-backed conservation model and add significant weight to community co-ownership structures as a financing and governance standard. CCB Gold certification was identified as the strongest proxy indicator for community governance quality."
+      "summary": "Emerging market consensus across project developers, validators, and buyers in late 2025 confirmed that 40-year carbon permanence commitments are viable across the majority of Sub-Saharan African ARR project geographies under median climate scenarios, with fire and drought risk concentrated in specific arid-margin areas. The findings support the long-duration credit structures used in VM0047-methodology projects and counter the argument that African ARR credits carry inherently higher permanence risk than temperate-zone equivalents - a material consideration for compliance-grade offtake negotiations."
+    },
+    {
+      "id": "icvcm-vm0047-v11-2025-10",
+      "domain": "Carbon markets",
+      "headline": "ICVCM approves VM0047 v1.1 - expanded scope allows degraded forest land inclusion",
+      "date": "2025-10-01",
+      "url": "https://www.icvcm.org/integrity-council-approves-six-carbon-dioxide-removal-methodologies/",
+      "status": "approved",
+      "summary": "On 1 October 2025 ICVCM approved the updated VM0047 v1.1 under its Core Carbon Principles Assessment Framework, extending CCP eligibility to the revised methodology published in May 2025. The update allows ARR project activities on forested land not previously managed for wood products, broadening the eligible project universe considerably, and permits removal of pre-existing woody biomass where fully accounted for in project emissions. Both v1.0 and v1.1 projects now carry CCP labels. 51 million CCP-approved credits were in circulation across all approved methodologies as of October 2025."
+    },
+    {
+      "id": "keystone-partnership-unga-2025-09",
+      "domain": "Biodiversity policy",
+      "headline": "Africa Keystone Protected Area Partnership formally launched at UNGA - 20 governments commit",
+      "date": "2025-09-01",
+      "url": "https://africakeystones.org",
+      "status": "approved",
+      "summary": "The Africa Keystone Protected Area Partnership was formally launched at the United Nations General Assembly in September 2025. The presidents of Botswana, Mozambique, Namibia, and South Africa led the announcement, with 20 African governments signing as country champions. Founding NGO partners are African Parks, WCS, and the Frankfurt Zoological Society, with the Rob Walton Foundation as primary funder. The partnership targets permanent protection of all 162 Keystone Protected Areas by 2035 at a cost of $1.2bn per year, updated from the $750M figure in the original April 2025 research paper."
+    },
+    {
+      "id": "corsia-vm0047-eligibility-2025-09",
+      "domain": "Carbon markets",
+      "headline": "CORSIA eligibility assessments ongoing for 2024-2026 compliance period - VM0047 decision pending",
+      "date": "2025-09-01",
+      "url": "https://icvcm.org/assessment-status/",
+      "status": "approved",
+      "summary": "The Carbon Offsetting and Reduction Scheme for International Aviation continued eligibility assessments for its 2024-2026 compliance period through 2025. ICVCM confirmed its CORSIA assessments are ongoing with interim and conditional approvals to be taken into account within its Assessment Framework. A positive CORSIA determination for VM0047 would open aviation sector demand for ARR credits - a significant additional offtake pathway that would materially affect pricing and liquidity for ARR projects across Africa."
+    },
+    {
+      "id": "biodiversity-credit-framework-2025-09",
+      "domain": "Conservation finance",
+      "headline": "CBD advisory panel publishes biodiversity credit framework - African landscapes identified as priority supply",
+      "date": "2025-09-01",
+      "url": null,
+      "status": "approved",
+      "summary": "An International Advisory Panel established under the Convention on Biological Diversity published a framework for scaling voluntary biodiversity credit markets, identifying African landscapes as a priority supply geography given their concentration of threatened species and measurable ecosystem services. The panel identified CCB Gold certification as a leading proxy indicator for biodiversity credit quality. The framework stops short of endorsing biodiversity credits as equivalent to public finance commitments but signals growing institutional legitimacy for the instrument as a complement to carbon market revenue."
+    },
+    {
+      "id": "tnc-debt-nature-africa-2025-08",
+      "domain": "Conservation finance",
+      "headline": "TNC confirms three African debt-for-nature swaps in advanced negotiation - combined value approaching $500M",
+      "date": "2025-08-01",
+      "url": null,
+      "status": "approved",
+      "summary": "The Nature Conservancy confirmed three African sovereign debt-for-nature swaps were in advanced negotiation in mid-2025, with a combined face value approaching $500 million and at least one transaction expected to close in 2026. Debt-for-nature swaps allow governments to retire a portion of external debt in exchange for ring-fenced conservation spending commitments. The mechanism has been successfully deployed in Gabon and Cabo Verde. African transactions face additional structuring complexity due to credit ratings and creditor composition, but the pipeline signals growing sovereign appetite for the instrument."
+    },
+    {
+      "id": "ghana-itmo-2025-07",
+      "domain": "Carbon markets",
+      "headline": "Ghana completes Africa first ITMO issuance - 11,733 units transferred to Switzerland under Article 6.2",
+      "date": "2025-07-07",
+      "url": "https://www.klik.ch/en/news/news-article/first-itmo-transfer-switzerland-ghana",
+      "status": "approved",
+      "summary": "On 7 July 2025, Ghana issued 11,733 ITMOs to the Swiss KliK Foundation under its bilateral Article 6.2 agreement - the first ITMO issuance from any mitigation activity in Africa and the first globally from a clean cookstove project. Generated through the Transformative Cookstove Activity in Rural Ghana, implemented by Envirofit and ACT Group, the transaction confirms the Article 6.2 architecture is operationally functional in an African context. Ghana is only the second country globally to complete an ITMO transfer for NDC use - directly material for South Africa Article 6.2 pathway development."
+    },
+    {
+      "id": "vcm-compliance-premium-2025-06",
+      "domain": "Carbon markets",
+      "headline": "Compliance premium over voluntary credits widens as Article 6.2 demand tier emerges",
+      "date": "2025-06-01",
+      "url": null,
+      "status": "approved",
+      "summary": "Analysis across carbon market participants in mid-2025 confirmed CCP-labelled credits trading at material premiums to non-CCP equivalents, with the gap widening further for credits carrying Article 6.2 government authorisation and corresponding adjustments. The compliance pathway is creating a two-tier market: CCP-eligible, Article 6.2-authorised credits commanding the highest prices, and legacy voluntary credits at the bottom. African ARR projects with VM0047 methodology and an Article 6.2 authorisation pathway sit in the highest-value tier of the emerging market structure."
+    },
+    {
+      "id": "wyss-african-parks-renewal-2025-06",
+      "domain": "Funding",
+      "headline": "Wyss Foundation renews major African Parks commitment - Malawi and Rwanda programmes confirmed",
+      "date": "2025-06-01",
+      "url": "https://www.africanparks.org/about-us/our-partners",
+      "status": "approved",
+      "summary": "The Wyss Foundation renewed its major commitment to African Parks in 2025, with Malawi and Rwanda programmes confirmed as primary beneficiaries. The Wyss Foundation provided $65 million to African Parks in 2017 and has remained a core strategic partner across Liwonde, Akagera, and related parks. Its continued commitment signals investor confidence in the African Parks management model and the long-term capital case for the Keystone Protected Area portfolio."
+    },
+    {
+      "id": "gbff-capitalization-2025-06",
+      "domain": "Conservation finance",
+      "headline": "Global Biodiversity Framework Fund reaches $400M in pledges against $20bn target - structural finance gap exposed",
+      "date": "2025-06-01",
+      "url": "https://www.cbd.int/gbf/fund",
+      "status": "approved",
+      "summary": "The Global Biodiversity Framework Fund reported total pledges of approximately $400 million by mid-2025 - a fraction of the $20 billion annual target that developed countries committed to by 2025. The shortfall reinforces the structural case for blended finance, carbon markets, and debt-for-nature mechanisms as the primary delivery vehicles for conservation finance, and directly validates the private capital mobilisation model underpinning the Keystone Partnership."
+    },
+    {
+      "id": "30x30-progress-2025-05",
+      "domain": "Biodiversity policy",
+      "headline": "First formal 30x30 progress report - 17.6% of land and 8.4% of ocean protected, pace insufficient",
+      "date": "2025-05-01",
+      "url": "https://www.cbd.int",
+      "status": "approved",
+      "summary": "The first formal COP progress report on the Kunming-Montreal 30x30 target showed 17.6% of global land and 8.4% of the ocean under formal protection - well short of the 2030 targets. African nations collectively protect approximately 16% of their land area. The report identifies effective management rather than boundary designation as the critical gap, directly reinforcing the case that protected area management quality is the binding constraint on biodiversity outcomes and the central argument behind the Keystone Partnership."
+    },
+    {
+      "id": "cif-nature-kenya-zambezi-2025-05",
+      "domain": "Conservation finance",
+      "headline": "Climate Investment Funds endorses $143M nature, people and climate plans for Kenya and Zambezi Basin",
+      "date": "2025-05-01",
+      "url": "https://www.cif.org/news/cif-endorses-143-million-nature-brazil-kenya-and-zambezi-river-basin",
+      "status": "approved",
+      "summary": "The Climate Investment Funds endorsed a $143 million investment plan under its Nature, People and Climate programme, with Kenya and the Zambezi River Basin as two of three target landscapes. IFC is a co-financing and implementation partner alongside the African Development Bank and World Bank. The Zambezi investment includes protected area management across Zambia, Zimbabwe, and Mozambique - directly overlapping with multiple Keystone Protected Area sites including Kafue, Lower Zambezi, and Gonarezhou."
+    },
+    {
+      "id": "usaid-conservation-cuts-2025-04",
+      "domain": "Africa political risk",
+      "headline": "USAID dismantling eliminates $693M in annual African biodiversity and forestry funding - conservation programmes shut down across continent",
+      "date": "2025-04-01",
+      "url": "https://e360.yale.edu/features/usaid-cuts-conservation",
+      "status": "approved",
+      "summary": "The Trump administration dismantling of USAID in early 2025 terminated approximately $375 million in annual international biodiversity programme funding across 60 countries and $318 million in forestry investments - a combined loss of nearly $700 million that represented one of the largest single sources of African conservation finance. Conservation programmes protecting elephants in Tanzania, great apes and national parks in central Africa, and watersheds across Sub-Saharan Africa were among those forced to shut down or operate on emergency private funding. USAID disbursements more than halved to $32 billion in 2025 as the State Department took over management. The cuts have accelerated interest in market-based alternatives including carbon finance and debt-for-nature mechanisms as replacement capital sources."
+    },
+    {
+      "id": "acmi-roadmap-2025-04",
+      "domain": "Carbon markets",
+      "headline": "African Carbon Markets Initiative advances implementation roadmap - ARR, REDD+ and clean cooking identified as primary supply pillars",
+      "date": "2025-04-01",
+      "url": "https://africacarbonmarkets.org",
+      "status": "approved",
+      "summary": "The African Carbon Markets Initiative, co-chaired by the African Union, advanced its implementation roadmap in early 2025, identifying ARR, REDD+ and clean cooking as the three primary methodological pillars for scaling African carbon supply. Nigeria, Kenya, and Ghana are identified as near-term scale markets. The initiative directly validates the project pipeline geography across Canopy tracked projects and the commercial thesis behind VM0047-methodology reforestation credits in Sub-Saharan Africa."
+    },
+    {
+      "id": "rwf-hopman-appointed-2025",
+      "domain": "Funding",
+      "headline": "Rob Walton Foundation appoints first Executive Director - Duko Hopman joins from McKinsey Natural Capital",
+      "date": "2025-04-01",
+      "url": "https://robwaltonfoundation.org/news/welcoming-duko-hopman",
+      "status": "approved",
+      "summary": "The Rob Walton Foundation appointed Duko Hopman as its first Executive Director in 2025. Hopman joins from McKinsey where he led global natural capital and conservation finance initiatives with Africa as his primary geography. RWF is the primary funder behind the Africa Keystone Protected Area Partnership and made a $100 million five-year commitment to African Parks in 2021 - the largest endowment gift in African Parks history. The appointment of a permanent Executive Director signals a shift toward more structured programmatic deployment of the Foundation capital across its African conservation portfolio."
+    },
+    {
+      "id": "tnfd-corporate-adoption-2025-03",
+      "domain": "Biodiversity policy",
+      "headline": "TNFD adoption crosses 500 corporate reporters - African supply chain exposure disclosures accelerating",
+      "date": "2025-03-01",
+      "url": "https://tnfd.global",
+      "status": "approved",
+      "summary": "The Taskforce on Nature-related Financial Disclosures reported over 500 companies and financial institutions committed to TNFD-aligned reporting by March 2025, up from 320 at the framework launch in 2023. African supply chain exposure - particularly deforestation-linked commodities from the Congo Basin, East Africa, and the Greater Limpopo - features prominently in early corporate reports. TNFD adoption creates institutional demand for credible African nature data and project intelligence."
+    },
+    {
+      "id": "cop16-rome-resumed-2025-02",
+      "domain": "Biodiversity policy",
+      "headline": "COP16 resumed in Rome - $200bn annual biodiversity finance target agreed by 2030",
+      "date": "2025-02-27",
+      "url": "https://www.cbd.int",
+      "status": "approved",
+      "summary": "The resumed COP16 session held at FAO headquarters in Rome from 25 to 27 February 2025 reached agreement on a resource mobilisation strategy targeting $200 billion annually for biodiversity by 2030. A monitoring framework was also adopted to track country progress on the 30x30 targets. The agreement gives formal UN backing to the scale of conservation financing required globally, of which the Africa Keystone Protected Area Partnership $1.2bn annual requirement is a material component."
+    },
+    {
+      "id": "icvcm-vm0047-v1-2024-12",
+      "domain": "Carbon markets",
+      "headline": "ICVCM approves VM0047 ARR as first nature-based methodology to meet Core Carbon Principles",
+      "date": "2024-12-12",
+      "url": "https://www.icvcm.org",
+      "status": "approved",
+      "summary": "The Integrity Council for the Voluntary Carbon Market approved Verra VM0047 Afforestation, Reforestation and Revegetation methodology on 12 December 2024 as meeting its Core Carbon Principles Assessment Framework - the first nature-based solution methodology to achieve CCP status. Credits issued under VM0047 now carry the CCP label, the market highest integrity signal. 54 projects were in the registration pipeline at the time of approval, expected to generate 6.5 million credits annually. VM0047 is the methodology underpinning Save the Sand."
+    },
+    {
+      "id": "elephant-migration-south-sudan-2024-12",
+      "domain": "Science",
+      "headline": "African Parks confirms world largest land mammal migration in South Sudan - six million animals",
+      "date": "2024-12-01",
+      "url": "https://www.africanparks.org/annual-report-2024",
+      "status": "approved",
+      "summary": "African Parks and the President of South Sudan formally confirmed the Great Nile Migration as the world largest land mammal migration, involving over six million white-eared kob, tiang, and Mongalla gazelle crossing between South Sudan and Ethiopia annually. The announcement coincided with a new management agreement for Ethiopia Gambella National Park, forming a continuous management corridor with Boma and Badingilo across the border. Both Boma and Badingilo are Keystone Protected Areas managed by African Parks. The migration represents a globally significant ecological asset with ecotourism and carbon sequestration potential."
+    },
+    {
+      "id": "cop29-article6-2024-11",
+      "domain": "Carbon markets",
+      "headline": "COP29 declares Article 6 fully operational after decade of stalled negotiations",
+      "date": "2024-11-23",
+      "url": "https://unfccc.int/news/cop29-agrees-international-carbon-market-standards",
+      "status": "approved",
+      "summary": "COP29 in Baku adopted the final rulebook for both Article 6.2 bilateral trading and the Article 6.4 UN-supervised mechanism, with the COP29 presidency declaring full operationalisation of international carbon markets. The agreement formalises the framework within which all African ITMO deals now operate. Critics note the rules contain no enforcement mechanism beyond public disclosure, and that demand rather than supply remains the binding constraint on market growth. 106 bilateral arrangements are now formalised globally."
+    },
+    {
+      "id": "cop16-cali-suspended-2024-11",
+      "domain": "Biodiversity policy",
+      "headline": "COP16 suspended without agreement on biodiversity finance - $700bn annual gap remains unfunded",
+      "date": "2024-11-02",
+      "url": "https://www.cbd.int/article/agreement-reached-cop-16",
+      "status": "approved",
+      "summary": "The UN Biodiversity Conference COP16 in Cali, Colombia was suspended on 2 November 2024 after losing quorum during overnight negotiations on resource mobilisation. Countries failed to agree on how to close the $700bn annual biodiversity finance gap or establish a new dedicated fund. Three outcomes were achieved: the Cali Fund for benefit-sharing from digital sequence information, a permanent Subsidiary Body for Indigenous Peoples and local communities, and agreement on marine protected area boundaries. Finance discussions were deferred to a resumed session in Rome."
+    },
+    {
+      "id": "ipbes-business-biodiversity-2024-11",
+      "domain": "Science",
+      "headline": "IPBES Business and Biodiversity Assessment - more than half of global GDP moderately or highly dependent on nature",
+      "date": "2024-11-01",
+      "url": "https://www.ipbes.net",
+      "status": "approved",
+      "summary": "The Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services published its Business and Biodiversity Assessment finding that more than half of global GDP is moderately or highly dependent on nature and ecosystem services. The report identifies the economic case for corporate nature investment as stronger than the ethical case alone, and calls for policy frameworks that make biodiversity degradation economically irrational. The assessment directly supports the commercial thesis behind ecosystem service payment mechanisms including carbon and biodiversity credits in African landscapes."
     }
   ],
-  "updated": "2026-04-10"
+  "updated": "2026-04-11"
 }

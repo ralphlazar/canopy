@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keystone Protected Areas - Canopy</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --ks: #5c3317; --ks-pale: #faf0e8; --ks-mid: rgba(92,51,23,0.15);
+    --ks-border: rgba(92,51,23,0.25);
+    --green: #1a4a2e; --green-pale: #e8f0eb;
+    --ap: #2a4a7a; --ap-pale: #eef2fa;
+    --carbon: #1a6b3c; --carbon-pale: #e6f4ec;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-link { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
+  .nav-link:hover { color: var(--text); }
+  .nav-link.active { color: var(--ks); font-weight: 600; }
+
+  /* HERO */
+  .hero { max-width: 900px; margin: 0 auto; padding: 52px 40px 40px; border-bottom: 1px solid var(--border); }
+  .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ks); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .ks-num { width: 22px; height: 22px; border-radius: 50%; background: var(--ks); color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hero-title { font-size: 34px; font-weight: 600; letter-spacing: -0.025em; color: var(--text); line-height: 1.1; margin-bottom: 16px; }
+  .hero-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; max-width: 680px; margin-bottom: 24px; }
+  .hero-source { font-size: 12px; color: var(--text-dim); }
+  .hero-source a { color: var(--ks); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); max-width: 900px; margin: 0 auto; }
+  .stat { padding: 24px 40px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-n { font-size: 26px; font-weight: 700; color: var(--ks); letter-spacing: -0.025em; margin-bottom: 4px; }
+  .stat-l { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+  /* TOOLBAR */
+  .toolbar { max-width: 900px; margin: 0 auto; padding: 14px 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .search-box { position: relative; }
+  .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+  .search-input { font-size: 13px; padding: 7px 12px 7px 30px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); font-family: inherit; outline: none; width: 240px; transition: border-color 0.15s; }
+  .search-input:focus { border-color: var(--ks); background: var(--bg); }
+  .count-note { font-size: 12px; color: var(--text-dim); }
+
+  /* MAP */
+  .map-wrap { max-width: 900px; margin: 0 auto; padding: 20px 40px; border-bottom: 1px solid var(--border); }
+  .map-svg-wrap { max-width: 560px; margin: 0 auto; }
+  .map-svg-wrap svg { width: 100%; height: auto; display: block; }
+  .map-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; justify-content: center; }
+  .map-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted); }
+  .map-legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .map-hint { font-size: 11px; color: var(--text-dim); text-align: center; margin-top: 6px; }
+  .map-tooltip { position: fixed; background: var(--text); color: #fff; font-size: 12px; padding: 6px 10px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.1s; white-space: nowrap; z-index: 300; line-height: 1.5; }
+  .map-tooltip.visible { opacity: 1; }
+
+  /* TABLE */
+  .table-wrap { max-width: 900px; margin: 0 auto; }
+  .table-header { display: grid; grid-template-columns: 1fr 180px; gap: 12px; padding: 10px 40px; background: var(--bg3); border-bottom: 2px solid var(--border); }
+  .th { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+  .th:hover { color: var(--ks); }
+  .th.active { color: var(--ks); }
+  .sort-arrow { font-size: 9px; opacity: 0.4; }
+  .th.active .sort-arrow { opacity: 1; }
+  .pa-list { }
+  .pa-row { display: grid; grid-template-columns: 1fr 180px; gap: 12px; padding: 12px 40px; border-bottom: 1px solid var(--border); align-items: center; cursor: pointer; transition: background 0.1s; }
+  .pa-row:hover { background: var(--ks-pale); }
+  .pa-row.active { background: var(--ks-pale); border-left: 3px solid var(--ks); padding-left: 37px; }
+  .pa-name { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; display: flex; align-items: center; gap: 7px; }
+  .pa-country { font-size: 12px; color: var(--text-dim); margin-top: 1px; }
+  .pa-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: var(--ks-pale); color: var(--ks); font-weight: 600; border: 1px solid var(--ks-border); white-space: nowrap; }
+  .pa-empty { padding: 40px; text-align: center; color: var(--text-dim); font-size: 13px; }
+
+  /* Carbon dot indicator */
+  .carbon-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--carbon); flex-shrink: 0; display: inline-block; }
+  .carbon-dot-wrap { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; color: var(--carbon); font-weight: 600; }
+
+  /* AP badge in table */
+  .ap-tag { font-size: 9px; padding: 2px 6px; border-radius: 4px; background: var(--ap-pale); color: var(--ap); font-weight: 700; letter-spacing: 0.04em; border: 1px solid rgba(42,74,122,0.2); flex-shrink: 0; }
+
+  /* SIDEBAR OVERLAY */
+  .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+  .sidebar-overlay.open { opacity: 1; pointer-events: all; }
+
+  /* SIDEBAR PANEL */
+  .sidebar { position: fixed; top: 0; right: 0; width: 420px; max-width: 100vw; height: 100vh; background: var(--bg); z-index: 201; transform: translateX(100%); transition: transform 0.28s cubic-bezier(0.22,1,0.36,1); overflow-y: auto; box-shadow: -8px 0 32px rgba(0,0,0,0.12); }
+  .sidebar.open { transform: translateX(0); }
+
+  .sb-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 10; }
+  .sb-close { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--text-muted); transition: all 0.15s; }
+  .sb-close:hover { background: var(--bg3); color: var(--text); }
+  .sb-name { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); line-height: 1.15; margin-bottom: 10px; padding-right: 36px; }
+  .sb-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .sb-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; }
+  .sb-badge-country { background: var(--bg3); color: var(--text-muted); border: 1px solid var(--border); }
+  .sb-badge-eco { background: var(--ks-pale); color: var(--ks); border: 1px solid var(--ks-border); }
+  .sb-badge-ap { background: var(--ap-pale); color: var(--ap); border: 1px solid rgba(42,74,122,0.25); }
+  .sb-badge-carbon { background: var(--carbon-pale); color: var(--carbon); border: 1px solid rgba(26,107,60,0.25); }
+
+  .sb-body { padding: 24px 28px; }
+  .sb-section { margin-bottom: 24px; }
+  .sb-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 6px; }
+
+  /* AP Manager callout */
+  .sb-ap-callout { background: var(--ap-pale); border: 1px solid rgba(42,74,122,0.2); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; display: flex; gap: 12px; align-items: flex-start; }
+  .sb-ap-icon { font-size: 20px; flex-shrink: 0; }
+  .sb-ap-text { }
+  .sb-ap-title { font-size: 13px; font-weight: 700; color: var(--ap); margin-bottom: 2px; }
+  .sb-ap-sub { font-size: 12px; color: #4a6090; line-height: 1.5; }
+
+  /* Carbon project callout */
+  .sb-carbon-callout { background: var(--carbon-pale); border: 1px solid rgba(26,107,60,0.2); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; }
+  .sb-carbon-title { font-size: 12px; font-weight: 700; color: var(--carbon); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .sb-carbon-project { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .sb-carbon-link { font-size: 12px; color: var(--carbon); text-decoration: underline; text-underline-offset: 2px; }
+
+  .sb-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .sb-size { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+  .sb-size-unit { font-size: 13px; font-weight: 400; color: var(--text-muted); }
+
+  .sb-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ks); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+  .sb-link:hover { color: var(--text); }
+  .sb-source { font-size: 11px; color: var(--text-dim); line-height: 1.6; padding-top: 16px; border-top: 1px solid var(--border); margin-top: 8px; }
+
+  /* PARTNERSHIP NOTE */
+  .partnership { max-width: 900px; margin: 0 auto; padding: 28px 40px 40px; border-top: 1px solid var(--border); }
+  .partnership-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+  .partnership-text { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 680px; }
+  .partnership-text a { color: var(--ks); text-decoration: underline; text-underline-offset: 3px; }
+
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 900px; margin: 0 auto; }
+  .footer-note { font-size: 12px; color: var(--text-dim); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
+  .footer-link:hover { color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 36px 24px 28px; }
+    .hero-title { font-size: 26px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat { padding: 18px 24px; }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
+    .toolbar { padding: 12px 24px; }
+    .search-input { width: 100%; }
+    .map-wrap { padding: 16px 24px; }
+    .table-header { display: none; }
+    .pa-row { grid-template-columns: 1fr auto; padding: 12px 24px; }
+    .sidebar { width: 100vw; }
+    .partnership { padding: 24px 24px 36px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="map-tooltip" id="map-tooltip"></div>
+<div class="sidebar-overlay" id="sb-overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR PANEL -->
+<div class="sidebar" id="sidebar">
+  <div class="sb-header">
+    <button class="sb-close" onclick="closeSidebar()" aria-label="Close">&#10005;</button>
+    <div class="sb-name" id="sb-name">Protected Area</div>
+    <div class="sb-badges" id="sb-badges"></div>
+  </div>
+  <div class="sb-body" id="sb-body"></div>
+</div>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">
+      <svg width="28" height="28" viewBox="0 0 28 28">
+        <rect width="28" height="28" fill="#f5f5f2" rx="4"/>
+        <text x="14" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a2e" font-family="-apple-system,sans-serif">C</text>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">Canopy</div>
+      <div class="logo-sub">African Conservation Finance</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Policy</a>
+    <a class="nav-link" href="index.html">Projects</a>
+    <a class="nav-link" href="index.html">Intel.</a>
+    <a class="nav-link" href="index.html">Funding</a>
+    <a class="nav-link" href="index.html">Who's Who</a>
+    <a class="nav-link" href="cairn.html">CAIRN</a>
+    <span class="nav-link active">Keystones</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow"><span class="ks-num">&#9670;</span>Keystone Protected Areas</div>
+  <h1 class="hero-title">The 162 that hold Africa together</h1>
+  <p class="hero-desc">Just 2% of Africa's protected areas - yet they contain 71% of the continent's threatened species, store 5.8 billion tonnes of carbon, and sustain water supplies for 250 million people. These are the Keystone Protected Areas identified by African Parks, WCS, and the Frankfurt Zoological Society, with support from the Rob Walton Foundation. Getting them properly funded is the central challenge of African conservation finance.</p>
+  <div class="hero-source">Source: <a href="https://africakeystones.org/s/20250409-Africa-Keystones-With-appendix.pdf" target="_blank">Keystone Protected Areas paper, April 2025</a> - Rob Walton Foundation / African Parks / WCS / Frankfurt Zoological Society. The Africa Keystone Protected Area Partnership was launched at the UN General Assembly, September 2025.</div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-n">162</div>
+    <div class="stat-l">Keystone Protected Areas across 33 countries</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n">71%</div>
+    <div class="stat-l">Of Africa's threatened vertebrate species within Keystones</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n">5.8bn t</div>
+    <div class="stat-l">Carbon stored - 43% of all carbon in Africa's protected areas</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n">$1.2bn</div>
+    <div class="stat-l">Annual funding needed to secure all 162 areas by 2035</div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="map-wrap">
+  <div class="map-svg-wrap">
+    <svg id="ks-map" viewBox="0 80 700 620"></svg>
+  </div>
+  <div class="map-legend">
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#f0d5b8"></div>1-2</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#d4956a"></div>3-5</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#b05c2a"></div>6-10</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#5c3317"></div>11+</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#e8e8e5"></div>None</div>
+  </div>
+  <div class="map-hint">Keystones per country. 33 countries represented. Click a country to filter.</div>
+</div>
+
+<!-- TABLE -->
+<div class="table-wrap">
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="search-icon">&#9906;</span>
+      <input class="search-input" id="search-input" type="text" placeholder="Search by name or country..." oninput="filterList()" autocomplete="off">
+    </div>
+    <div class="count-note" id="count-note">162 Keystone Protected Areas</div>
+  </div>
+
+  <div class="table-header">
+    <div class="th active" id="th-name" onclick="sortBy('name')">Protected Area <span class="sort-arrow" id="arr-name">&#8595;</span></div>
+    <div class="th" id="th-country" onclick="sortBy('country')">Country <span class="sort-arrow" id="arr-country">&#8595;</span></div>
+  </div>
+
+  <div class="pa-list" id="pa-list">
+    <div class="pa-empty">Loading...</div>
+  </div>
+</div>
+
+<!-- PARTNERSHIP NOTE -->
+<div class="partnership">
+  <div class="partnership-title">The Africa Keystone Protected Area Partnership</div>
+  <div class="partnership-text">Launched at the UN General Assembly in September 2025 by the Presidents of Botswana, Mozambique, Namibia, and South Africa, the Keystone Partnership aims to secure all 162 areas by 2035. Founding partners include the Rob Walton Foundation, African Parks, WCS, and the Frankfurt Zoological Society. The mechanism combines philanthropy, carbon markets, debt-for-nature swaps, and public finance. <a href="https://africakeystones.org" target="_blank">africakeystones.org</a></div>
+</div>
+
+<footer>
+  <span class="footer-note">Source: Africa Keystone Protected Areas paper, April 2025. Updated as the Partnership evolves.</span>
+  <div class="footer-links">
+    <a class="footer-link" href="index.html">Home</a>
+    <a class="footer-link" href="https://africakeystones.org" target="_blank">Keystone Partnership</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+  let allKeystones = [];
+  let currentSort = { key: 'name', dir: 1 };
+  let searchTerm = '';
+  let activeId = null;
+
+  // Carbon project display names (id -> friendly name)
+  const CARBON_PROJECT_NAMES = {
+    'kafue-zambezi-community-forest-project': 'Kafue Zambezi Community Forest Project',
+    'lower-zambezi-redd-project': 'Lower Zambezi REDD+ Project',
+    'luangwa-community-forests-project': 'Luangwa Community Forests Project',
+    'lunga-luswishi-carbon-enhancement-project': 'Lunga Luswishi Carbon Enhancement Project',
+    'comaco-landscape-management-project': 'COMACO Landscape Management Project',
+    'conkouati-douli-national-park-redd-project': 'Conkouati-Douli National Park REDD+ Project',
+    'north-pikounda-redd': 'North Pikounda REDD+',
+    'natural-forest-regeneration-for-enhanced-carbon-stocks-in-the-albertine-rift-fre': 'Natural Forest Regeneration - Albertine Rift (FRECAR)',
+  };
+
+  const COUNTRY_ISO = {
+    'Algeria':12,'Angola':24,'Benin':204,'Botswana':72,'Burkina Faso':854,
+    'Cameroon':120,'Central African Republic':140,'Chad':148,'DRC':180,
+    'Equatorial Guinea':226,'Ethiopia':231,'Gabon':266,'Ghana':288,
+    'Ivory Coast':384,'Kenya':404,'Lesotho':426,'Liberia':430,'Mali':466,
+    'Mozambique':508,'Malawi':454,'Namibia':516,'Niger':562,'Nigeria':566,
+    'Republic of Congo':178,'Rwanda':646,'Senegal':686,'South Africa':710,
+    'South Sudan':728,'Sudan':729,'Tanzania':834,'Togo':768,'Uganda':800,
+    'Zambia':894,'Zimbabwe':716
+  };
+
+  const africaISO = new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,231,232,262,266,270,288,
+    324,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,624,638,646,678,686,690,694,
+    706,710,716,728,729,732,748,768,788,800,818,834,854,894]);
+
+  const isoToName = {
+    12:'Algeria',24:'Angola',72:'Botswana',108:'Burundi',120:'Cameroon',132:'Cape Verde',
+    140:'Central African Republic',148:'Chad',174:'Comoros',178:'Republic of Congo',180:'DRC',
+    204:'Benin',226:'Equatorial Guinea',231:'Ethiopia',232:'Eritrea',262:'Djibouti',266:'Gabon',
+    270:'Gambia',288:'Ghana',324:'Guinea',384:'Ivory Coast',404:'Kenya',426:'Lesotho',430:'Liberia',
+    434:'Libya',450:'Madagascar',454:'Malawi',466:'Mali',478:'Mauritania',480:'Mauritius',
+    504:'Morocco',508:'Mozambique',516:'Namibia',562:'Niger',566:'Nigeria',624:'Guinea-Bissau',
+    646:'Rwanda',678:'Sao Tome',686:'Senegal',690:'Seychelles',694:'Sierra Leone',706:'Somalia',
+    710:'South Africa',716:'Zimbabwe',728:'South Sudan',729:'Sudan',748:'Eswatini',768:'Togo',
+    788:'Tunisia',800:'Uganda',818:'Egypt',834:'Tanzania',854:'Burkina Faso',894:'Zambia',
+    732:'Western Sahara'
+  };
+
+  function ksColor(count) {
+    if (!count) return '#e8e8e5';
+    if (count >= 11) return '#5c3317';
+    if (count >= 6)  return '#b05c2a';
+    if (count >= 3)  return '#d4956a';
+    return '#f0d5b8';
+  }
+
+  // ── SIDEBAR ──────────────────────────────────────────────────────────────────
+
+  function openSidebar(k) {
+    activeId = k.name + '|' + k.country;
+
+    // Header
+    document.getElementById('sb-name').textContent = k.name;
+
+    // Badges
+    const badgesEl = document.getElementById('sb-badges');
+    let badges = '';
+    badges += '<span class="sb-badge sb-badge-country">' + k.country + '</span>';
+    if (k.ecosystem) badges += '<span class="sb-badge sb-badge-eco">' + k.ecosystem + '</span>';
+    if (k.manager === 'African Parks') badges += '<span class="sb-badge sb-badge-ap">African Parks managed</span>';
+    if (k.carbon_project) badges += '<span class="sb-badge sb-badge-carbon">Carbon project</span>';
+    badgesEl.innerHTML = badges;
+
+    // Body
+    let html = '';
+
+    // AP callout
+    if (k.manager === 'African Parks') {
+      html += '<div class="sb-ap-callout">';
+      html += '<div class="sb-ap-icon">&#127807;</div>';
+      html += '<div class="sb-ap-text">';
+      html += '<div class="sb-ap-title">African Parks managed</div>';
+      html += '<div class="sb-ap-sub">This protected area is under a delegated management agreement with African Parks, a founding partner of the Africa Keystone Protected Area Partnership and primary grantee of the Rob Walton Foundation.</div>';
+      html += '</div></div>';
+    }
+
+    // Carbon project callout (Task 5 cross-reference)
+    if (k.carbon_project && k.carbon_project_id) {
+      const pName = CARBON_PROJECT_NAMES[k.carbon_project_id] || k.carbon_project_id;
+      html += '<div class="sb-carbon-callout">';
+      html += '<div class="sb-carbon-title">&#9679; Carbon project linked</div>';
+      html += '<div class="sb-carbon-project">' + pName + '</div>';
+      html += '<a class="sb-carbon-link" href="cairn.html" target="_blank">View CAIRN rating for this project &#8594;</a>';
+      html += '</div>';
+    }
+
+    // Description
+    if (k.description) {
+      html += '<div class="sb-section">';
+      html += '<div class="sb-label">About</div>';
+      html += '<div class="sb-desc">' + k.description + '</div>';
+      html += '</div>';
+    }
+
+    // Size + Manager row
+    html += '<div class="sb-section" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">';
+    if (k.size_km2) {
+      html += '<div>';
+      html += '<div class="sb-label">Size</div>';
+      html += '<div class="sb-size">' + k.size_km2.toLocaleString() + '<span class="sb-size-unit"> km&#178;</span></div>';
+      html += '</div>';
+    }
+    if (k.manager) {
+      html += '<div>';
+      html += '<div class="sb-label">Manager</div>';
+      html += '<div style="font-size:14px;font-weight:600;color:var(--text);margin-top:2px;">' + k.manager + '</div>';
+      html += '</div>';
+    }
+    html += '</div>';
+
+    // Protected Planet link
+    if (k.wdpa_url) {
+      html += '<div class="sb-section">';
+      html += '<div class="sb-label">Protected Planet</div>';
+      html += '<a class="sb-link" href="' + k.wdpa_url + '" target="_blank">View WDPA entry &#8599;</a>';
+      html += '</div>';
+    }
+
+    // Source note
+    html += '<div class="sb-source">';
+    html += 'Source: Africa Keystone Protected Areas paper, April 2025. Rob Walton Foundation / African Parks / WCS / Frankfurt Zoological Society. ';
+    html += '<a href="https://africakeystones.org/s/20250409-Africa-Keystones-With-appendix.pdf" target="_blank" style="color:var(--ks);text-decoration:underline;">Full paper &#8599;</a>';
+    html += '</div>';
+
+    document.getElementById('sb-body').innerHTML = html;
+
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('sb-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // Highlight active row
+    document.querySelectorAll('.pa-row').forEach(function(r) {
+      r.classList.toggle('active', r.dataset.id === activeId);
+    });
+  }
+
+  function closeSidebar() {
+    activeId = null;
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sb-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+    document.querySelectorAll('.pa-row').forEach(function(r) { r.classList.remove('active'); });
+  }
+
+  // ── LIST RENDERING ─────────────────────────────────────────────────────────
+
+  function renderList() {
+    let list = searchTerm
+      ? allKeystones.filter(function(k) {
+          return k.name.toLowerCase().includes(searchTerm) || k.country.toLowerCase().includes(searchTerm);
+        })
+      : allKeystones.slice();
+
+    list.sort(function(a, b) {
+      const va = (a[currentSort.key] || '').toLowerCase();
+      const vb = (b[currentSort.key] || '').toLowerCase();
+      return va < vb ? -currentSort.dir : va > vb ? currentSort.dir : 0;
+    });
+
+    document.getElementById('count-note').textContent = list.length + ' Keystone Protected Area' + (list.length !== 1 ? 's' : '');
+
+    const container = document.getElementById('pa-list');
+    if (!list.length) {
+      container.innerHTML = '<div class="pa-empty">No matches.</div>';
+      return;
+    }
+
+    container.innerHTML = list.map(function(k) {
+      const rowId = k.name + '|' + k.country;
+      const isAP = k.manager === 'African Parks';
+      const hasCarbon = k.carbon_project;
+
+      let nameHTML = '<span>' + k.name + '</span>';
+      if (isAP) nameHTML += ' <span class="ap-tag">AP</span>';
+      if (hasCarbon) nameHTML += ' <span class="carbon-dot-wrap"><span class="carbon-dot"></span></span>';
+
+      return '<div class="pa-row' + (activeId === rowId ? ' active' : '') + '" data-id="' + rowId + '" onclick="handleRowClick(this)">' +
+        '<div><div class="pa-name">' + nameHTML + '</div><div class="pa-country">' + k.country + '</div></div>' +
+        '<div><span class="pa-badge">' + k.country_code + '</span></div>' +
+        '</div>';
+    }).join('');
+
+    // Attach click data
+    container.querySelectorAll('.pa-row').forEach(function(row) {
+      const id = row.dataset.id;
+      const parts = id.split('|');
+      row._keystoneData = list.find(function(k) { return k.name === parts[0] && k.country === parts[1]; });
+    });
+  }
+
+  function handleRowClick(el) {
+    const k = el._keystoneData;
+    if (!k) return;
+    const rowId = k.name + '|' + k.country;
+    if (activeId === rowId) { closeSidebar(); return; }
+    openSidebar(k);
+  }
+
+  function sortBy(key) {
+    if (currentSort.key === key) { currentSort.dir *= -1; } else { currentSort.key = key; currentSort.dir = 1; }
+    document.querySelectorAll('.th').forEach(function(t) {
+      t.classList.remove('active');
+      const arr = document.getElementById('arr-' + t.id.replace('th-',''));
+      if (arr) arr.style.opacity = '0.4';
+    });
+    const th = document.getElementById('th-' + key);
+    if (th) {
+      th.classList.add('active');
+      const arr = document.getElementById('arr-' + key);
+      if (arr) { arr.innerHTML = currentSort.dir === 1 ? '&#8595;' : '&#8593;'; arr.style.opacity = '1'; }
+    }
+    renderList();
+  }
+
+  function filterList() {
+    searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
+    renderList();
+  }
+
+  // Keyboard close
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  // ── MAP ───────────────────────────────────────────────────────────────────
+
+  async function renderMap(countByCountry) {
+    const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+    const topo = await res.json();
+    const svg = d3.select('#ks-map');
+    svg.selectAll('*').remove();
+    const w = 700, h = 750;
+    const projection = d3.geoNaturalEarth1().scale(400).center([17, 2]).translate([w/2, h/2]);
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+
+    svg.selectAll('path')
+      .data(countries.features.filter(function(f) { return africaISO.has(+f.id) || +f.id === -99; }))
+      .join('path')
+      .attr('d', path)
+      .attr('fill', function(f) {
+        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        return name ? ksColor(countByCountry[name] || 0) : '#e8e8e5';
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.6)
+      .style('cursor', 'pointer')
+      .on('mouseover', function(event, f) {
+        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        if (!name) return;
+        const count = countByCountry[name] || 0;
+        const tt = document.getElementById('map-tooltip');
+        tt.innerHTML = '<strong>' + name + '</strong><br>' + (count ? count + ' Keystone PA' + (count !== 1 ? 's' : '') : 'No Keystone PAs');
+        tt.classList.add('visible');
+        d3.select(this).attr('opacity', 0.75);
+      })
+      .on('mousemove', function(event) {
+        const tt = document.getElementById('map-tooltip');
+        tt.style.left = (event.clientX + 12) + 'px';
+        tt.style.top = (event.clientY - 28) + 'px';
+      })
+      .on('mouseout', function() {
+        document.getElementById('map-tooltip').classList.remove('visible');
+        d3.select(this).attr('opacity', 1);
+      })
+      .on('click', function(event, f) {
+        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        if (!name) return;
+        const input = document.getElementById('search-input');
+        if (searchTerm === name.toLowerCase()) {
+          input.value = '';
+          searchTerm = '';
+        } else {
+          input.value = name;
+          searchTerm = name.toLowerCase();
+        }
+        renderList();
+        document.getElementById('pa-list').scrollIntoView({ behavior: 'smooth' });
+      });
+  }
+
+  // ── INIT ──────────────────────────────────────────────────────────────────
+
+  async function init() {
+    const res = await fetch('data/keystones.json');
+    const data = await res.json();
+    allKeystones = data.keystones;
+
+    const countByCountry = {};
+    allKeystones.forEach(function(k) {
+      countByCountry[k.country] = (countByCountry[k.country] || 0) + 1;
+    });
+
+    renderList();
+    renderMap(countByCountry);
+  }
+
+  init();
+</script>
+</body>
+</html>

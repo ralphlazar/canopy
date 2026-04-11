@@ -481,30 +481,34 @@
   }
   .home-card-1 { border-color: rgba(139,26,26,0.25); background: rgba(139,26,26,0.025); }
   .home-card-2 { border-color: rgba(26,74,46,0.25);  background: rgba(26,74,46,0.025); }
-  .home-card-3 { border-color: rgba(74,111,163,0.25); background: rgba(74,111,163,0.025); }
-  .home-card-4 { border-color: rgba(193,127,0,0.25);  background: rgba(193,127,0,0.025); }
+  .home-card-3 { border-color: rgba(92,51,23,0.25);  background: rgba(92,51,23,0.025); }
+  .home-card-4 { border-color: rgba(74,111,163,0.25); background: rgba(74,111,163,0.025); }
   .home-card-1:hover { border-color: rgba(139,26,26,0.5); }
   .home-card-2:hover { border-color: rgba(26,74,46,0.5); }
-  .home-card-3:hover { border-color: rgba(74,111,163,0.5); }
-  .home-card-4:hover { border-color: rgba(193,127,0,0.5); }
+  .home-card-3:hover { border-color: rgba(92,51,23,0.5); }
+  .home-card-4:hover { border-color: rgba(74,111,163,0.5); }
   .card-num-1 { background: #8b1a1a; }
   .card-num-2 { background: #1a4a2e; }
-  .card-num-3 { background: #4a6fa3; }
-  .card-num-4 { background: #c17f00; }
+  .card-num-3 { background: #5c3317; }
+  .card-num-4 { background: #4a6fa3; }
   .home-card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 18px 20px 14px;
   }
+  .home-card-1, .home-card-2, .home-card-3, .home-card-4 {
+    height: 340px;
+    overflow: hidden;
+  }
   .home-card-map {
     position: relative;
     overflow: hidden;
-    flex: 1;
+    height: 340px;
   }
   .home-card-map svg {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     background: var(--bg2);
   }
@@ -613,6 +617,8 @@
   @media (max-width: 768px) {
     .home-hero { padding: 32px 24px 24px; }
     .home-grid { grid-template-columns: 1fr; padding: 0 24px 32px; }
+    .home-card-7 { grid-column: span 1; }
+    .home-card-1, .home-card-2, .home-card-3, .home-card-4 { height: auto; overflow: visible; }
     .home-card-map { height: 210px; display: flex; align-items: center; justify-content: flex-end; }
     .home-card-map svg { width: auto; height: 100%; max-width: 55%; }
   }
@@ -763,6 +769,16 @@
   .cairn-tags { display: flex; gap: 6px; flex-wrap: wrap; padding: 14px 20px 20px; }
   .cairn-tag { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: rgba(74,42,107,0.08); color: #4a2a6b; font-weight: 600; }
 
+  /* FUNDING INSTRUMENTS (now card 7) */
+  .home-card-7 { border-color: rgba(193,127,0,0.25); background: rgba(193,127,0,0.025); grid-column: span 2; }
+  .home-card-7:hover { border-color: rgba(193,127,0,0.5); }
+  .card-num-7 { background: #c17f00; }
+  .home-card-7 .home-card-badges { flex-direction: row; flex-wrap: wrap; gap: 10px; padding: 0 20px 20px; }
+  .ks-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 0 20px 20px; border-radius: 8px; overflow: hidden; }
+  .ks-stat { background: var(--bg); padding: 12px 14px; }
+  .ks-stat-n { font-size: 18px; font-weight: 700; color: #5c3317; letter-spacing: -0.02em; }
+  .ks-stat-l { font-size: 10px; color: var(--text-dim); line-height: 1.3; margin-top: 2px; }
+
   .ww-list-header { display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; padding: 10px 40px; max-width: 1100px; margin: 0 auto; border-bottom: 2px solid var(--border); background: var(--bg3); border-top: 1px solid var(--border); }
   .ww-col { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
   .ww-col:hover { color: var(--text); }
@@ -845,10 +861,11 @@
   <div class="nav-links">
     <span class="nav-link" onclick="showView('policy'); activatePolicyMap();">Policy</span>
     <span class="nav-link" onclick="showView('projects'); activateProjMap();">Projects</span>
+    <span class="nav-link" onclick="window.location.href='keystones.html'" style="color:#5c3317;font-weight:600;">Keystones</span>
     <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
-    <span class="nav-link" onclick="showView('instruments')">Funding</span>
     <span class="nav-link" onclick="showView('whowho')">Who's Who</span>
     <span class="nav-link" onclick="window.location.href='cairn.html'" style="color:#4a2a6b;font-weight:600;">CAIRN</span>
+    <span class="nav-link" onclick="showView('instruments')">Funding</span>
     <div class="search-wrap">
       <span class="search-icon">&#9906;</span>
       <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
@@ -871,10 +888,11 @@
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-item" onclick="mobileNav('policy')"><span class="mobile-menu-num" style="background:#8b1a1a">1</span>Policy Tracker</div>
   <div class="mobile-menu-item" onclick="mobileNav('projects')"><span class="mobile-menu-num" style="background:#1a4a2e">2</span>Projects</div>
-  <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">3</span>Intelligence</div>
-  <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">4</span>Funding Instruments</div>
+  <div class="mobile-menu-item" onclick="window.location.href='keystones.html'"><span class="mobile-menu-num" style="background:#5c3317">3</span>Keystone Protected Areas</div>
+  <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">4</span>Intelligence</div>
   <div class="mobile-menu-item" onclick="mobileNav('whowho')"><span class="mobile-menu-num" style="background:#1a5c5c">5</span>Who's Who</div>
   <div class="mobile-menu-item" onclick="window.location.href='cairn.html'"><span class="mobile-menu-num" style="background:#4a2a6b">6</span>CAIRN</div>
+  <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">7</span>Funding Instruments</div>
   <div class="mobile-menu-divider"></div>
   <div class="mobile-menu-sub" onclick="mobileNav('about')">About</div>
   <div class="mobile-menu-sub">Subscribe to brief</div>
@@ -918,7 +936,7 @@
           <div class="home-card-map-top">
             <div>
               <div class="home-card-map-title"><span class="card-num card-num-2">2</span>Projects Tracker</div>
-              <div class="home-card-map-sub" id="mini-proj-stat"><span class="live-num">261</span> projects tracked across Africa</div>
+              <div class="home-card-map-sub" id="mini-proj-stat"><span class="live-num">148</span> projects tracked across Africa</div>
             </div>
             <div class="home-card-map-cta">Open -></div>
           </div>
@@ -931,40 +949,43 @@
       </div>
     </div>
 
-    <!-- Intelligence -->
-    <div class="home-card home-card-3" onclick="showView('intelligence');">
+    <!-- Keystones PA - card 3 with map -->
+    <div class="home-card home-card-3" onclick="window.location.href='keystones.html'">
+      <div class="home-card-map">
+        <svg id="mini-ks-map" viewBox="0 0 700 750"></svg>
+        <div class="home-card-map-overlay">
+          <div class="home-card-map-top">
+            <div>
+              <div class="home-card-map-title"><span class="card-num card-num-3">3</span>Keystone Protected Areas</div>
+              <div class="home-card-map-sub">Africa's 162 most irreplaceable protected areas</div>
+            </div>
+            <div class="home-card-map-cta">Open -></div>
+          </div>
+          <div class="home-card-map-bottom">
+            <span class="hcl-swatch" style="background:#f0d5b8"></span>1-2
+            <span class="hcl-swatch" style="background:#d4956a;margin-left:8px"></span>3-5
+            <span class="hcl-swatch" style="background:#b05c2a;margin-left:8px"></span>6-10
+            <span class="hcl-swatch" style="background:#5c3317;margin-left:8px"></span>11+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intelligence - card 4, same height as KPA card -->
+    <div class="home-card home-card-4" onclick="showView('intelligence');">
       <div class="home-card-header">
         <div>
-          <div class="home-card-map-title"><span class="card-num card-num-3">3</span>Intelligence</div>
-          <div class="home-card-map-sub">Weekly signals from across the landscape</div>
+          <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Intelligence</div>
+          <div class="home-card-map-sub">Signals from across the conservation finance landscape</div>
         </div>
         <div class="home-card-map-cta">Open -></div>
       </div>
-      <div class="home-card-intel" id="home-intel-list">
+      <div class="home-card-intel" id="home-intel-list" style="flex:1;overflow:hidden;">
         <div class="loading">Loading...</div>
       </div>
     </div>
 
-    <!-- Funding instruments -->
-    <div class="home-card home-card-4" onclick="showView('instruments');">
-      <div class="home-card-header">
-        <div>
-          <div class="home-card-map-title"><span class="card-num card-num-4">4</span>Funding Instruments</div>
-          <div class="home-card-map-sub" id="home-inst-stat">22 instruments indexed</div>
-        </div>
-        <div class="home-card-map-cta">Open -></div>
-      </div>
-      <div class="home-card-badges">
-        <span class="inst-badge b-voluntary">Voluntary market</span>
-        <span class="inst-badge b-compliance">Compliance market</span>
-        <span class="inst-badge b-sovereign">Sovereign</span>
-        <span class="inst-badge b-blended">Blended finance</span>
-        <span class="inst-badge b-philanthropic">Philanthropic</span>
-        <span class="inst-badge b-emerging">Emerging</span>
-      </div>
-    </div>
-
-    <!-- Who's Who -->
+    <!-- Who's Who - card 5 -->
     <div class="home-card home-card-5" onclick="showView('whowho');">
       <div class="home-card-header">
         <div>
@@ -978,7 +999,7 @@
       </div>
     </div>
 
-    <!-- CAIRN -->
+    <!-- CAIRN - card 6 -->
     <div class="home-card home-card-6" onclick="window.location.href='cairn.html'">
       <div class="home-card-header">
         <div>
@@ -1003,6 +1024,25 @@
       </div>
     </div>
 
+    <!-- Funding Instruments - card 7, full width -->
+    <div class="home-card home-card-7" onclick="showView('instruments');">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-7">7</span>Funding Instruments</div>
+          <div class="home-card-map-sub" id="home-inst-stat">22 instruments indexed</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+      <div class="home-card-badges">
+        <span class="inst-badge b-voluntary">Voluntary market</span>
+        <span class="inst-badge b-compliance">Compliance market</span>
+        <span class="inst-badge b-sovereign">Sovereign</span>
+        <span class="inst-badge b-blended">Blended finance</span>
+        <span class="inst-badge b-philanthropic">Philanthropic</span>
+        <span class="inst-badge b-emerging">Emerging</span>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
@@ -1019,7 +1059,7 @@
   <div class="page-header">
     <div class="page-back" onclick="showView('home')">&#8592; Back</div>
     <div class="page-title">Projects Tracker</div>
-    <div class="page-sub"><span class="live-num" id="proj-page-count">261</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
+    <div class="page-sub"><span class="live-num" id="proj-page-count">148</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
   </div>
   <div class="view-toggle">
     <button class="toggle-btn active" onclick="setProjView('map',this)">Map</button>
@@ -1205,7 +1245,7 @@
   <div class="about-body">
     <p class="about-lead">Canopy is a public resource on conservation finance in Africa.</p>
 
-    <p class="about-p">It covers 261 tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
+    <p class="about-p">It covers 148 tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
 
     <p class="about-p">It is built for funders, family offices, and advisors who need to understand the landscape before committing capital - and for anyone tracking what is actually happening at the frontier of conservation finance.</p>
 
@@ -1288,7 +1328,7 @@
     );
   }
 
-  let allProjects = [], allInstruments = [], allPolicy = [], allWhosWho = [];
+  let allProjects = [], allInstruments = [], allPolicy = [], allWhosWho = [], allKeystones = [];
   let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all', currentWWFilter = 'all';
 
   const instCatLabel = { voluntary:'Voluntary market', compliance:'Compliance market', sovereign:'Sovereign', blended:'Blended finance', philanthropic:'Philanthropic', emerging:'Emerging' };
@@ -1494,16 +1534,17 @@
   // LOAD
   async function load() {
     try {
-      const [pR,iR,instR,polR,wwR] = await Promise.all([
+      const [pR,iR,instR,polR,wwR,ksR] = await Promise.all([
         fetch('data/projects.json'), fetch('data/intelligence.json?v='+Date.now()),
         fetch('data/instruments.json'), fetch('data/policy.json'),
-        fetch('data/whos_who.json')
+        fetch('data/whos_who.json'), fetch('data/keystones.json')
       ]);
-      const [pd,id,instd,pold,wwd] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json(),wwR.json()]);
+      const [pd,id,instd,pold,wwd,ksd] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json(),wwR.json(),ksR.json()]);
 
       allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
       allIntelligence = id.intelligence.filter(i=>i.status==='approved');
       allWhosWho = wwd.profiles;
+      allKeystones = ksd.keystones;
 
       // home who's who feed
       const homeWW = allWhosWho.filter(p=>p.verified).slice().sort((a,b) => surname(a.name).localeCompare(surname(b.name))).slice(0,4);
@@ -1517,8 +1558,8 @@
         : '<div style="padding:12px 0;font-size:12px;color:var(--text-dim)">Loading profiles...</div>';
       document.getElementById('home-ww-stat').textContent = allWhosWho.length + ' profiles - funders, developers, standard-setters';
 
-      // home intel feed
-      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,4);
+      // home intel feed - more items to fill taller card
+      const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,5);
       document.getElementById('home-intel-list').innerHTML = homeIntel.length
         ? homeIntel.map(i =>
             '<div class="home-intel-item">' +
@@ -1554,6 +1595,7 @@
       if (typeof renderMiniProjMap === 'function') {
         renderMiniProjMap();
         renderMiniPolicyMap();
+        renderMiniKSMap();
         renderLogoMap();
       }
 
@@ -2003,19 +2045,14 @@
     426:'lesotho',430:'liberia',434:'libya',450:'madagascar',454:'malawi',
     466:'mali',478:'mauritania',480:'mauritius',504:'morocco',508:'mozambique',
     516:'namibia',562:'niger',566:'nigeria',646:'rwanda',678:'sao-tome-principe',
-    686:'senegal',690:'seychelles',694:'sierra-leone',706:'somalia',710:'south-africa',
+    686:'senegal',694:'sierra-leone',706:'somalia',710:'south-africa',
     716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
     788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',
-    894:'zambia',262:'djibouti',732:'western-sahara'
+    894:'zambia',262:'djibouti',686:'senegal'
   };
 
   // African ISO codes
   const africaISO = new Set(Object.keys(isoToId).map(Number));
-
-  // Features with no numeric ID that should still render (Natural Earth quirk)
-  const nameToId = { 'Somaliland': 'somalia' };
-  function isAfrican(f) { return africaISO.has(+f.id) || (f.properties && nameToId[f.properties.name]); }
-  function getFeatureId(f) { return isoToId[+f.id] || (f.properties && nameToId[f.properties.name]) || null; }
 
   const policyColor = {
     'operational':'#1a4a2e', 'agreement-signed':'#0c5c58',
@@ -2033,7 +2070,7 @@
 
   async function loadWorldData() {
     if (worldData) return worldData;
-    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
     worldData = topo;
     return topo;
   }
@@ -2061,20 +2098,20 @@
     allPolicy.forEach(c => { policyById[c.id] = c; });
 
     svg.selectAll('path')
-      .data(countries.features.filter(f => isAfrican(f)))
+      .data(countries.features.filter(f => africaISO.has(+f.id) || +f.id === -99))
       .join('path')
       .attr('class', 'country-path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const c = policyById[id];
         if (!c) return '#e8e8e5';
         return riskOverride(c) || policyColor[c.status] || '#e8e8e5';
       })
-      .attr('title', f => getFeatureId(f) || '')
+      .attr('title', f => isoToId[+f.id] || '')
       .on('mouseover', (event, f) => {
         if (isTouchDevice()) return;
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const c = policyById[id];
         if (!c) return;
         showTooltip(event, '<strong>'+c.name+'</strong><br>'+(statusLabel[c.status]||c.status));
@@ -2083,7 +2120,7 @@
       .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
         hideTooltip();
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const c = policyById[id];
         if (c) openPolicyDetail(c);
       });
@@ -2126,12 +2163,12 @@
       .interpolator(d3.interpolate('#e8f5e0','#1a4a2e'));
 
     svg.selectAll('path')
-      .data(countries.features.filter(f => isAfrican(f)))
+      .data(countries.features.filter(f => africaISO.has(+f.id) || +f.id === -99))
       .join('path')
       .attr('class', 'country-path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const count = projCountryMap[id] || 0;
         return count > 0 ? colorScale(count) : '#f0f0ee';
       })
@@ -2139,7 +2176,7 @@
       .attr('stroke-width', 0.5)
       .on('mouseover', (event, f) => {
         if (isTouchDevice()) return;
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         if (!id) return;
         const count = projCountryMap[id] || 0;
         const countryName = allProjects.find(p => {
@@ -2160,7 +2197,7 @@
       .on('mousemove', moveTooltip)
       .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         if (!id) return;
         hideTooltip();
         if (selectedProjCountry === id) {
@@ -2306,7 +2343,7 @@
 
     // Sort north to south for reveal
     const features = countries.features
-      .filter(f => isAfrican(f))
+      .filter(f => africaISO.has(+f.id) || +f.id === -99)
       .sort((a, b) => {
         const centA = d3.geoCentroid(a);
         const centB = d3.geoCentroid(b);
@@ -2324,7 +2361,7 @@
 
     // Sequential reveal - north to south
     paths.each(function(f, i) {
-      const id = getFeatureId(f);
+      const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
       const count = projCountryMap[id] || 0;
       const targetFill = count > 0 ? colorScale(count) : '#e8e8e5';
       d3.select(this)
@@ -2337,7 +2374,7 @@
     // Hover tooltips
     paths
       .on('mouseover', function(event, f) {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         if (!id) return;
         const count = projCountryMap[id] || 0;
         const proj = allProjects.find(p => {
@@ -2376,7 +2413,7 @@
 
     // Sort north to south for reveal
     const features = countries.features
-      .filter(f => isAfrican(f))
+      .filter(f => africaISO.has(+f.id) || +f.id === -99)
       .sort((a, b) => {
         const centA = d3.geoCentroid(a);
         const centB = d3.geoCentroid(b);
@@ -2394,7 +2431,7 @@
 
     // Sequential reveal - north to south
     paths.each(function(f, i) {
-      const id = getFeatureId(f);
+      const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
       const c = policyById[id];
       const targetFill = c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
       d3.select(this)
@@ -2407,10 +2444,86 @@
     // Hover tooltips
     paths
       .on('mouseover', function(event, f) {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const c = policyById[id];
         if (!c) return;
         showTooltip(event, '<strong>' + c.name + '</strong><br>' + (statusLabel[c.status] || c.status));
+        d3.select(this).attr('opacity', 0.75);
+      })
+      .on('mousemove', moveTooltip)
+      .on('mouseout', function() {
+        hideTooltip();
+        d3.select(this).attr('opacity', 1);
+      });
+  }
+
+  // RENDER MINI KS MAP - keystone count per country, brown shades
+  async function renderMiniKSMap() {
+    const svg = d3.select('#mini-ks-map');
+    svg.selectAll('*').remove();
+    const topo = await loadWorldData();
+    const projection = getProjection(svg.node());
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+
+    // Map keystone country names to ISO numbers
+    const ksNameToISO = {
+      'Algeria':12,'Angola':24,'Benin':204,'Botswana':72,'Cameroon':120,
+      'Central African Republic':140,'Chad':148,'DRC':180,'Equatorial Guinea':226,
+      'Ethiopia':231,'Gabon':266,'Ghana':288,'Ivory Coast':384,'Kenya':404,
+      'Lesotho':426,'Liberia':430,'Malawi':454,'Mali':466,'Mozambique':508,
+      'Namibia':516,'Niger':562,'Nigeria':566,'Republic of Congo':178,'Rwanda':646,
+      'Senegal':686,'South Africa':710,'South Sudan':728,'Sudan':729,
+      'Tanzania':834,'Togo':768,'Uganda':800,'Zambia':894,'Zimbabwe':716
+    };
+
+    // Count keystones per ISO
+    const ksCount = {};
+    allKeystones.forEach(k => {
+      const iso = ksNameToISO[k.country];
+      if (iso) ksCount[iso] = (ksCount[iso] || 0) + 1;
+    });
+
+    function ksColor(count) {
+      if (!count) return '#e8e8e5';
+      if (count >= 11) return '#5c3317';
+      if (count >= 6)  return '#b05c2a';
+      if (count >= 3)  return '#d4956a';
+      return '#f0d5b8';
+    }
+
+    // Sort north to south for sequential reveal
+    const features = countries.features
+      .filter(f => africaISO.has(+f.id) || +f.id === -99)
+      .sort((a, b) => d3.geoCentroid(b)[1] - d3.geoCentroid(a)[1]);
+
+    const paths = svg.selectAll('path')
+      .data(features)
+      .join('path')
+      .attr('d', path)
+      .attr('fill', '#e8e8e5')
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.6)
+      .style('cursor', 'pointer');
+
+    paths.each(function(f, i) {
+      const iso = +f.id;
+      const targetFill = ksColor(ksCount[iso] || 0);
+      d3.select(this)
+        .transition()
+        .delay(i * 28)
+        .duration(320)
+        .attr('fill', targetFill);
+    });
+
+    paths
+      .on('mouseover', function(event, f) {
+        const iso = +f.id;
+        const count = ksCount[iso] || 0;
+        const nameEntry = Object.entries(ksNameToISO).find(([,v]) => v === iso);
+        const displayName = iso === -99 ? 'Somalia (Somaliland)' : (nameEntry ? nameEntry[0] : null);
+        if (!displayName) return;
+        showTooltip(event, '<strong>' + displayName + '</strong><br>' + (count ? count + ' Keystone PA' + (count !== 1 ? 's' : '') : 'No Keystones'));
         d3.select(this).attr('opacity', 0.75);
       })
       .on('mousemove', moveTooltip)
@@ -2429,13 +2542,13 @@
     const countries = topojson.feature(topo, topo.objects.countries);
     const policyById = {};
     allPolicy.forEach(c => { policyById[c.id] = c; });
-    const features = countries.features.filter(f => isAfrican(f));
+    const features = countries.features.filter(f => africaISO.has(+f.id) || +f.id === -99);
     svg.selectAll('path')
       .data(features)
       .join('path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = getFeatureId(f);
+        const id = +f.id === -99 ? 'somalia' : isoToId[+f.id];
         const c = policyById[id];
         return c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
       })
@@ -2465,6 +2578,7 @@
   if (allProjects.length) {
     renderMiniProjMap();
     renderMiniPolicyMap();
+    if (allKeystones.length) renderMiniKSMap();
     renderLogoMap();
   }
 </script>

@@ -1,6 +1,6 @@
 {
   "_note": "Canopy Who's Who - African Conservation Finance. All profiles are sourced from publicly available information. Claims are verifiable. No personal contact details included. Remove _draft field when approving for publication.",
-  "_generated": "2026-04-10",
+  "_generated": "2026-04-11",
   "_schema_version": "1.0",
   "profiles": [
     {
@@ -306,7 +306,7 @@
     {
       "id": "lorna-ritchie",
       "name": "Lorna Ritchie",
-      "role": "Staff, ICVCM",
+      "role": "Director of Public Affairs",
       "organisation": "Integrity Council for the Voluntary Carbon Market",
       "organisation_type": "standard_body",
       "location": null,
@@ -332,10 +332,9 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true,
+      "last_updated": "2026-04-11",
       "_note": "Role title at ICVCM not confirmed. Verify before publication."
     },
     {
@@ -1993,7 +1992,7 @@
     {
       "id": "david-antonioli",
       "name": "David Antonioli",
-      "role": "Chief Executive Officer",
+      "role": "Former Chief Executive Officer",
       "organisation": "Verra",
       "organisation_type": "standard_body",
       "location": "Washington DC",
@@ -2011,7 +2010,7 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "CEO of Verra, the organisation behind the Verified Carbon Standard - the most widely used voluntary carbon market standard in the world. VCS-registered projects account for the large majority of African carbon credits in circulation. Antonioli has led Verra through the development of VM0047, the methodology underpinning the highest-integrity afforestation and reforestation credits now entering the market.",
+      "summary": "Founding CEO of Verra, the world leading carbon credit standards body, serving from its inception until May 2023. Antonioli built Verra into the dominant standard in the voluntary carbon market, overseeing the development of the Verified Carbon Standard and its growth to over one billion credits issued. He departed in May 2023 following criticism of credit quality and a significant revenue decline. Succeeded by interim CEO Judith Simon, then by current CEO Mandy Rambharos from August 2024. Antonioli subsequently moved into advisory and investment roles in the carbon markets space.",
       "notable_work": [
         {
           "description": "Led Verra through the approval of VM0047 ARR methodology, now recognised by ICVCM as meeting Core Carbon Principles and the cornerstone of high-integrity forestry credits in Africa",
@@ -2029,8 +2028,7 @@
       "source": "canopy",
       "verified": true,
       "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true
+      "last_updated": "2026-04-11"
     },
     {
       "id": "eron-bloomgarden",
@@ -2155,8 +2153,8 @@
     {
       "id": "charlotte-kaiser",
       "name": "Charlotte Kaiser",
-      "role": "Managing Director",
-      "organisation": "NatureVest",
+      "role": "Head of Impact Finance",
+      "organisation": "BTG Pactual Timberland Investment Group",
       "organisation_type": "fund",
       "location": "Arlington, Virginia",
       "geography": [
@@ -2174,7 +2172,7 @@
         "VCM"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "Managing Director of NatureVest, The Nature Conservancy's conservation investment division. NatureVest structures blended finance transactions that use philanthropic and concessional capital to crowd in private investment for conservation outcomes. Africa is a target geography across multiple TNC-managed facilities including debt-for-nature arrangements.",
+      "summary": "Head of Impact Finance at BTG Pactual Timberland Investment Group since July 2022, where she leads impact-focused investment transactions across a $4.9 billion timberland portfolio. Previously served as Managing Director of NatureVest at The Nature Conservancy, TNC impact investment unit, where she grew the portfolio to over $2.5 billion in capital committed to conservation transactions. Holds degrees from Harvard, Yale School of Forestry, and Yale School of Management. The current Managing Director of NatureVest is Dr. Catherine Burns.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -2186,8 +2184,7 @@
       "source": "canopy",
       "verified": false,
       "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true,
+      "last_updated": "2026-04-11",
       "_note": "NatureVest Managing Director role confirmed from TNC website. Verify current title and Africa programme scope."
     },
     {
@@ -3357,43 +3354,6 @@
       "_note": "MD role requires verification from responsAbility directly."
     },
     {
-      "id": "nicolas-perrin",
-      "name": "Nicolas Perrin",
-      "role": "Chief Executive Officer",
-      "organisation": "South Pole",
-      "organisation_type": "developer",
-      "location": "Zurich, Switzerland",
-      "geography": [
-        "Pan-Africa",
-        "Global"
-      ],
-      "focus_areas": [
-        "carbon_markets",
-        "redd_plus",
-        "agroforestry"
-      ],
-      "instrument_types": [
-        "VCM",
-        "ITMO"
-      ],
-      "deal_size": "$10M-$200M",
-      "summary": "CEO of South Pole, one of the world largest carbon project developers and consultancies. South Pole has developed and marketed credits from a significant portfolio of African projects across REDD+, ARR, and clean cooking. The company navigated a period of intense scrutiny over credit quality in 2023 and has restructured its quality assurance processes under new leadership.",
-      "notable_work": [],
-      "public_footprint": [
-        {
-          "type": "profile",
-          "title": "South Pole leadership",
-          "url": "https://www.southpole.com/about-us"
-        }
-      ],
-      "source": "canopy",
-      "verified": false,
-      "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role requires verification - South Pole leadership has changed. Confirm current title."
-    },
-    {
       "id": "michael-wolosin",
       "name": "Michael Wolosin",
       "role": "Managing Director",
@@ -3844,20 +3804,27 @@
       ],
       "focus_areas": [
         "biodiversity",
+        "protected_areas",
         "blended_finance",
-        "carbon_markets"
+        "carbon_markets",
+        "conservation_finance"
       ],
       "instrument_types": [
         "grant",
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "First Executive Director of the Rob Walton Foundation, appointed to lead its conservation strategy with Africa as the primary geography. Brings deep experience from McKinsey where he led global initiatives on natural capital, conservation finance, and large-scale ecosystem protection. The Foundation works with governments, NGOs, and local communities on high-impact strategies and is focused on safeguarding critical landscapes vital to the livelihoods and security of millions of people.",
+      "summary": "Executive Director of the Rob Walton Foundation - the first person to hold this role. RWF is the primary funder behind the Africa Keystone Protected Area Partnership, which it co-founded with African Parks, WCS, and the Frankfurt Zoological Society and launched at UNGA in September 2025. Hopman brings deep experience from McKinsey where he led global natural capital and conservation finance initiatives, with Africa as his primary geography. RWF made a $100 million five-year commitment to African Parks in 2021 and funds Conservation International, the Blue Nature Alliance, and the Legacy Landscapes Fund, among other grantees.",
       "notable_work": [
         {
           "description": "Appointed as first Executive Director of the Rob Walton Foundation to lead its Africa-focused conservation strategy",
           "year": 2025,
           "source_url": "https://robwaltonfoundation.org/news/welcoming-duko-hopman"
+        },
+        {
+          "description": "Oversaw the Africa Keystone Protected Area Partnership launch at UNGA September 2025, with 20 African governments and four founding NGO partners",
+          "year": 2025,
+          "source_url": "https://africakeystones.org"
         }
       ],
       "public_footprint": [
@@ -3869,9 +3836,135 @@
       ],
       "source": "canopy",
       "verified": true,
-      "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true
+      "status": "approved",
+      "last_updated": "2026-04-11"
+    },
+    {
+      "id": "daniela-raik",
+      "name": "Daniela Raik",
+      "role": "Former Interim Chief Executive Officer",
+      "organisation": "Conservation International",
+      "organisation_type": "ngo",
+      "location": "Arlington, Virginia",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "biodiversity",
+        "carbon_markets",
+        "blended_finance",
+        "protected_areas"
+      ],
+      "instrument_types": [
+        "VCM",
+        "blended_finance",
+        "grant"
+      ],
+      "deal_size": "$10M-$200M",
+      "summary": "Led Conservation International as Interim CEO from August 2025 to February 2026, following the departure of M. Sanjayan. Previously served as Executive Vice President and Chief Conservation Officer, leading CI conservation impact across nearly 30 countries. Has worked at CI for 17 years across roles including managing director of the Betty and Gordon Moore Center for Science and senior vice president of the Americas program. Holds advanced degrees in natural resources from Cornell University. Was instrumental in developing the Gaborone Declaration for Sustainability in Africa. Succeeded as permanent CEO by Dr Sebastian Troeng in February 2026. CI is a primary grantee of the Rob Walton Foundation and a founding partner in the Blue Nature Alliance.",
+      "notable_work": [
+        {
+          "description": "Appointed Interim CEO of Conservation International following departure of M. Sanjayan, leading the organisation through a period of strategic transition",
+          "year": 2025,
+          "source_url": "https://www.conservation.org/press-releases/2025/08/11/conservation-international-announces-leadership-transition-to-maximize-future-impact"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Conservation International leadership",
+          "url": "https://www.conservation.org/experts-list/daniela-raik-phd"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-11"
+    },
+    {
+      "id": "stefanie-lang",
+      "name": "Stefanie Lang",
+      "role": "Executive Director",
+      "organisation": "Legacy Landscapes Fund",
+      "organisation_type": "fund",
+      "location": "Frankfurt, Germany",
+      "geography": [
+        "Pan-Africa",
+        "Sub-Saharan Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "protected_areas",
+        "biodiversity",
+        "blended_finance",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance"
+      ],
+      "deal_size": "$1M-$50M",
+      "summary": "Executive Director of the Legacy Landscapes Fund since April 2021, leading the Frankfurt-based charitable foundation that provides long-term secured core funding for globally significant protected areas. LLF was established by the German Ministry for Economic Cooperation and Development and KfW Development Bank, and targets a portfolio of 30 landscapes by 2030 across Africa, Asia, and Latin America. Lang brings more than 20 years of conservation experience across bilateral and multilateral institutions, NGOs, and the private sector. LLF African portfolio includes Odzala-Kokoua (Republic of Congo), Iona (Angola), Gonarezhou (Zimbabwe), and other Keystone Protected Areas. LLF is a primary grantee of the Rob Walton Foundation.",
+      "notable_work": [
+        {
+          "description": "Built the Legacy Landscapes Fund portfolio to 15 landscapes across Africa, Asia, and Latin America, presenting at a Berlin portfolio exhibition in October 2025 with 15 partner landscapes",
+          "year": 2025,
+          "source_url": "https://legacylandscapes.org"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Legacy Landscapes Fund - Stefanie Lang",
+          "url": "https://legacylandscapes.org/teams/stefanie-lang-executive-director-of-llf/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-11"
+    },
+    {
+      "id": "ryan-dolan",
+      "name": "Ryan Dolan",
+      "role": "Managing Director",
+      "organisation": "Blue Nature Alliance",
+      "organisation_type": "ngo",
+      "location": "Washington DC",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "biodiversity",
+        "protected_areas",
+        "policy"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance"
+      ],
+      "deal_size": "$5M-$100M",
+      "summary": "Managing Director of the Blue Nature Alliance, a global marine conservation partnership co-led by Conservation International, The Pew Charitable Trusts, the Global Environment Facility, Minderoo Foundation, and the Rob and Melani Walton Foundation. The Alliance targets the conservation of 18 million square kilometres of ocean by 2030. Dolan brings more than eight years of experience with The Pew Charitable Trusts working to secure marine protected areas in Antarctica Southern Ocean, including serving as NGO representative to the US delegation at CCAMLR and playing a central role in securing the Ross Sea Protected Area in 2016. Blue Nature Alliance is a primary vehicle for RWF ocean conservation strategy and a key grantee in the RWF portfolio alongside African Parks, CI, and the Legacy Landscapes Fund.",
+      "notable_work": [
+        {
+          "description": "Leads the Blue Nature Alliance in coordinating monitoring, annual planning, and Antarctic site engagement across the 18-million-km2 ocean conservation coalition",
+          "year": 2022,
+          "source_url": "https://www.bluenaturealliance.org/about/leadership/ryan-dolan/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Blue Nature Alliance leadership",
+          "url": "https://www.bluenaturealliance.org/about/leadership/ryan-dolan/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-11"
     },
     {
       "id": "rob-walton",
@@ -4559,42 +4652,6 @@
       "_draft": true
     },
     {
-      "id": "andrew-mitchell-gc",
-      "name": "Andrew Mitchell",
-      "role": "Executive Director",
-      "organisation": "Global Canopy",
-      "organisation_type": "advisory",
-      "location": "Oxford, UK",
-      "geography": [
-        "Pan-Africa",
-        "Global"
-      ],
-      "focus_areas": [
-        "redd_plus",
-        "biodiversity",
-        "carbon_markets"
-      ],
-      "instrument_types": [
-        "VCM",
-        "blended_finance"
-      ],
-      "deal_size": null,
-      "summary": "Founder and Executive Director of Global Canopy, the Oxford-based organisation that produces Forest 500 - the annual ranking of the companies and financial institutions with the greatest exposure to deforestation risk. Global Canopy data directly influences which financial institutions face pressure to adopt no-deforestation policies and is a primary tool for investors evaluating supply chain and portfolio exposure to African forest loss.",
-      "notable_work": [],
-      "public_footprint": [
-        {
-          "type": "profile",
-          "title": "Global Canopy",
-          "url": "https://globalcanopy.org/"
-        }
-      ],
-      "source": "canopy",
-      "verified": true,
-      "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true
-    },
-    {
       "id": "euan-murray",
       "name": "Euan Murray",
       "role": "Chief Executive",
@@ -4937,8 +4994,19 @@
         "VCM"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "CEO of African Parks, the organisation that manages 22 national parks across 12 African countries under long-term management agreements with national governments. African Parks operates the largest portfolio of directly managed protected areas in Africa and has been developing carbon and biodiversity finance mechanisms to reduce grant dependency. Fearnhead has built a model that blends philanthropic anchor capital with tourism revenue and increasingly with ecosystem service payments.",
-      "notable_work": [],
+      "summary": "CEO of African Parks, the organisation that manages 22 protected areas across 13 African countries under long-term delegated management agreements with national governments - the largest and most ecologically diverse portfolio under any single conservation organisation on the continent. African Parks operates on a business model that blends philanthropic anchor capital with tourism revenue and ecosystem service payments, and is the lead delivery partner in the Africa Keystone Protected Area Partnership. Fearnhead has built the model from its founding years under Dutch philanthropist Paul Fentener van Vlissingen and overseen its expansion to over 20 million hectares. RWF made a transformational $100 million five-year commitment to African Parks in 2021, the largest endowment gift in the organisation history.",
+      "notable_work": [
+        {
+          "description": "Led African Parks to a portfolio of 22 protected areas across 13 countries covering over 20 million hectares, with a mandate to manage 30 parks by 2030",
+          "year": 2025,
+          "source_url": "https://www.africanparks.org/our-work/african-parks-strategy"
+        },
+        {
+          "description": "Oversaw the Keystone Protected Area Partnership launch at UNGA September 2025, with African Parks as a founding partner alongside RWF, WCS, and Frankfurt Zoological Society",
+          "year": 2025,
+          "source_url": "https://africakeystones.org"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4948,9 +5016,8 @@
       ],
       "source": "canopy",
       "verified": true,
-      "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true
+      "status": "approved",
+      "last_updated": "2026-04-11"
     },
     {
       "id": "andrew-muir",
@@ -5029,7 +5096,7 @@
     {
       "id": "m-sanjayan",
       "name": "M. Sanjayan",
-      "role": "Chief Executive Officer",
+      "role": "Former Chief Executive Officer",
       "organisation": "Conservation International",
       "organisation_type": "ngo",
       "location": "Arlington, Virginia",
@@ -5048,7 +5115,7 @@
         "grant"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "CEO of Conservation International, one of the largest conservation NGOs globally with major Africa programmes across the Congo Basin, East Africa, and the Indian Ocean. CI developed the concept of biodiversity hotspots and has been active in carbon market development across Africa for over two decades. Sanjayan is a prominent communicator and policy voice on nature finance.",
+      "summary": "Former CEO of Conservation International, where he led the organisation for eight years. Sanjayan stepped down in August 2025 and was succeeded as interim CEO by Dr Daniela Raik. Under his tenure CI expanded its Africa programmes significantly across the Congo Basin, East Africa, and the Indian Ocean. A prominent communicator and policy voice on nature finance, Sanjayan remains active in the conservation space.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -5059,9 +5126,8 @@
       ],
       "source": "canopy",
       "verified": true,
-      "status": "pending",
-      "last_updated": "2026-04-10",
-      "_draft": true
+      "status": "approved",
+      "last_updated": "2026-04-11"
     },
     {
       "id": "carter-roberts",
