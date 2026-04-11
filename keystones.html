@@ -528,18 +528,18 @@
     const countries = topojson.feature(topo, topo.objects.countries);
 
     svg.selectAll('path')
-      .data(countries.features.filter(function(f) { return africaISO.has(+f.id) || +f.id === -99; }))
+      .data(countries.features.filter(function(f) { return africaISO.has(+f.id) || (f.properties && f.properties.name === 'Somaliland'); }))
       .join('path')
       .attr('d', path)
       .attr('fill', function(f) {
-        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        const name = (f.properties && f.properties.name === 'Somaliland') ? 'Somalia' : isoToName[+f.id];
         return name ? ksColor(countByCountry[name] || 0) : '#e8e8e5';
       })
       .attr('stroke', '#fff')
       .attr('stroke-width', 0.6)
       .style('cursor', 'pointer')
       .on('mouseover', function(event, f) {
-        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        const name = (f.properties && f.properties.name === 'Somaliland') ? 'Somalia' : isoToName[+f.id];
         if (!name) return;
         const count = countByCountry[name] || 0;
         const tt = document.getElementById('map-tooltip');
@@ -557,7 +557,7 @@
         d3.select(this).attr('opacity', 1);
       })
       .on('click', function(event, f) {
-        const name = +f.id === -99 ? 'Somalia' : isoToName[+f.id];
+        const name = (f.properties && f.properties.name === 'Somaliland') ? 'Somalia' : isoToName[+f.id];
         if (!name) return;
         const input = document.getElementById('search-input');
         if (searchTerm === name.toLowerCase()) {
