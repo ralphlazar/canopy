@@ -11,6 +11,7 @@
   :root {
     --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
     --border: #e8e8e5; --green: #1a4a2e; --green-pale: #e8f5e0;
+    --teal: #1a5c5c; --teal-pale: #e0f0ef;
     --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
     --vol-bg: #eaf3de;   --vol-text: #27500a;
     --comp-bg: #e6f1fb;  --comp-text: #0c447c;
@@ -736,6 +737,74 @@
     .mini-maps { grid-template-columns: 1fr; }
     .mini-map-panel:first-child { border-right: none; border-bottom: 1px solid var(--border); }
   }
+
+  /* WHO'S WHO */
+  .home-card-5 { border-color: rgba(26,92,92,0.25); background: rgba(26,92,92,0.025); }
+  .home-card-5:hover { border-color: rgba(26,92,92,0.5); }
+  .card-num-5 { background: #1a5c5c; }
+
+  .ww-list-header { display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; padding: 10px 40px; max-width: 1100px; margin: 0 auto; border-bottom: 2px solid var(--border); background: var(--bg3); border-top: 1px solid var(--border); }
+  .ww-col { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
+  .ww-col:hover { color: var(--text); }
+  .ww-col.ww-col-active { color: var(--teal); }
+  .ww-arrow { font-size: 10px; opacity: 0.4; }
+  .ww-col:hover .ww-arrow { opacity: 0.7; }
+  .ww-col.ww-col-active .ww-arrow { opacity: 1; }
+  @media (max-width: 768px) { .ww-list-header { display: none; } }
+
+  .ww-grid { display: flex; flex-direction: column; padding: 0 40px 28px; max-width: 1100px; margin: 0 auto; }
+  .ww-card { border-bottom: 1px solid var(--border); padding: 2px 0; background: transparent; cursor: pointer; display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; align-items: center; border-radius: 0; transition: background 0.1s; }
+  .ww-card:hover { background: var(--bg2); margin: 0 -40px; padding: 2px 40px; }
+  .ww-card:last-child { border-bottom: none; }
+  .ww-card-top { display: none; }
+  .ww-name { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .ww-role { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+  .ww-org { font-size: 12px; color: var(--text-dim); margin: 0; }
+  .ww-tags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  .ww-verified { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--teal-pale); color: var(--teal); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+  .ww-unverified { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--nf-bg); color: var(--nf-text); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+  .ww-count { font-size: 12px; color: var(--text-dim); padding: 20px 40px 0; max-width: 1100px; margin: 0 auto; }
+
+  .ww-org-badge { font-size: 10px; padding: 3px 10px; border-radius: 20px; display: inline-block; font-weight: 600; }
+  .ww-fund       { background: var(--comp-bg);  color: var(--comp-text); }
+  .ww-dfi        { background: var(--blend-bg); color: var(--blend-text); }
+  .ww-ngo        { background: var(--vol-bg);   color: var(--vol-text); }
+  .ww-standard_body { background: var(--sov-bg); color: var(--sov-text); }
+  .ww-developer  { background: var(--ag-bg);    color: var(--ag-text); }
+  .ww-government { background: var(--phil-bg);  color: var(--phil-text); }
+  .ww-buyer      { background: var(--nf-bg);    color: var(--nf-text); }
+  .ww-advisory   { background: var(--emerg-bg); color: var(--emerg-text); }
+
+  .ww-search-bar { padding: 12px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .ww-search-input { font-size: 13px; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); width: 260px; outline: none; font-family: inherit; transition: border-color 0.15s, width 0.2s; }
+  .ww-search-input:focus { border-color: var(--teal); background: var(--bg); width: 320px; }
+  @media (max-width: 768px) { .ww-search-bar { padding-left: 24px; padding-right: 24px; } .ww-search-input { width: 100%; } .ww-search-input:focus { width: 100%; } }
+
+  .ww-suggest { border-top: 1px solid var(--border); margin-top: 8px; padding: 32px 40px 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  .ww-suggest-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .ww-suggest-sub { font-size: 12px; color: var(--text-dim); margin-bottom: 20px; }
+  .ww-suggest-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 560px; }
+  .ww-suggest-input { font-size: 13px; padding: 8px 12px; border-radius: 7px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); font-family: inherit; outline: none; transition: border-color 0.15s; }
+  .ww-suggest-input:focus { border-color: var(--teal); background: var(--bg); }
+  .ww-suggest-input.full { grid-column: 1 / -1; }
+  .ww-suggest-btn { grid-column: 1 / -1; justify-self: start; font-size: 12px; padding: 8px 20px; border-radius: 7px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; font-weight: 500; font-family: inherit; transition: background 0.15s; }
+  .ww-suggest-btn:hover { background: var(--teal-pale); }
+  .ww-suggest-thanks { font-size: 13px; color: var(--teal); display: none; padding-top: 4px; }
+  @media (max-width: 768px) { .ww-suggest { padding: 28px 24px 36px; } .ww-suggest-form { grid-template-columns: 1fr; } .ww-suggest-input.full { grid-column: 1; } .ww-suggest-btn { grid-column: 1; } }
+  .home-ww-list { display: flex; flex-direction: column; padding: 0 20px 4px; flex: 1; }
+  .home-ww-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .home-ww-item:last-child { border-bottom: none; }
+  .home-ww-name { font-size: 12px; font-weight: 600; color: var(--text); }
+  .home-ww-role { font-size: 11px; color: var(--text-dim); }
+
+  @media (max-width: 768px) {
+    .ww-grid { padding-left: 24px; padding-right: 24px; }
+    .ww-count { padding-left: 24px; padding-right: 24px; }
+    .ww-card { grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+    .ww-card:hover { margin: 0 -24px; padding: 2px 24px; }
+    .ww-org { display: none; }
+    .ww-tags { justify-content: flex-start; }
+  }
 </style>
 </head>
 <body>
@@ -755,6 +824,7 @@
     <span class="nav-link" onclick="showView('projects'); activateProjMap();">Projects</span>
     <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
     <span class="nav-link" onclick="showView('instruments')">Funding</span>
+    <span class="nav-link" onclick="showView('whowho')">Who's Who</span>
     <div class="search-wrap">
       <span class="search-icon">&#9906;</span>
       <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
@@ -779,6 +849,7 @@
   <div class="mobile-menu-item" onclick="mobileNav('projects')"><span class="mobile-menu-num" style="background:#1a4a2e">2</span>Projects</div>
   <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">3</span>Intelligence</div>
   <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">4</span>Funding Instruments</div>
+  <div class="mobile-menu-item" onclick="mobileNav('whowho')"><span class="mobile-menu-num" style="background:#1a5c5c">5</span>Who's Who</div>
   <div class="mobile-menu-divider"></div>
   <div class="mobile-menu-sub" onclick="mobileNav('about')">About</div>
   <div class="mobile-menu-sub">Subscribe to brief</div>
@@ -865,6 +936,20 @@
         <span class="inst-badge b-blended">Blended finance</span>
         <span class="inst-badge b-philanthropic">Philanthropic</span>
         <span class="inst-badge b-emerging">Emerging</span>
+      </div>
+    </div>
+
+    <!-- Who's Who -->
+    <div class="home-card home-card-5" onclick="showView('whowho');">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-5">5</span>Who's Who</div>
+          <div class="home-card-map-sub" id="home-ww-stat">The people who matter in African conservation finance</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+      <div class="home-ww-list" id="home-ww-list">
+        <div class="loading">Loading...</div>
       </div>
     </div>
 
@@ -1014,9 +1099,56 @@
   </footer>
 </div>
 
-<!-- ABOUT -->
-<div id="view-about" class="view">
+<!-- WHO'S WHO -->
+<div id="view-whowho" class="view">
   <div class="page-header">
+    <div class="page-back" onclick="showView('home')">&#8592; Back</div>
+    <div class="page-title">Who's Who</div>
+    <div class="page-sub">The people who matter in African conservation finance - funders, developers, standard-setters, and the officials who make deals happen.</div>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;margin-bottom:4px;line-height:1.6;max-width:700px">All profiles are compiled from publicly available sources - organisational websites, conference programmes, registry filings, and published interviews. No personal contact details are included. Canopy does not hold or process private data about any individual listed here. If you are listed and would like to update or remove your profile, contact us.</p>
+  </div>
+  <div class="cat-tabs" id="ww-tabs">
+    <button class="cat-tab active" onclick="filterWW('all',this)">All</button>
+    <button class="cat-tab" onclick="filterWW('fund',this)">Funds</button>
+    <button class="cat-tab" onclick="filterWW('dfi',this)">DFIs</button>
+    <button class="cat-tab" onclick="filterWW('developer',this)">Developers</button>
+    <button class="cat-tab" onclick="filterWW('ngo',this)">NGOs</button>
+    <button class="cat-tab" onclick="filterWW('standard_body',this)">Standard bodies</button>
+    <button class="cat-tab" onclick="filterWW('government',this)">Government</button>
+    <button class="cat-tab" onclick="filterWW('advisory',this)">Advisory</button>
+    <button class="cat-tab" onclick="filterWW('buyer',this)">Buyers</button>
+  </div>
+  <div class="ww-search-bar">
+    <input class="ww-search-input" id="ww-search-input" type="text" placeholder="Search by name or organisation..." autocomplete="off">
+  </div>
+  <div class="ww-count" id="ww-count"></div>
+  <div class="ww-list-header">
+    <div class="ww-col ww-col-active" data-col="name" onclick="setWWSort('name')">Name <span class="ww-arrow">↑</span></div>
+    <div class="ww-col" data-col="role" onclick="setWWSort('role')">Role <span class="ww-arrow">↑↓</span></div>
+    <div class="ww-col" data-col="organisation" onclick="setWWSort('organisation')">Organisation <span class="ww-arrow">↑↓</span></div>
+    <div class="ww-col" data-col="type" onclick="setWWSort('type')">Type <span class="ww-arrow">↑↓</span></div>
+  </div>
+  <div id="whowho-full" class="ww-grid"><div class="loading">Loading...</div></div>
+  <div class="ww-suggest">
+    <div class="ww-suggest-title">Know someone who belongs here?</div>
+    <div class="ww-suggest-sub">Suggestions take 30 seconds. We write the profile.</div>
+    <div class="ww-suggest-form" id="ww-suggest-form">
+      <input class="ww-suggest-input" id="ww-s-name" type="text" placeholder="Name" required>
+      <input class="ww-suggest-input" id="ww-s-org" type="text" placeholder="Organisation" required>
+      <input class="ww-suggest-input" id="ww-s-role" type="text" placeholder="Role" required>
+      <input class="ww-suggest-input" id="ww-s-linkedin" type="url" placeholder="LinkedIn URL">
+      <button class="ww-suggest-btn" onclick="submitWWSuggest()">Suggest this person</button>
+    </div>
+    <div class="ww-suggest-thanks" id="ww-suggest-thanks">Received - thank you. We will review and add to the directory.</div>
+  </div>
+  <footer>
+    <span class="footer-note">Updated weekly · Pan-African · Independent</span>
+    <div class="footer-links"><span class="footer-link" onclick="showView('about')">About</span><span class="footer-link">Subscribe</span><span class="footer-link">Contact</span></div>
+  </footer>
+</div>
+
+<!-- ABOUT -->
+<div id="view-about" class="view">  <div class="page-header">
     <div class="page-back" onclick="showView('home')">&#8592; Back</div>
     <div class="page-title">About</div>
   </div>
@@ -1106,8 +1238,8 @@
     );
   }
 
-  let allProjects = [], allInstruments = [], allPolicy = [];
-  let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all';
+  let allProjects = [], allInstruments = [], allPolicy = [], allWhosWho = [];
+  let currentProjFilter = 'all', currentInstFilter = 'all', currentPolicyFilter = 'all', currentWWFilter = 'all';
 
   const instCatLabel = { voluntary:'Voluntary market', compliance:'Compliance market', sovereign:'Sovereign', blended:'Blended finance', philanthropic:'Philanthropic', emerging:'Emerging' };
   const instCatOrder = ['voluntary','compliance','sovereign','blended','philanthropic','emerging'];
@@ -1312,14 +1444,28 @@
   // LOAD
   async function load() {
     try {
-      const [pR,iR,instR,polR] = await Promise.all([
+      const [pR,iR,instR,polR,wwR] = await Promise.all([
         fetch('data/projects.json'), fetch('data/intelligence.json?v='+Date.now()),
-        fetch('data/instruments.json'), fetch('data/policy.json')
+        fetch('data/instruments.json'), fetch('data/policy.json'),
+        fetch('data/whos_who.json')
       ]);
-      const [pd,id,instd,pold] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json()]);
+      const [pd,id,instd,pold,wwd] = await Promise.all([pR.json(),iR.json(),instR.json(),polR.json(),wwR.json()]);
 
       allProjects = pd.projects; allInstruments = instd.instruments; allPolicy = pold.countries;
       allIntelligence = id.intelligence.filter(i=>i.status==='approved');
+      allWhosWho = wwd.profiles;
+
+      // home who's who feed
+      const homeWW = allWhosWho.filter(p=>p.verified).slice().sort((a,b) => surname(a.name).localeCompare(surname(b.name))).slice(0,4);
+      document.getElementById('home-ww-list').innerHTML = homeWW.length
+        ? homeWW.map(p =>
+            '<div class="home-ww-item">' +
+            '<div class="home-ww-name">'+formatName(p.name)+'</div>' +
+            '<div class="home-ww-role">'+p.role+', '+p.organisation+'</div>' +
+            '</div>'
+          ).join('')
+        : '<div style="padding:12px 0;font-size:12px;color:var(--text-dim)">Loading profiles...</div>';
+      document.getElementById('home-ww-stat').textContent = allWhosWho.length + ' profiles - funders, developers, standard-setters';
 
       // home intel feed
       const homeIntel = id.intelligence.filter(i=>i.status==='approved').slice(0,4);
@@ -1350,7 +1496,7 @@
       // disclaimer
       document.getElementById('policy-disclaimer').textContent = 'Data last updated '+pold.updated+'. '+pold.note;
 
-      renderProjectsFull(); renderInstFull(); renderPolicyGrid(); renderIntelFull();
+      renderProjectsFull(); renderInstFull(); renderPolicyGrid(); renderIntelFull(); renderWhosWho();
       renderPolicyMap();
       document.querySelector('.policy-stat').classList.add('active');
 
@@ -1395,7 +1541,11 @@
       matches(query, c.name, c.region, c.notes, c.itmo_buyer)
     ).slice(0, 3);
 
-    const total = projHits.length + instHits.length + policyHits.length;
+    const wwHits = allWhosWho.filter(p =>
+      matches(query, p.name, p.role, p.organisation, ...(p.focus_areas||[]), ...(p.geography||[]))
+    ).slice(0, 3);
+
+    const total = projHits.length + instHits.length + policyHits.length + wwHits.length;
 
     if (total === 0) {
       searchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
@@ -1435,6 +1585,16 @@
       ).join('');
     }
 
+    if (wwHits.length) {
+      html += '<div class="search-group-title">Who\'s Who</div>';
+      html += wwHits.map(p =>
+        '<div class="search-result" onclick=\'searchSelectWW('+safeJSON(p)+')\'>' +
+        '<div class="search-result-name">'+p.name+'</div>' +
+        '<div class="search-result-sub">'+p.role+', '+p.organisation+'</div>' +
+        '</div>'
+      ).join('');
+    }
+
     searchResults.innerHTML = html;
     searchResults.classList.add('visible');
   }
@@ -1462,6 +1622,15 @@
     setTimeout(() => openPolicyDetail(c), 50);
   }
 
+  function searchSelectWW(p) {
+    clearSearch();
+    showView('whowho');
+    setTimeout(() => {
+      const i = wwRenderedList.findIndex(x => x.id === p.id);
+      if (i >= 0) openWWDetail(i);
+    }, 50);
+  }
+
   searchInput.addEventListener('input', e => runSearch(e.target.value.trim()));
   searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') clearSearch(); });
 
@@ -1483,7 +1652,10 @@
     const policyHits = allPolicy.filter(c =>
       matches(query, c.name, c.region, c.notes, c.itmo_buyer)
     ).slice(0, 3);
-    const total = projHits.length + instHits.length + policyHits.length;
+    const wwHits = allWhosWho.filter(p =>
+      matches(query, p.name, p.role, p.organisation, ...(p.focus_areas||[]), ...(p.geography||[]))
+    ).slice(0, 3);
+    const total = projHits.length + instHits.length + policyHits.length + wwHits.length;
     if (total === 0) {
       mobileSearchResults.innerHTML = '<div class="search-empty">No results for "'+query+'"</div>';
       mobileSearchResults.classList.add('visible');
@@ -1514,6 +1686,14 @@
         '<div class="search-result-sub">'+(statusLabel[c.status]||c.status)+'</div></div>'
       ).join('');
     }
+    if (wwHits.length) {
+      html += '<div class="search-group-title">Who\'s Who</div>';
+      html += wwHits.map(p =>
+        '<div class="search-result" onclick=\'mobilSearchSelectWW('+safeJSON(p)+')\'>' +
+        '<div class="search-result-name">'+p.name+'</div>' +
+        '<div class="search-result-sub">'+p.role+', '+p.organisation+'</div></div>'
+      ).join('');
+    }
     mobileSearchResults.innerHTML = html;
     mobileSearchResults.classList.add('visible');
   }
@@ -1541,9 +1721,22 @@
     showView('policy');
     setTimeout(() => openPolicyDetail(c), 50);
   }
+  function mobilSearchSelectWW(p) {
+    closeMobileSearch();
+    showView('whowho');
+    setTimeout(() => {
+      const i = wwRenderedList.findIndex(x => x.id === p.id);
+      if (i >= 0) openWWDetail(i);
+    }, 50);
+  }
 
   mobileSearchInput.addEventListener('input', e => runMobileSearch(e.target.value.trim()));
   mobileSearchInput.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileSearch(); });
+
+  document.getElementById('ww-search-input').addEventListener('input', e => {
+    wwSearchQuery = e.target.value.trim();
+    renderWhosWho();
+  });
   document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrap')) searchResults.classList.remove('visible');
     if (!e.target.closest('#mobile-menu') && !e.target.closest('#hamburger')) {
@@ -1551,6 +1744,168 @@
       document.getElementById('hamburger').classList.remove('open');
     }
   });
+
+  // WHO'S WHO
+  const wwOrgLabel = { fund:'Fund', dfi:'DFI', standard_body:'Standard body', developer:'Developer', government:'Government', ngo:'NGO', buyer:'Buyer', advisory:'Advisory' };
+  let wwSearchQuery = '';
+  let wwSortCol = 'name';
+  let wwSortDir = 1;
+
+  function formatName(name) {
+    const honorifics = ['Dr.', 'Prof.', 'Sir', 'Dame'];
+    let honorific = null;
+    let n = name;
+    for (const h of honorifics) {
+      if (name.startsWith(h + ' ')) { honorific = h; n = name.slice(h.length + 1); break; }
+    }
+    const parts = n.trim().split(' ');
+    const sur = parts.pop();
+    const rest = parts.join(' ');
+    const display = sur + (rest ? ', ' + rest : '');
+    return honorific ? display + ' (' + honorific.replace('.','') + '.)' : display;
+  }
+
+  function surname(name) {
+    const honorifics = ['Dr.', 'Prof.', 'Sir', 'Dame'];
+    let n = name;
+    for (const h of honorifics) { if (n.startsWith(h + ' ')) { n = n.slice(h.length + 1); break; } }
+    return n.trim().split(' ').pop().toLowerCase();
+  }
+
+  function setWWSort(col) {
+    if (wwSortCol === col) { wwSortDir *= -1; } else { wwSortCol = col; wwSortDir = 1; }
+    document.querySelectorAll('.ww-col').forEach(h => {
+      const isActive = h.dataset.col === wwSortCol;
+      h.classList.toggle('ww-col-active', isActive);
+      h.querySelector('.ww-arrow').textContent = isActive ? (wwSortDir === 1 ? '↑' : '↓') : '↑↓';
+    });
+    renderWhosWho();
+  }
+
+  function filterWW(f, btn) {
+    currentWWFilter = f;
+    document.querySelectorAll('#ww-tabs .cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    renderWhosWho();
+  }
+
+  let wwRenderedList = [];
+
+  function renderWhosWho() {
+    let list = currentWWFilter === 'all'
+      ? allWhosWho
+      : allWhosWho.filter(p => p.organisation_type === currentWWFilter);
+    if (wwSearchQuery) {
+      const q = wwSearchQuery.toLowerCase();
+      list = list.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.organisation.toLowerCase().includes(q) ||
+        p.role.toLowerCase().includes(q)
+      );
+    }
+    list = list.slice().sort((a, b) => {
+      let vA, vB;
+      if (wwSortCol === 'name')         { vA = surname(a.name); vB = surname(b.name); }
+      else if (wwSortCol === 'role')    { vA = a.role.toLowerCase(); vB = b.role.toLowerCase(); }
+      else if (wwSortCol === 'organisation') { vA = a.organisation.toLowerCase(); vB = b.organisation.toLowerCase(); }
+      else if (wwSortCol === 'type')    { vA = (wwOrgLabel[a.organisation_type]||a.organisation_type).toLowerCase(); vB = (wwOrgLabel[b.organisation_type]||b.organisation_type).toLowerCase(); }
+      return wwSortDir * vA.localeCompare(vB);
+    });
+    wwRenderedList = list;
+    document.getElementById('ww-count').textContent = list.length + ' profile' + (list.length !== 1 ? 's' : '');
+    document.getElementById('whowho-full').innerHTML = list.length
+      ? list.map((p, i) => wwCardHTML(p, i)).join('')
+      : '<div class="empty">No profiles match.</div>';
+  }
+
+  function wwCardHTML(p, i) {
+    const orgBadge = '<span class="ww-org-badge ww-' + p.organisation_type + '">' + (wwOrgLabel[p.organisation_type] || p.organisation_type) + '</span>';
+    const geo = (p.geography || []).slice(0,1).map(g => '<span class="proj-tag">'+g+'</span>').join('');
+    return '<div class="ww-card" onclick="openWWDetail(' + i + ')">' +
+      '<div class="ww-name">'+formatName(p.name)+'</div>' +
+      '<div class="ww-role">'+p.role+'</div>' +
+      '<div class="ww-org">'+p.organisation+'</div>' +
+      '<div class="ww-tags">' + orgBadge + geo + '</div>' +
+      '</div>';
+  }
+
+  function openWWDetail(i) {
+    const p = wwRenderedList[i];
+    const unconfirmedNote = !p.verified
+      ? '<div style="font-size:11px;color:var(--text-dim);margin-top:6px">Role title awaiting confirmation from primary source.</div>'
+      : '';
+    const orgBadge = '<span class="ww-org-badge ww-' + p.organisation_type + '">' + (wwOrgLabel[p.organisation_type] || p.organisation_type) + '</span>';
+
+    const focusAreas = p.focus_areas && p.focus_areas.length
+      ? '<div class="detail-section-title">Focus areas</div>' +
+        '<div class="detail-tags">' + p.focus_areas.map(f => '<span class="proj-tag">'+f+'</span>').join('') + '</div>'
+      : '';
+    const instruments = p.instrument_types && p.instrument_types.length
+      ? '<div class="detail-section-title" style="margin-top:16px">Instruments</div>' +
+        '<div class="detail-tags">' + p.instrument_types.map(i => '<span class="proj-tag">'+i+'</span>').join('') + '</div>'
+      : '';
+    const geos = p.geography && p.geography.length
+      ? '<div class="detail-section-title" style="margin-top:16px">Geography</div>' +
+        '<div class="detail-tags">' + p.geography.map(g => '<span class="proj-tag">'+g+'</span>').join('') + '</div>'
+      : '';
+
+    const notable = p.notable_work && p.notable_work.length
+      ? '<div class="detail-section-title" style="margin-top:24px">Notable work</div>' +
+        p.notable_work.map(w =>
+          '<div style="padding:10px 0;border-bottom:1px solid var(--border)">' +
+          '<div style="font-size:13px;color:var(--text);line-height:1.55;margin-bottom:4px">' + w.description + '</div>' +
+          (w.year ? '<div style="font-size:11px;color:var(--text-dim)">' + w.year + (w.source_url ? ' - <a href="'+w.source_url+'" target="_blank" style="color:var(--teal)">Source -></a>' : '') + '</div>' : '') +
+          '</div>'
+        ).join('')
+      : '';
+
+    const footprint = p.public_footprint && p.public_footprint.length
+      ? '<div class="detail-section-title" style="margin-top:24px">Public footprint</div>' +
+        p.public_footprint.map(f =>
+          '<div class="detail-meta-row"><span class="detail-meta-label">' + f.type + '</span>' +
+          '<span class="detail-meta-value"><a href="'+f.url+'" target="_blank" style="color:var(--teal)">'+f.title+' -></a></span></div>'
+        ).join('')
+      : '';
+
+    const dealSize = p.deal_size
+      ? '<div class="detail-meta-row"><span class="detail-meta-label">Deal size</span><span class="detail-meta-value">'+p.deal_size+'</span></div>'
+      : '';
+
+    openDetail(
+      formatName(p.name),
+      orgBadge,
+      '<div class="detail-section-title">Position</div>' +
+      '<div class="detail-meta-row"><span class="detail-meta-label">Role</span><span class="detail-meta-value">'+p.role+'</span></div>' +
+      unconfirmedNote +
+      '<div class="detail-meta-row"><span class="detail-meta-label">Organisation</span><span class="detail-meta-value">'+p.organisation+'</span></div>' +
+      '<div class="detail-meta-row"><span class="detail-meta-label">Location</span><span class="detail-meta-value">'+p.location+'</span></div>' +
+      dealSize +
+      (p.summary ? '<div class="detail-section-title" style="margin-top:24px">Profile</div><p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:16px">'+p.summary+'</p>' : '') +
+      focusAreas + instruments + geos +
+      notable +
+      footprint
+    );
+  }
+
+  async function submitWWSuggest() {
+    const name     = document.getElementById('ww-s-name').value.trim();
+    const org      = document.getElementById('ww-s-org').value.trim();
+    const role     = document.getElementById('ww-s-role').value.trim();
+    const linkedin = document.getElementById('ww-s-linkedin').value.trim();
+    if (!name || !org || !role) {
+      document.getElementById('ww-s-name').focus();
+      return;
+    }
+    try {
+      await fetch('https://formspree.io/f/mpqogvgk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, organisation: org, role, linkedin })
+      });
+    } catch(e) {}
+    document.getElementById('ww-suggest-form').style.display = 'none';
+    document.getElementById('ww-suggest-thanks').style.display = 'block';
+  }
 
   load();
 </script>
