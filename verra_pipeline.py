@@ -212,6 +212,46 @@ def main():
     print(f"New projects to review: {len(new_entries)}")
     print()
 
+    # --- NEW: Find existing projects not matched in Verra CSV ---
+    verra_names_in_csv = {row.get("Name", "").strip().lower() for row in candidates}
+    verra_ids_in_csv = {str(row.get("ID", "")).strip() for row in candidates}
+
+    with open(args.projects, "r", encoding="utf-8") as f:
+        existing_data = json.load(f)
+
+    unverified = []
+    for p in existing_data.get("projects", []):
+        pid = str(p.get("verra_id", "")).strip()
+        pname = p.get("name", "").strip().lower()
+        matched_by_id = pid and pid in verra_ids_in_csv
+        matched_by_name = any(
+            pname in vname or vname in pname
+            for vname in verra_names_in_csv
+            if len(vname) > 4
+        )
+        if not matched_by_id and not matched_by_name:
+            unverified.append({"id": p["id"], "name": p["name"], "country": p.get("country",""), "status": p.get("status","")})
+
+    if unverified:
+        print(f"--- UNVERIFIED: {len(unverified)} existing projects with no match in Verra CSV ---")
+        print("These may be synthetic, non-Verra, or named differently on the registry.")
+        print()
+        for u in unverified:
+            print(f"  ? {u['name']} ({u['country']}) [{u['status']}]  id:{u['id']}")
+        print()
+
+        unverified_output = {
+            "_note": "These existing projects were not matched in the Verra CSV. Review each: may be synthetic, registered under a different name, or on a non-Verra standard (Gold Standard, Plan Vivo).",
+            "_generated": date.today().isoformat(),
+            "unverified_count": len(unverified),
+            "projects": unverified
+        }
+        unverified_path = os.path.expanduser(args.output.replace(".json", "_unverified.json"))
+        with open(unverified_path, "w", encoding="utf-8") as f:
+            json.dump(unverified_output, f, indent=2, ensure_ascii=False)
+        print(f"Unverified list written to: {unverified_path}")
+        print()
+
     if new_entries:
         print("New projects found:")
         for e in new_entries:

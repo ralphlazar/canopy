@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIRN Scoring Methodology - Canopy</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --cairn: #4a2a6b; --cairn-pale: #f0eaf7; --cairn-mid: rgba(74,42,107,0.15);
+    --cairn-border: rgba(74,42,107,0.25);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-link { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
+  .nav-link:hover { color: var(--text); }
+  .nav-link.active { color: var(--cairn); font-weight: 600; }
+
+  .page-wrap { max-width: 740px; margin: 0 auto; padding: 56px 40px 100px; }
+
+  .page-back { font-size: 12px; color: var(--text-dim); display: inline-flex; align-items: center; gap: 6px; margin-bottom: 40px; transition: color 0.15s; cursor: pointer; }
+  .page-back:hover { color: var(--text); }
+
+  .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cairn); margin-bottom: 14px; }
+  .page-title { font-size: 32px; font-weight: 600; letter-spacing: -0.025em; color: var(--text); line-height: 1.1; margin-bottom: 8px; }
+  .page-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 48px; }
+
+  .lead { font-size: 17px; color: var(--text); line-height: 1.75; font-weight: 500; margin-bottom: 40px; letter-spacing: -0.01em; border-left: 3px solid var(--cairn); padding-left: 20px; }
+
+  .section { margin-bottom: 52px; }
+  .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cairn); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--cairn-border); }
+  .body-p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+  .body-p:last-child { margin-bottom: 0; }
+
+  /* WEIGHT SUMMARY */
+  .weight-grid { display: grid; grid-template-columns: 1fr 60px; gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  .weight-row { display: contents; }
+  .weight-row > div { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .weight-row:last-child > div { border-bottom: none; }
+  .weight-row > div:first-child { color: var(--text); font-weight: 500; }
+  .weight-row > div:last-child { color: var(--cairn); font-weight: 700; text-align: right; background: var(--cairn-pale); }
+  .weight-row.header > div { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); background: var(--bg3); }
+
+  /* RUBRIC TABLE */
+  .rubric-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 13px; }
+  .rubric-table th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); padding: 8px 14px; text-align: left; background: var(--bg3); border-bottom: 2px solid var(--border); }
+  .rubric-table th:first-child { width: 70px; }
+  .rubric-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); line-height: 1.5; vertical-align: top; }
+  .rubric-table tr:last-child td { border-bottom: none; }
+  .rubric-table td:first-child { font-weight: 700; color: var(--cairn); font-size: 15px; text-align: center; }
+  .rubric-table tbody tr:hover { background: var(--bg2); }
+
+  /* GRADE TABLE */
+  .grade-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; }
+  .grade-table th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); padding: 8px 14px; text-align: left; background: var(--bg3); border-bottom: 2px solid var(--border); }
+  .grade-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); vertical-align: middle; }
+  .grade-table tr:last-child td { border-bottom: none; }
+  .grade-badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 11px; border-radius: 5px; }
+  .grade-Aplus  { background: #e6f4ec; color: #1a6b3a; }
+  .grade-A      { background: #e8f0e8; color: #2a5a2a; }
+  .grade-Bplus  { background: #e8eef7; color: #2a4a8a; }
+  .grade-B      { background: #eaf0f8; color: #3a5a9a; }
+  .grade-Cplus  { background: #fef6e0; color: #8a6000; }
+  .grade-C      { background: #fef0d0; color: #9a6800; }
+  .grade-D      { background: #fde8e8; color: #9a2a2a; }
+
+  .callout { background: var(--cairn-pale); border: 1px solid var(--cairn-border); border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .callout strong { color: var(--cairn); }
+
+  .source-list { margin: 12px 0 0; padding: 0; list-style: none; }
+  .source-list li { font-size: 14px; color: var(--text-muted); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; }
+  .source-list li:last-child { border-bottom: none; }
+  .source-name { font-weight: 600; color: var(--text); min-width: 180px; flex-shrink: 0; }
+
+  .dim-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+  .dim-number { font-size: 28px; font-weight: 700; color: var(--cairn); line-height: 1; }
+  .dim-name { font-size: 18px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .dim-weight-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--cairn-pale); color: var(--cairn); font-weight: 600; border: 1px solid var(--cairn-border); }
+
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .footer-note { font-size: 12px; color: var(--text-dim); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
+  .footer-link:hover { color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .page-wrap { padding: 36px 24px 60px; }
+    .page-title { font-size: 26px; }
+    .weight-grid { grid-template-columns: 1fr 50px; }
+    .rubric-table th, .rubric-table td { padding: 8px 10px; }
+    .source-name { min-width: 120px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">
+      <svg width="28" height="28" viewBox="0 0 28 28">
+        <rect width="28" height="28" fill="#f5f5f2" rx="4"/>
+        <text x="14" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a2e" font-family="-apple-system,sans-serif">C</text>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">Canopy</div>
+      <div class="logo-sub">African Conservation Finance</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Policy</a>
+    <a class="nav-link" href="index.html">Projects</a>
+    <a class="nav-link" href="index.html">Intel.</a>
+    <a class="nav-link" href="index.html">Funding</a>
+    <a class="nav-link" href="index.html">Who's Who</a>
+    <a class="nav-link active" href="cairn.html">CAIRN</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <a class="page-back" href="cairn.html">&#8592; Back to CAIRN ratings</a>
+
+  <div class="eyebrow">CAIRN - Scoring methodology</div>
+  <h1 class="page-title">How we score</h1>
+  <div class="page-sub">Full technical disclosure - updated April 2026</div>
+
+  <div class="lead">
+    CAIRN is Canopy's proprietary rating system for African conservation finance projects. We built it because no credible, systematic, data-driven rating existed - and because the absence of one was costing the sector capital it should have been attracting. Every score is derived from public registry data, with no editorial judgment applied. The rubric below is the complete scoring logic.
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <div class="section-title">Overview</div>
+    <p class="body-p">CAIRN scores five dimensions per project, each rated 1 to 5 from public data. The five scores are combined into a weighted composite and converted to a letter grade.</p>
+    <p class="body-p">The weighting reflects two priorities: credibility of the carbon claim (methodology and additionality together represent 50% of the score) and capital risk (financial viability and sovereign risk together represent 40%). Community architecture accounts for the remaining 10% - weighted lower not because it matters less, but because the public data is thinner and the scoring is therefore less precise at this stage.</p>
+
+    <div class="weight-grid">
+      <div class="weight-row header"><div>Dimension</div><div>Weight</div></div>
+      <div class="weight-row"><div>1. Methodology</div><div>25%</div></div>
+      <div class="weight-row"><div>2. Additionality</div><div>25%</div></div>
+      <div class="weight-row"><div>3. Financial viability</div><div>20%</div></div>
+      <div class="weight-row"><div>4. Sovereign risk</div><div>20%</div></div>
+      <div class="weight-row"><div>5. Community architecture</div><div>10%</div></div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 1 -->
+  <div class="section">
+    <div class="section-title">Dimension 1 - Methodology</div>
+    <div class="dim-header">
+      <div class="dim-number">1</div>
+      <div class="dim-name">Methodology</div>
+      <span class="dim-weight-badge">25%</span>
+    </div>
+    <p class="body-p">The methodology is the scientific and procedural framework that governs how a project measures, reports, and verifies its carbon impact. Not all methodologies are equal. Older REDD+ methodologies have weaker baselines and additionality tests. Newer methodologies - particularly VM0047 for afforestation, reforestation, and revegetation - have been built to a higher standard and have earned ICVCM Core Carbon Principles approval, the market's most rigorous independent quality certification.</p>
+    <p class="body-p">The score reflects both the methodology itself and whether it has received CCP approval from the Integrity Council for the Voluntary Carbon Market.</p>
+
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>Criteria</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>VM0047 (ARR) with ICVCM Core Carbon Principles approval confirmed in certification</td></tr>
+        <tr><td>4</td><td>VM0047 (ARR) without explicit CCP confirmation, or VM0033 (Blue Carbon), or VM0032 (Savanna burning)</td></tr>
+        <tr><td>3</td><td>Gold Standard methodology, or VM0012 (Improved Forest Management)</td></tr>
+        <tr><td>2</td><td>Older REDD+ methodologies: VM0007, VM0009, VM0015</td></tr>
+        <tr><td>1</td><td>Unrecognised or undisclosed methodology</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Data source:</strong> Verra registry project listings (methodology code and certification fields). Gold Standard registry for Gold Standard projects.</div>
+  </div>
+
+  <!-- DIMENSION 2 -->
+  <div class="section">
+    <div class="section-title">Dimension 2 - Additionality</div>
+    <div class="dim-header">
+      <div class="dim-number">2</div>
+      <div class="dim-name">Additionality</div>
+      <span class="dim-weight-badge">25%</span>
+    </div>
+    <p class="body-p">Additionality is the central credibility question in carbon markets: would the emissions reduction or carbon removal have happened without the carbon finance? A project that would have proceeded regardless - because the land was protected by law, or the economics worked without carbon revenue - is not additional, and its credits represent no real-world benefit.</p>
+    <p class="body-p">Rigorous additionality assessment requires reading a project's Project Design Document in full - a manual task that cannot be automated at scale. CAIRN instead uses a proxy approach based on two data points that are strongly correlated with additionality quality: the strength of the methodology (which sets the additionality test) and third-party validation status (which confirms the test has been applied and passed).</p>
+    <p class="body-p">This is a considered methodological choice, not a limitation. The methodology score already captures the stringency of the additionality test. Validation status confirms the test was applied by an independent third party. Together, these two signals are a sound proxy for additionality quality at the level of granularity that public data supports.</p>
+
+    <p class="body-p">For scoring purposes, a project is considered validated if its status is Issuing, Registered, or Issuance confirmed. Under Validation and In Development are pre-validation stages.</p>
+
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>Criteria</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>Validated + CCP-approved methodology (methodology score 5)</td></tr>
+        <tr><td>4</td><td>Validated + strong methodology (methodology score 4)</td></tr>
+        <tr><td>3</td><td>Validated + established methodology (methodology score 3), or not yet validated + strong methodology (score 4-5)</td></tr>
+        <tr><td>2</td><td>Not yet validated + established methodology, or validated + older methodology</td></tr>
+        <tr><td>1</td><td>Not validated + older methodology</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Data source:</strong> Derived from methodology score (Dimension 1) and project status field from Verra and Gold Standard registries. No manual inputs at this stage - a CMS layer allowing editorial override will be added in a future version.</div>
+  </div>
+
+  <!-- DIMENSION 3 -->
+  <div class="section">
+    <div class="section-title">Dimension 3 - Financial viability</div>
+    <div class="dim-header">
+      <div class="dim-number">3</div>
+      <div class="dim-name">Financial viability</div>
+      <span class="dim-weight-badge">20%</span>
+    </div>
+    <p class="body-p">A project that will never issue credits, or that faces structural barriers to generating revenue, is not a viable investment regardless of its ecological credentials. Financial viability is scored from project status and the presence of an Article 6.2 compliance pathway - the most valuable revenue channel currently available to African conservation projects, given the compliance premium over voluntary credits.</p>
+
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>Criteria</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>Issuing credits with a confirmed Article 6.2 / ITMO pathway</td></tr>
+        <tr><td>4</td><td>Issuing credits, voluntary market</td></tr>
+        <tr><td>3</td><td>Registered or issuance confirmed - not yet issuing</td></tr>
+        <tr><td>2</td><td>Under validation - methodology registered, credits not yet issued</td></tr>
+        <tr><td>1</td><td>In development - earliest stage</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Data source:</strong> Project status field from Verra and Gold Standard registries. Article 6.2 pathway confirmed from project tags derived from registry data and UNFCCC Article 6 pipeline.</div>
+  </div>
+
+  <!-- DIMENSION 4 -->
+  <div class="section">
+    <div class="section-title">Dimension 4 - Sovereign risk</div>
+    <div class="dim-header">
+      <div class="dim-number">4</div>
+      <div class="dim-name">Sovereign risk</div>
+      <span class="dim-weight-badge">20%</span>
+    </div>
+    <p class="body-p">Conservation finance projects operate within sovereign environments that affect their durability, enforceability, and counterparty risk. A project in a politically stable, well-governed country with a functioning legal system is materially lower risk than the same project in a fragile state - regardless of its carbon methodology.</p>
+    <p class="body-p">The CAIRN sovereign risk score combines two distinct risk types that together determine the full sovereign exposure of a conservation finance investment.</p>
+    <p class="body-p"><strong style="color:var(--text);">Governance risk (50% of sovereign score)</strong> - the risk that a country's political environment, rule of law, or institutional stability undermines the project. Scored from the World Bank Governance Indicators composite: political stability and absence of violence, rule of law, control of corruption, and government effectiveness. These four indicators are most directly relevant to conservation finance - they capture whether a government can be held to its commitments, whether land rights can be enforced, and whether regulatory frameworks are stable.</p>
+    <p class="body-p"><strong style="color:var(--text);">Default risk (50% of sovereign score)</strong> - the risk that a sovereign counterparty defaults on financial obligations, directly relevant to debt-for-nature swaps, sovereign-backed instruments, and any structure where the government is a financial counterparty. Scored from the most recently published sovereign credit rating from Moody's, S&P, or Fitch. Where multiple agencies rate the same country, the most recently updated rating takes precedence.</p>
+    <p class="body-p">Where no agency credit rating exists - which applies to the majority of African nations, particularly smaller economies and fragile states - the sovereign score falls back to 100% governance risk (WGI only). This is the more conservative approach: unrated sovereigns carry unquantified default risk, and WGI alone captures the governance dimension without implying a false precision on credit.</p>
+
+    <p class="body-p" style="font-weight:600;color:var(--text);">WGI scoring</p>
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>WGI position</th><th>Representative countries</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>Top quartile</td><td>Botswana, Mauritius, Namibia, Rwanda, Seychelles, Cape Verde</td></tr>
+        <tr><td>4</td><td>Second quartile</td><td>South Africa, Morocco, Ghana, Senegal, Tanzania, Benin</td></tr>
+        <tr><td>3</td><td>Third quartile</td><td>Kenya, Nigeria, Ivory Coast, Cameroon, Uganda, Ethiopia</td></tr>
+        <tr><td>2</td><td>Bottom quartile</td><td>DRC, Sudan, Mali, Burkina Faso, Guinea, Niger</td></tr>
+        <tr><td>1</td><td>Bottom quartile, conflict-affected</td><td>Somalia, South Sudan, Eritrea</td></tr>
+      </tbody>
+    </table>
+
+    <p class="body-p" style="font-weight:600;color:var(--text);margin-top:24px;">Credit rating scoring</p>
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>Rating range</th><th>Signal</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>BBB- and above</td><td>Investment grade</td></tr>
+        <tr><td>4</td><td>BB+ to BB-</td><td>Sub-investment grade, lower risk</td></tr>
+        <tr><td>3</td><td>B+ to B-</td><td>Speculative, moderate risk</td></tr>
+        <tr><td>2</td><td>CCC and below</td><td>High default risk or in restructuring</td></tr>
+        <tr><td>1</td><td>No rating</td><td>Falls back to 100% WGI</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Data sources:</strong> World Bank Governance Indicators (most recent annual release). Sovereign credit ratings: Moody's, S&P Global, Fitch Ratings - most recently published rating per country. Where ratings differ between agencies, the most recently updated rating is used. Unrated countries score on WGI only.</div>
+  </div>
+
+  <!-- DIMENSION 5 -->
+  <div class="section">
+    <div class="section-title">Dimension 5 - Community architecture</div>
+    <div class="dim-header">
+      <div class="dim-number">5</div>
+      <div class="dim-name">Community architecture</div>
+      <span class="dim-weight-badge">10%</span>
+    </div>
+    <p class="body-p">How a project is structured in relation to the communities whose land it sits on is a material factor in project durability. Projects with weak community architecture - where communities are passive recipients rather than active participants - face higher risk of consent withdrawal, land disputes, and regulatory challenge. This is increasingly true as host country governments scrutinise community benefit-sharing more closely under Article 6.2 frameworks.</p>
+    <p class="body-p">The best available proxy from public data is CCB certification - the Climate, Community and Biodiversity standard independently assesses community governance, benefit-sharing, and land tenure. CCB Gold is the highest tier and requires the most rigorous demonstration of community co-ownership. Gold Standard methodology also incorporates community standards, though with less granularity than CCB.</p>
+    <p class="body-p">Community architecture is weighted at 10% - lower than its real-world importance - because public data coverage is thinner here than on the other four dimensions. A CMS layer allowing manual enrichment of community structure data is planned, at which point the weighting will be reviewed.</p>
+
+    <table class="rubric-table">
+      <thead><tr><th>Score</th><th>Criteria</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>CCB Gold certified</td></tr>
+        <tr><td>4</td><td>CCB standard certified</td></tr>
+        <tr><td>3</td><td>Gold Standard certification (incorporates community standards)</td></tr>
+        <tr><td>2</td><td>VCS only, or CCP approved without CCB - no independent community assessment</td></tr>
+        <tr><td>1</td><td>No recognised community certification or standard</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Data source:</strong> Certification field from Verra and Gold Standard project listings. CCB certification is independently verified by Verra at registration.</div>
+  </div>
+
+  <!-- GRADE CONVERSION -->
+  <div class="section">
+    <div class="section-title">Grade conversion</div>
+    <p class="body-p">The five dimension scores are multiplied by their respective weights and summed to produce a composite between 1 and 5. The composite maps to a letter grade as follows.</p>
+
+    <table class="grade-table">
+      <thead><tr><th>Composite score</th><th>Grade</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>4.50 - 5.00</td><td><span class="grade-badge grade-Aplus">A+</span></td><td>Strongest available profile across all five dimensions. CCP-approved methodology, validated, issuing or on a compliance pathway, top-quartile sovereign environment, CCB Gold.</td></tr>
+        <tr><td>4.00 - 4.49</td><td><span class="grade-badge grade-A">A</span></td><td>High-quality project. Strong on most dimensions. Minor gaps - typically sovereign environment or community certification.</td></tr>
+        <tr><td>3.50 - 3.99</td><td><span class="grade-badge grade-Bplus">B+</span></td><td>Solid project. Established methodology, validated or near-validation, reasonable sovereign context.</td></tr>
+        <tr><td>3.00 - 3.49</td><td><span class="grade-badge grade-B">B</span></td><td>Acceptable project with identifiable gaps - typically older methodology, pre-validation stage, or weaker sovereign environment.</td></tr>
+        <tr><td>2.50 - 2.99</td><td><span class="grade-badge grade-Cplus">C+</span></td><td>Below average. Multiple dimensions score weakly. Carries meaningful risk that should be understood before capital deployment.</td></tr>
+        <tr><td>2.00 - 2.49</td><td><span class="grade-badge grade-C">C</span></td><td>Weak profile. Older methodology, pre-validation, difficult sovereign context, or limited community structure. High risk.</td></tr>
+        <tr><td>Below 2.00</td><td><span class="grade-badge grade-D">D</span></td><td>The data available presents a poor profile across most or all dimensions. Not a signal to avoid - but a signal to understand the project in depth before proceeding.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DATA SOURCES -->
+  <div class="section">
+    <div class="section-title">Data sources</div>
+    <p class="body-p">All inputs are from public sources updated on a regular cycle. No proprietary data is used. No manual editorial inputs are applied at this stage.</p>
+    <ul class="source-list">
+      <li><span class="source-name">Verra registry</span>Project methodology, certification, validation status, issuance data. Primary source for 130+ of 261 tracked projects.</li>
+      <li><span class="source-name">Gold Standard registry</span>Project data for Gold Standard-certified projects not on Verra.</li>
+      <li><span class="source-name">World Bank WGI</span>Governance indicators for all 54 African nations. Most recent annual release. Four indicators used: political stability, rule of law, control of corruption, government effectiveness.</li>
+      <li><span class="source-name">Moody's / S&amp;P / Fitch</span>Sovereign credit ratings where published. Most recently updated rating used. Unrated countries fall back to 100% WGI.</li>
+      <li><span class="source-name">UNFCCC Article 6 pipeline</span>Article 6.2 bilateral arrangement status. Used to identify projects on a compliance pathway for financial viability scoring.</li>
+    </ul>
+  </div>
+
+  <!-- LIMITATIONS -->
+  <div class="section">
+    <div class="section-title">Limitations and future development</div>
+    <p class="body-p">CAIRN is a data-derived rating, not a due diligence replacement. It scores what public registry data supports. It does not assess management quality, community relationships on the ground, developer track record, or buyer offtake terms - all of which matter to actual investment decisions.</p>
+    <p class="body-p">Three known limitations in the current version:</p>
+    <p class="body-p"><strong>Additionality proxy.</strong> The current approach proxies additionality from methodology and validation status. A full additionality assessment requires reading the Project Design Document. A future CMS layer will allow manual additionality assessments to override the proxy score where Canopy has done the work.</p>
+    <p class="body-p"><strong>Community architecture data.</strong> CCB certification is a strong signal but covers only a subset of projects. Many projects with genuine community co-ownership structures are not CCB-certified. Manual enrichment will improve this dimension as data is gathered.</p>
+    <p class="body-p"><strong>Sovereign credit gaps.</strong> The majority of African countries are unrated by the major agencies. The WGI-only fallback is robust, but the 50/50 composite for rated countries is more precise. Coverage will improve as more countries access international debt markets.</p>
+    <p class="body-p">CAIRN scores are updated when source data changes - on registry updates, new WGI releases, or rating agency actions. The scoring date is displayed on each project record.</p>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="section">
+    <div class="section-title">Disclaimer</div>
+    <p class="body-p">CAIRN scores are informational only. They are not financial advice, investment recommendations, or a solicitation to buy or sell any financial instrument. Canopy makes no warranty as to the accuracy or completeness of the underlying data. All investment decisions should be made on the basis of independent due diligence.</p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-note">Updated April 2026 - Pan-African - Independent</span>
+  <div class="footer-links">
+    <a class="footer-link" href="cairn.html">Back to CAIRN</a>
+    <a class="footer-link" href="index.html">Home</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -434,7 +434,7 @@
   .search-empty { padding: 20px 16px; font-size: 13px; color: var(--text-dim); text-align: center; }
 
   /* MAP */
-  .view-toggle { display: flex; gap: 0; padding: 6px 40px 0; max-width: 1100px; margin: 0 auto; }
+  .view-toggle { display: flex; gap: 0; padding: 6px 40px 16px; max-width: 1100px; margin: 0 auto; }
   .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; }
   .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
   .toggle-btn:last-child  { border-radius: 0 6px 6px 0; border-left: none; }
@@ -743,6 +743,26 @@
   .home-card-5:hover { border-color: rgba(26,92,92,0.5); }
   .card-num-5 { background: #1a5c5c; }
 
+  /* CAIRN */
+  .home-card-6 { border-color: rgba(74,42,107,0.25); background: rgba(74,42,107,0.025); }
+  .home-card-6:hover { border-color: rgba(74,42,107,0.5); }
+  .card-num-6 { background: #4a2a6b; }
+  .cairn-lock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid rgba(74,42,107,0.2);
+    border-radius: 10px;
+    background: rgba(74,42,107,0.04);
+    margin: 0 20px;
+  }
+  .cairn-lock-icon { font-size: 22px; opacity: 0.55; flex-shrink: 0; }
+  .cairn-lock-label { font-size: 13px; font-weight: 600; color: #4a2a6b; }
+  .cairn-lock-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .cairn-tags { display: flex; gap: 6px; flex-wrap: wrap; padding: 14px 20px 20px; }
+  .cairn-tag { font-size: 10px; padding: 3px 10px; border-radius: 20px; background: rgba(74,42,107,0.08); color: #4a2a6b; font-weight: 600; }
+
   .ww-list-header { display: grid; grid-template-columns: 180px 1fr 180px 100px; gap: 20px; padding: 10px 40px; max-width: 1100px; margin: 0 auto; border-bottom: 2px solid var(--border); background: var(--bg3); border-top: 1px solid var(--border); }
   .ww-col { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
   .ww-col:hover { color: var(--text); }
@@ -828,6 +848,7 @@
     <span class="nav-link" onclick="showView('intelligence')">Intel.</span>
     <span class="nav-link" onclick="showView('instruments')">Funding</span>
     <span class="nav-link" onclick="showView('whowho')">Who's Who</span>
+    <span class="nav-link" onclick="window.location.href='cairn.html'" style="color:#4a2a6b;font-weight:600;">CAIRN</span>
     <div class="search-wrap">
       <span class="search-icon">&#9906;</span>
       <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
@@ -853,6 +874,7 @@
   <div class="mobile-menu-item" onclick="mobileNav('intelligence')"><span class="mobile-menu-num" style="background:#4a6fa3">3</span>Intelligence</div>
   <div class="mobile-menu-item" onclick="mobileNav('instruments')"><span class="mobile-menu-num" style="background:#c17f00">4</span>Funding Instruments</div>
   <div class="mobile-menu-item" onclick="mobileNav('whowho')"><span class="mobile-menu-num" style="background:#1a5c5c">5</span>Who's Who</div>
+  <div class="mobile-menu-item" onclick="window.location.href='cairn.html'"><span class="mobile-menu-num" style="background:#4a2a6b">6</span>CAIRN</div>
   <div class="mobile-menu-divider"></div>
   <div class="mobile-menu-sub" onclick="mobileNav('about')">About</div>
   <div class="mobile-menu-sub">Subscribe to brief</div>
@@ -896,7 +918,7 @@
           <div class="home-card-map-top">
             <div>
               <div class="home-card-map-title"><span class="card-num card-num-2">2</span>Projects Tracker</div>
-              <div class="home-card-map-sub" id="mini-proj-stat"><span class="live-num">148</span> projects tracked across Africa</div>
+              <div class="home-card-map-sub" id="mini-proj-stat"><span class="live-num">261</span> projects tracked across Africa</div>
             </div>
             <div class="home-card-map-cta">Open -></div>
           </div>
@@ -956,6 +978,31 @@
       </div>
     </div>
 
+    <!-- CAIRN -->
+    <div class="home-card home-card-6" onclick="window.location.href='cairn.html'">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-6">6</span>CAIRN</div>
+          <div class="home-card-map-sub">Canopy African Impact &amp; Risk Navigator - proprietary project ratings</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+      <div class="cairn-lock">
+        <div class="cairn-lock-icon">&#128274;</div>
+        <div>
+          <div class="cairn-lock-label">Members only</div>
+          <div class="cairn-lock-sub">Rated opinions on African conservation projects - password required</div>
+        </div>
+      </div>
+      <div class="cairn-tags">
+        <span class="cairn-tag">Methodology</span>
+        <span class="cairn-tag">Community architecture</span>
+        <span class="cairn-tag">Additionality</span>
+        <span class="cairn-tag">Financial viability</span>
+        <span class="cairn-tag">Sovereign risk</span>
+      </div>
+    </div>
+
   </div>
   <footer>
     <span class="footer-note">Updated weekly · Pan-African · Independent</span>
@@ -972,7 +1019,7 @@
   <div class="page-header">
     <div class="page-back" onclick="showView('home')">&#8592; Back</div>
     <div class="page-title">Projects Tracker</div>
-    <div class="page-sub"><span class="live-num" id="proj-page-count">148</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
+    <div class="page-sub"><span class="live-num" id="proj-page-count">261</span> conservation finance projects across Africa - tracked, verified, and explained.</div>
   </div>
   <div class="view-toggle">
     <button class="toggle-btn active" onclick="setProjView('map',this)">Map</button>
@@ -1158,7 +1205,7 @@
   <div class="about-body">
     <p class="about-lead">Canopy is a public resource on conservation finance in Africa.</p>
 
-    <p class="about-p">It covers 148 tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
+    <p class="about-p">It covers 261 tracked projects across 54 countries - methodology, certification, and current status. Twenty-two funding instruments are indexed and explained, from voluntary carbon credits to debt-for-nature swaps. Article 6.2 readiness is mapped for every African nation. A weekly intelligence feed tracks what is moving across carbon markets, biodiversity policy, and philanthropic flows.</p>
 
     <p class="about-p">It is built for funders, family offices, and advisors who need to understand the landscape before committing capital - and for anyone tracking what is actually happening at the frontier of conservation finance.</p>
 
@@ -1956,14 +2003,19 @@
     426:'lesotho',430:'liberia',434:'libya',450:'madagascar',454:'malawi',
     466:'mali',478:'mauritania',480:'mauritius',504:'morocco',508:'mozambique',
     516:'namibia',562:'niger',566:'nigeria',646:'rwanda',678:'sao-tome-principe',
-    686:'senegal',694:'sierra-leone',706:'somalia',710:'south-africa',
+    686:'senegal',690:'seychelles',694:'sierra-leone',706:'somalia',710:'south-africa',
     716:'zimbabwe',728:'south-sudan',729:'sudan',748:'eswatini',768:'togo',
     788:'tunisia',800:'uganda',818:'egypt',834:'tanzania',854:'burkina-faso',
-    894:'zambia',262:'djibouti',686:'senegal'
+    894:'zambia',262:'djibouti',732:'western-sahara'
   };
 
   // African ISO codes
   const africaISO = new Set(Object.keys(isoToId).map(Number));
+
+  // Features with no numeric ID that should still render (Natural Earth quirk)
+  const nameToId = { 'Somaliland': 'somalia' };
+  function isAfrican(f) { return africaISO.has(+f.id) || (f.properties && nameToId[f.properties.name]); }
+  function getFeatureId(f) { return isoToId[+f.id] || (f.properties && nameToId[f.properties.name]) || null; }
 
   const policyColor = {
     'operational':'#1a4a2e', 'agreement-signed':'#0c5c58',
@@ -1981,7 +2033,7 @@
 
   async function loadWorldData() {
     if (worldData) return worldData;
-    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+    const topo = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
     worldData = topo;
     return topo;
   }
@@ -2009,20 +2061,20 @@
     allPolicy.forEach(c => { policyById[c.id] = c; });
 
     svg.selectAll('path')
-      .data(countries.features.filter(f => africaISO.has(+f.id)))
+      .data(countries.features.filter(f => isAfrican(f)))
       .join('path')
       .attr('class', 'country-path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const c = policyById[id];
         if (!c) return '#e8e8e5';
         return riskOverride(c) || policyColor[c.status] || '#e8e8e5';
       })
-      .attr('title', f => isoToId[+f.id] || '')
+      .attr('title', f => getFeatureId(f) || '')
       .on('mouseover', (event, f) => {
         if (isTouchDevice()) return;
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const c = policyById[id];
         if (!c) return;
         showTooltip(event, '<strong>'+c.name+'</strong><br>'+(statusLabel[c.status]||c.status));
@@ -2031,7 +2083,7 @@
       .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
         hideTooltip();
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const c = policyById[id];
         if (c) openPolicyDetail(c);
       });
@@ -2074,12 +2126,12 @@
       .interpolator(d3.interpolate('#e8f5e0','#1a4a2e'));
 
     svg.selectAll('path')
-      .data(countries.features.filter(f => africaISO.has(+f.id)))
+      .data(countries.features.filter(f => isAfrican(f)))
       .join('path')
       .attr('class', 'country-path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const count = projCountryMap[id] || 0;
         return count > 0 ? colorScale(count) : '#f0f0ee';
       })
@@ -2087,7 +2139,7 @@
       .attr('stroke-width', 0.5)
       .on('mouseover', (event, f) => {
         if (isTouchDevice()) return;
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         if (!id) return;
         const count = projCountryMap[id] || 0;
         const countryName = allProjects.find(p => {
@@ -2108,7 +2160,7 @@
       .on('mousemove', moveTooltip)
       .on('mouseout', hideTooltip)
       .on('click', (event, f) => {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         if (!id) return;
         hideTooltip();
         if (selectedProjCountry === id) {
@@ -2254,7 +2306,7 @@
 
     // Sort north to south for reveal
     const features = countries.features
-      .filter(f => africaISO.has(+f.id))
+      .filter(f => isAfrican(f))
       .sort((a, b) => {
         const centA = d3.geoCentroid(a);
         const centB = d3.geoCentroid(b);
@@ -2272,7 +2324,7 @@
 
     // Sequential reveal - north to south
     paths.each(function(f, i) {
-      const id = isoToId[+f.id];
+      const id = getFeatureId(f);
       const count = projCountryMap[id] || 0;
       const targetFill = count > 0 ? colorScale(count) : '#e8e8e5';
       d3.select(this)
@@ -2285,7 +2337,7 @@
     // Hover tooltips
     paths
       .on('mouseover', function(event, f) {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         if (!id) return;
         const count = projCountryMap[id] || 0;
         const proj = allProjects.find(p => {
@@ -2324,7 +2376,7 @@
 
     // Sort north to south for reveal
     const features = countries.features
-      .filter(f => africaISO.has(+f.id))
+      .filter(f => isAfrican(f))
       .sort((a, b) => {
         const centA = d3.geoCentroid(a);
         const centB = d3.geoCentroid(b);
@@ -2342,7 +2394,7 @@
 
     // Sequential reveal - north to south
     paths.each(function(f, i) {
-      const id = isoToId[+f.id];
+      const id = getFeatureId(f);
       const c = policyById[id];
       const targetFill = c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
       d3.select(this)
@@ -2355,7 +2407,7 @@
     // Hover tooltips
     paths
       .on('mouseover', function(event, f) {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const c = policyById[id];
         if (!c) return;
         showTooltip(event, '<strong>' + c.name + '</strong><br>' + (statusLabel[c.status] || c.status));
@@ -2377,13 +2429,13 @@
     const countries = topojson.feature(topo, topo.objects.countries);
     const policyById = {};
     allPolicy.forEach(c => { policyById[c.id] = c; });
-    const features = countries.features.filter(f => africaISO.has(+f.id));
+    const features = countries.features.filter(f => isAfrican(f));
     svg.selectAll('path')
       .data(features)
       .join('path')
       .attr('d', path)
       .attr('fill', f => {
-        const id = isoToId[+f.id];
+        const id = getFeatureId(f);
         const c = policyById[id];
         return c ? (riskOverride(c) || policyColor[c.status] || '#e8e8e5') : '#e8e8e5';
       })

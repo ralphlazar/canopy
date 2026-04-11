@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIRN - Canopy Africa Impact &amp; Risk Navigator</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5;
+    --green: #1a4a2e;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --cairn: #4a2a6b; --cairn-pale: #f0eaf7; --cairn-mid: rgba(74,42,107,0.15);
+    --cairn-border: rgba(74,42,107,0.25);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-link { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
+  .nav-link:hover { color: var(--text); }
+  .nav-link.active { color: var(--cairn); font-weight: 600; }
+
+  /* INTRO */
+  .intro-wrap { max-width: 720px; margin: 0 auto; padding: 52px 40px 36px; border-bottom: 1px solid var(--border); }
+  .cairn-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cairn); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .cairn-num { width: 22px; height: 22px; border-radius: 50%; background: var(--cairn); color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cairn-title { font-size: 34px; font-weight: 600; letter-spacing: -0.025em; color: var(--text); line-height: 1.1; margin-bottom: 6px; }
+  .cairn-acronym { font-size: 13px; color: var(--text-dim); margin-bottom: 22px; }
+  .cairn-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 10px; }
+  .cairn-dims { font-size: 12px; color: var(--text-dim); }
+  .live-num { color: var(--green); font-weight: 700; animation: pulse-opacity 2.5s ease-in-out infinite; }
+  @keyframes pulse-opacity { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* GATE */
+  .gate-wrap { max-width: 720px; margin: 0 auto; padding: 48px 40px 80px; }
+  .gate-box { border: 1px solid var(--border); border-radius: 14px; padding: 36px; background: var(--bg2); max-width: 480px; }
+  .gate-lock { font-size: 28px; margin-bottom: 14px; opacity: 0.45; }
+  .gate-title { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .gate-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+  .gate-row { display: flex; gap: 10px; align-items: center; }
+  .gate-input { font-size: 14px; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; outline: none; width: 180px; transition: border-color 0.15s; }
+  .gate-input:focus { border-color: var(--cairn); }
+  .gate-input.error { border-color: #c0392b; }
+  .gate-btn { font-size: 13px; padding: 9px 20px; border-radius: 8px; border: none; background: var(--cairn); color: #f0eaf7; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity 0.15s; }
+  .gate-btn:hover { opacity: 0.85; }
+  .gate-clue { font-size: 11px; color: var(--text-dim); margin-top: 10px; }
+  .gate-error { font-size: 12px; color: #c0392b; margin-top: 8px; display: none; }
+  .gate-error.visible { display: block; }
+
+  /* TOOL */
+  .tool-wrap { display: none; }
+  .tool-wrap.visible { display: block; }
+  .tool-inner { max-width: 720px; margin: 0 auto; }
+
+  /* METHODOLOGY LINK */
+  .meth-bar { padding: 13px 40px; border-bottom: 1px solid var(--border); background: var(--cairn-pale); }
+  .meth-bar-inner { max-width: 720px; margin: 0 auto; }
+  .meth-link { font-size: 13px; color: var(--cairn); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* GRADE FILTER */
+  .grade-summary { display: flex; border-bottom: 1px solid var(--border); overflow-x: auto; justify-content: center; }
+  .grade-stat { padding: 16px 18px; border-right: 1px solid var(--border); cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
+  .grade-stat:last-child { border-right: none; }
+  .grade-stat:hover { background: var(--bg2); }
+  .grade-stat.active { background: var(--cairn-pale); }
+  .grade-stat-n { font-size: 18px; font-weight: 700; color: var(--cairn); margin-bottom: 2px; }
+  .grade-stat-l { font-size: 10px; color: var(--text-dim); }
+  .grade-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 5px; }
+  .grade-Aplus  { background: #e6f4ec; color: #1a6b3a; }
+  .grade-A      { background: #e8f0e8; color: #2a5a2a; }
+  .grade-Bplus  { background: #e8eef7; color: #2a4a8a; }
+  .grade-B      { background: #eaf0f8; color: #3a5a9a; }
+  .grade-Cplus  { background: #fef6e0; color: #8a6000; }
+  .grade-C      { background: #fef0d0; color: #9a6800; }
+  .grade-D      { background: #fde8e8; color: #9a2a2a; }
+
+  /* TOOLBAR */
+  .toolbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 40px; border-bottom: 1px solid var(--border); gap: 16px; flex-wrap: wrap; max-width: 720px; margin: 0 auto; }
+  .search-box { position: relative; }
+  .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+  .search-input { font-size: 13px; padding: 7px 12px 7px 30px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); font-family: inherit; outline: none; width: 260px; transition: border-color 0.15s, width 0.2s; }
+  .search-input:focus { border-color: var(--cairn); background: var(--bg); width: 300px; }
+  .view-toggle { display: flex; gap: 0; }
+  .toggle-btn { font-size: 12px; padding: 6px 16px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all 0.15s; font-family: inherit; }
+  .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+  .toggle-btn:last-child { border-radius: 0 6px 6px 0; border-left: none; }
+  .toggle-btn.active { background: var(--cairn); color: #f0eaf7; border-color: var(--cairn); }
+
+  /* FILTER NOTE */
+  .filter-note { padding: 10px 40px; font-size: 12px; color: var(--text-dim); border-bottom: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+
+  /* TABLE VIEW */
+  .table-view { display: block; }
+  .map-view { display: none; }
+
+  .proj-list-header { display: grid; grid-template-columns: 1fr 110px 110px 90px; gap: 12px; padding: 10px 40px; border-bottom: 2px solid var(--border); background: var(--bg3); max-width: 720px; margin: 0 auto; }
+  .pl-col { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); cursor: pointer; user-select: none; display: flex; align-items: center; gap: 5px; transition: color 0.15s; }
+  .pl-col:hover { color: var(--cairn); }
+  .pl-col.sortable-active { color: var(--cairn); }
+  .pl-col.right { justify-content: flex-end; }
+  .sort-arrow { font-size: 9px; opacity: 0.4; }
+  .pl-col.sortable-active .sort-arrow { opacity: 1; }
+  .proj-list { max-width: 720px; margin: 0 auto; }
+
+  .proj-row { display: grid; grid-template-columns: 1fr 110px 110px 90px; gap: 12px; padding: 13px 40px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s; align-items: center; max-width: 720px; margin: 0 auto; }
+  .proj-row:hover { background: var(--bg2); }
+  .proj-row.expanded { background: var(--cairn-pale); }
+  .pr-name { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .pr-country { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .pr-method { font-size: 11px; color: var(--text-dim); }
+  .pr-status-text { font-size: 11px; font-weight: 500; }
+  .s-issuing    { color: #1a6b3a; }
+  .s-registered { color: #2a4a8a; }
+  .s-validation { color: #8a6000; }
+  .s-development { color: var(--text-dim); }
+  .pr-grade { text-align: right; }
+  .pr-score { font-size: 10px; color: var(--text-dim); margin-top: 3px; }
+
+  /* DETAIL EXPAND */
+  .proj-detail { display: none; padding: 16px 40px 22px; border-bottom: 1px solid var(--border); background: var(--cairn-pale); max-width: 720px; margin: 0 auto; }
+  .proj-detail.open { display: block; }
+  .detail-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 14px; }
+  .dim-card { background: var(--bg); border: 1px solid var(--cairn-border); border-radius: 10px; padding: 13px; }
+  .dim-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin-bottom: 7px; }
+  .dim-score-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 7px; }
+  .dim-score-num { font-size: 20px; font-weight: 700; color: var(--cairn); line-height: 1; }
+  .dim-score-denom { font-size: 11px; color: var(--text-dim); }
+  .dim-bar-wrap { height: 4px; background: var(--cairn-mid); border-radius: 2px; margin-bottom: 7px; }
+  .dim-bar { height: 4px; border-radius: 2px; background: var(--cairn); }
+  .dim-weight { font-size: 10px; color: var(--text-dim); line-height: 1.4; }
+  .detail-footer { display: flex; align-items: center; gap: 16px; padding-top: 12px; border-top: 1px solid var(--cairn-border); flex-wrap: wrap; }
+  .detail-grade-label { font-size: 12px; color: var(--text-muted); }
+  .detail-grade-val { font-size: 24px; font-weight: 700; }
+  .detail-composite { font-size: 13px; color: var(--text-dim); }
+  .detail-note { font-size: 11px; color: var(--text-dim); margin-top: 8px; font-style: italic; }
+
+  /* MAP VIEW */
+  .map-wrap { padding: 20px 40px 32px; max-width: 720px; margin: 0 auto; }
+  .map-svg-wrap { width: 100%; max-width: 460px; margin: 0 auto; }
+  .map-svg-wrap svg { width: 100%; height: auto; display: block; }
+  .map-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; justify-content: center; }
+  .map-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted); }
+  .map-legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .map-hint { font-size: 11px; color: var(--text-dim); text-align: center; margin-top: 8px; }
+  .map-country-detail { border-top: 1px solid var(--border); padding: 20px 40px 0; display: none; max-width: 720px; margin: 0 auto; }
+  .map-country-detail.open { display: block; }
+  .map-country-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; }
+  .map-country-close { font-size: 20px; color: var(--text-dim); cursor: pointer; background: none; border: none; line-height: 1; }
+  .map-proj-row { display: grid; grid-template-columns: 1fr 80px; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); align-items: center; cursor: pointer; }
+  .map-proj-row:last-child { border-bottom: none; }
+  .map-proj-row:hover { background: var(--bg2); margin: 0 -40px; padding: 10px 40px; }
+  .map-proj-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .map-proj-sub { font-size: 11px; color: var(--text-dim); }
+
+  /* MAP TOOLTIP */
+  .map-tooltip { position: fixed; background: var(--text); color: #fff; font-size: 12px; padding: 6px 10px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.1s; white-space: nowrap; z-index: 300; line-height: 1.5; }
+  .map-tooltip.visible { opacity: 1; }
+
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+  .footer-note { font-size: 12px; color: var(--text-dim); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
+  .footer-link:hover { color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .intro-wrap { padding: 36px 24px 28px; }
+    .cairn-title { font-size: 26px; }
+    .gate-wrap { padding: 32px 24px 60px; }
+    .gate-row { flex-direction: column; align-items: stretch; }
+    .gate-input { width: 100%; }
+    .meth-bar { padding: 12px 24px; }
+    .toolbar { padding: 10px 24px; }
+    .search-input { width: 100%; }
+    .search-input:focus { width: 100%; }
+    .filter-note { padding: 10px 24px; }
+    .proj-list-header { display: none; }
+    .proj-row { grid-template-columns: 1fr 80px; gap: 8px; padding: 12px 24px; }
+    .pr-method, .pr-status-text { display: none; }
+    .proj-detail { padding: 12px 24px 18px; }
+    .detail-grid { grid-template-columns: 1fr 1fr; }
+    .map-wrap { padding: 16px 24px 24px; }
+    .map-country-detail { padding: 16px 24px 0; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="map-tooltip" id="map-tooltip"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">
+      <svg width="28" height="28" viewBox="0 0 28 28">
+        <rect width="28" height="28" fill="#f5f5f2" rx="4"/>
+        <text x="14" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a2e" font-family="-apple-system,sans-serif">C</text>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">Canopy</div>
+      <div class="logo-sub">African Conservation Finance</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Policy</a>
+    <a class="nav-link" href="index.html">Projects</a>
+    <a class="nav-link" href="index.html">Intel.</a>
+    <a class="nav-link" href="index.html">Funding</a>
+    <a class="nav-link" href="index.html">Who's Who</a>
+    <span class="nav-link active">CAIRN</span>
+  </div>
+</nav>
+
+<!-- INTRO -->
+<div class="intro-wrap">
+  <div class="cairn-eyebrow"><span class="cairn-num">6</span>Canopy Proprietary</div>
+  <h1 class="cairn-title">CAIRN</h1>
+  <div class="cairn-acronym">Canopy Africa Impact &amp; Risk Navigator</div>
+  <p class="cairn-desc">Data-driven ratings across <span class="live-num">261</span> African conservation finance projects. 5 dimensions scored from public registry data and weighted into a single letter grade. No editorial opinion - the data speaks.</p>
+  <p class="cairn-dims">Methodology · Additionality · Financial Viability · Sovereign Risk · Community Architecture</p>
+</div>
+
+<!-- GATE -->
+<div class="gate-wrap" id="gate-wrap">
+  <div class="gate-box">
+    <div class="gate-lock">&#128274;</div>
+    <div class="gate-title">Members only</div>
+    <div class="gate-sub">CAIRN ratings are available to Canopy partners and members of the Funders Coalition. Enter the access password below.</div>
+    <div class="gate-row">
+      <input class="gate-input" id="gate-input" type="password" placeholder="Password" autocomplete="off" onkeydown="if(event.key==='Enter')checkPassword()">
+      <button class="gate-btn" onclick="checkPassword()">Enter</button>
+    </div>
+    <div class="gate-clue">Clue: your wife's initials (lowercase)</div>
+    <div class="gate-error" id="gate-error">Incorrect password. Contact Canopy to request access.</div>
+  </div>
+</div>
+
+<!-- TOOL -->
+<div class="tool-wrap" id="tool-wrap">
+
+  <div class="meth-bar">
+    <div class="meth-bar-inner">
+      <a class="meth-link" href="cairn-methodology.html">How we score - full methodology</a>
+    </div>
+  </div>
+
+  <!-- Grade filter tabs -->
+  <div class="grade-summary">
+    <div class="grade-stat active" onclick="filterGrade('all',this)">
+      <div class="grade-stat-n" id="count-all">-</div>
+      <div class="grade-stat-l">All</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('A+',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-Aplus">A+</span></div>
+      <div class="grade-stat-l" id="count-Aplus">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('A',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-A">A</span></div>
+      <div class="grade-stat-l" id="count-A">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('B+',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-Bplus">B+</span></div>
+      <div class="grade-stat-l" id="count-Bplus">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('B',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-B">B</span></div>
+      <div class="grade-stat-l" id="count-B">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('C+',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-Cplus">C+</span></div>
+      <div class="grade-stat-l" id="count-Cplus">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('C',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-C">C</span></div>
+      <div class="grade-stat-l" id="count-C">-</div>
+    </div>
+    <div class="grade-stat" onclick="filterGrade('D',this)">
+      <div class="grade-stat-n"><span class="grade-badge grade-D">D</span></div>
+      <div class="grade-stat-l" id="count-D">-</div>
+    </div>
+  </div>
+
+  <!-- Toolbar: search + view toggle -->
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="search-icon">&#9906;</span>
+      <input class="search-input" id="search-input" type="text" placeholder="Search projects or countries..." oninput="handleSearch()" autocomplete="off">
+    </div>
+    <div class="view-toggle">
+      <button class="toggle-btn active" id="btn-table" onclick="setView('table')">Table</button>
+      <button class="toggle-btn" id="btn-map" onclick="setView('map')">Map</button>
+    </div>
+  </div>
+
+  <div class="filter-note" id="filter-note">Loading ratings...</div>
+
+  <!-- TABLE VIEW -->
+  <div class="table-view" id="table-view">
+    <div class="proj-list-header">
+      <div class="pl-col sortable-active" id="col-project" onclick="sortBy('name')">Project <span class="sort-arrow" id="arrow-name">&#8595;</span></div>
+      <div class="pl-col" id="col-country" onclick="sortBy('country')" style="cursor:pointer;">Country <span class="sort-arrow" id="arrow-country">&#8595;</span></div>
+      <div class="pl-col" id="col-status">Status</div>
+      <div class="pl-col right" id="col-grade" onclick="sortBy('score')" style="cursor:pointer;">Score <span class="sort-arrow" id="arrow-score">&#8595;</span></div>
+    </div>
+    <div class="proj-list" id="proj-list">
+      <div style="padding:40px;text-align:center;color:var(--text-dim);font-size:13px;">Loading...</div>
+    </div>
+  </div>
+
+  <!-- MAP VIEW -->
+  <div class="map-view" id="map-view">
+    <div class="map-wrap">
+      <div class="map-svg-wrap">
+        <svg id="cairn-map" viewBox="0 80 700 620"></svg>
+      </div>
+      <div class="map-legend">
+        <div class="map-legend-item"><div class="map-legend-swatch" style="background:#2d7a4a"></div>A+ / A</div>
+        <div class="map-legend-item"><div class="map-legend-swatch" style="background:#3a6fa8"></div>B+ / B</div>
+        <div class="map-legend-item"><div class="map-legend-swatch" style="background:#c17f00"></div>C+ / C</div>
+        <div class="map-legend-item"><div class="map-legend-swatch" style="background:#8b2a2a"></div>D</div>
+        <div class="map-legend-item"><div class="map-legend-swatch" style="background:#e8e8e5"></div>No projects</div>
+      </div>
+      <div class="map-hint">Click a country to see its CAIRN-rated projects</div>
+    </div>
+    <div class="map-country-detail" id="map-country-detail">
+      <div class="map-country-title">
+        <span id="map-country-name"></span>
+        <button class="map-country-close" onclick="closeCountryDetail()">&#215;</button>
+      </div>
+      <div id="map-country-projects"></div>
+    </div>
+  </div>
+
+</div><!-- end tool-wrap -->
+
+<footer>
+  <span class="footer-note">Scores from public registry data - Verra, Gold Standard, World Bank WGI.</span>
+  <div class="footer-links">
+    <a class="footer-link" href="index.html">Home</a>
+    <span class="footer-link">Contact</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+  let sovereignData = {};
+  let allScored = [];
+  let activeFilter = 'all';
+  let currentSort = { key: 'score', dir: -1 };
+  let searchTerm = '';
+  let currentView = 'table';
+
+  // SCORING
+
+  function scoreMethodology(methodology, certification) {
+    const m = (methodology || '').toLowerCase();
+    const c = (certification || '').toLowerCase();
+    if (m.includes('vm0047') && c.includes('ccp')) return 5;
+    if (m.includes('vm0047')) return 4;
+    if (m.includes('vm0033') || m.includes('vm0032')) return 4;
+    if (m.includes('gold standard') || m.includes('vm0012')) return 3;
+    if (m.includes('vm0007') || m.includes('vm0009') || m.includes('vm0015')) return 2;
+    return 2;
+  }
+
+  function isValidated(status) {
+    const s = (status || '').toLowerCase();
+    return s === 'issuing' || s === 'registered' || s === 'issuance 2027';
+  }
+
+  function scoreAdditionality(methodology, certification, status) {
+    const ms = scoreMethodology(methodology, certification);
+    const validated = isValidated(status);
+    if (validated && ms >= 5) return 5;
+    if (validated && ms >= 4) return 4;
+    if (validated && ms >= 3) return 3;
+    if (!validated && ms >= 4) return 3;
+    if (!validated && ms >= 3) return 2;
+    return 1;
+  }
+
+  function scoreFinancialViability(status, tags) {
+    const s = (status || '').toLowerCase();
+    const t = (tags || []).join(' ').toLowerCase();
+    if (s === 'issuing' && t.includes('article 6.2')) return 5;
+    if (s === 'issuing') return 4;
+    if (s === 'registered' || s === 'issuance 2027') return 3;
+    if (s.includes('validation')) return 2;
+    return 1;
+  }
+
+  function scoreCommunityArchitecture(certification) {
+    const c = (certification || '').toLowerCase();
+    if (c.includes('ccb gold')) return 5;
+    if (c.includes('ccb')) return 4;
+    if (c.includes('gold standard')) return 3;
+    return 2;
+  }
+
+  function scoreSovereign(country) {
+    const d = sovereignData[country];
+    if (!d) return 2;
+    const wgi = d.wgi || 2;
+    const rs = d.rating_score;
+    if (rs !== null && rs !== undefined) return Math.round((wgi * 0.5 + rs * 0.5) * 100) / 100;
+    return wgi;
+  }
+
+  function letterGrade(score) {
+    if (score >= 4.5) return 'A+';
+    if (score >= 4.0) return 'A';
+    if (score >= 3.5) return 'B+';
+    if (score >= 3.0) return 'B';
+    if (score >= 2.5) return 'C+';
+    if (score >= 2.0) return 'C';
+    return 'D';
+  }
+
+  function gradeClass(grade) { return 'grade-' + grade.replace('+', 'plus'); }
+
+  function computeCAIRN(p) {
+    const m = scoreMethodology(p.methodology, p.certification);
+    const a = scoreAdditionality(p.methodology, p.certification, p.status);
+    const f = scoreFinancialViability(p.status, p.tags);
+    const c = scoreCommunityArchitecture(p.certification);
+    const s = scoreSovereign(p.country);
+    const composite = Math.round((m*0.25 + a*0.25 + f*0.20 + s*0.20 + c*0.10) * 100) / 100;
+    return { composite, grade: letterGrade(composite), m, a, f, s, c };
+  }
+
+  function statusClass(status) {
+    const s = (status || '').toLowerCase();
+    if (s === 'issuing') return 's-issuing';
+    if (s === 'registered') return 's-registered';
+    if (s.includes('validation')) return 's-validation';
+    return 's-development';
+  }
+
+  function sovereignNote(country) {
+    const d = sovereignData[country];
+    if (!d) return '100% WGI';
+    if (d.rating && d.rating_score !== null) return '50% WGI + 50% ' + d.rating;
+    return '100% WGI';
+  }
+
+  // FILTER + SORT
+
+  function getFiltered() {
+    let list = activeFilter === 'all' ? allScored : allScored.filter(function(p) { return p.cairn.grade === activeFilter; });
+    if (searchTerm) {
+      const q = searchTerm.toLowerCase();
+      list = list.filter(function(p) {
+        return p.name.toLowerCase().includes(q) || p.country.toLowerCase().includes(q) || (p.region || '').toLowerCase().includes(q);
+      });
+    }
+    list = list.slice().sort(function(a, b) {
+      if (currentSort.key === 'score') return (b.cairn.composite - a.cairn.composite) * currentSort.dir * -1;
+      if (currentSort.key === 'name') return a.name.localeCompare(b.name) * currentSort.dir;
+      if (currentSort.key === 'country') return a.country.localeCompare(b.country) * currentSort.dir;
+      return 0;
+    });
+    return list;
+  }
+
+  function updateFilterNote(list) {
+    const note = document.getElementById('filter-note');
+    const total = list.length;
+    const extra = searchTerm ? ' matching "' + searchTerm + '"' : '';
+    const grade = activeFilter !== 'all' ? ' rated ' + activeFilter : '';
+    note.textContent = total + ' project' + (total !== 1 ? 's' : '') + grade + extra + '. Click any row to see dimension breakdown.';
+  }
+
+  // RENDER TABLE
+
+  function dimCard(label, score, weight, source) {
+    const pct = Math.round((score / 5) * 100);
+    return '<div class="dim-card">' +
+      '<div class="dim-label">' + label + '</div>' +
+      '<div class="dim-score-row"><span class="dim-score-num">' + score.toFixed(1) + '</span><span class="dim-score-denom">/ 5</span></div>' +
+      '<div class="dim-bar-wrap"><div class="dim-bar" style="width:' + pct + '%"></div></div>' +
+      '<div class="dim-weight">' + weight + '% - ' + source + '</div>' +
+      '</div>';
+  }
+
+  function renderTable(projects) {
+    const list = document.getElementById('proj-list');
+    if (!projects.length) {
+      list.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-dim);font-size:13px;">No projects match.</div>';
+      return;
+    }
+    list.innerHTML = projects.map(function(p) {
+      const sc = p.cairn;
+      const gc = gradeClass(sc.grade);
+      return '<div class="proj-row" id="row-' + p.id + '" onclick="toggleDetail(\'' + p.id + '\')">' +
+        '<div><div class="pr-name">' + p.name + '</div><div class="pr-country">' + (p.region || '') + '</div></div>' +
+        '<div class="pr-method">' + p.country + '</div>' +
+        '<div class="pr-status-text ' + statusClass(p.status) + '">' + (p.status || '-') + '</div>' +
+        '<div class="pr-grade"><span class="grade-badge ' + gc + '">' + sc.grade + '</span><div class="pr-score">' + sc.composite.toFixed(2) + ' / 5</div></div>' +
+        '</div>' +
+        '<div class="proj-detail" id="detail-' + p.id + '">' +
+        '<div class="detail-grid">' +
+        dimCard('Methodology', sc.m, 25, 'VM code + CCP') +
+        dimCard('Additionality', sc.a, 25, 'method + validation') +
+        dimCard('Financial viability', sc.f, 20, 'status + pathway') +
+        dimCard('Sovereign risk', sc.s, 20, sovereignNote(p.country)) +
+        dimCard('Community architecture', sc.c, 10, 'CCB certification') +
+        '</div>' +
+        '<div class="detail-footer">' +
+        '<div class="detail-grade-label">CAIRN grade</div>' +
+        '<div class="detail-grade-val ' + gc + '">' + sc.grade + '</div>' +
+        '<div class="detail-composite">' + sc.composite.toFixed(2) + ' composite</div>' +
+        '</div>' +
+        '<div class="detail-note">Public registry data only. Sovereign: ' + sovereignNote(p.country) + '.</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  function toggleDetail(id) {
+    const detail = document.getElementById('detail-' + id);
+    const row = document.getElementById('row-' + id);
+    const isOpen = detail.classList.contains('open');
+    document.querySelectorAll('.proj-detail.open').forEach(function(d) { d.classList.remove('open'); });
+    document.querySelectorAll('.proj-row.expanded').forEach(function(r) { r.classList.remove('expanded'); });
+    if (!isOpen) {
+      detail.classList.add('open');
+      row.classList.add('expanded');
+      row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  // SORT
+
+  function sortBy(key) {
+    if (currentSort.key === key) {
+      currentSort.dir *= -1;
+    } else {
+      currentSort.key = key;
+      currentSort.dir = 1;
+    }
+    updateSortArrows();
+    refresh();
+  }
+
+  function updateSortArrows() {
+    ['name','country','score'].forEach(function(k) {
+      const arrowId = 'arrow-' + k;
+      const colId = k === 'name' ? 'col-project' : (k === 'country' ? 'col-country' : 'col-grade');
+      const arrow = document.getElementById(arrowId);
+      const col = document.getElementById(colId);
+      if (!arrow || !col) return;
+      if (currentSort.key === k) {
+        col.classList.add('sortable-active');
+        arrow.innerHTML = currentSort.dir === 1 ? '&#8595;' : '&#8593;';
+        arrow.style.opacity = '1';
+      } else {
+        col.classList.remove('sortable-active');
+        arrow.innerHTML = '&#8595;';
+        arrow.style.opacity = '0.4';
+      }
+    });
+  }
+
+  // FILTER BY GRADE
+
+  function filterGrade(grade, el) {
+    activeFilter = grade;
+    document.querySelectorAll('.grade-stat').forEach(function(s) { s.classList.remove('active'); });
+    el.classList.add('active');
+    refresh();
+  }
+
+  // SEARCH
+
+  function handleSearch() {
+    searchTerm = document.getElementById('search-input').value.trim();
+    refresh();
+  }
+
+  // REFRESH
+
+  function refresh() {
+    const filtered = getFiltered();
+    updateFilterNote(filtered);
+    if (currentView === 'table') {
+      renderTable(filtered);
+    } else {
+      renderMap();
+    }
+  }
+
+  // VIEW TOGGLE
+
+  function setView(view) {
+    currentView = view;
+    document.getElementById('table-view').style.display = view === 'table' ? 'block' : 'none';
+    document.getElementById('map-view').style.display = view === 'map' ? 'block' : 'none';
+    document.getElementById('btn-table').classList.toggle('active', view === 'table');
+    document.getElementById('btn-map').classList.toggle('active', view === 'map');
+    if (view === 'map') renderMap();
+  }
+
+  // COUNTS
+
+  function updateCounts() {
+    document.getElementById('count-all').textContent = allScored.length;
+    ['A+','A','B+','B','C+','C','D'].forEach(function(g) {
+      const key = 'count-' + g.replace('+','plus');
+      const count = allScored.filter(function(p) { return p.cairn.grade === g; }).length;
+      const el = document.getElementById(key);
+      if (el) el.textContent = count;
+    });
+  }
+
+  // MAP
+
+  const africaISO = new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,231,232,262,266,270,288,324,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,624,638,646,678,686,690,694,706,710,716,728,729,732,748,768,788,800,818,834,854,894]);
+
+  const cairnNameToCountry = { 'Somaliland': 'Somalia' };
+  function cairnIsAfrican(f) { return cairnIsAfrican(f) || (f.properties && cairnNameToCountry[f.properties.name]); }
+  function cairnGetCountry(f) { return cairnGetCountry(f) || (f.properties && cairnNameToCountry[f.properties.name]) || null; }
+
+  const isoToCountry = {
+    12:'Algeria',204:'Benin',72:'Botswana',854:'Burkina Faso',120:'Cameroon',132:'Cape Verde',
+    140:'Central African Republic',148:'Chad',174:'Comoros',180:'DRC',262:'Djibouti',818:'Egypt',
+    226:'Equatorial Guinea',232:'Eritrea',748:'Eswatini',231:'Ethiopia',266:'Gabon',270:'Gambia',
+    288:'Ghana',324:'Guinea',624:'Guinea-Bissau',384:'Ivory Coast',404:'Kenya',426:'Lesotho',
+    430:'Liberia',434:'Libya',450:'Madagascar',454:'Malawi',466:'Mali',478:'Mauritania',
+    480:'Mauritius',504:'Morocco',508:'Mozambique',516:'Namibia',562:'Niger',566:'Nigeria',
+    178:'Republic of Congo',638:'Reunion',646:'Rwanda',678:'Sao Tome and Principe',686:'Senegal',
+    690:'Seychelles',694:'Sierra Leone',706:'Somalia',710:'South Africa',728:'South Sudan',
+    729:'Sudan',834:'Tanzania',768:'Togo',788:'Tunisia',800:'Uganda',894:'Zambia',716:'Zimbabwe',
+    732:'Western Sahara'
+  };
+
+  function gradeColor(grade) {
+    if (!grade) return '#e8e8e5';
+    if (grade === 'A+' || grade === 'A') return '#2d7a4a';
+    if (grade === 'B+' || grade === 'B') return '#3a6fa8';
+    if (grade === 'C+' || grade === 'C') return '#c17f00';
+    return '#8b2a2a';
+  }
+
+  function countryAvgGrade(country) {
+    const projs = allScored.filter(function(p) { return p.country === country; });
+    if (!projs.length) return null;
+    const avg = projs.reduce(function(sum, p) { return sum + p.cairn.composite; }, 0) / projs.length;
+    return letterGrade(avg);
+  }
+
+  let worldTopoCache = null;
+  async function loadWorld() {
+    if (worldTopoCache) return worldTopoCache;
+    const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+    worldTopoCache = await res.json();
+    return worldTopoCache;
+  }
+
+  async function renderMap() {
+    const topo = await loadWorld();
+    const svg = d3.select('#cairn-map');
+    svg.selectAll('*').remove();
+    const w = 700, h = 750;
+    const projection = d3.geoMercator().scale(400).center([25, 2]).translate([w/2, h/2]);
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+
+    svg.selectAll('path')
+      .data(countries.features.filter(function(f) { return cairnIsAfrican(f); }))
+      .join('path')
+      .attr('d', path)
+      .attr('fill', function(f) {
+        const name = cairnGetCountry(f);
+        if (!name) return '#e8e8e5';
+        const grade = countryAvgGrade(name);
+        return gradeColor(grade);
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.8)
+      .style('cursor', 'pointer')
+      .style('transition', 'opacity 0.15s')
+      .on('mouseover', function(event, f) {
+        const name = cairnGetCountry(f);
+        if (!name) return;
+        const projs = allScored.filter(function(p) { return p.country === name; });
+        const label = projs.length ? projs.length + ' project' + (projs.length !== 1 ? 's' : '') : 'No projects tracked';
+        const tt = document.getElementById('map-tooltip');
+        tt.innerHTML = '<strong>' + name + '</strong><br>' + label;
+        tt.classList.add('visible');
+        d3.select(this).attr('opacity', 0.75);
+      })
+      .on('mousemove', function(event) {
+        const tt = document.getElementById('map-tooltip');
+        tt.style.left = (event.clientX + 12) + 'px';
+        tt.style.top = (event.clientY - 28) + 'px';
+      })
+      .on('mouseout', function() {
+        document.getElementById('map-tooltip').classList.remove('visible');
+        d3.select(this).attr('opacity', 1);
+      })
+      .on('click', function(event, f) {
+        const name = cairnGetCountry(f);
+        if (!name) return;
+        showCountryDetail(name);
+      });
+  }
+
+  function showCountryDetail(country) {
+    const projs = allScored.filter(function(p) { return p.country === country; }).sort(function(a,b) { return b.cairn.composite - a.cairn.composite; });
+    document.getElementById('map-country-name').textContent = country + ' - ' + projs.length + ' project' + (projs.length !== 1 ? 's' : '');
+    const container = document.getElementById('map-country-projects');
+    if (!projs.length) {
+      container.innerHTML = '<div style="font-size:13px;color:var(--text-dim);padding:16px 0;">No CAIRN-rated projects tracked in this country.</div>';
+    } else {
+      container.innerHTML = projs.map(function(p) {
+        const gc = gradeClass(p.cairn.grade);
+        return '<div class="map-proj-row" onclick="setView(\'table\'); document.getElementById(\'search-input\').value=\'' + p.country + '\'; searchTerm=\'' + p.country + '\'; refresh(); setTimeout(function(){ toggleDetail(\'' + p.id + '\'); }, 100);">' +
+          '<div><div class="map-proj-name">' + p.name + '</div><div class="map-proj-sub">' + (p.methodology || '') + ' - ' + (p.status || '') + '</div></div>' +
+          '<div style="text-align:right"><span class="grade-badge ' + gc + '">' + p.cairn.grade + '</span><div class="pr-score">' + p.cairn.composite.toFixed(2) + '</div></div>' +
+          '</div>';
+      }).join('');
+    }
+    document.getElementById('map-country-detail').classList.add('open');
+  }
+
+  function closeCountryDetail() {
+    document.getElementById('map-country-detail').classList.remove('open');
+  }
+
+  // LOAD
+
+  async function loadAndScore() {
+    try {
+      const [projRes, sovRes] = await Promise.all([
+        fetch('data/projects.json'),
+        fetch('data/sovereign.json')
+      ]);
+      const projData = await projRes.json();
+      const sovData = await sovRes.json();
+      sovereignData = sovData.countries || {};
+      const projects = projData.projects || [];
+      allScored = projects.map(function(p) { return Object.assign({}, p, { cairn: computeCAIRN(p) }); });
+      allScored.sort(function(a, b) { return b.cairn.composite - a.cairn.composite; });
+      currentSort = { key: 'score', dir: 1 };
+      updateCounts();
+      refresh();
+    } catch(e) {
+      document.getElementById('proj-list').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-dim);font-size:13px;">Could not load project data. Ensure the local server is running.</div>';
+    }
+  }
+
+  function checkPassword() {
+    const val = document.getElementById('gate-input').value.trim().toLowerCase();
+    const input = document.getElementById('gate-input');
+    const error = document.getElementById('gate-error');
+    if (val === 'mej') {
+      document.getElementById('gate-wrap').style.display = 'none';
+      document.getElementById('tool-wrap').classList.add('visible');
+      loadAndScore();
+    } else {
+      input.classList.add('error');
+      error.classList.add('visible');
+      input.value = '';
+      input.focus();
+    }
+  }
+</script>
+</body>
+</html>
