@@ -57,7 +57,7 @@
       "id": "magali-rousselot",
       "name": "Magali Rousselot",
       "role": "Investment Director, Natural Capital",
-      "organisation": "Mirova Natural Capital",
+      "organisation": "Mirova",
       "organisation_type": "fund",
       "location": "Paris, France",
       "geography": [
@@ -74,8 +74,14 @@
         "blended_finance"
       ],
       "deal_size": "$10M-$100M",
-      "summary": "Investment director within Mirova's natural capital team, working alongside Gautier Queru on deal origination and portfolio management across Africa, Latin America and Southeast Asia. Leads on individual transaction execution within the Mirova Sustainable Land Fund 2 strategy.",
-      "notable_work": [],
+      "summary": "Investment Director within Mirova natural capital team, working alongside Gautier Queru on deal origination and portfolio management across Africa, Latin America and Southeast Asia. Prior to Mirova she held an investment role at Proparco, the private sector arm of Agence Francaise de Developpement, where she structured financing for projects in health and education across emerging markets. At Mirova she has been involved in individual transaction execution within the Sustainable Land Fund strategies.",
+      "notable_work": [
+        {
+          "description": "Lead investment director on the Bureo transaction, through which Mirova deployed capital into fishing net recycling and ocean plastics reduction across Latin America, contributing to Mirova passing $100 million in deployed impact capital",
+          "year": 2023,
+          "source_url": "https://www.im.natixis.com/en-intl/about/investment-manager-news/2023/mirova-invests-in-bureo-inc-to-support-the-expansion-of-their-end-of-life-fishing-net-recycling-programme-across-latin-america"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -84,11 +90,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from Mirova team page. Individual transaction involvement requires further verification."
+      "_draft": true
     },
     {
       "id": "irina-likhachova",
@@ -340,7 +345,7 @@
     {
       "id": "heather-mcewan",
       "name": "Heather McEwan",
-      "role": "Regional Representative, Africa and Middle East",
+      "role": "Regional Representative, Africa and the Middle East",
       "organisation": "Verra",
       "organisation_type": "standard_body",
       "location": null,
@@ -358,7 +363,7 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "Verra's primary engagement point for African project developers and governments. Sat on the CMAS 2025 panel on COP30 alignment. The Africa and Middle East regional role at Verra involves approving new project registrations, supporting country-level Article 6.2 processes, and communicating methodology updates to the African developer community.",
+      "summary": "Verra regional representative for Africa and the Middle East, covering project developer and government engagement across the continent on VCS, Plastic Waste Reduction, and SD VISta standards. Born in Zimbabwe, she built her career in the South African energy and carbon sector before joining Verra in 2021 - working initially as South Africa manager before expanding to the full Africa and Middle East remit. Won the Female Energy Professional of the Year award from the Southern African Energy Efficiency Confederation (SAEEC) and the Sub-Saharan Energy Professional Development Award from the International Association of Energy Engineers in 2019. Holds degrees in Geography and Environmental Sciences alongside carbon and ISO 50001 certifications.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -368,11 +373,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role title sourced from CMAS 2025 programme listing. Verify current title with Verra directly."
+      "_draft": true
     },
     {
       "id": "olivia-tuchten",
@@ -580,7 +584,7 @@
     {
       "id": "kwame-ababio",
       "name": "Kwame Ababio",
-      "role": "Carbon Markets Lead",
+      "role": "Head, Environment and Climate Change Unit",
       "organisation": "AUDA-NEPAD",
       "organisation_type": "government",
       "location": "Johannesburg, South Africa",
@@ -597,7 +601,7 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "The African Union Development Agency's lead on carbon markets at continental level, representing 55 member states. Appeared on the CMAS 2025 panel on COP30 alignment. AUDA-NEPAD is developing frameworks to coordinate carbon market readiness across the continent and position Africa as a unified actor in global negotiations.",
+      "summary": "Head of the Environment and Climate Change Unit at the African Union Development Agency (AUDA-NEPAD), representing 55 AU member states on climate and carbon market policy. Also a Research Fellow at the Climate Policy Lab at the Fletcher School, Tufts University, where he is completing a PhD with a focus on climate finance, energy transitions, climate diplomacy and carbon markets. Has represented AUDA-NEPAD in the Pan-African Action Agenda on Ecosystem Restoration and leads continental-level engagement on how African countries can access and benefit from voluntary carbon markets.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -607,11 +611,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role title at AUDA-NEPAD to be confirmed. Name sourced from CMAS 2025 programme."
+      "_draft": true
     },
     {
       "id": "mamadou-diakhite",
@@ -695,7 +698,7 @@
     {
       "id": "bernardin-uzayisaba",
       "name": "Bernardin Uzayisaba",
-      "role": "Carbon Market Programme Specialist",
+      "role": "Regional Carbon Market Programme Specialist",
       "organisation": "UNDP",
       "organisation_type": "dfi",
       "location": null,
@@ -712,7 +715,7 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "UNDP's technical lead on carbon market readiness across Africa. Facilitated the Carbon 101 masterclass at CMAS 2025, covering Article 6 architecture and Africa's role. Works on UNDP's High-Integrity Carbon Markets Initiative in partnership with Switzerland's FOEN, which is deploying up to 1.8 million ITMOs through African project developers.",
+      "summary": "Regional Carbon Market Programme Specialist at UNDP South Africa, leading efforts to operationalise Article 6 of the Paris Agreement, mobilise investment, and structure high-integrity carbon credit systems across Africa. More than 15 years of experience advancing sustainable development in Africa. Based in Johannesburg and active across the continent on the design of carbon market governance frameworks and government capacity-building for participation in voluntary and compliance carbon markets.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -722,11 +725,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Location and full role title to be verified."
+      "_draft": true
     },
     {
       "id": "ebipere-clark",
@@ -862,7 +864,7 @@
     {
       "id": "marc-baker",
       "name": "Marc Baker",
-      "role": "Director of Carbon",
+      "role": "Co-Founder and Director",
       "organisation": "Carbon Tanzania",
       "organisation_type": "developer",
       "location": "Tanzania",
@@ -880,8 +882,14 @@
         "REDD+"
       ],
       "deal_size": "$5M-$50M",
-      "summary": "Leads the carbon function at Carbon Tanzania, one of East Africa's most active REDD+ and savanna project developers. Quoted at CMAS 2025 on the inflection point in African carbon markets with the emergence of Article 6.2. Carbon Tanzania's portfolio includes projects protecting critical wildlife corridors and community lands across the country.",
-      "notable_work": [],
+      "summary": "Co-Founder and Director of Carbon Tanzania, one of Africa most respected community-centred forest carbon project developers, which he co-founded in 2007. Carbon Tanzania works with indigenous communities in northern and western Tanzania to protect dryland forests and generate Verra-verified carbon credits, with all revenues flowing directly to the communities. Projects now cover more than 690,000 hectares of forest across four REDD schemes, protecting habitat for chimpanzees, elephants, wild dogs and lions, and have delivered more than $3.7 million directly to remote communities in 2024 alone. BSc in Conservation Management from Nottingham Trent University. Based in Arusha.",
+      "notable_work": [
+        {
+          "description": "Co-founded Carbon Tanzania in 2007, validating the first REDD project in 2011 and growing to four operational forest conservation projects covering over 690,000 hectares in Tanzania, with over $6.9 million delivered to communities in 2023",
+          "year": 2007,
+          "source_url": "https://carbontanzania.com/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -890,11 +898,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 coverage. Individual deal history to be verified."
+      "_draft": true
     },
     {
       "id": "bryan-adkins",
@@ -916,8 +923,19 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "CEO of Eden: People+Planet, a large-scale reforestation and community carbon developer with operations across East Africa. Appeared on the CMAS 2025 high-integrity panel. Eden operates at significant scale, focusing on employment-based restoration models that create direct livelihoods for local communities through tree planting and land restoration.",
-      "notable_work": [],
+      "summary": "CEO of Eden: People+Planet and its Compassionate Carbon subsidiary. Appointed CEO in late 2022 following the retirement of founder Dr Steve Fitch, having run Compassionate Carbon since its 2021 launch. Two decades in the environmental sector across compliance and voluntary carbon markets - previous roles at UNEP, FAO, WCS, and Wildlife Works Carbon, plus advisory work for regional governments in East Africa and North America on REDD+ and restoration policy. Founder of the Kijabe Forest Trust in Kenya, protecting 6,000 hectares of primary forest reserve. Sits on the Independent Advisory Council under IETA.",
+      "notable_work": [
+        {
+          "description": "Founded the Kijabe Forest Trust in Kenya to protect 6,000 hectares of primary forest reserve, one of the earliest community-based forest carbon projects in East Africa",
+          "year": null,
+          "source_url": "https://eden-plus.org/team_member/bryan-adkins/"
+        },
+        {
+          "description": "Appointed CEO of Eden: People+Planet, taking over from founder Dr Steve Fitch and leading the organisation through its transition from reforestation to landscape-scale ecosystem restoration",
+          "year": 2022,
+          "source_url": "https://eden-plus.org/2022/11/14/eden-reforestation-projects-announces-bryan-adkins-as-ceo/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -926,11 +944,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 coverage. Verify current role title."
+      "_draft": true
     },
     {
       "id": "storm-patel",
@@ -962,11 +979,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 coverage and Africa Sustainability Matters reporting."
+      "_draft": true
     },
     {
       "id": "chidalu-onyenso",
@@ -1001,7 +1017,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and organisation confirmed from multiple conference sources. Individual project details require verification."
+      "_note": "Unverified. Chidalu Onyenso as Founder and CEO at Earthbond - needs current role confirmation."
     },
     {
       "id": "nicole-dewing",
@@ -1038,7 +1054,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 coverage. Individual project details require verification."
+      "_note": "Unverified. Nicole Dewing as Co-Founder at Africa Carbon and Commodities - needs current role confirmation."
     },
     {
       "id": "madeleine-garlick",
@@ -1068,11 +1084,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 coverage. Further verification required."
+      "_draft": true
     },
     {
       "id": "daniel-okoth",
@@ -1107,12 +1122,12 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 and Africa Climate Week sources."
+      "_note": "Unverified. Daniel Okoth as Head of Carbon at SunCulture - needs current role confirmation."
     },
     {
       "id": "herman-neethling",
       "name": "Herman Neethling",
-      "role": "General Manager, Shell Nature Based Solutions EMEA",
+      "role": "General Manager, Nature Based Solutions Europe, Middle East and Africa",
       "organisation": "Shell",
       "organisation_type": "buyer",
       "location": null,
@@ -1130,12 +1145,12 @@
         "REDD+"
       ],
       "deal_size": "$10M-$100M",
-      "summary": "Shell's lead on nature-based solutions across Europe, Middle East and Africa. Presented the Akwaaba Project in Ghana at CMAS 2025 - a forest ecosystem restoration project in Ghana developed in partnership with Wildlife Works. Shell NBS is one of the largest corporate buyers of African nature-based carbon credits, making Neethling a key demand-side contact for project developers across the continent.",
+      "summary": "General Manager for Shell Nature Based Solutions in Europe, Middle East and Africa, responsible for the development and management of the EMEA portfolio of natural ecosystem conservation and restoration opportunities. Joined Shell in 1998 and has held financial, commercial, and general management roles across a broad portfolio of global opportunities, including execution of large and complex mergers, acquisitions, divestments and partnerships. Qualified Chartered Accountant and Chartered Financial Analyst with a Masters in Finance; began his career at Deloitte in the USA and South Africa before moving into the energy sector.",
       "notable_work": [
         {
-          "description": "Presented Shell's Akwaaba Project in Ghana at Carbon Markets Africa Summit 2025 - a forest ecosystem restoration project representing Shell's largest African NBS investment",
-          "year": 2025,
-          "source_url": "https://www.carbonmarketsafrica.com/programme"
+          "description": "Leads Shell NBS EMEA portfolio development, the corporate side of Shell's commitment to invest in nature-based solutions as part of its net-zero strategy",
+          "year": null,
+          "source_url": "https://www.carbonmarketsafrica.com/speakers"
         }
       ],
       "public_footprint": [
@@ -1146,16 +1161,15 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Verify current title."
+      "_draft": true
     },
     {
       "id": "angela-churie-kallhauge",
       "name": "Angela Churie Kallhauge",
-      "role": "Vice President, Impact",
+      "role": "Executive Vice President, Impact",
       "organisation": "Environmental Defense Fund",
       "organisation_type": "ngo",
       "location": null,
@@ -1173,8 +1187,14 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "EDF's VP for Impact, responsible for the organisation's carbon market and Article 6 strategy. Appeared at CMAS 2025 Day 1. EDF has been a primary institutional advocate for well-designed carbon markets that support Africa's climate goals. Mandy Rambharos came to Verra directly from EDF, where she worked for Churie Kallhauge.",
-      "notable_work": [],
+      "summary": "Executive Vice President, Impact at the Environmental Defense Fund, where she joined in 2022. A Kenyan national who built her career across multilateral climate policy and the Swedish government. Spent 14 years at the Swedish Energy Agency working on climate, energy and development, during which she served as EU lead negotiator on adaptation and resilience under the UNFCCC for close to a decade and represented Sweden on the Adaptation Fund Board. Then moved to the World Bank as head of the secretariat of the Carbon Pricing Leadership Coalition for five years before joining EDF. Brings direct experience of how carbon pricing policy translates across the African context, and represents EDF in high-level multilateral processes.",
+      "notable_work": [
+        {
+          "description": "Led the secretariat of the Carbon Pricing Leadership Coalition at the World Bank for five years, coordinating engagement across governments, business, and civil society on carbon pricing architecture",
+          "year": 2017,
+          "source_url": "https://www.edf.org/people/angela-churie-kallhauge"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -1183,11 +1203,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role and organisation confirmed from CMAS 2025 programme. Verify current title."
+      "_draft": true
     },
     {
       "id": "nick-moss",
@@ -1343,7 +1362,7 @@
         "green_bond"
       ],
       "deal_size": "$100M+",
-      "summary": "CEO of FSD Africa, a UK government-funded financial sector development institution targeting mobilisation of \u00a310 billion in finance including \u00a32 billion for climate adaptation by 2030. Quoted in the authoritative Landscape of Climate Finance in Africa 2024 report, commissioned by FSD Africa and produced by the Climate Policy Initiative.",
+      "summary": "CEO of FSD Africa, a UK government-funded financial sector development institution targeting mobilisation of £10 billion in finance including £2 billion for climate adaptation by 2030. Quoted in the authoritative Landscape of Climate Finance in Africa 2024 report, commissioned by FSD Africa and produced by the Climate Policy Initiative.",
       "notable_work": [
         {
           "description": "Commissioned and published the Landscape of Climate Finance in Africa 2024, the authoritative dataset tracking climate finance flows across all 54 African countries",
@@ -1557,8 +1576,19 @@
         "VCM"
       ],
       "deal_size": "$5M-$50M",
-      "summary": "CEO of TASC Africa, the leading South African grassland and savanna carbon project developer. TASC's GRASS initiative restores hundreds of thousands of hectares of communal land through regenerative management, generating VCS credits. Quoted at CMAS 2025 on the grassroots impact of carbon finance. TASC was the diamond sponsor of CMAS 2025.",
-      "notable_work": [],
+      "summary": "CEO Africa at TASC, one of Southern Africa largest carbon project developers. Launched the South Africa business in October 2020 having had no prior carbon market experience - her background was in asset management in London and Bermuda, where she rose to Global Head of Operations at a billion-dollar firm. Under her leadership TASC has grown to more than 750 employees, reached more than 1.3 million households through its clean cookstove programme, and has over 720,000 hectares under rangeland management through its GRASS (Grassland Restoration and Stewardship) project. Named Carbon Project Development CEO of the Year at CEO Monthly Female CEO of the Year Awards 2025. University of Natal graduate.",
+      "notable_work": [
+        {
+          "description": "TASC won the Environmental Finance Voluntary Carbon Market Award in 2023 for its cookstove project, enabling significant programme expansion - over 950,000 households supplied across rural South Africa",
+          "year": 2023,
+          "source_url": "https://www.carbonmarketsafrica.com/news-and-media/tasc-our-carbon-financed-projects-are-having-a-monumental-impact-at-a-very-grassroots-level"
+        },
+        {
+          "description": "Named Carbon Project Development CEO of the Year at CEO Monthly Female CEO of the Year Awards 2025",
+          "year": 2025,
+          "source_url": "https://www.environewsnigeria.com/tascs-shelley-estcourt-named-carbon-project-development-ceo-of-the-year/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "keynote",
@@ -1567,11 +1597,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 coverage. Verify current title with TASC directly."
+      "_draft": true
     },
     {
       "id": "dominic-wilhelm",
@@ -1603,11 +1632,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from multiple CMAS 2025 sources. Organisation details to be verified."
+      "_draft": true
     },
     {
       "id": "candice-stevens",
@@ -1631,8 +1659,19 @@
         "biodiversity_credit"
       ],
       "deal_size": null,
-      "summary": "Founder of the Sustainable Finance Coalition, a South Africa-based platform convening the financial sector around nature and climate. Appeared on the CMAS 2025 blue carbon panel. Works at the intersection of corporate sustainability, financial regulation and conservation finance in the South African and broader African context.",
-      "notable_work": [],
+      "summary": "Founder and CEO of the Sustainable Finance Coalition, a South African non-profit that designs and mobilises tailored finance solutions for conservation across Africa. Founded in 2019 with WWF South Africa and Wilderness Foundation Africa as co-founders. Co-Chair of the IUCN WCPA Sustainable Finance Specialist Group and a Mulago Foundation Fellow. BCom and LLB from Stellenbosch University, specialising in tax - a background she deliberately channelled into conservation finance. Received a UN Pathfinder Award Special Commendation for introducing the world first effective biodiversity tax incentive into the South African protected areas network. The Coalition has developed 17 finance solutions replicated 62 times across 15 countries and the South West Indian Ocean, targeting half a billion dollars in new conservation finance by 2030.",
+      "notable_work": [
+        {
+          "description": "Introduced South Africa first effective biodiversity tax incentive (under section 37D) into the national protected areas network - recognised with a UN Pathfinder Award Special Commendation as a pioneering global innovation in conservation finance",
+          "year": null,
+          "source_url": "https://informaconnect.com/exportcredit-africa/speakers/candice-stevens/"
+        },
+        {
+          "description": "Built the Sustainable Finance Coalition from 2019 to a 17-solution finance inventory replicated 62 times across 15 African countries and the South West Indian Ocean, generating an estimated $87 million in new flows of finance for conservation",
+          "year": 2019,
+          "source_url": "https://sustainablefinancecoalition.org/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -1641,11 +1680,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Organisation details to be verified."
+      "_draft": true
     },
     {
       "id": "james-mansfield",
@@ -1727,7 +1765,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Verify current title with WWF."
+      "_note": "Unverified. Samantha Petersen as West Indian Ocean Seascape Lead at WWF - needs current role confirmation."
     },
     {
       "id": "anelisa-matutu",
@@ -1768,7 +1806,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Verify current title with JSE."
+      "_note": "Unverified. Anelisa Matutu as Head of Commodities, Capital Markets at JSE - needs current role confirmation."
     },
     {
       "id": "lawrence-cole-morgan",
@@ -1803,7 +1841,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 coverage in Africa Sustainability Matters. Verify current title with Standard Bank."
+      "_note": "Unverified. Lawrence Cole-Morgan as Carbon Trading Lead at Standard Bank - needs current role confirmation."
     },
     {
       "id": "tim-mclellan",
@@ -1836,11 +1874,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Verify current CEO title."
+      "_draft": true
     },
     {
       "id": "gwen-busby",
@@ -1881,8 +1918,8 @@
     {
       "id": "dorah-modise",
       "name": "Dorah Modise",
-      "role": "Commissioner",
-      "organisation": "Presidential Climate Commission, South Africa",
+      "role": "Executive Director",
+      "organisation": "Presidential Climate Commission",
       "organisation_type": "government",
       "location": "Johannesburg, South Africa",
       "geography": [
@@ -1899,8 +1936,14 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "Commissioner at South Africa's Presidential Climate Commission, an independent advisory body that advises the President and Cabinet on just transition policy. Appeared in the CMAS 2025 Day 2 financing keynote. The PCC has been instrumental in shaping South Africa's carbon market framework and Article 6.2 strategy.",
-      "notable_work": [],
+      "summary": "Executive Director of the Presidential Climate Commission (PCC) of South Africa, appointed to the role in February 2025. More than 26 years of experience across environmental sustainability, international diplomacy, national and provincial government, and academia. Previously held senior management roles at the Department of Forestry, Fisheries and the Environment, where she was instrumental in drafting the adaptation component of the White Paper on Climate Change and establishing the National Green Fund. Led the South African technical delegation at the Rio Plus 20 Summit in 2012 as part of the UN Commission on Sustainable Development negotiating team. Holds an MBA from GIBS (University of Pretoria), a masters in Environmental Development and Policy from Sussex, and a postgraduate diploma in Environmental Diplomacy from Geneva.",
+      "notable_work": [
+        {
+          "description": "Appointed Executive Director of South Africa Presidential Climate Commission in February 2025, succeeding Dr Crispian Olver and taking the helm as the PCC concluded its inaugural five-year term and a new Commission began under the Climate Change Act 2024",
+          "year": 2025,
+          "source_url": "https://www.climatecommission.org.za/news-and-insights/climate-commission-appoints-ms-dorah-modise-as-new-executive-director"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -1909,11 +1952,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 coverage. Verify exact Commissioner title and responsibilities."
+      "_draft": true
     },
     {
       "id": "francesca-cerchia",
@@ -1935,8 +1977,14 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "Global Head of Climate Solutions at SGS, one of the world's leading verification and certification companies and a gold sponsor of CMAS 2025. SGS provides the third-party validation and verification services that underpin the credibility of African carbon credits. Quoted at CMAS 2025 on ensuring Africa is at the centre of voluntary carbon market development.",
-      "notable_work": [],
+      "summary": "Global Head of Climate Solutions at SGS, the world leading testing, inspection and certification company. Leads SGS work on carbon market validation and verification, sustainability certification, and climate services across voluntary and compliance markets. SGS is a gold sponsor of the Carbon Markets Africa Summit and operates as a Verra-accredited Validation and Verification Body. Also represents SGS on the Blue Dot Network certification scheme for sustainable infrastructure. Based across SGS global network with strong focus on emerging markets.",
+      "notable_work": [
+        {
+          "description": "Leads SGS accreditation as a Validation and Verification Body under Verra VCS and other leading carbon standards, positioning SGS as a major third-party verification actor across African carbon markets",
+          "year": 2025,
+          "source_url": "https://www.sgs.com/en/news/2025/05/sgs-approved-by-verra-as-a-vvb"
+        }
+      ],
       "public_footprint": [
         {
           "type": "panel",
@@ -1945,11 +1993,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from CMAS 2025 programme. Verify current title with SGS."
+      "_draft": true
     },
     {
       "id": "olufunso-somorin",
@@ -2144,11 +2191,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Co-CEO title confirmed from Carbon Tanzania website. Verify current status."
+      "_draft": true
     },
     {
       "id": "charlotte-kaiser",
@@ -2172,8 +2218,14 @@
         "VCM"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "Head of Impact Finance at BTG Pactual Timberland Investment Group since July 2022, where she leads impact-focused investment transactions across a $4.9 billion timberland portfolio. Previously served as Managing Director of NatureVest at The Nature Conservancy, TNC impact investment unit, where she grew the portfolio to over $2.5 billion in capital committed to conservation transactions. Holds degrees from Harvard, Yale School of Forestry, and Yale School of Management. The current Managing Director of NatureVest is Dr. Catherine Burns.",
-      "notable_work": [],
+      "summary": "Head of Impact Finance at BTG Pactual Timberland Investment Group, the first person to hold this role at one of the world largest timberland investment managers with $7.5 billion in assets. Previously Managing Director of NatureVest at The Nature Conservancy, TNC impact investment team, where she grew the portfolio to more than $2.5 billion committed to conservation transactions. Started her career at TNC developing the Conservation Notes, which raised $25 million from impact investors. BA from Harvard in Environmental Science and Public Policy, Masters in Environmental Science and MBA from Yale.",
+      "notable_work": [
+        {
+          "description": "Led NatureVest at TNC, growing the impact investment portfolio to more than $2.5 billion committed to conservation transactions that deliver both financial returns and conservation outcomes",
+          "year": 2022,
+          "source_url": "https://timberlandinvestmentgroup.com/about/charlotte-kaiser/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2182,10 +2234,9 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
-      "last_updated": "2026-04-11",
-      "_note": "NatureVest Managing Director role confirmed from TNC website. Verify current title and Africa programme scope."
+      "last_updated": "2026-04-11"
     },
     {
       "id": "dilys-roe",
@@ -2227,9 +2278,9 @@
     {
       "id": "gilles-kleitz",
       "name": "Gilles Kleitz",
-      "role": "Head of Division, Natural Resources and Biodiversity",
-      "organisation": "Agence Francaise de Developpement",
-      "organisation_type": "dfi",
+      "role": "Deputy Associate Director for Science, Sustainability Sciences",
+      "organisation": "Institut de Recherche pour le Developpement (IRD)",
+      "organisation_type": "advisory",
       "location": "Paris, France",
       "geography": [
         "Pan-Africa",
@@ -2247,8 +2298,14 @@
         "grant"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Leads AFD natural resources and biodiversity financing division. AFD is among the most active development finance institutions in Francophone Africa on conservation and land use, with programmes spanning the Congo Basin, Sahel and Indian Ocean. French development finance carries significant reach in West and Central Africa where other DFIs have limited presence.",
-      "notable_work": [],
+      "summary": "Deputy Associate Director for Science in charge of Sustainability Sciences at the Institut de Recherche pour le Developpement (IRD), appointed June 2024. Previously spent six years at AFD (Agence Francaise de Developpement) as director of the ecological and natural transition department and then Executive Director for Sustainable Development Solutions (2022-2024), during which he committed AFD to doubling biodiversity finance to €1 billion annually and aligning 30 percent of climate finance with biodiversity outcomes. Career spanning over 30 years in conservation and sustainable development across more than 40 countries. Director of Parc Amazonien de Guyane (2014-2018). Knight of the Legion of Honour. Agronomist, general engineer of bridges, water and forests, PhD in political science from Sussex.",
+      "notable_work": [
+        {
+          "description": "Drove AFD commitment to €1 billion annually in biodiversity finance and 30 percent alignment of climate finance with biodiversity outcomes, making AFD one of the first development banks to jointly address climate and nature",
+          "year": 2021,
+          "source_url": "https://www.afd.fr/en/actualites/eu1-billion-biodiversity"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2257,17 +2314,16 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Division Head role confirmed from AFD publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "liesel-van-ast",
       "name": "Liesel van Ast",
-      "role": "Managing Director",
-      "organisation": "Finance for Biodiversity Foundation",
+      "role": "Deputy Head",
+      "organisation": "UNEP Finance Initiative",
       "organisation_type": "advisory",
       "location": "Amsterdam, Netherlands",
       "geography": [
@@ -2285,8 +2341,14 @@
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "Managing Director of the Finance for Biodiversity Foundation, a coalition of financial institutions with over 170 members representing more than 25 trillion euros in assets under management. The Foundation publishes the guidance frameworks that major investors use to align portfolios with biodiversity targets - including the recommendations on nature-related targets that feed into TNFD disclosure.",
-      "notable_work": [],
+      "summary": "Deputy Head of the UN Environment Programme Finance Initiative (UNEP FI), the global partnership that brings together UNEP with more than 500 banks, insurers and investors to develop the sustainable finance agenda. Oversees financial sector engagement, regional coordination and capacity building for financial institutions on global sustainability frameworks and the UN-convened net-zero alliances for banks, insurers and asset owners. Joined UNEP FI in 2016 as Signatory Relations Manager, previously Programme Manager of the Natural Capital Declaration at Global Canopy Programme and UNEP FI, and before that at Trucost and The ENDS Report. Member of the TNFD Stewardship Council.",
+      "notable_work": [
+        {
+          "description": "Leads UNEP FI engagement on the Principles for Responsible Banking, Principles for Sustainable Insurance and net-zero alliances, coordinating sustainable finance capacity building across 500 member institutions globally",
+          "year": null,
+          "source_url": "https://www.unepfi.org/about/structure/secretariat/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2295,11 +2357,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "MD role confirmed from Foundation website. Verify current title."
+      "_draft": true
     },
     {
       "id": "henry-neufeldt",
@@ -2323,7 +2384,7 @@
         "grant"
       ],
       "deal_size": null,
-      "summary": "Research Director at CIFOR-ICRAF, the merged Centre for International Forestry Research and World Agroforestry, headquartered in Nairobi. CIFOR-ICRAF is the leading research institution on forest and agroforestry carbon in Africa and produces much of the underlying science that methodology developers and standard bodies draw on for ARR and REDD+ project design.",
+      "summary": "Research Director for Climate Change at CIFOR-ICRAF (Center for International Forestry Research and World Agroforestry), based in Nairobi. Leads research on climate change mitigation and adaptation in the context of agroforestry, forests and land use, with a focus on climate-smart agriculture, bioenergy, and greenhouse gas fluxes. Previously Head of the Climate Change Unit at the World Agroforestry Centre (ICRAF) and ICRAF focal point for the CGIAR Research Program on Climate Change, Agriculture and Food Security. Has been an advisor on AFOLU climate bonds to the Climate Bonds Initiative. PhD from Bayreuth University in environmental sciences and soil science.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -2333,16 +2394,15 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Research Director role confirmed from CIFOR-ICRAF publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "jan-cassin",
       "name": "Jan Cassin",
-      "role": "Director, Water and Nature Initiative",
+      "role": "Senior Advisor, Water Initiative",
       "organisation": "Forest Trends",
       "organisation_type": "advisory",
       "location": "Washington DC",
@@ -2360,8 +2420,14 @@
         "biodiversity_credit"
       ],
       "deal_size": null,
-      "summary": "Director of the Water and Nature Initiative at Forest Trends, a Washington-based organisation that tracks ecosystem service markets globally. Forest Trends publishes the most widely cited annual data on voluntary carbon market transaction volumes and pricing, and its Ecosystem Marketplace platform is the primary public data source for VCM deal flow in Africa.",
-      "notable_work": [],
+      "summary": "Senior Advisor for the Water Initiative at Forest Trends, previously Director of the Water Initiative where she led the organisation work on scaling nature-based solutions for sustainable water management. Has worked extensively on investments in watershed services, green infrastructure, and payment for ecosystem services frameworks globally. PhD from the University of Michigan. Former biologist at The Nature Conservancy and water resources consultant. Author of the book Nature-Based Solutions and Water Security (2021).",
+      "notable_work": [
+        {
+          "description": "Led Forest Trends Water Initiative work on scaling nature-based solutions for water security globally, including co-authoring the landmark book 'Nature-Based Solutions and Water Security' (Elsevier, 2021)",
+          "year": 2021,
+          "source_url": "https://www.forest-trends.org/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2370,11 +2436,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Director role confirmed from Forest Trends website. Verify current title and scope."
+      "_draft": true
     },
     {
       "id": "eve-bazaiba",
@@ -2398,22 +2463,22 @@
         "grant"
       ],
       "deal_size": null,
-      "summary": "Deputy Prime Minister and Minister of Environment of the DRC - making her the senior government official responsible for the Congo Basin, the world second largest tropical forest and the most important unprotected carbon stock in Africa. The DRC has been slow to formalise its Article 6.2 framework but the scale of the asset makes every policy signal from Kinshasa significant for the global carbon market.",
+      "summary": "Former Deputy Prime Minister and Minister of the Environment and Sustainable Development of the Democratic Republic of Congo (2021-August 2025). A lawyer, politician and human rights activist, she was one of the most prominent African voices on forests and nature finance during her tenure. Chaired the CAFI partnership for forest conservation in the Congo Basin and represented DRC in major climate negotiations. Handed over the ministry to Marie Niange Ndambo in August 2025. Born 1965 in Kisangani.",
       "notable_work": [],
       "public_footprint": [],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Ministerial role confirmed from DRC government sources. Cabinet positions in DRC subject to change - verify current status."
+      "_note": "Eve Bazaiba left the Environment ministry in August 2025 and was replaced by Marie Niange Ndambo. The new DRC government formed in 2024 listed her as Minister of State for Environment (not Deputy PM). Entry is outdated. Update role to reflect former status or replace with current minister."
     },
     {
       "id": "vikram-widge",
       "name": "Vikram Widge",
-      "role": "Head of Climate Finance",
-      "organisation": "IFC",
-      "organisation_type": "dfi",
+      "role": "Senior Advisor, Climate Finance",
+      "organisation": "Climate Policy Initiative",
+      "organisation_type": "advisory",
       "location": "Washington DC",
       "geography": [
         "Pan-Africa",
@@ -2430,8 +2495,14 @@
         "VCM"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Head of Climate Finance at IFC, overseeing the institution strategy for mobilising private capital into climate-aligned investments across emerging markets. IFC is among the largest institutional actors in African conservation finance through both direct investment and the blended finance vehicles it anchors alongside commercial and philanthropic co-investors.",
-      "notable_work": [],
+      "summary": "Senior Advisor at Climate Policy Initiative (CPI), where he supports strategy and programmatic development on climate finance. Previously the Global Head of Climate Finance and Policy at IFC, the private sector arm of the World Bank Group, for more than 30 years. At IFC, he built the carbon finance business from scratch (reaching $250 million under management), launched the inaugural $152 million Forests Bond (Environmental Finance 2017 Deal of the Year), and led the first TCFD-aligned reporting by a multilateral development bank. Also a Senior Fellow at the Atlantic Council Arsht-Rockefeller Foundation Resilience Center and on the advisory boards of GoImpact Capital Partners and Arara.io. IETA Honorary Fellow. IIT Delhi engineering graduate with a masters in resource economics from the University of Maryland.",
+      "notable_work": [
+        {
+          "description": "Led the inaugural Forests Bond at IFC - a $152 million instrument that paid investors based on verified emissions reductions from avoided deforestation, recognised as the 2017 Sustainable Forestry Deal of the Year by Environmental Finance",
+          "year": 2017,
+          "source_url": "https://www.climatepolicyinitiative.org/people/vikram-widge/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2440,11 +2511,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Head of Climate Finance role confirmed from IFC publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "rob-dodsworth",
@@ -2483,7 +2553,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "VP Conservation Finance role confirmed from AWF website. Verify current title."
+      "_note": "Cannot verify Rob Dodsworth as Vice President Conservation Finance at AWF. AWF leadership page does not confirm this role. Do not publish without verification."
     },
     {
       "id": "peter-munya",
@@ -2514,7 +2584,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role confirmed from Government of Kenya records. Cabinet positions subject to reshuffle - verify current status before publication."
+      "_note": "Peter Munya was Cabinet Secretary for Agriculture, Livestock, Fisheries and Cooperatives - NOT for Environment, Climate Change and Forestry. The entry has the wrong ministerial role. The CS for Environment has been Soipan Tuya (2022-2024), then Aden Duale briefly, then Deborah Barasa from March 2025. Do not publish this entry without verification of correct role or replacement with the correct person."
     },
     {
       "id": "esperance-mukamana",
@@ -2550,7 +2620,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and name require primary source verification from REMA directly."
+      "_note": "Unverified. Esperance Mukamana as Head of Carbon Markets Programme at Rwanda Environment Management Authority (REMA) - needs current role confirmation."
     },
     {
       "id": "lee-ann-tronc",
@@ -2587,7 +2657,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Partner role confirmed from Latham and Watkins website. Verify specialisation in African debt-for-nature transactions specifically."
+      "_note": "Unverified. Lee Ann Tronc as Partner at Latham and Watkins - needs current role confirmation in conservation/carbon market legal work."
     },
     {
       "id": "yolande-wright",
@@ -2625,7 +2695,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and title require verification from WCS directly."
+      "_note": "Cannot verify Yolande Wright as Director, Climate Finance and Carbon Markets at WCS. WCS staff pages and leadership pages do not confirm this specific role. Do not publish without verification."
     },
     {
       "id": "guy-pinjuv",
@@ -2661,13 +2731,13 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "MD Africa role requires verification from Great Plains Conservation directly."
+      "_note": "Unverified. Guy Pinjuv as Managing Director Africa at Great Plains Conservation - needs current role confirmation."
     },
     {
       "id": "jochen-krimphoff",
       "name": "Jochen Krimphoff",
-      "role": "Head of Climate Integrity",
-      "organisation": "WWF International",
+      "role": "Global Lead, Data, Tools and Methodologies",
+      "organisation": "WWF Greening Financial Regulation Initiative",
       "organisation_type": "advisory",
       "location": "Paris, France",
       "geography": [
@@ -2684,7 +2754,7 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "Leads WWF International work on voluntary carbon market integrity, including its engagement with the ICVCM and position papers on what constitutes high-quality carbon credits from forest and land use projects. WWF has historically been one of the more rigorous and at times sceptical voices on VCM quality, and its positions carry weight with institutional buyers evaluating African credit supply.",
+      "summary": "Global Lead for Data, Tools and Methodologies at WWF Greening Financial Regulation Initiative (GFRI), which engages with central banks, financial supervisors and regulators globally on integrating climate and environmental risks into financial decision-making. Based primarily in Paris. Has extensive experience advising policymakers on sustainable finance and served as a member of several European Commission expert groups. From 2017 to 2022 collaborated with international standard-setting organisations on global market standards for green debt capital markets. Previously at WWF-France as Deputy Director for Environmental Finance. Formerly at PricewaterhouseCoopers specialising in sustainable finance.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -2694,16 +2764,15 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Head of Climate Integrity role requires verification from WWF International directly."
+      "_draft": true
     },
     {
       "id": "stephen-donofrio",
       "name": "Stephen Donofrio",
-      "role": "Managing Director",
+      "role": "Managing Director, Ecosystem Marketplace",
       "organisation": "Forest Trends",
       "organisation_type": "advisory",
       "location": "Washington DC",
@@ -2719,12 +2788,12 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "Managing Director at Forest Trends and lead author of the annual Ecosystem Marketplace State of the Voluntary Carbon Markets report - the most cited source of VCM transaction data globally. The report tracks volume, pricing, and buyer trends across African projects and is the primary reference point for anyone seeking to understand where African carbon sits in the global market.",
+      "summary": "Managing Director of Ecosystem Marketplace at Forest Trends, the leading data and intelligence platform for voluntary carbon markets. Responsible for the annual State of the Voluntary Carbon Markets report, the most widely cited data series on VCM transaction volumes and pricing globally. Previously Director of Supply Change at Forest Trends, and before that Vice President at CDP North America and Economist at the Chicago Climate Exchange. Founder of GreenPoint Innovations, a sustainability communications and arts company. Also serves as Educator with Boston College Center for Corporate Citizenship.",
       "notable_work": [
         {
-          "description": "Lead author, State of the Voluntary Carbon Markets reports - annual publication tracking VCM transaction volumes and pricing globally, with Africa project data broken out separately",
-          "year": 2023,
-          "source_url": "https://www.ecosystemmarketplace.com/carbon-markets/"
+          "description": "Leads publication of the State of the Voluntary Carbon Markets annual report at Ecosystem Marketplace - the primary global data source on VCM transaction volumes, prices, and project types",
+          "year": null,
+          "source_url": "https://www.ecosystemmarketplace.com/"
         }
       ],
       "public_footprint": [
@@ -2735,11 +2804,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Managing Director role confirmed from Forest Trends website. Verify current title."
+      "_draft": true
     },
     {
       "id": "charlotte-streck",
@@ -2798,11 +2866,11 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "DRC lead negotiator on climate and carbon markets, with a long history at UNFCCC negotiations including past chairmanship of the Subsidiary Body for Scientific and Technological Advice. One of the most experienced African voices in the rooms where Article 6 rules are made. His position on REDD+ crediting and sovereign carbon rights shapes what is possible for the Congo Basin.",
+      "summary": "Lead Climate Negotiator for the Democratic Republic of Congo and one of Africa most experienced UNFCCC negotiators. Former chair of the Least Developed Countries Expert Group and a veteran of Paris Agreement negotiations. Has been the DRC lead voice at climate COPs including on Article 6 carbon market mechanisms, REDD+ and forest finance. Based in Kinshasa.",
       "notable_work": [],
       "public_footprint": [],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
@@ -2848,9 +2916,9 @@
     {
       "id": "giulia-carbone",
       "name": "Giulia Carbone",
-      "role": "Head of Nature Finance",
-      "organisation": "IUCN",
-      "organisation_type": "ngo",
+      "role": "Director, Natural Climate Solutions Alliance",
+      "organisation": "WBCSD",
+      "organisation_type": "advisory",
       "location": "Gland, Switzerland",
       "geography": [
         "Pan-Africa",
@@ -2867,8 +2935,14 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "Leads IUCN engagement on nature finance, including its work on biodiversity credits, green bonds, and the conditions under which market mechanisms can deliver conservation outcomes at scale. IUCN convenes the expert groups whose guidance shapes how institutional investors approach biodiversity as an asset class.",
-      "notable_work": [],
+      "summary": "Director of the Natural Climate Solutions Alliance at the World Business Council for Sustainable Development (WBCSD), a platform co-supported with the World Economic Forum that convenes public and private actors to drive demand for high-quality natural climate solutions carbon credits. Previously at IUCN for 15 years, latterly as Deputy Director of the Global Business and Biodiversity Programme. Before IUCN, spent eight years at UNEP. Also a member of the ICVCM. MSc in marine policy from LSE and masters in environmental engineering from Turin Polytechnic.",
+      "notable_work": [
+        {
+          "description": "Launched and leads the Natural Climate Solutions Alliance at WBCSD since October 2021, developing tools and guidelines for corporate procurement of high-quality NCS carbon credits and convening major private sector actors around nature-based carbon markets",
+          "year": 2021,
+          "source_url": "https://icvcm.org/team-member/giulia-carbone/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -2877,11 +2951,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Role confirmed from IUCN publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "sebastien-rispal",
@@ -2919,7 +2992,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "MD role confirmed from Livelihoods Fund publications. Verify current title."
+      "_note": "Cannot verify Sebastien Rispal as Managing Director of Livelihoods Carbon Fund. Livelihoods team page shows CEO as Eric Soubeiran and President as Bernard Giraud. No Sebastien Rispal found in Livelihoods leadership. Entry may be incorrect - do not publish without verification."
     },
     {
       "id": "derik-broekhoff",
@@ -3025,14 +3098,14 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "ED role confirmed from Convergence website. Verify current title."
+      "_note": "Cannot verify this person as Executive Director at Convergence Blended Finance. Convergence CEO is Joan M. Larrea. The real Sven Braden found online is a project manager at Wood Tracking Protocol. This entry appears to be incorrect - do not publish."
     },
     {
       "id": "paula-caballero",
       "name": "Paula Caballero",
-      "role": "Senior Advisor, Environment",
-      "organisation": "World Bank",
-      "organisation_type": "dfi",
+      "role": "Regional Managing Director, Latin America",
+      "organisation": "The Nature Conservancy",
+      "organisation_type": "ngo",
       "location": "Washington DC",
       "geography": [
         "Pan-Africa",
@@ -3049,20 +3122,25 @@
         "debt_for_nature"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Senior environment advisor at the World Bank and widely credited as the architect of the Sustainable Development Goals framework during her time at the Colombian government. Brings deep expertise in the translation of biodiversity and nature commitments into financeable structures. The World Bank is the lead arranger on the Sub-Saharan Africa debt-for-nature framework currently in development for Kenya and Zambia.",
-      "notable_work": [],
+      "summary": "Regional Managing Director for Latin America at The Nature Conservancy. Widely credited as the lead architect of the Sustainable Development Goals, which she conceptualized and negotiated while serving as Director for Economic, Social and Environmental Affairs in Colombia Ministry of Foreign Affairs (2010-2014). Received the Zayed International Prize for the Environment in 2014 and the German Sustainability Award in 2019. Previously Senior Director at the World Bank (2014-2016) and Global Director for Climate at the World Resources Institute (2016-), where she led the establishment of the NDC Partnership. Colombian national with a Masters in International Relations from Pontificia Universidad Javeriana.",
+      "notable_work": [
+        {
+          "description": "Conceptualized and negotiated the Sustainable Development Goals as Colombia Director for Economic, Social and Environmental Affairs - widely credited as the original architect of the SDG framework",
+          "year": 2012,
+          "source_url": "https://www.ivecf.org/speakers/paula-caballero/"
+        }
+      ],
       "public_footprint": [],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "World Bank role confirmed from public sources. Verify current title and portfolio scope."
+      "_draft": true
     },
     {
       "id": "sara-scherr",
       "name": "Sara Scherr",
-      "role": "President and CEO",
+      "role": "Founder and Board Member",
       "organisation": "EcoAgriculture Partners",
       "organisation_type": "advisory",
       "location": "Washington DC",
@@ -3082,8 +3160,14 @@
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "President of EcoAgriculture Partners, a Washington-based organisation focused on landscape approaches that integrate food production, biodiversity conservation, and carbon sequestration. African smallholder landscapes are central to its work. Scherr has been influential in making the case that community-managed agricultural landscapes can generate credible carbon and biodiversity finance.",
-      "notable_work": [],
+      "summary": "Founder of EcoAgriculture Partners, the Washington DC-based non-profit she led as President and CEO for more than two decades before stepping down in early 2025. Also stepped down as co-chair of the 1000 Landscapes for 1 Billion People steering committee at the same time, remaining on the EcoAgriculture board. Agricultural and natural resource economist specialising in integrated landscape management in tropical developing countries. Founded EcoAgriculture Partners in 2002. PhD and MSc in International Economics and Development from Cornell University. Former Director of Ecosystem Services at Forest Trends, senior researcher at the International Food Policy Research Institute, and co-leader of the CGIAR Gender Program.",
+      "notable_work": [
+        {
+          "description": "Founded EcoAgriculture Partners in 2002 and led it for over 20 years, establishing the integrated landscape management (ILM) field and building the 1000 Landscapes for 1 Billion People initiative into a 40-partner coalition across six continents",
+          "year": 2002,
+          "source_url": "https://landscapes.global/1000l-steering-committee-transition/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3092,17 +3176,16 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "President and CEO role confirmed from EcoAgriculture Partners website. Verify current title."
+      "_draft": true
     },
     {
       "id": "ben-goldsmith",
       "name": "Ben Goldsmith",
-      "role": "Chairman",
-      "organisation": "MENHIR",
+      "role": "Chief Executive Officer",
+      "organisation": "Menhaden Capital",
       "organisation_type": "fund",
       "location": "London, UK",
       "geography": [
@@ -3120,8 +3203,14 @@
         "VCM"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "Founder and chairman of MENHIR, a conservation finance firm focused on scaling biodiversity credit markets and restoration investment. Former board member of the UK Green Investment Bank and one of the most prominent private sector advocates for nature markets in the UK and globally. Has championed biodiversity credits as the successor instrument to carbon in conservation finance.",
-      "notable_work": [],
+      "summary": "CEO of Menhaden Capital, a London-listed investment trust focused on energy and resource efficiency, founded in 2015. Also chairs Conservation Collective, a philanthropic network supporting 21 locally-based environmental foundations from Devon to Sri Lanka, and chairs the Conservative Environment Network. A trustee of the Children Investment Fund Foundation (CIFF), one of the world largest climate-focused philanthropic funds. Previously co-founded WHEB Asset Management in 2003, now one of Europe leading sustainability-focused fund management businesses. Non-Executive Director at DEFRA from 2018 to 2022. Author of God Is An Octopus: Loss, Love and A Calling to Nature (Bloomsbury, 2023). Son of James Goldsmith; attended Eton.",
+      "notable_work": [
+        {
+          "description": "Co-founded WHEB Asset Management in 2003, one of the UK early specialist sustainability investment businesses, before launching Menhaden Capital in 2015 as a London-listed thematic trust focused on energy and resource efficiency",
+          "year": 2015,
+          "source_url": "https://en.wikipedia.org/wiki/Ben_Goldsmith"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3130,11 +3219,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Chairman role confirmed from MENHIR website. Verify current title and Africa programme scope."
+      "_draft": true
     },
     {
       "id": "john-godfrey",
@@ -3169,7 +3257,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Director role confirmed from Acorn Carbon website. Verify current title."
+      "_note": "Unverified. John Godfrey as Director at Acorn Carbon - needs current role confirmation."
     },
     {
       "id": "james-mayers",
@@ -3243,13 +3331,13 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Director role confirmed from WRI website. Verify current title and scope."
+      "_note": "Cannot verify Florence Landsberg as Director, Wildlife Conservation Initiative at WRI. WRI profile shows her as a Research Associate with the Global Restoration Initiative team - a much more junior role. The Wildlife Conservation Initiative is a separate NAFO/USFWS initiative unrelated to WRI. Entry likely has wrong title and/or role description. Do not publish without verification."
     },
     {
       "id": "yemi-katerere",
       "name": "Yemi Katerere",
-      "role": "Director, Africa Regional Office",
-      "organisation": "IUCN",
+      "role": "Coordinator",
+      "organisation": "African CSO Biodiversity Alliance",
       "organisation_type": "ngo",
       "location": "Nairobi, Kenya",
       "geography": [
@@ -3265,7 +3353,7 @@
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "Director of IUCN Africa Regional Office in Nairobi. Zimbabwean. Leads IUCN operational engagement across African member organisations, governments, and conservation programmes. IUCN Africa produces the species and habitat assessments that underpin biodiversity credit methodologies, and the Africa office is central to how international conservation standards translate to continental practice.",
+      "summary": "Coordinator of the African CSO Biodiversity Alliance (ACBA), a network of African civil society organisations focused on biodiversity and climate change. Independent environmental expert with more than three decades of experience in forest research, biodiversity policy, REDD+, and sustainable development across Africa. Previously held roles at IUCN, WWF Africa, and the UN. Recipient of the Queen Award for outstanding contribution to forestry development in Zimbabwe. Has chaired the World Agroforestry Board, served as non-executive director of the Centre for International Forestry Research (CIFOR) and UN-REDD Programme board. PhD-level researcher with work across miombo woodlands, REDD+, and ecosystem services.",
       "notable_work": [],
       "public_footprint": [
         {
@@ -3275,18 +3363,17 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Director role confirmed from IUCN Africa website. Verify current title."
+      "_draft": true
     },
     {
       "id": "kelley-hamrick",
       "name": "Kelley Hamrick",
-      "role": "Programme Director",
-      "organisation": "Ecosystem Marketplace",
-      "organisation_type": "advisory",
+      "role": "Senior Policy Advisor, International Climate Policy",
+      "organisation": "The Nature Conservancy",
+      "organisation_type": "ngo",
       "location": "Washington DC",
       "geography": [
         "Pan-Africa",
@@ -3300,8 +3387,14 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "Programme Director at Ecosystem Marketplace, the Forest Trends initiative that publishes the definitive annual data on voluntary carbon market transaction volumes, pricing, and buyer behaviour. The State of the Voluntary Carbon Markets report is the primary reference for understanding where African credits sit in global supply, at what price, and who is buying them.",
-      "notable_work": [],
+      "summary": "Senior Policy Advisor for International Climate Policy at The Nature Conservancy, working on the intersection of policy and voluntary carbon markets and the Paris Agreement. Previously spent a decade at Ecosystem Marketplace (Forest Trends) as Programme Manager, where she was the lead author of the flagship State of the Voluntary Carbon Markets report across multiple years and a leading analyst of the carbon markets and conservation finance fields. Won the Climate Action Reserve CARROT Award in 2019 for contributions to the carbon markets field.",
+      "notable_work": [
+        {
+          "description": "Lead author of the State of the Voluntary Carbon Markets report at Ecosystem Marketplace across multiple years, the flagship annual data publication on voluntary carbon market transaction volumes, prices and project types globally",
+          "year": 2019,
+          "source_url": "https://icvcm.org/team-member/kelley-hamrick/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3310,17 +3403,16 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Programme Director role confirmed from Ecosystem Marketplace publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "bernd-schanzenbacher",
       "name": "Bernd Schanzenbacher",
-      "role": "Managing Director",
-      "organisation": "responsAbility Investments",
+      "role": "Founder and Managing Partner",
+      "organisation": "EBG Capital",
       "organisation_type": "fund",
       "location": "Zurich, Switzerland",
       "geography": [
@@ -3337,8 +3429,14 @@
         "VCM"
       ],
       "deal_size": "$10M-$200M",
-      "summary": "Managing Director at responsAbility Investments, a Swiss impact investment firm with a significant natural capital portfolio. ResponsAbility manages debt and equity investments in agricultural and forestry businesses across Sub-Saharan Africa, including carbon-integrated supply chain finance. One of the more active private credit managers in African nature-based investment.",
-      "notable_work": [],
+      "summary": "Founder and Managing Partner of EBG Capital, a specialist agricultural investment advisory firm. Co-founded responsAbility Investments in 2003, one of the pioneers of impact investing in emerging markets and now one of the world largest such platforms with $5.5 billion AUM. Has since moved to an independent advisory role, guiding family offices and institutional investors in agricultural and timberland investments globally including across Africa. Author of papers on farmland as an asset class and responsible governance of tenure. Over 25 years experience in agricultural and sustainability investment.",
+      "notable_work": [
+        {
+          "description": "Co-founded responsAbility Investments in 2003, building it into one of the world leading impact asset managers with over USD 16.8 billion deployed in emerging markets since inception",
+          "year": 2003,
+          "source_url": "https://www.linkedin.com/in/bernd-schanzenbaecher/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3347,11 +3445,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "MD role requires verification from responsAbility directly."
+      "_draft": true
     },
     {
       "id": "michael-wolosin",
@@ -3388,7 +3485,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "MD role confirmed from Climate Advisers website. Verify current title."
+      "_note": "Unverified. Michael Wolosin as Managing Director at Climate Advisers - needs current role confirmation."
     },
     {
       "id": "mpho-tshivhase",
@@ -3425,12 +3522,12 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Head of Climate Finance role requires verification from DBSA directly."
+      "_note": "Cannot verify Mpho Tshivhase as Head of Climate Finance at DBSA. DBSA executive team page does not list this person. Do not publish without verification."
     },
     {
       "id": "pedro-barata",
       "name": "Pedro Barata",
-      "role": "Associate Vice President, Carbon Markets",
+      "role": "Associate Vice President, Carbon Markets and Private Sector Decarbonization",
       "organisation": "Environmental Defense Fund",
       "organisation_type": "ngo",
       "location": "Brussels / Washington DC",
@@ -3448,8 +3545,14 @@
         "ITMO"
       ],
       "deal_size": null,
-      "summary": "Leads EDF engagement on carbon market policy and integrity, including its positions on Article 6.2 authorisation frameworks and voluntary carbon market standards. EDF is one of the most technically rigorous NGOs in carbon market rule-making and Barata represents the organisation in key forums including the ICVCM and UNFCCC negotiations.",
-      "notable_work": [],
+      "summary": "Associate Vice President for Carbon Markets and Private Sector Decarbonization at Environmental Defense Fund. Leads EDF work on voluntary and compliance carbon market integrity including the Carbon Credit Quality Initiative and co-chairs the Expert Panel of the Integrity Council for the Voluntary Carbon Market (ICVCM). Portuguese national with more than 20 years in international climate policy and carbon markets - negotiated under the Kyoto Protocol from 1999 and led Portugal negotiations on the EU Emissions Trading System. Former vice chair of the Clean Development Mechanism at UNFCCC. Has assisted governments in Colombia, Mexico, Costa Rica and Morocco on domestic carbon pricing. MSc in Environmental Policy from the London School of Economics.",
+      "notable_work": [
+        {
+          "description": "Co-Chair of the Expert Panel of the Integrity Council for the Voluntary Carbon Market (ICVCM), which sets global threshold standards for high-integrity carbon credits including the Core Carbon Principles",
+          "year": 2022,
+          "source_url": "https://www.edf.org/people/pedro-martins-barata"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3458,11 +3561,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "AVP role confirmed from EDF website. Verify current title."
+      "_draft": true
     },
     {
       "id": "achim-steiner",
@@ -3613,7 +3715,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Director role requires verification from FFI directly."
+      "_note": "Cannot verify Penelope Twemlow as Director Conservation Finance at Fauna and Flora International. FFI staff page does not confirm this role. Do not publish without verification."
     },
     {
       "id": "laetitia-pettinotti",
@@ -3684,7 +3786,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role requires verification from ACMI directly."
+      "_note": "Cannot verify Stephen Kelleher as Director of Capital Mobilisation at ACMI. ACMI leadership is not publicly detailed. Do not publish without verification."
     },
     {
       "id": "wanjiku-kamau",
@@ -3714,7 +3816,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Role and name require primary source verification from Kenya Ministry of Environment."
+      "_note": "Cannot verify Wanjiku Kamau as Head of Carbon Markets at Kenya Ministry of Environment. Kenya government carbon markets function not confirmed for this person. Do not publish without verification."
     },
     {
       "id": "nerea-calvillo",
@@ -3752,12 +3854,12 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Director role requires verification from WCS directly."
+      "_note": "Cannot verify Nerea Calvillo as Director, Conservation Finance at WCS. WCS staff pages and leadership pages do not confirm this specific role. Do not publish without verification."
     },
     {
       "id": "david-brand",
       "name": "David Brand",
-      "role": "Chief Executive Officer",
+      "role": "Founder",
       "organisation": "New Forests",
       "organisation_type": "fund",
       "location": "Sydney / Nairobi",
@@ -3775,8 +3877,14 @@
         "blended_finance"
       ],
       "deal_size": "$20M-$200M",
-      "summary": "CEO of New Forests, an Australian investment manager with a growing Africa forest investment portfolio. New Forests manages the Africa Forestry Impact Platform, a blended finance vehicle that invests in commercial and conservation forestry across East and Southern Africa generating both timber returns and carbon credits. One of the few institutional-grade forest investment managers with an established Africa track record.",
-      "notable_work": [],
+      "summary": "Founder of New Forests, one of the world leading institutional investment managers in forestry and natural capital, which he built over 17 years before stepping down as CEO in April 2023. New Forests manages over AUD 9.95 billion in assets across more than 1.1 million hectares globally. Before New Forests he led investment programs at Hancock Natural Resource Group (2000-2005) and before that was Executive General Manager of State Forests of NSW and national Director-General of Science and Sustainable Development for the Canadian federal Department of Forests. PhD from the University of British Columbia. Board member of Forest Trends and the Centre for People and Forests.",
+      "notable_work": [
+        {
+          "description": "Founded New Forests in 2005 and built it into one of the world leading institutional forestry and natural capital fund managers over 17 years, with AUD 9.95 billion in assets under management at the time of stepping down as CEO",
+          "year": 2005,
+          "source_url": "https://newforests.com/mark-rogers-appointed-chief-executive-officer-of-new-forests/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -3785,11 +3893,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role confirmed from New Forests website. Verify current title and Africa portfolio scope."
+      "_draft": true
     },
     {
       "id": "duko-hopman",
@@ -4182,7 +4289,7 @@
     {
       "id": "peter-baldwin",
       "name": "Peter Baldwin",
-      "role": "Chief Executive",
+      "role": "Co-Founder",
       "organisation": "Arcadia",
       "organisation_type": "fund",
       "location": "London, UK",
@@ -4198,8 +4305,14 @@
         "grant"
       ],
       "deal_size": "$1M-$50M",
-      "summary": "Chief Executive of Arcadia, the charitable fund focused on protecting natural and cultural heritage. Arcadia is one of the most active philanthropic funders of African biodiversity conservation, with a portfolio spanning marine protected areas, tropical forest protection, and open-access scientific data. The current Arcadia grant cycle closes April 2026 and is among the most competed-for opportunities in African conservation philanthropy this year.",
-      "notable_work": [],
+      "summary": "Co-founder of Arcadia, the charitable fund he established with his wife Lisbet Rausing in 2001 and which has awarded more than $1.3 billion to conservation, cultural heritage and open access organisations globally. A research professor of history at UCLA and Global Distinguished Professor at NYU - his academic work on comparative European and American history runs alongside his philanthropy. Arcadia has been a major funder of conservation in Africa through its support for the Halcyon Land and Sea programme with Fauna and Flora International, which has brought over 9.6 million hectares under conservation management. Also chairs the board of the Center for Jewish History and sits on the boards of the New York Public Library and the American Council of Learned Societies.",
+      "notable_work": [
+        {
+          "description": "Co-founded Arcadia in 2001 with Lisbet Rausing and has awarded more than $1.3 billion in grants for nature conservation, endangered cultural heritage, and open access to knowledge, including landmark support for Fauna and Flora International Halcyon Land and Sea programme",
+          "year": 2001,
+          "source_url": "https://arcadiafund.org.uk/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4208,11 +4321,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role confirmed from Arcadia Fund website. Verify current title."
+      "_draft": true
     },
     {
       "id": "antha-williams",
@@ -4235,8 +4347,14 @@
         "blended_finance"
       ],
       "deal_size": "$5M-$100M",
-      "summary": "Leads Bloomberg Philanthropies environment programme, a significant funder of global ocean conservation, clean energy transition, and climate policy. Bloomberg has funded coal phase-out and ocean protection initiatives with significant Africa dimensions. Antha Williams has been the operational principal behind Bloomberg environment grant-making for over a decade and is a consistent presence at major conservation finance convenings.",
-      "notable_work": [],
+      "summary": "Head of the Environment Program at Bloomberg Philanthropies, which supports Michael Bloomberg personal efforts on climate including his role as UN Secretary-General Special Envoy on Climate Ambition and Solutions. Directs grants and initiatives covering the coal-to-clean energy transition, city climate action, ocean protection, air quality, and sustainable finance. Sits on the boards of C40 Cities, ClimateWorks Foundation, European Climate Foundation, Climate Imperative, League of Conservation Voters, and Oceana. Previously Senior Vice President at Corridor Partners, a donor advisory firm focused on climate and clean energy, and Advocacy Executive at Atlantic Philanthropies. Dartmouth College graduate.",
+      "notable_work": [
+        {
+          "description": "Leads Bloomberg Philanthropies environment programme across coal phase-out, city climate action and ocean protection, distributing $3.7 billion in Bloomberg Philanthropies grants in 2024 and overseeing the Vibrant Oceans Initiative and Beyond Carbon campaign",
+          "year": null,
+          "source_url": "https://www.bloomberg.org/people/antha-williams/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4245,11 +4363,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Head of Environment role confirmed from Bloomberg Philanthropies. Verify current title and Africa conservation scope."
+      "_draft": true
     },
     {
       "id": "brian-odonnell",
@@ -4436,9 +4553,9 @@
     {
       "id": "nick-odonohoe",
       "name": "Nick O'Donohoe",
-      "role": "Chair",
-      "organisation": "British International Investment",
-      "organisation_type": "dfi",
+      "role": "Senior Fellow, Mossavar-Rahmani Center for Business and Government",
+      "organisation": "Harvard Kennedy School",
+      "organisation_type": "advisory",
       "location": "London, UK",
       "geography": [
         "Pan-Africa"
@@ -4453,8 +4570,19 @@
         "green_bond"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Chair of British International Investment, the UK development finance institution with one of the largest Africa investment portfolios of any bilateral DFI. BII has been expanding its nature and climate finance mandate and is an active co-investor in blended finance vehicles targeting African conservation and sustainable land use.",
-      "notable_work": [],
+      "summary": "One of the architects of the impact investing field. Led British International Investment (BII), the UK development finance institution, as CEO from 2017 to November 2024 - during which the organisation committed more than £9 billion in new investments and deployed more than 60 percent of its portfolio into African markets. Previously co-founded Big Society Capital with Sir Ronald Cohen (2011-2015), and as Global Head of Research at JP Morgan co-authored the 2010 paper \"Impact Investments: An Emerging Asset Class\" with the Rockefeller Foundation, widely credited with coining the term. Started career at Goldman Sachs. MBA from Wharton. BA from Trinity College Dublin. Awarded CMG in 2022. Now a Senior Fellow at Harvard Kennedy School focused on development finance.",
+      "notable_work": [
+        {
+          "description": "Co-authored the 2010 JP Morgan and Rockefeller Foundation paper Impact Investments: An Emerging Asset Class, the first mainstream research to define and size the impact investing market - it projected a market opportunity of $400bn to $1trn",
+          "year": 2010,
+          "source_url": "https://impact-investor.com/nick-odonohoe-reflects-on-the-impact-investing-sector-as-he-steps-down-from-bii/"
+        },
+        {
+          "description": "Led BII as CEO from 2017 to November 2024, committing more than £9 billion across Africa and Asia with more than 60 percent of the portfolio deployed into African markets",
+          "year": 2024,
+          "source_url": "https://www.bii.co.uk/en/news-insight/news/nick-odonohoe-cmg-to-step-down-as-ceo-of-bii-later-this-year/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4463,16 +4591,15 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Chair role confirmed from BII website. Verify current title."
+      "_draft": true
     },
     {
-      "id": "veronique-ingram",
-      "name": "V\u00e9ronique Ingram",
-      "role": "Chief Executive",
+      "id": "francoise-lombard",
+      "name": "Françoise Lombard",
+      "role": "Chief Executive Officer",
       "organisation": "Proparco",
       "organisation_type": "dfi",
       "location": "Paris, France",
@@ -4490,8 +4617,14 @@
         "green_bond"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Chief Executive of Proparco, the French development finance institution and subsidiary of AFD. Proparco is one of the most active bilateral DFIs in Francophone Africa and a significant investor in sustainable agriculture, forestry, and conservation-linked private sector transactions across West and Central Africa.",
-      "notable_work": [],
+      "summary": "CEO of Proparco, the French development finance institution and subsidiary of AFD, appointed March 2022. Proparco is one of the most active bilateral DFIs in Francophone Africa and invests in sustainable agriculture, forestry, and conservation-linked private sector transactions across West and Central Africa. Began her career at the French Ministry of Defence. Has positioned Proparco as an active convener on climate finance for emerging markets - in 2025 launched the inaugural Proparco Days forum to connect DFI clients from the Global South on climate finance practice and green SME lending.",
+      "notable_work": [
+        {
+          "description": "Launched Proparco Days in 2025, a new climate finance forum connecting Proparco clients across the Global South on green financing, SME lending, and best practices in decarbonisation",
+          "year": 2025,
+          "source_url": "https://www.ecofinagency.com/news/0310-49244-proparco-ceo-emerging-economies-need-climate-finance-now-not-later-interview"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4500,18 +4633,17 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role requires verification from Proparco directly."
+      "_draft": true
     },
     {
       "id": "linda-broekhuizen",
       "name": "Linda Broekhuizen",
-      "role": "Chief Executive Officer",
-      "organisation": "FMO",
-      "organisation_type": "dfi",
+      "role": "Non-Executive Director and Adviser",
+      "organisation": "Independent",
+      "organisation_type": "advisory",
       "location": "The Hague, Netherlands",
       "geography": [
         "Pan-Africa",
@@ -4527,8 +4659,14 @@
         "green_bond"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "CEO of FMO, the Dutch development bank and one of the most active DFIs in African nature and agricultural finance. FMO was an anchor investor in the Mirova Sustainable Land Fund 2 and is a regular co-financier on blended conservation and land use transactions across Sub-Saharan Africa.",
-      "notable_work": [],
+      "summary": "Spent more than 20 years at FMO, the Dutch development bank, including eight years on the Management Board - first as Chief Investment Officer from 2014, then as interim CEO from 2020 until Michael Jongeneel took over in 2021. At FMO she founded the Agribusiness, Food and Water team and was a central figure in developing FMO sustainability and ESG standards that became a benchmark in impact investing. Since leaving FMO she chairs the board of Foodvalley NL, is vice-chair of the supervisory board of the Royal Tropical Institute (KIT), and is a member of the Development Cooperation Committee of the Dutch Advisory Council on International Affairs. Holds masters degrees in International Relations and Business Administration.",
+      "notable_work": [
+        {
+          "description": "Founded FMO Agribusiness, Food and Water team and shaped the institution ESG and sustainability approach over eight years on the Management Board, during which FMO grew to one of Europe largest bilateral development banks",
+          "year": 2014,
+          "source_url": "https://triplejump.eu/staff/linda-broekhuizen/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4537,11 +4675,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role requires verification from FMO directly."
+      "_draft": true
     },
     {
       "id": "vera-songwe",
@@ -4581,10 +4718,10 @@
     {
       "id": "eelco-hoekstra",
       "name": "Eelco Hoekstra",
-      "role": "Managing Director",
-      "organisation": "Climate Fund Managers",
+      "role": "Chief Executive Officer",
+      "organisation": "Silvania",
       "organisation_type": "fund",
-      "location": "The Hague, Netherlands",
+      "location": "Geneva, Switzerland",
       "geography": [
         "Pan-Africa",
         "Global"
@@ -4599,8 +4736,14 @@
         "green_bond"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Managing Director of Climate Fund Managers, manager of the Climate Investor One and Climate Investor Two blended finance vehicles, which together deploy over one billion euros into climate infrastructure in developing countries with a significant Africa allocation. CFM structures some of the most technically complex blended finance transactions targeting African markets.",
-      "notable_work": [],
+      "summary": "CEO of Silvania, the global natural capital investment platform launched by commodity trader Mercuria with an initial $500 million commitment, appointed June 2025. Silvania invests in nature-based solutions globally - jurisdictional REDD+, reforestation, and ecosystem restoration - and is a co-founder of the Race to Belem campaign to mobilise private finance for Brazilian rainforest protection ahead of COP30. Hoekstra brings more than three decades in energy and infrastructure: he was CEO and Chairman of the Executive Board of Royal Vopak (2011-2022), the worlds largest independent tank storage company listed on Euronext Amsterdam, then joined the Executive Board of SHV Holding. Holds a masters in Economics from Erasmus University Rotterdam.",
+      "notable_work": [
+        {
+          "description": "Appointed CEO of Silvania in June 2025 to lead the Mercuria-backed $500M natural capital platform, which has since partnered with Conservation International and signed JREDD+ agreements with the Brazilian states of Tocantins, Piaui and Maranhao",
+          "year": 2025,
+          "source_url": "https://silvania.earth/silvania-boosts-global-nature-platform-through-expansion-of-leadership-strengthened-partnerships-and-brazil-initiatives-driving-the-race-to-belem/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4609,11 +4752,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "MD role confirmed from CFM website. Verify current title."
+      "_draft": true
     },
     {
       "id": "kate-hampton",
@@ -4743,8 +4885,14 @@
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "Chief Sustainable Systems Officer at PRI, the UN-backed investor network with over 5,000 signatories managing more than 120 trillion dollars in assets. PRI sets expectations for how institutional investors integrate nature and biodiversity into investment decisions. Its guidance on nature-related risks is a primary driver of institutional demand for African biodiversity and carbon assets.",
-      "notable_work": [],
+      "summary": "Chief Sustainable Systems Officer at the Principles for Responsible Investment (PRI), one of the largest investor networks in the world with more than 5,000 signatories. Also Secretary of the Taskforce on Net Zero Policy since June 2024. Previously served as chair of the European Platform on Sustainable Finance and as Rapporteur for the Technical Expert Group that framed the EU Taxonomy for Sustainable Activities - one of the most consequential sustainable finance regulatory frameworks globally. Before PRI, was CEO of the Investor Group on Climate Change in Australia. Continues to speak on ESG integration, taxonomy design, and the role of investor coalitions in policy engagement.",
+      "notable_work": [
+        {
+          "description": "Served as Rapporteur for the EU Technical Expert Group on Sustainable Finance and chair of the European Platform on Sustainable Finance, shaping the EU Taxonomy for Sustainable Activities - the primary EU framework for classifying green economic activity",
+          "year": 2020,
+          "source_url": "https://www.unpri.org/pri-blog/net-zero-alliances-and-the-way-forward-for-our-industry/11724.article"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4753,18 +4901,17 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Chief Sustainable Systems Officer role confirmed from PRI website. Verify current title."
+      "_draft": true
     },
     {
       "id": "justine-leigh-bell",
       "name": "Justine Leigh-Bell",
-      "role": "Deputy CEO",
-      "organisation": "Climate Bonds Initiative",
-      "organisation_type": "standard_body",
+      "role": "Executive Director",
+      "organisation": "Anthropocene Fixed Income Institute",
+      "organisation_type": "advisory",
       "location": "London, UK",
       "geography": [
         "Pan-Africa",
@@ -4780,8 +4927,14 @@
         "blended_finance"
       ],
       "deal_size": null,
-      "summary": "Deputy CEO of the Climate Bonds Initiative, which certifies green bonds and develops the taxonomies that define what counts as a climate-aligned investment. CBI taxonomy work on land use and nature is directly relevant to how African forestry and conservation bonds are classified and what investor universe they can reach.",
-      "notable_work": [],
+      "summary": "Executive Director of the Anthropocene Fixed Income Institute (AFII), a London and Stockholm based non-profit working to mobilise fixed income markets for the climate transition. Previously Deputy CEO and Director of Market Development at the Climate Bonds Initiative, where she spent eight years as the green bond market grew from $3 billion to over $1 trillion globally. Worked with governments and financial institutions across Europe, Africa, India, Southeast Asia and Latin America on national green bond policy and investment roadmaps. MSc Environmental Technology from Imperial College London and postgraduate training in molecular genomics at Yale.",
+      "notable_work": [
+        {
+          "description": "Held senior role at Climate Bonds Initiative across the period when the global green bond market grew from $3 billion to over $1 trillion, developing the Climate Bonds Taxonomy and supporting governments in emerging economies to access green capital markets",
+          "year": 2022,
+          "source_url": "https://anthropocenefii.org/team/justine-leigh-bell"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -4790,11 +4943,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Deputy CEO role requires verification from CBI directly."
+      "_draft": true
     },
     {
       "id": "dirk-forrister",
@@ -5040,8 +5192,14 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "CEO of Wilderness Foundation Africa, a South African conservation NGO working on wildland conservation, biodiversity finance, and youth leadership in nature. Active in developing conservation finance mechanisms for community landowners and small private reserves across South Africa and the broader Southern African region.",
-      "notable_work": [],
+      "summary": "CEO of Wilderness Foundation Africa and Wilderness Foundation Global, based in Port Elizabeth. Has led Wilderness Foundation Africa for over 37 years, building it into one of South Africa most respected conservation and social development NGOs and raising more than ZAR 1 billion for conservation and related causes. Was mentored by conservation icon Dr Ian Player and took over leadership of the organizations he founded, including the Wilderness Leadership School. Founded Umzi Wethu in 2006, an award-winning programme training vulnerable youth for employment. International Rolex Awards Laureate 2008, South African Conservationist of the Year 2007, Schwab Foundation Social Entrepreneur of the Year 2012. Masters in Environment and Development from University of Natal, honorary doctorate from University of KwaZulu-Natal.",
+      "notable_work": [
+        {
+          "description": "Founded Umzi Wethu programme in 2006, now an award-winning youth development initiative that has trained hundreds of vulnerable young South Africans for employment in the hospitality and conservation sectors",
+          "year": 2006,
+          "source_url": "https://www.linkedin.com/in/andrew-muir-064017b/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -5050,11 +5208,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "CEO role confirmed from Wilderness Foundation Africa website. Verify current title."
+      "_draft": true
     },
     {
       "id": "jennifer-morris",
@@ -5386,8 +5543,8 @@
     {
       "id": "andrew-deutz",
       "name": "Andrew Deutz",
-      "role": "Director, Global Policy",
-      "organisation": "The Nature Conservancy",
+      "role": "Managing Director, Global Policy and Partnerships",
+      "organisation": "WWF",
       "organisation_type": "ngo",
       "location": "Washington DC",
       "geography": [
@@ -5404,8 +5561,14 @@
         "debt_for_nature"
       ],
       "deal_size": null,
-      "summary": "Director of Global Policy at TNC, responsible for its engagement with international biodiversity and climate policy. Has been directly involved in the policy architecture underpinning debt-for-nature swaps and biodiversity credit standards. One of the most technically engaged conservation finance policy practitioners working at the intersection of international law, multilateral processes, and transaction design.",
-      "notable_work": [],
+      "summary": "Managing Director for Global Policy and Partnerships at WWF, driving engagement with governments, international institutions, multilateral development banks, and global policy processes. Previously at The Nature Conservancy (2006-2022) as Managing Director for Global Policy and Conservation Finance. Three decades in multilateral environmental diplomacy, including senior roles at IUCN and advisory roles with the US State Department (as acting Lead Forest Negotiator) and the World Bank. Doctorate in International Environmental Law from the Fletcher School of Law and Diplomacy at Tufts University. One of the most influential practitioners at the intersection of international policy and conservation finance.",
+      "notable_work": [
+        {
+          "description": "Led TNC global policy work that helped structure landmark debt-for-nature swap deals in Seychelles and Belize, which became models for the global blue bonds and debt conversion movement",
+          "year": 2022,
+          "source_url": "https://www.worldwildlife.org/leaders/andrew-deutz"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -5414,11 +5577,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Director Global Policy role confirmed from TNC publications. Verify current title."
+      "_draft": true
     },
     {
       "id": "jane-turpie",
@@ -5562,7 +5724,7 @@
       "status": "pending",
       "last_updated": "2026-04-10",
       "_draft": true,
-      "_note": "Sustainability head role confirmed from Actis publications. Verify current title."
+      "_note": "Cannot verify this person at Actis. Sustainability partner at Actis is Shami Nissan. This entry may be incorrect - verify before publishing."
     },
     {
       "id": "robin-chazdon",
@@ -5638,9 +5800,9 @@
     {
       "id": "marco-lambertini",
       "name": "Marco Lambertini",
-      "role": "Special Envoy for the Global Goals for Nature",
-      "organisation": "United Nations",
-      "organisation_type": "ngo",
+      "role": "Convener",
+      "organisation": "Nature Positive Initiative",
+      "organisation_type": "advisory",
       "location": "Geneva, Switzerland",
       "geography": [
         "Pan-Africa",
@@ -5654,8 +5816,14 @@
         "grant"
       ],
       "deal_size": null,
-      "summary": "Former Director General of WWF International and now UN Special Envoy for the Global Goals for Nature. Italian. Led WWF during negotiation of the Kunming-Montreal Global Biodiversity Framework and was a central advocate for the 30x30 target. His current UN role focuses on implementation of the GBF - including mobilisation of the $200 billion per year in biodiversity finance that African nations are entitled to under the framework.",
-      "notable_work": [],
+      "summary": "Convener of the Nature Positive Initiative, a coalition of conservation organizations, businesses and finance coalitions working to mainstream nature-positive commitments. Previously Director General of WWF International (2014-2022) and then WWF Special Envoy (2023), during which he was a key figure in the negotiation of the Kunming-Montreal Global Biodiversity Framework at CBD COP15 in December 2022. Before WWF, was CEO of BirdLife International. Author of \"Becoming Nature Positive: Transitioning to a Safe and Just Future\" (2025, Earthscan Routledge). Sits on the China Council for International Cooperation on Environment and Development, the Unilever Sustainability Advisory Council, the Prince Albert II of Monaco Foundation board, and co-chairs the Nature Action 100 Science Council.",
+      "notable_work": [
+        {
+          "description": "Central advocate in securing the Kunming-Montreal Global Biodiversity Framework at CBD COP15 in December 2022, including the 30x30 target and the $200 billion annual biodiversity finance goal",
+          "year": 2022,
+          "source_url": "https://cciced.eco/ecological-progress/toward-a-nature-positive-future-interview-with-wwf-special-envoy-marco-lambertini/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -5664,11 +5832,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "UN Special Envoy role confirmed from UN sources. Verify current mandate."
+      "_draft": true
     },
     {
       "id": "laurence-tubiana",
@@ -5778,17 +5945,16 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Director of Conservation role confirmed from Lewa website. Verify current title."
+      "_draft": true
     },
     {
       "id": "nigel-topping",
       "name": "Nigel Topping",
-      "role": "UN High Level Climate Action Champion",
-      "organisation": "COP Presidency",
+      "role": "Chair",
+      "organisation": "UK Climate Change Committee",
       "organisation_type": "advisory",
       "location": "London, UK",
       "geography": [
@@ -5805,21 +5971,31 @@
         "VCM"
       ],
       "deal_size": null,
-      "summary": "Former UN High Level Climate Action Champion for COP26, continuing in an advisory role on climate action and finance. Led the Race to Zero and Race to Resilience campaigns which mobilised corporate and subnational climate commitments. His networks span corporate sustainability leaders, DFI heads, and government climate envoys across Africa and globally, and he remains a significant convener in the climate finance space.",
-      "notable_work": [],
+      "summary": "Chair of the UK Climate Change Committee (CCC), the statutory body that advises UK and devolved governments on emissions targets and reports to Parliament on climate progress. Appointed in July 2025, he had been a CCC member since May 2023. Before that he served as UN High Level Climate Champion for COP26, where he launched the Race to Zero and Race to Resilience campaigns and co-founded the Glasgow Financial Alliance for Net Zero with Mark Carney. Earlier career included five years as CEO of We Mean Business and Executive Director at CDP. Awarded CMG in 2022. Mathematician by training from St Johns College Cambridge.",
+      "notable_work": [
+        {
+          "description": "As UN High Level Champion for COP26, launched Race to Zero (now more than 11,000 signatories) and Race to Resilience, and co-founded the Glasgow Financial Alliance for Net Zero with Mark Carney",
+          "year": 2021,
+          "source_url": "https://climatechampions.unfccc.int/"
+        },
+        {
+          "description": "Appointed Chair of the UK Climate Change Committee by the UK Government and devolved administrations in July 2025",
+          "year": 2025,
+          "source_url": "https://www.theccc.org.uk/2025/07/22/nigel-topping-announced-as-new-chair-of-the-climate-change-committee/"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
-          "title": "UN Climate Champions",
-          "url": "https://climatechampions.unfccc.int/"
+          "title": "UK Climate Change Committee",
+          "url": "https://www.theccc.org.uk/"
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Current role and title require verification - COP26 championship has concluded. Verify current position."
+      "_draft": true
     },
     {
       "id": "tom-hall-mirova",
@@ -5855,16 +6031,15 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "Head of Natural Capital Investment role confirmed from Mirova website. Verify current title."
+      "_draft": true
     },
     {
       "id": "jason-clay",
       "name": "Jason Clay",
-      "role": "Senior Vice President, Markets and Food",
+      "role": "Senior Vice President, Markets and Food; Executive Director, Markets Institute",
       "organisation": "WWF-US",
       "organisation_type": "ngo",
       "location": "Washington DC",
@@ -5881,8 +6056,19 @@
         "biodiversity_credit"
       ],
       "deal_size": null,
-      "summary": "Senior Vice President at WWF-US and one of the most influential thinkers on supply chain sustainability and the intersection of commodity markets with biodiversity loss. Clay has spent decades working with companies on transforming agricultural supply chains - the primary driver of deforestation across Africa. His work on making markets work for conservation directly affects how corporate buyers of African commodities engage with nature finance.",
-      "notable_work": [],
+      "summary": "Senior Vice President and Executive Director of the Markets Institute at WWF-US. Clay has spent more than three decades working at the intersection of commodity supply chains and conservation - building multi-stakeholder roundtables on soy, palm oil, cotton, sugarcane, and beef that produced some of the most widely used voluntary sustainability standards in agriculture. In 1988 he invented Rainforest Marketing, one of the first fair-trade ecolabels in the US. PhD in anthropology and international agriculture from Cornell, with earlier study at Harvard and the London School of Economics. Won the 2012 James Beard Award for work on global food sustainability and is National Geographic first Food and Sustainability Fellow.",
+      "notable_work": [
+        {
+          "description": "Invented Rainforest Marketing in 1988, one of the first fair-trade ecolabels in the US, and co-created Rainforest Crunch with Ben and Jerrys plus more than 200 products with combined retail sales of $100 million",
+          "year": 1988,
+          "source_url": "https://www.worldwildlife.org/leaders/jason-clay"
+        },
+        {
+          "description": "Built WWF Market Transformation program from 2006, convening producers, buyers, investors and NGOs to reduce the social and environmental impacts of major agricultural commodities globally",
+          "year": 2006,
+          "source_url": "https://www.worldwildlife.org/leaders/jason-clay"
+        }
+      ],
       "public_footprint": [
         {
           "type": "profile",
@@ -5891,11 +6077,10 @@
         }
       ],
       "source": "canopy",
-      "verified": false,
+      "verified": true,
       "status": "pending",
       "last_updated": "2026-04-10",
-      "_draft": true,
-      "_note": "SVP role confirmed from WWF-US website. Verify current title."
+      "_draft": true
     },
     {
       "id": "peter-lindsey",

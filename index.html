@@ -1023,7 +1023,7 @@
       <div class="home-card-header">
         <div>
           <div class="home-card-map-title"><span class="card-num card-num-6">6</span>CAIRN</div>
-          <div class="home-card-map-sub"><strong style="font-size:14px;">Canopy Africa Impact &amp; Risk Navigator</strong><br>Our proprietary project rating tool</div>
+          <div class="home-card-map-sub"><strong style="font-size:14px;">Canopy Africa Impact &amp; Risk Navigator</strong><br>Our proprietary project rating tool<br>Data-driven ratings across <span class="live-num" id="cairn-proj-count">261</span> projects</div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
           <div class="home-card-map-cta">Open -></div>
@@ -1602,6 +1602,7 @@
       document.getElementById('mini-proj-stat').innerHTML = '<span class="live-num">'+projCount+'</span> projects tracked across Africa';
       if (document.getElementById('proj-page-count')) document.getElementById('proj-page-count').textContent = projCount;
       if (document.getElementById('about-proj-count')) document.getElementById('about-proj-count').textContent = projCount;
+      if (document.getElementById('cairn-proj-count')) document.getElementById('cairn-proj-count').textContent = projCount;
 
       // policy summary counts
       const counts = {operational:0,'agreement-signed':0,'in-negotiation':0,'framework-only':0,'no-framework':0};
