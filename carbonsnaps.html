@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carbon Market Pulse - Canopy</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #fafaf8; --bg3: #f5f5f2;
+    --border: #e8e8e5;
+    --green: #1a4a2e;
+    --text: #1a1a18; --text-muted: #5f5e5a; --text-dim: #999896;
+    --pulse: #1a3552; --pulse-pale: #edf1f7; --pulse-mid: rgba(26,53,82,0.1);
+    --pulse-border: rgba(26,53,82,0.22);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; }
+  .logo-mark { width: 30px; height: 30px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--border); overflow: hidden; }
+  .logo-name { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+  .logo-sub  { font-size: 11px; color: var(--text-muted); font-weight: 400; display: block; }
+  .nav-links { display: none; }
+  .nav-link  { font-size: 13px; color: var(--text-muted); transition: color 0.15s; cursor: pointer; text-decoration: none; }
+  .nav-link:hover { color: var(--text); }
+  .nav-link.active { color: var(--pulse); font-weight: 600; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-cta { font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--green); color: var(--green); background: transparent; cursor: pointer; font-weight: 500; transition: background 0.15s; }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.2s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 99; padding: 8px 0 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu-item { display: flex; align-items: center; gap: 12px; padding: 13px 24px; font-size: 15px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.1s; text-decoration: none; }
+  .mobile-menu-item:hover { background: var(--bg2); }
+  .mobile-menu-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .mobile-menu-divider { height: 1px; background: var(--border); margin: 8px 24px; }
+  .mobile-menu-sub { padding: 10px 24px; font-size: 13px; color: var(--text-muted); cursor: pointer; transition: background 0.1s; text-decoration: none; display: block; }
+  .mobile-menu-sub:hover { background: var(--bg2); }
+
+  /* INTRO */
+  .intro-wrap { max-width: 720px; margin: 0 auto; padding: 52px 40px 36px; border-bottom: 1px solid var(--border); }
+  .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pulse); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .eyebrow-num { width: 22px; height: 22px; border-radius: 50%; background: var(--pulse); color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .page-title { font-size: 34px; font-weight: 600; letter-spacing: -0.025em; color: var(--text); line-height: 1.1; margin-bottom: 18px; }
+  .page-desc { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 10px; }
+  .page-note { font-size: 12px; color: var(--text-dim); }
+
+  /* SIGNAL BAR */
+  .signal-bar { background: var(--pulse-pale); border-bottom: 1px solid var(--pulse-border); padding: 13px 40px; }
+  .signal-bar-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .signal-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pulse); }
+  .signal-bar-right { display: flex; align-items: center; gap: 16px; }
+  .signal-pill { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 5px; }
+  .signal-pill.bearish { background: #fde8e8; color: #9a2a2a; }
+  .signal-pill.bullish { background: #e6f4ec; color: #1a6b3a; }
+  .signal-pill.mixed   { background: #fef6e0; color: #8a6000; }
+  .signal-pill.neutral { background: var(--bg3); color: var(--text-dim); }
+  .signal-bar-updated { font-size: 11px; color: var(--text-dim); }
+
+  /* INSTRUMENT CARDS */
+  .instruments-wrap { max-width: 720px; margin: 0 auto; padding: 32px 40px; border-bottom: 1px solid var(--border); }
+  .instruments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .inst-card { border: 1px solid var(--pulse-border); border-radius: 12px; padding: 22px; background: var(--pulse-pale); }
+  .inst-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+  .inst-name { font-size: 18px; font-weight: 700; color: var(--pulse); letter-spacing: -0.01em; }
+  .inst-fullname { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .inst-price-block { text-align: right; }
+  .inst-price { font-size: 24px; font-weight: 700; color: var(--text); letter-spacing: -0.03em; line-height: 1; }
+  .inst-price-unit { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
+  .inst-changes { display: flex; gap: 12px; margin-bottom: 14px; }
+  .inst-change-item { flex: 1; }
+  .inst-change-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 3px; }
+  .inst-change-val { font-size: 13px; font-weight: 600; }
+  .inst-change-val.down { color: #9a2a2a; }
+  .inst-change-val.up   { color: #1a6b3a; }
+  .inst-change-val.flat { color: var(--text-dim); }
+  .inst-divider { height: 1px; background: var(--pulse-border); margin-bottom: 14px; }
+  .inst-story { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+  .inst-signal-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .inst-signal-label { font-size: 11px; color: var(--text-dim); }
+
+  /* AFRICA CONTEXT */
+  .context-wrap { max-width: 720px; margin: 0 auto; padding: 32px 40px; border-bottom: 1px solid var(--border); }
+  .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 16px; }
+  .context-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; }
+  .context-box p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+  .context-box p + p { margin-top: 12px; }
+
+  /* REGULATORY EVENTS */
+  .events-wrap { max-width: 720px; margin: 0 auto; padding: 32px 40px; border-bottom: 1px solid var(--border); }
+  .events-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .event-row { display: grid; grid-template-columns: 110px 1fr 80px; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border); align-items: start; background: var(--bg); transition: background 0.1s; }
+  .event-row:last-child { border-bottom: none; }
+  .event-row:hover { background: var(--bg2); }
+  .event-date-col { font-size: 11px; color: var(--text-dim); line-height: 1.5; padding-top: 1px; }
+  .event-date-main { font-weight: 600; color: var(--text-muted); }
+  .event-date-sub { font-size: 10px; color: var(--text-dim); margin-top: 2px; }
+  .event-date-hot { color: #9a2a2a; }
+  .event-date-warm { color: #8a6000; }
+  .event-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .event-note { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+  .event-inst-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+  .event-inst-tag { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 4px; background: var(--pulse-mid); color: var(--pulse); }
+  .event-signal-col { text-align: right; padding-top: 2px; }
+
+  /* EXTERNAL LINK */
+  .external-wrap { max-width: 720px; margin: 0 auto; padding: 28px 40px 40px; }
+  .external-box { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border: 1px solid var(--pulse-border); border-radius: 10px; background: var(--pulse-pale); }
+  .external-label { font-size: 13px; font-weight: 600; color: var(--pulse); margin-bottom: 3px; }
+  .external-sub { font-size: 12px; color: var(--text-dim); }
+  .external-btn { font-size: 12px; font-weight: 600; padding: 8px 18px; border-radius: 8px; background: var(--pulse); color: #fff; text-decoration: none; white-space: nowrap; transition: opacity 0.15s; }
+  .external-btn:hover { opacity: 0.85; }
+
+  footer { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); max-width: 720px; margin: 0 auto; }
+  .footer-note { font-size: 12px; color: var(--text-dim); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; color: var(--text-dim); cursor: pointer; transition: color 0.15s; }
+  .footer-link:hover { color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 24px; }
+    .intro-wrap { padding: 36px 24px 28px; }
+    .page-title { font-size: 26px; }
+    .signal-bar { padding: 12px 24px; }
+    .instruments-wrap { padding: 24px 24px; }
+    .instruments-grid { grid-template-columns: 1fr; }
+    .context-wrap { padding: 24px 24px; }
+    .events-wrap { padding: 24px 24px; }
+    .event-row { grid-template-columns: 90px 1fr; }
+    .event-signal-col { display: none; }
+    .external-wrap { padding: 20px 24px 32px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-mount"></div>
+
+<!-- INTRO -->
+<div class="intro-wrap">
+  <div class="eyebrow"><span class="eyebrow-num">8</span>Market context</div>
+  <h1 class="page-title">Carbon Market Pulse</h1>
+  <p class="page-desc">African conservation projects sell credits into the voluntary carbon market. What that market is doing - its price direction, regulatory outlook, and upcoming events - directly affects the financial viability of projects across this database. This page tracks the signals that matter.</p>
+  <p class="page-note">VCM and CORSIA only. Compliance market data (EUA, UKA, CCA) at <a href="https://carbonsnaps.com" target="_blank" style="color:var(--pulse);text-decoration:underline;text-underline-offset:3px;">carbonsnaps.com</a>.</p>
+</div>
+
+<!-- SIGNAL BAR -->
+<div class="signal-bar">
+  <div class="signal-bar-inner">
+    <span class="signal-bar-label">Overall signal for African conservation projects</span>
+    <div class="signal-bar-right">
+      <span class="signal-pill bearish">Bearish near-term</span>
+      <span class="signal-bar-updated">Updated 9 Apr 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- INSTRUMENT CARDS -->
+<div class="instruments-wrap">
+  <div class="section-label">Instruments</div>
+  <div class="instruments-grid">
+
+    <!-- VCM -->
+    <div class="inst-card">
+      <div class="inst-card-header">
+        <div>
+          <div class="inst-name">VCM</div>
+          <div class="inst-fullname">Voluntary Carbon Market</div>
+        </div>
+        <div class="inst-price-block">
+          <div class="inst-price">$6.40</div>
+          <div class="inst-price-unit">GEO spot / tonne</div>
+        </div>
+      </div>
+      <div class="inst-changes">
+        <div class="inst-change-item">
+          <div class="inst-change-label">1 week</div>
+          <div class="inst-change-val down">-2.1%</div>
+        </div>
+        <div class="inst-change-item">
+          <div class="inst-change-label">1 month</div>
+          <div class="inst-change-val down">-8.4%</div>
+        </div>
+        <div class="inst-change-item">
+          <div class="inst-change-label">3 months</div>
+          <div class="inst-change-val down">-12.1%</div>
+        </div>
+      </div>
+      <div class="inst-signal-row">
+        <span class="inst-signal-label">Signal</span>
+        <span class="signal-pill bearish">Bearish</span>
+      </div>
+      <div class="inst-divider"></div>
+      <p class="inst-story">VCM spot has been under pressure through Q1 2026 as corporate demand signals remain soft and the Article 6 rulebook continues to settle. Nature-based African projects are holding a quality premium over the GEO benchmark - CCB-certified projects with verified community co-benefits are pricing 2-4x above spot. The quality differential is real and widening. The broader market headwind is also real.</p>
+    </div>
+
+    <!-- CORSIA -->
+    <div class="inst-card">
+      <div class="inst-card-header">
+        <div>
+          <div class="inst-name">CORSIA</div>
+          <div class="inst-fullname">Carbon Offsetting and Reduction Scheme for International Aviation</div>
+        </div>
+      </div>
+      <div class="inst-signal-row">
+        <span class="inst-signal-label">Signal</span>
+        <span class="signal-pill mixed">Mixed</span>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div class="inst-change-label" style="margin-bottom:6px;">Phase</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text);">Phase 1 - ends 31 Dec 2026</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:2px;">Phase 2 begins 1 Jan 2027</div>
+      </div>
+      <div class="inst-divider"></div>
+      <p class="inst-story">CORSIA Phase 1 runs through end of 2026. The transition to Phase 2 creates uncertainty about which credit types will qualify - particularly whether Article 6.4 credits, once issued, will be eligible. This matters directly for African nature-based projects that may access aviation demand. COP31 in Belem in November 2026 is the key moment for clarity on Article 6.4 operational rules.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- AFRICA CONTEXT -->
+<div class="context-wrap">
+  <div class="section-label">What this means for African projects</div>
+  <div class="context-box">
+    <p>The 261 projects tracked in this database almost all sell into the VCM. Spot price direction is a direct input to financial viability - a project that pencilled out at $12 looks different at $6.40. The quality premium for CCB-certified, community-verified credits is the mitigating factor: well-structured African projects are not competing on price with generic offsets.</p>
+    <p>CORSIA represents a potential demand channel that does not yet exist at scale for African nature projects. When it opens fully in Phase 2, projects that have invested in CORSIA-eligible certification will have access to aviation sector demand on top of the voluntary market. The $1.2 billion annual financing requirement for the 162 Keystone Protected Areas will require both channels to function.</p>
+  </div>
+</div>
+
+<!-- REGULATORY EVENTS -->
+<div class="events-wrap">
+  <div class="section-label">Upcoming events that affect African projects</div>
+  <div class="events-list">
+
+    <div class="event-row">
+      <div class="event-date-col">
+        <div class="event-date-main event-date-hot">30 Apr 2026</div>
+        <div class="event-date-sub">in 18 days</div>
+      </div>
+      <div>
+        <div class="event-name">EU ETS annual surrender deadline</div>
+        <div class="event-note">261 million tonnes of 2025 emissions due. Compliance activity typically creates near-term EUA demand and can soften voluntary market sentiment as corporate attention shifts to compliance obligations.</div>
+        <div class="event-inst-tags"><span class="event-inst-tag">EUA</span><span class="event-inst-tag">VCM</span></div>
+      </div>
+      <div class="event-signal-col"><span class="signal-pill bullish">Bullish</span></div>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date-col">
+        <div class="event-date-main event-date-warm">Nov 2026</div>
+        <div class="event-date-sub">Belem, Brazil</div>
+      </div>
+      <div>
+        <div class="event-name">COP31</div>
+        <div class="event-note">Article 6 implementation and CORSIA Phase 2 transition rules are the critical agenda items for African conservation project developers. A clear Article 6.4 operational framework would open a significant new demand channel for African nature-based credits.</div>
+        <div class="event-inst-tags"><span class="event-inst-tag">VCM</span><span class="event-inst-tag">CORSIA</span></div>
+      </div>
+      <div class="event-signal-col"><span class="signal-pill mixed">Mixed</span></div>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date-col">
+        <div class="event-date-main">31 Dec 2026</div>
+        <div class="event-date-sub">end of year</div>
+      </div>
+      <div>
+        <div class="event-name">CORSIA Phase 1 end - Phase 2 transition</div>
+        <div class="event-note">Phase 2 covers 2027-2035 and expands mandatory participation to more airlines. Eligible credit types for Phase 2 are still being finalised. African nature-based projects holding CORSIA-eligible certification are positioned to access aviation demand if Article 6.4 credits receive approval.</div>
+        <div class="event-inst-tags"><span class="event-inst-tag">CORSIA</span></div>
+      </div>
+      <div class="event-signal-col"><span class="signal-pill mixed">Mixed</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EXTERNAL LINK -->
+<div class="external-wrap">
+  <div class="external-box">
+    <div>
+      <div class="external-label">Full carbon market data - all 8 instruments</div>
+      <div class="external-sub">EUA, UKA, CCA, LCFS, RGGI, RIN, 45Z and VCM - prices, regulatory tracker, weekly digest</div>
+    </div>
+    <a class="external-btn" href="https://carbonsnaps.com" target="_blank">carbonsnaps.com -></a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-note">Carbon market data updated weekly. Project data at <a href="index.html" style="color:var(--text-dim);">canopy home</a>.</span>
+  <div class="footer-links">
+    <a class="footer-link" href="index.html">Home</a>
+    <span class="footer-link">Contact</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+  const africaISO = new Set([12,24,72,108,120,132,140,148,174,178,180,204,226,232,231,266,270,288,324,624,384,404,426,430,434,450,454,466,478,480,504,508,516,562,566,646,678,686,694,706,710,716,728,729,748,768,788,800,818,834,854,894,262]);
+  let _worldCache = null;
+  async function loadWorld() {
+    if (_worldCache) return _worldCache;
+    _worldCache = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+    return _worldCache;
+  }
+  async function renderLogoMap() {
+    const topo = await loadWorld();
+    const svg = d3.select('#logo-map');
+    if (svg.empty()) return;
+    svg.selectAll('*').remove();
+    const projection = d3.geoNaturalEarth1().scale(400).center([17,2]).translate([350, 417]);
+    const path = d3.geoPath().projection(projection);
+    const countries = topojson.feature(topo, topo.objects.countries);
+    const features = countries.features.filter(f => africaISO.has(+f.id));
+    svg.selectAll('path').data(features).join('path')
+      .attr('d', path).attr('fill', '#c8dfc8').attr('stroke', '#fff').attr('stroke-width', 0.5);
+  }
+</script>
+<script src="nav.js" defer></script>
+</body>
+</html>

@@ -1362,7 +1362,7 @@
         "green_bond"
       ],
       "deal_size": "$100M+",
-      "summary": "CEO of FSD Africa, a UK government-funded financial sector development institution targeting mobilisation of £10 billion in finance including £2 billion for climate adaptation by 2030. Quoted in the authoritative Landscape of Climate Finance in Africa 2024 report, commissioned by FSD Africa and produced by the Climate Policy Initiative.",
+      "summary": "CEO of FSD Africa, a UK government-funded financial sector development institution targeting mobilisation of \u00a310 billion in finance including \u00a32 billion for climate adaptation by 2030. Quoted in the authoritative Landscape of Climate Finance in Africa 2024 report, commissioned by FSD Africa and produced by the Climate Policy Initiative.",
       "notable_work": [
         {
           "description": "Commissioned and published the Landscape of Climate Finance in Africa 2024, the authoritative dataset tracking climate finance flows across all 54 African countries",
@@ -2298,10 +2298,10 @@
         "grant"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "Deputy Associate Director for Science in charge of Sustainability Sciences at the Institut de Recherche pour le Developpement (IRD), appointed June 2024. Previously spent six years at AFD (Agence Francaise de Developpement) as director of the ecological and natural transition department and then Executive Director for Sustainable Development Solutions (2022-2024), during which he committed AFD to doubling biodiversity finance to €1 billion annually and aligning 30 percent of climate finance with biodiversity outcomes. Career spanning over 30 years in conservation and sustainable development across more than 40 countries. Director of Parc Amazonien de Guyane (2014-2018). Knight of the Legion of Honour. Agronomist, general engineer of bridges, water and forests, PhD in political science from Sussex.",
+      "summary": "Deputy Associate Director for Science in charge of Sustainability Sciences at the Institut de Recherche pour le Developpement (IRD), appointed June 2024. Previously spent six years at AFD (Agence Francaise de Developpement) as director of the ecological and natural transition department and then Executive Director for Sustainable Development Solutions (2022-2024), during which he committed AFD to doubling biodiversity finance to \u20ac1 billion annually and aligning 30 percent of climate finance with biodiversity outcomes. Career spanning over 30 years in conservation and sustainable development across more than 40 countries. Director of Parc Amazonien de Guyane (2014-2018). Knight of the Legion of Honour. Agronomist, general engineer of bridges, water and forests, PhD in political science from Sussex.",
       "notable_work": [
         {
-          "description": "Drove AFD commitment to €1 billion annually in biodiversity finance and 30 percent alignment of climate finance with biodiversity outcomes, making AFD one of the first development banks to jointly address climate and nature",
+          "description": "Drove AFD commitment to \u20ac1 billion annually in biodiversity finance and 30 percent alignment of climate finance with biodiversity outcomes, making AFD one of the first development banks to jointly address climate and nature",
           "year": 2021,
           "source_url": "https://www.afd.fr/en/actualites/eu1-billion-biodiversity"
         }
@@ -4570,7 +4570,7 @@
         "green_bond"
       ],
       "deal_size": "$50M-$500M",
-      "summary": "One of the architects of the impact investing field. Led British International Investment (BII), the UK development finance institution, as CEO from 2017 to November 2024 - during which the organisation committed more than £9 billion in new investments and deployed more than 60 percent of its portfolio into African markets. Previously co-founded Big Society Capital with Sir Ronald Cohen (2011-2015), and as Global Head of Research at JP Morgan co-authored the 2010 paper \"Impact Investments: An Emerging Asset Class\" with the Rockefeller Foundation, widely credited with coining the term. Started career at Goldman Sachs. MBA from Wharton. BA from Trinity College Dublin. Awarded CMG in 2022. Now a Senior Fellow at Harvard Kennedy School focused on development finance.",
+      "summary": "One of the architects of the impact investing field. Led British International Investment (BII), the UK development finance institution, as CEO from 2017 to November 2024 - during which the organisation committed more than \u00a39 billion in new investments and deployed more than 60 percent of its portfolio into African markets. Previously co-founded Big Society Capital with Sir Ronald Cohen (2011-2015), and as Global Head of Research at JP Morgan co-authored the 2010 paper \"Impact Investments: An Emerging Asset Class\" with the Rockefeller Foundation, widely credited with coining the term. Started career at Goldman Sachs. MBA from Wharton. BA from Trinity College Dublin. Awarded CMG in 2022. Now a Senior Fellow at Harvard Kennedy School focused on development finance.",
       "notable_work": [
         {
           "description": "Co-authored the 2010 JP Morgan and Rockefeller Foundation paper Impact Investments: An Emerging Asset Class, the first mainstream research to define and size the impact investing market - it projected a market opportunity of $400bn to $1trn",
@@ -4578,7 +4578,7 @@
           "source_url": "https://impact-investor.com/nick-odonohoe-reflects-on-the-impact-investing-sector-as-he-steps-down-from-bii/"
         },
         {
-          "description": "Led BII as CEO from 2017 to November 2024, committing more than £9 billion across Africa and Asia with more than 60 percent of the portfolio deployed into African markets",
+          "description": "Led BII as CEO from 2017 to November 2024, committing more than \u00a39 billion across Africa and Asia with more than 60 percent of the portfolio deployed into African markets",
           "year": 2024,
           "source_url": "https://www.bii.co.uk/en/news-insight/news/nick-odonohoe-cmg-to-step-down-as-ceo-of-bii-later-this-year/"
         }
@@ -4598,7 +4598,7 @@
     },
     {
       "id": "francoise-lombard",
-      "name": "Françoise Lombard",
+      "name": "Fran\u00e7oise Lombard",
       "role": "Chief Executive Officer",
       "organisation": "Proparco",
       "organisation_type": "dfi",
@@ -6129,6 +6129,1105 @@
       "verified": true,
       "status": "approved",
       "last_updated": "2026-04-11"
+    },
+    {
+      "id": "el-hadji-mbaye-diagne",
+      "name": "El Hadji Mbaye Diagne",
+      "role": "Director General",
+      "organisation": "Afrique-Energie-Environnement",
+      "organisation_type": "ngo",
+      "location": "Dakar, Senegal",
+      "geography": [
+        "West Africa",
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "article_6",
+        "climate_policy",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "VCM",
+        "compliance"
+      ],
+      "deal_size": null,
+      "summary": "One of Africa's most influential figures in international carbon market governance. Leads Afrique-Energie-Environnement, a Senegal-based organisation focused on energy and environmental policy across the continent. Has represented Senegal at UNFCCC negotiations since 2000 and served as lead coordinator on market mechanism issues across two decades of talks - giving him a front-row role in the architecture of Article 6. Chaired the Clean Development Mechanism Executive Board and currently sits on the Article 6.4 Supervisory Body, the UN mechanism replacing the CDM. Also a lead author on the IPCC Sixth Assessment Report and a board member of Verra, the worlds largest voluntary carbon standard body.",
+      "notable_work": [
+        {
+          "description": "Chair of the Clean Development Mechanism Executive Board, overseeing the primary UN carbon crediting mechanism under the Kyoto Protocol",
+          "year": 2015,
+          "source_url": "https://unfccc.int/process-and-meetings/bodies/constituted-bodies/clean-development-mechanism-executive-board-cdm-eb/members"
+        },
+        {
+          "description": "Member of the Article 6.4 Supervisory Body, the UN mechanism established under the Paris Agreement to govern the successor carbon crediting standard to the CDM",
+          "year": 2022,
+          "source_url": "https://unfccc.int/process-and-meetings/bodies/constituted-bodies/article-64-supervisory-body"
+        },
+        {
+          "description": "Lead author for the IPCC Sixth Assessment Report, contributing expert analysis on mitigation pathways and carbon market mechanisms",
+          "year": 2022,
+          "source_url": "https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Board",
+          "url": "https://verra.org/board/el-hadji-mbaye-diagne/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "jennifer-park",
+      "name": "Jennifer Park",
+      "role": "Partner, Impact and Corporate Strategy",
+      "organisation": "ALTERRA Management Limited",
+      "organisation_type": "fund",
+      "location": "Abu Dhabi, UAE",
+      "geography": [
+        "Global",
+        "Sub-Saharan Africa",
+        "MENA"
+      ],
+      "focus_areas": [
+        "climate_finance",
+        "impact_investing",
+        "climate_policy",
+        "blended_finance"
+      ],
+      "instrument_types": [
+        "blended_finance",
+        "private_equity"
+      ],
+      "deal_size": "$100M+",
+      "summary": "Leads impact and corporate strategy at ALTERRA, one of the worlds largest private climate investment vehicles with $30 billion in commitments from the UAE. A trained lawyer and Chartered Financial Analyst, she brings an unusual combination of legal, financial, and diplomatic credentials to climate capital deployment. Before ALTERRA, she spent years in the executive office of the UN Secretary-General advising both Ban Ki-moon and Antonio Guterres on climate and energy - work that included a central role in advancing the Paris Agreement and shaping the Just Energy Transition Partnerships. A Verra board member.",
+      "notable_work": [
+        {
+          "description": "Senior adviser to the UN Secretary-General on climate and energy, contributing to the negotiation and advancement of the Paris Agreement under Ban Ki-moon and Ant\u00f3nio Guterres",
+          "year": 2016,
+          "source_url": "https://unfccc.int/process-and-meetings/the-paris-agreement"
+        },
+        {
+          "description": "Partner at ALTERRA Management Limited, the UAE-backed $30 billion climate investment vehicle launched at COP28 to mobilise private capital for climate solutions globally",
+          "year": 2023,
+          "source_url": "https://www.alterraclimate.com"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Board",
+          "url": "https://verra.org/board/jennifer-park/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "derek-brent-walker",
+      "name": "Derek Walker",
+      "role": "Principal",
+      "organisation": "Summit Strategy Group",
+      "organisation_type": "advisory",
+      "location": "United States",
+      "geography": [
+        "Global",
+        "North America"
+      ],
+      "focus_areas": [
+        "climate_policy",
+        "clean_energy",
+        "carbon_markets",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "grant",
+        "policy"
+      ],
+      "deal_size": null,
+      "summary": "Climate and clean energy strategist with 25 years across non-profit leadership, academic institutions, and policy. Runs Summit Strategy Group and chairs the board of the Institute for Sustainable Communities. Previously Executive Director of the Arthur L. Irving Institute for Energy and Society at Dartmouth College, and before that spent 17 years at Environmental Defense Fund in senior roles including Vice President of Global Energy Transition, where he led interdisciplinary teams across science, law, economics, and policy. Teaches international climate law at Vermont Law and Graduate School. Holds a degree from the College of William and Mary and has studied at University College Oxford. A Verra board member.",
+      "notable_work": [
+        {
+          "description": "Vice President of Global Energy Transition at Environmental Defense Fund, leading interdisciplinary efforts to advance clean energy and climate solutions across key regions including emerging markets",
+          "year": 2020,
+          "source_url": "https://www.edf.org"
+        },
+        {
+          "description": "Executive Director of the Arthur L. Irving Institute for Energy and Society at Dartmouth College, shaping research and policy programs on energy transition and climate",
+          "year": 2022,
+          "source_url": "https://irving.dartmouth.edu"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Board",
+          "url": "https://verra.org/board/derek-brent-walker/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "mandy-rambharos",
+      "name": "Mandy Rambharos",
+      "role": "Chief Executive Officer",
+      "organisation": "Verra",
+      "organisation_type": "standard_body",
+      "location": "Washington DC, USA",
+      "geography": [
+        "Pan-Africa",
+        "Global",
+        "Southern Africa"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "climate_policy",
+        "just_transition",
+        "article_6"
+      ],
+      "instrument_types": [
+        "VCM",
+        "compliance"
+      ],
+      "deal_size": null,
+      "summary": "CEO of Verra, the world's largest voluntary carbon standard body, which governs the VCS program underpinning the majority of African conservation carbon projects. South African, with a career built across Eskom, EDF, and the UNFCCC negotiating rooms. At Eskom she served as General Manager for Just Energy Transition, developing the utility's strategy to move away from coal and playing a central role in establishing the Just Energy Transition Partnership at COP26 - a landmark financing agreement between South Africa and the G7. Before Verra she was VP for Global Climate Cooperation at Environmental Defense Fund, directing multilateral climate engagements and carbon pricing strategy. A former UNFCCC negotiator for South Africa, she co-chaired the Article 6 outcome at COP26, the agreement that now governs international carbon market rules under the Paris Agreement. Board member of the National Business Initiative and member of the SBTi Technical Council.",
+      "notable_work": [
+        {
+          "description": "Co-chaired the Article 6 negotiations at COP26 that produced the rules governing international carbon markets under the Paris Agreement, as South Africa negotiator",
+          "year": 2021,
+          "source_url": "https://unfccc.int/process-and-meetings/the-paris-agreement/article-6"
+        },
+        {
+          "description": "Architect of the Just Energy Transition Partnership for South Africa at COP26, securing commitments of $8.5 billion from Germany, France, the UK, the US, and the EU to support Eskom transition away from coal",
+          "year": 2021,
+          "source_url": "https://www.climatechangenews.com/2021/11/02/south-africa-secures-8-5bn-deal-to-accelerate-coal-phase-out/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Staff",
+          "url": "https://verra.org/staff/mandy-rambharos/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "katie-goslee",
+      "name": "Katie Goslee",
+      "role": "Director, Forest Carbon",
+      "organisation": "Verra",
+      "organisation_type": "standard_body",
+      "location": "United States",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "redd_plus",
+        "carbon_markets",
+        "forest_carbon",
+        "blue_carbon"
+      ],
+      "instrument_types": [
+        "VCM"
+      ],
+      "deal_size": null,
+      "summary": "Leads the team at Verra responsible for REDD+, Improved Forest Management, Afforestation/Reforestation/Revegetation, and Blue Carbon methodologies - the technical frameworks that govern how the majority of African conservation carbon projects are designed and credited. The Forest Carbon team also maintains and updates the rules of the VCS Program itself. Before Verra, Katie directed the Ecosystem Services Unit at Winrock International, where the work covered measurement, monitoring, and technical design of international land-use and climate change projects. Earlier roles included the US Forest Service and a sustainable forestry program in Appalachia. MS in Forestry from SUNY College of Environmental Science and Forestry, MPA from Syracuse University Maxwell School.",
+      "notable_work": [
+        {
+          "description": "Leads development and revision of Verra REDD+, IFM, ARR, and Blue Carbon methodologies that underpin the majority of African conservation carbon projects registered under the VCS program",
+          "year": 2024,
+          "source_url": "https://verra.org/programs/verified-carbon-standard/vcs-program-details/"
+        },
+        {
+          "description": "Previously directed the Ecosystem Services Unit at Winrock International, developing measurement and monitoring approaches for forest carbon projects across international and domestic land-use programs",
+          "year": 2020,
+          "source_url": "https://www.winrock.org/program/ecosystem-services/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Staff",
+          "url": "https://verra.org/staff/katie-goslee/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "manish-neupane",
+      "name": "Manish Neupane",
+      "role": "Director, Natural Climate Solutions",
+      "organisation": "Verra",
+      "organisation_type": "standard_body",
+      "location": "London, UK",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "community_conservation",
+        "biodiversity",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "VCM"
+      ],
+      "deal_size": null,
+      "summary": "Oversees Verra's SD VISta (Sustainable Development Verified Impact Standard) and Climate, Community and Biodiversity programs - the frameworks that assess and certify the sustainable development and community co-benefits of conservation projects. For African conservation finance, the CCB standard in particular functions as the quality signal that distinguishes projects with verified community architecture from those without. Neupane manages the project review process and provides guidance to developers and auditors moving projects through the system. Before Verra he ran the assurance program at Better Cotton, managing third-party verifiers and certification systems across global supply chains. MSc in Environmental Monitoring, Modelling and Management from Kings College London.",
+      "notable_work": [
+        {
+          "description": "Directs Verra CCB Program, the standard used to certify community and biodiversity co-benefits on conservation projects - a key quality differentiator for African REDD+ and NCS projects seeking premium pricing",
+          "year": 2023,
+          "source_url": "https://verra.org/programs/ccbs/"
+        },
+        {
+          "description": "Oversees SD VISta program, Verra standard for certifying sustainable development impacts, applicable to conservation projects seeking to demonstrate social and livelihood outcomes alongside carbon",
+          "year": 2023,
+          "source_url": "https://verra.org/programs/sd-verified-impact-standard/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Staff",
+          "url": "https://verra.org/staff/manish-neupane/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "marie-calmel",
+      "name": "Marie Calmel",
+      "role": "Director, NCS Program Quality",
+      "organisation": "Verra",
+      "organisation_type": "standard_body",
+      "location": "France",
+      "geography": [
+        "Pan-Africa",
+        "Central Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "redd_plus",
+        "carbon_markets",
+        "forest_carbon",
+        "conservation_finance"
+      ],
+      "instrument_types": [
+        "VCM"
+      ],
+      "deal_size": null,
+      "summary": "Responsible for the technical integrity and quality of Verra VCS natural climate solutions projects, including the Jurisdictional and Nested REDD+ program. Her remit covers ensuring that REDD+ and NCS methodologies are technically sound and aligned with international policy frameworks - work that directly determines which African conservation projects meet the bar for VCS certification and which do not. Before Verra she spent five years as an independent consultant on REDD+ for project developers, donors, and governments, and before that worked for ONF International, the French National Forest Office subsidiary, where she built REDD+ and forest climate strategy for multiple countries. She has worked extensively across the Congo River basin - one of the most important forest carbon geographies in Africa - as well as Southeast Asia and the Guiana Shield. Career began in 2008 in Indonesia. Holds an MS from the University of Provence and a postgraduate qualification from ISIGE-AgroParisTech.",
+      "notable_work": [
+        {
+          "description": "Supervises VCS NCS portfolio quality including the JNR program, setting the bar for what REDD+ and conservation projects must demonstrate to achieve and maintain certification under the worlds leading carbon standard",
+          "year": 2023,
+          "source_url": "https://verra.org/programs/jurisdictional-nested-redd-framework/"
+        },
+        {
+          "description": "Prior to Verra, led a three-year technical cooperation project in the Guiana Shield across French Guiana, Suriname, Guyana, and Brazil on REDD+ implementation",
+          "year": 2018,
+          "source_url": "https://verra.org/staff/marie-calmel/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Staff",
+          "url": "https://verra.org/staff/marie-calmel/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "sinclair-vincent",
+      "name": "Sinclair Vincent",
+      "role": "Senior Director, Program Development",
+      "organisation": "Verra",
+      "organisation_type": "standard_body",
+      "location": "United States",
+      "geography": [
+        "Global",
+        "Pan-Africa"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "biodiversity",
+        "conservation_finance",
+        "climate_policy"
+      ],
+      "instrument_types": [
+        "VCM"
+      ],
+      "deal_size": null,
+      "summary": "Leads the direction and evolution of Verra program suite - VCS, SD VISta, CCB, and Plastic Waste Reduction - and handles market development for Verra sustainable development programs including corporate and government engagement. The standards she oversees define what is credible in the voluntary carbon market and therefore shape which African conservation projects can access finance. An earlier role at Verra put her at the center of VCS project review; most recently she led development of the SD VISta Nature Framework, a methodology for measuring and quantifying biodiversity outcomes - directly relevant as buyers increasingly seek projects with verified nature co-benefits alongside carbon. MS in Environmental Science and Management from the Bren School, UC Santa Barbara.",
+      "notable_work": [
+        {
+          "description": "Led development of the SD VISta Nature Framework, Verra methodology for measuring and certifying biodiversity outcomes on conservation projects, responding to growing market demand for nature-positive credentials",
+          "year": 2023,
+          "source_url": "https://verra.org/programs/sd-verified-impact-standard/"
+        },
+        {
+          "description": "Oversees the VCS Program and full suite of Verra standards governing credibility of voluntary carbon credits - the framework within which the majority of African conservation carbon projects operate",
+          "year": 2024,
+          "source_url": "https://verra.org/programs/verified-carbon-standard/"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Verra Staff",
+          "url": "https://verra.org/staff/sinclair-vincent/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "gail-klintworth",
+      "name": "Gail Klintworth",
+      "role": "Chairman and Co-Founder",
+      "organisation": "Savo",
+      "organisation_type": "advisory",
+      "location": "United Kingdom",
+      "geography": [
+        "Pan-Africa",
+        "Southern Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "climate_finance",
+        "clean_energy",
+        "impact_investing"
+      ],
+      "instrument_types": [
+        "blended_finance",
+        "grant"
+      ],
+      "deal_size": null,
+      "summary": "South African business leader who built a 28-year career at Unilever, ending as Global Chief Sustainability Officer and before that as CEO of Unilever South Africa. Chairs the Shell Foundation, which deploys capital and business support to scale clean energy and climate solutions for low-income communities across Africa and Asia - working alongside British International Investment across Kenya, Zambia, Nigeria, Ghana, South Africa, and Tanzania. Also chairs GlobeScan and Integrity Action, sits on the Rabobank Supervisory Board, and is a Non-Executive Director at Tiger Brands. A Special Advisor to SYSTEMIQ and co-founder of Savo, the SYSTEMIQ-incubated African sustainable investment bank. Holds a masters in Sustainability Leadership from Cambridge and undergraduate degrees from Wits and Rhodes.",
+      "notable_work": [
+        {
+          "description": "Chair of Shell Foundation since 2019, overseeing a portfolio of clean energy and climate businesses across sub-Saharan Africa and South Asia with a strategy to reach 60 million people through energy access by 2032",
+          "year": 2019,
+          "source_url": "https://shellfoundation.org/trustees/gail-klintworth/"
+        },
+        {
+          "description": "Co-founded Savo, the SYSTEMIQ-incubated sustainable investment bank and venture builder operating across Kenya, Nigeria, Uganda, and Sudan with a $2.5 billion sustainable deal pipeline",
+          "year": 2020,
+          "source_url": "https://www.savo.earth/about-us"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Shell Foundation",
+          "url": "https://shellfoundation.org/trustees/gail-klintworth/"
+        },
+        {
+          "type": "profile",
+          "title": "Savo",
+          "url": "https://www.savo.earth/about-us"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "robbie-marwick",
+      "name": "Robbie Marwick",
+      "role": "CEO and Co-Founder",
+      "organisation": "Savo",
+      "organisation_type": "advisory",
+      "location": "London, UK",
+      "geography": [
+        "Pan-Africa",
+        "East Africa",
+        "West Africa"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "conservation_finance",
+        "impact_investing",
+        "blended_finance"
+      ],
+      "instrument_types": [
+        "VCM",
+        "blended_finance",
+        "private_equity"
+      ],
+      "deal_size": "$1M-$50M",
+      "summary": "Operator at the centre of African conservation carbon project development. CEO of Savo and interim CEO of Africa Carbon Partners, the Savo portfolio company developing nature-based carbon projects in Nigeria - including the Gashaka Gumti National Park and Okomu National Park projects announced at COP28 under an MOU with the National Council on Climate Change and Africa Nature Investors Foundation. Background spans McKinsey, investment coverage of Africa for a $50 billion public equity fund, and early employment at SYSTEMIQ where he helped grow the firm from five to 200 people. Savo operates across Kenya, Nigeria, Uganda, and Sudan with a reported sustainable deal pipeline of over $2.5 billion and $100 million in closed transactions.",
+      "notable_work": [
+        {
+          "description": "Represented Africa Carbon Partners at COP28 for the MOU announcement with Nigeria National Council on Climate Change and Africa Nature Investors Foundation to develop the Gashaka Gumti and Okomu National Park carbon projects",
+          "year": 2023,
+          "source_url": "https://www.linkedin.com/company/savo-project-developers"
+        },
+        {
+          "description": "Co-founded Savo and built a sustainable deal pipeline of over $2.5 billion across African markets spanning climate, nature-based solutions, agri-processing, and infrastructure",
+          "year": 2020,
+          "source_url": "https://www.savo.earth/about-us"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Savo",
+          "url": "https://www.savo.earth/about-us"
+        },
+        {
+          "type": "profile",
+          "title": "LinkedIn",
+          "url": "https://uk.linkedin.com/in/robbie-marwick-0b76a72a2"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "ade-okuwoga",
+      "name": "Ade Okuwoga",
+      "role": "Associate",
+      "organisation": "General Atlantic BeyondNetZero",
+      "organisation_type": "fund",
+      "location": "United Kingdom",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "climate_finance",
+        "carbon_markets",
+        "conservation_finance",
+        "clean_energy"
+      ],
+      "instrument_types": [
+        "private_equity",
+        "blended_finance"
+      ],
+      "deal_size": "$10M-$200M",
+      "summary": "Associate at General Atlantic BeyondNetZero, the climate-focused growth equity fund of General Atlantic, while continuing to advise Savo, the African sustainable venture builder he co-founded. The BeyondNetZero role puts him at the intersection of large-scale private equity climate capital and African conservation and clean energy deal flow. Prior career spans SYSTEMIQ, where he led project development and worked on sustainable special economic zones across Ethiopia, Nigeria, and Kenya; McKinsey; Chevron; and the UN. Holds an MBA from Harvard Business School. His co-founder role at Savo and current seat at BeyondNetZero together position him as a bridge between on-the-ground African project development and institutional climate capital deployment.",
+      "notable_work": [
+        {
+          "description": "Associate at General Atlantic BeyondNetZero, the climate-focused growth equity fund targeting businesses accelerating decarbonisation across global markets including Africa",
+          "year": 2023,
+          "source_url": "https://www.generalatlantic.com/beyond-net-zero/"
+        },
+        {
+          "description": "Co-founded Savo and led project development at SYSTEMIQ across sustainable special economic zones in Ethiopia, Nigeria, and Kenya before moving to BeyondNetZero",
+          "year": 2020,
+          "source_url": "https://www.savo.earth/about-us"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Savo",
+          "url": "https://www.savo.earth/about-us"
+        },
+        {
+          "type": "profile",
+          "title": "LinkedIn",
+          "url": "https://uk.linkedin.com/in/ade-okuwoga-550a1675"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "adam-falk",
+      "name": "Adam Falk",
+      "role": "President and Chief Executive Officer",
+      "organisation": "Wildlife Conservation Society",
+      "organisation_type": "ngo",
+      "location": "New York, USA",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "protected_areas",
+        "biodiversity",
+        "community_conservation"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance"
+      ],
+      "deal_size": null,
+      "summary": "President and CEO of the Wildlife Conservation Society, which runs the largest on-the-ground field conservation programme in the world, active across more than 55 countries. WCS is a founding partner of the Africa Keystone Protected Area Partnership alongside the Rob Walton Foundation, African Parks, and the Frankfurt Zoological Society - making Falk a direct counterpart to Duko Hopman in the initiative. Falk joined WCS in July 2025, bringing a background that crosses institutional science and large-scale philanthropy: he served as President of the Alfred P. Sloan Foundation from 2018, and before that as President of Williams College and Dean of the Zanvyl Krieger School at Johns Hopkins, where he was also a professor of physics. Elected member of the American Academy of Arts and Sciences and the Council on Foreign Relations. PhD in physics from Harvard. WCS Africa operations span the Congo Basin, East Africa, and Southern Africa, covering some of the continent's most ecologically critical landscapes.",
+      "notable_work": [
+        {
+          "description": "Represented WCS at the Africa Keystone Protected Area Partnership launch at UNGA in September 2025, alongside the presidents of Botswana, Mozambique, Namibia, and South Africa",
+          "year": 2025,
+          "source_url": "https://internationalconservation.org/blog/africa-keystone-protected-area-partnership-launch"
+        },
+        {
+          "description": "Leads WCS, which implements the largest field-based conservation programme globally, including major Africa programmes in the Congo Basin, Niassa, Tanzania, Rwanda, and across East and Southern Africa",
+          "year": 2025,
+          "source_url": "https://www.wcs.org/our-work/places/africa"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "WCS",
+          "url": "https://www.wcs.org/about-us/bios-adam-f-falk"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "frederick-kumah",
+      "name": "Frederick Kumah",
+      "role": "Vice President, Global Leadership",
+      "organisation": "African Wildlife Foundation",
+      "organisation_type": "ngo",
+      "location": "Nairobi, Kenya",
+      "geography": [
+        "Pan-Africa",
+        "East Africa",
+        "West Africa"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "protected_areas",
+        "biodiversity",
+        "climate_policy",
+        "community_conservation"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance",
+        "policy"
+      ],
+      "deal_size": null,
+      "summary": "Ghanaian conservation leader who has spent 26 years in senior roles across AWF, WWF International, Oxfam, and ADRA International, working across Africa, Europe, Asia, and the Americas. Based in Nairobi, he oversees AWF strategic engagement with governments and multilateral institutions and is the driving force behind two of the most significant African conservation governance initiatives of recent years: the Africa Protected Area Directors (APAD) network, for which AWF serves as secretariat, and AWF involvement in the Africa Keystone Protected Area Partnership, where he leads engagement with the African Union, ICCF, and 20-plus African governments on protecting 162 critical protected areas. He was a central figure at COP15 in Montreal and COP16 in Cali, shaping Africa positions on the Kunming-Montreal Global Biodiversity Framework. Prior to his current role he served as WWF Regional Director for Africa. Completed an Executive MBA in Strategic Leadership.",
+      "notable_work": [
+        {
+          "description": "Founded and leads the Africa Protected Area Directors (APAD) network through AWF, bringing together protected area directors from across the continent to align on conservation financing, transboundary cooperation, and climate-resilient management",
+          "year": 2021,
+          "source_url": "https://www.awf.org/news/awf-gears-second-africa-protected-areas-directors-apad-conference"
+        },
+        {
+          "description": "Leads AWF engagement in the Africa Keystone Protected Area Partnership in partnership with the Rob Walton Foundation, African Union, and ICCF, convening African governments on the plan to secure 162 of the continents most critical protected areas",
+          "year": 2025,
+          "source_url": "https://www.awf.org/news/explainer-safeguarding-africas-biodiversity-through-africa-keystone-protected-area-partnership"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "African Wildlife Foundation",
+          "url": "https://www.awf.org/news/environmental-policy-expert-africas-protected-areas-critical-development"
+        },
+        {
+          "type": "profile",
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/frederick-kumah-9bb879161/"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "joshua-katz",
+      "name": "Joshua Katz",
+      "role": "Partner, Natural Capital and Nature",
+      "organisation": "McKinsey and Company",
+      "organisation_type": "advisory",
+      "location": "Connecticut, USA",
+      "geography": [
+        "Global",
+        "Pan-Africa"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "biodiversity",
+        "carbon_markets",
+        "blended_finance",
+        "climate_finance"
+      ],
+      "instrument_types": [
+        "policy",
+        "blended_finance"
+      ],
+      "deal_size": null,
+      "summary": "McKinsey partner who leads the firms Natural Capital and Nature team - the role built by Tony Hansen and previously held alongside Duko Hopman. Co-authored the flagship McKinsey nature reports with both, including the 2022 Nature in the Balance report and annual corporate nature commitment trackers. Works with Blue Nature Alliance and Enduring Earth on conservation finance strategy, and advises governments on implementing 30x30 targets under the Kunming-Montreal Global Biodiversity Framework. Leads McKinsey involvement in the WEF CEO Alliance on Nature. A strategic thought partner to public, private, and social sector leaders at the intersection of nature and finance - which puts him in regular contact with the funders, standard-setters, and institutional investors who define the conservation finance landscape Canopy covers.",
+      "notable_work": [
+        {
+          "description": "Co-authored Nature in the Balance (2022) with Duko Hopman, Tony Hansen, and Kartik Jayaram - the landmark McKinsey report quantifying corporate actions to restore natural capital, widely cited across the conservation finance sector",
+          "year": 2022,
+          "source_url": "https://www.mckinsey.com/capabilities/sustainability/our-insights/nature-in-the-balance-what-companies-can-do-to-restore-natural-capital"
+        },
+        {
+          "description": "Leads McKinsey Natural Capital and Nature team, advising Blue Nature Alliance, Enduring Earth, and governments on nature-positive strategies and 30x30 implementation",
+          "year": 2024,
+          "source_url": "https://www.mckinsey.com/featured-insights/world-economic-forum/knowledge-collaborations/nature-and-natural-capital"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "McKinsey",
+          "url": "https://www.mckinsey.com/our-people/joshua-katz"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "kartik-jayaram",
+      "name": "Kartik Jayaram",
+      "role": "Senior Partner, Sustainability Practice",
+      "organisation": "McKinsey and Company",
+      "organisation_type": "advisory",
+      "location": "Nairobi, Kenya",
+      "geography": [
+        "Pan-Africa",
+        "East Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "conservation_finance",
+        "climate_finance",
+        "blended_finance"
+      ],
+      "instrument_types": [
+        "VCM",
+        "policy",
+        "blended_finance"
+      ],
+      "deal_size": null,
+      "summary": "McKinsey Senior Partner based in Nairobi who leads the firms Sustainability Practice across Eastern Europe, the Middle East, and Africa. Has spent the majority of his 25-year McKinsey career in Africa, having previously served as Managing Partner of the East Africa office. His current sustainability mandate explicitly includes developing voluntary carbon markets - putting him at the centre of the institutional thinking that shapes how African carbon projects attract capital. Co-authored multiple natural capital and Green Africa reports with Duko Hopman and Joshua Katz. Also advises governments on national economic development strategies, green manufacturing, and foreign direct investment. Former chair of the board of Generation Kenya. MBA from University of Chicago Booth, engineering degrees from IIT. One of the most influential institutional voices on African sustainability from inside a major consulting firm.",
+      "notable_work": [
+        {
+          "description": "Co-authored Green Africa: A Growth and Resilience Agenda for the Continent (2021) and Africa green manufacturing report, setting out the $2 trillion investment case for a net-zero industrial transition in Africa",
+          "year": 2021,
+          "source_url": "https://www.mckinsey.com/capabilities/sustainability/our-insights/green-africa-a-growth-and-resilience-agenda-for-the-continent"
+        },
+        {
+          "description": "Leads McKinsey Sustainability Practice in EEMA from Nairobi, with an explicit mandate covering voluntary carbon market development in Africa alongside economic development strategy and green manufacturing",
+          "year": 2024,
+          "source_url": "https://www.mckinsey.com/our-people/kartik-jayaram"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "McKinsey",
+          "url": "https://www.mckinsey.com/our-people/kartik-jayaram"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "kristine-tompkins",
+      "name": "Kristine Tompkins",
+      "role": "President and Co-Founder",
+      "organisation": "Tompkins Conservation",
+      "organisation_type": "ngo",
+      "location": "Chile",
+      "geography": [
+        "Global"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "protected_areas",
+        "biodiversity",
+        "community_conservation"
+      ],
+      "instrument_types": [
+        "grant"
+      ],
+      "deal_size": null,
+      "summary": "One of the most significant conservation philanthropists alive. Co-founded Tompkins Conservation with her late husband Douglas Tompkins - founder of The North Face and co-founder of Esprit - and has spent three decades protecting and rewilding landscapes in Chile and Argentina, creating or expanding 15 national parks across the two countries and protecting approximately 14.8 million acres. Former CEO of Patagonia for 20 years. First conservationist to receive the Carnegie Medal of Philanthropy. Served as UN Global Patron for Protected Areas from 2018 to 2022. TED talk Let us Make the World Wild Again has over two million views. Work is primarily concentrated in South America, but her influence on global conservation philanthropy - including through advisory relationships with figures in the Africa conservation finance space - is substantial. Tony Hansen sits on the Tompkins Conservation advisory board.",
+      "notable_work": [
+        {
+          "description": "Created or expanded 15 national parks in Chile and Argentina through Tompkins Conservation, protecting approximately 14.8 million acres and pioneering a model of private land purchase combined with government partnership for national park creation",
+          "year": 2018,
+          "source_url": "https://www.tompkinsconservation.org/our-team/"
+        },
+        {
+          "description": "First conservationist to receive the Carnegie Medal of Philanthropy; named UN Global Patron for Protected Areas 2018-2022",
+          "year": 2018,
+          "source_url": "https://www.unep.org/people/kristine-tompkins"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Tompkins Conservation",
+          "url": "https://www.tompkinsconservation.org/our-team/"
+        },
+        {
+          "type": "talk",
+          "title": "TED Talk - Let us Make the World Wild Again",
+          "url": "https://www.ted.com/speakers/kristine_tompkins"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "ashley-robson",
+      "name": "Ashley Robson",
+      "role": "Founder",
+      "organisation": "Keystone Conservation",
+      "organisation_type": "advisory",
+      "location": "Africa",
+      "geography": [
+        "Pan-Africa",
+        "Southern Africa",
+        "East Africa"
+      ],
+      "focus_areas": [
+        "conservation_finance",
+        "protected_areas",
+        "biodiversity"
+      ],
+      "instrument_types": [
+        "grant",
+        "blended_finance"
+      ],
+      "deal_size": null,
+      "summary": "Conservation economist and founder of Keystone Conservation, a specialist boutique focused on financial and resource modelling for protected areas across Africa. Has completed modelling work in Angola, Kenya, Mozambique, Saudi Arabia, South Africa, Uganda, and Zambia. Developed the Keystone Standard - a dynamic modelling system that calculates the costs and resource requirements of effective conservation management for individual protected areas. Co-authored the landmark 2025 paper Keystone Protected Areas are Vitally Important for Nature Conservation and Socioeconomic Opportunity in Africa, with WCS, African Parks, and the Frankfurt Zoological Society, supported by the Rob Walton Foundation - the paper that defines the 162 Keystone Protected Areas now at the centre of the Africa Keystone Protected Area Partnership. An earlier peer-reviewed 2021 paper (Robson et al.) using a Conservation Area Performance Index found that 82% of Africa conservation areas were in deterioration or failure. The analytical backbone of the two most important protected area finance assessments on the continent in recent years.",
+      "notable_work": [
+        {
+          "description": "Co-authored the Keystone Protected Areas paper (2025) with WCS, African Parks, Frankfurt Zoological Society, and Peter Lindsey, supported by Rob Walton Foundation - the research that identified 162 priority protected areas covering 33% of protected land and 71% of threatened vertebrate species in Africa",
+          "year": 2025,
+          "source_url": "https://www.wcs.org/keystone-protected-areas-in-africa"
+        },
+        {
+          "description": "Founded Keystone Conservation and developed the Keystone Standard, a dynamic modelling system for calculating protected area costs and resource requirements used by governments, NGOs, and private operators across Africa",
+          "year": 2021,
+          "source_url": "https://keystone-conservation.com"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Keystone Conservation",
+          "url": "https://keystone-conservation.com"
+        }
+      ],
+      "source": "canopy",
+      "verified": true,
+      "status": "approved",
+      "last_updated": "2026-04-12"
+    },
+    {
+      "id": "ephraim-mwepya-shitima",
+      "name": "Ephraim Mwepya Shitima",
+      "role": "Chair, African Group of Negotiators on Climate Change; Director, Climate Change Department",
+      "organisation": "Ministry of Green Economy and Environment, Zambia",
+      "organisation_type": "government",
+      "location": "Lusaka, Zambia",
+      "geography": [
+        "Pan-Africa",
+        "Southern Africa"
+      ],
+      "focus_areas": [
+        "policy",
+        "article_6",
+        "carbon_markets",
+        "climate_finance"
+      ],
+      "instrument_types": [
+        "Article6",
+        "VCM"
+      ],
+      "deal_size": null,
+      "summary": "Directs Zambia's climate change and green economy policy and served as Chair of the African Group of Negotiators on Climate Change from January 2021 to December 2023, acting as chief negotiator for Africa at COP27 in Sharm El Sheikh and COP28 in Dubai. Also served as Zambia's UNFCCC National Focal Point from 2016 to 2023. With over 24 years in Zambian government environmental roles and 20 years in UNFCCC multilateral negotiations, he is one of the most experienced African climate diplomats in active service.",
+      "notable_work": [
+        {
+          "description": "Led Africa's climate negotiations at COP27 in Sharm El Sheikh (2022) and COP28 in Dubai (2023) as Chair of the African Group of Negotiators on Climate Change",
+          "year": 2023,
+          "source_url": "https://unfccc.int"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "conference",
+          "title": "Carbon Markets Africa Summit 2025 Speaker",
+          "url": "https://carbonmarketsafrica.com/speakers"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
+    },
+    {
+      "id": "hugh-salway",
+      "name": "Hugh Salway",
+      "role": "Senior Director, Market Development and Partnerships",
+      "organisation": "Gold Standard",
+      "organisation_type": "standard_body",
+      "location": "Geneva, Switzerland",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "policy",
+        "nature_based_solutions",
+        "article_6"
+      ],
+      "instrument_types": [
+        "VCM",
+        "Article6"
+      ],
+      "deal_size": null,
+      "summary": "Leads Gold Standard's partnerships with governments, corporations, investors, and project developers, as well as the organisation's capacity-building, advocacy, and initiatives work. Gold Standard operates across more than 3,500 projects in over 100 countries. He joined in 2021 after eight years in the British Government, most recently as Head of International Carbon Markets, having also held roles at HM Treasury, the Cabinet Office, and the Department for Energy and Climate Change. His government career included leading UK engagement on CORSIA and the Article 6 negotiations under the Paris Agreement.",
+      "notable_work": [
+        {
+          "description": "Led the UK's international carbon markets work at BEIS, including Article 6 Paris Agreement negotiations and CORSIA aviation offset scheme development, before joining Gold Standard in 2021",
+          "year": 2021,
+          "source_url": "https://www.goldstandard.org"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Gold Standard team",
+          "url": "https://www.goldstandard.org/about-us/team"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
+    },
+    {
+      "id": "andrew-gilder",
+      "name": "Andrew Gilder",
+      "role": "Director",
+      "organisation": "Climate Legal",
+      "organisation_type": "consultancy",
+      "location": "Johannesburg, South Africa",
+      "geography": [
+        "Southern Africa",
+        "Pan-Africa"
+      ],
+      "focus_areas": [
+        "policy",
+        "carbon_markets",
+        "carbon_tax",
+        "climate_finance"
+      ],
+      "instrument_types": [
+        "VCM",
+        "Article6",
+        "compliance_carbon"
+      ],
+      "deal_size": null,
+      "summary": "One of South Africa's leading practitioners in environmental, climate change, and carbon markets law, with over 23 years of specialised practice. Drafted the South African Climate Change Act 2024 for the Department of Forestry, Fisheries and the Environment, and has advised public and private sector clients across multiple African jurisdictions including Zimbabwe, the Seychelles, and the SADC region. His work spans climate change policy development, carbon market regulation, carbon tax, transactional advice, and contract drafting for carbon market participants. Recognised in Best Lawyers (2018, 2020-24) and Chambers and Partners (2021-24) in the South Africa environment category. Co-author of three seminal texts: Climate Change Law and Governance in South Africa (Juta, 2016), Concise Guide to Carbon Tax (LexisNexis, 2020), and Comprehensive Guide to Carbon Tax (LexisNexis, 2022).",
+      "notable_work": [
+        {
+          "description": "Drafted the South African Climate Change Act 2024 for the Department of Forestry, Fisheries and the Environment, together with related legal instruments",
+          "year": 2024,
+          "source_url": "https://www.climatelegal.co.za"
+        },
+        {
+          "description": "Co-authored Climate Change Law and Governance in South Africa (Juta, 2016), the first comprehensive treatise on climate change law and governance in the country",
+          "year": 2016,
+          "source_url": "https://juta.co.za"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Climate Legal",
+          "url": "https://www.climatelegal.co.za"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
+    },
+    {
+      "id": "fenella-aouane",
+      "name": "Fenella Aouane",
+      "role": "Managing Director, Head of Carbon Pricing",
+      "organisation": "Global Green Growth Institute (GGGI)",
+      "organisation_type": "multilateral",
+      "location": "Seoul, South Korea",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "article_6",
+        "climate_finance",
+        "policy"
+      ],
+      "instrument_types": [
+        "VCM",
+        "Article6"
+      ],
+      "deal_size": null,
+      "summary": "Leads a global team at GGGI supporting governments to design and participate in carbon markets, and oversees multiple carbon funds purchasing ITMOs under Article 6. With over 25 years in commodity markets she was active in CDM primary markets, completing multiple award-winning trades, and initiated the first public-private programme with a UN entity to support carbon project development in Africa. Has built and led trading and brokerage teams at Natixis and Cargill focused on energy and derivative markets. Her combination of multilateral policy work and deep commercial markets experience is unusual in the Article 6 space.",
+      "notable_work": [
+        {
+          "description": "Initiated the first public-private programme with a UN entity to support carbon project development in Africa; completed multiple award-winning CDM primary market trades over a 25-year commodity markets career",
+          "year": 2010,
+          "source_url": "https://gggi.org"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "GGGI staff",
+          "url": "https://gggi.org/about-gggi/staff/"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
+    },
+    {
+      "id": "ibrahim-shelleng",
+      "name": "Ibrahim Shelleng",
+      "role": "Senior Special Assistant to the President on Climate Finance and Stakeholder Engagement",
+      "organisation": "Government of Nigeria",
+      "organisation_type": "government",
+      "location": "Abuja, Nigeria",
+      "geography": [
+        "West Africa"
+      ],
+      "focus_areas": [
+        "climate_finance",
+        "carbon_markets",
+        "policy",
+        "article_6"
+      ],
+      "instrument_types": [
+        "VCM",
+        "Article6"
+      ],
+      "deal_size": null,
+      "summary": "Serves as the Nigerian Presidency's focal point for climate finance and stakeholder engagement, and as Secretary of the Intergovernmental Committee on the National Carbon Market Activation Plan - the framework driving Nigeria's sovereign engagement with voluntary and Article 6 carbon markets. Also sits on the Presidential Committee on Climate Action and Green Economic Solutions and the Presidential Steering Committee on Project Evergreen. A chartered stockbroker and associate of the Chartered Institute for Securities and Investments UK, he previously served as Head of Business Development at the Nigeria Mortgage Refinance Company.",
+      "notable_work": [
+        {
+          "description": "Serves as Secretary of the Intergovernmental Committee on Nigeria's National Carbon Market Activation Plan, coordinating the government's sovereign carbon market strategy",
+          "year": 2023,
+          "source_url": "https://www.statehouse.gov.ng"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "conference",
+          "title": "Carbon Markets Africa Summit 2025 Speaker",
+          "url": "https://carbonmarketsafrica.com/speakers"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
+    },
+    {
+      "id": "carmen-alvarez",
+      "name": "Carmen Alvarez",
+      "role": "Jurisdictional Policy Lead",
+      "organisation": "Sylvera",
+      "organisation_type": "consultancy",
+      "location": "London, UK",
+      "geography": [
+        "Pan-Africa",
+        "Global"
+      ],
+      "focus_areas": [
+        "carbon_markets",
+        "redd_plus",
+        "article_6",
+        "policy"
+      ],
+      "instrument_types": [
+        "VCM",
+        "Article6"
+      ],
+      "deal_size": null,
+      "summary": "Leads Sylvera's work on Article 6 and jurisdictional REDD+ approaches, advising buyers, investors, and sovereign sellers on how to navigate the intersection of international climate policy and voluntary carbon markets. Has advised governments and the private sector on the design and implementation of climate and carbon pricing policies at national and international levels. At Sylvera, she helps clients assess transition risks and opportunities arising from carbon market and climate policy developments - particularly as jurisdictional crediting under Article 6 begins to displace project-level credits in parts of the market.",
+      "notable_work": [
+        {
+          "description": "Leads Sylvera's jurisdictional REDD+ and Article 6 advisory practice, helping buyers and sovereign sellers navigate the evolving intersection of voluntary and compliance carbon markets",
+          "year": 2022,
+          "source_url": "https://www.sylvera.com"
+        }
+      ],
+      "public_footprint": [
+        {
+          "type": "profile",
+          "title": "Sylvera team",
+          "url": "https://www.sylvera.com/about"
+        }
+      ],
+      "source": "cmas_2025",
+      "verified": true,
+      "status": "pending",
+      "last_updated": "2026-04-12",
+      "_draft": true
     }
   ]
 }

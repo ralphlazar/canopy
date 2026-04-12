@@ -63,25 +63,8 @@
   .live-num { color: var(--green); font-weight: 700; animation: pulse-opacity 2.5s ease-in-out infinite; }
   @keyframes pulse-opacity { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-  /* GATE */
-  .gate-wrap { max-width: 720px; margin: 0 auto; padding: 48px 40px 80px; }
-  .gate-box { border: 1px solid var(--border); border-radius: 14px; padding: 36px; background: var(--bg2); max-width: 480px; }
-  .gate-lock { font-size: 28px; margin-bottom: 14px; opacity: 0.45; }
-  .gate-title { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
-  .gate-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
-  .gate-row { display: flex; gap: 10px; align-items: center; }
-  .gate-input { font-size: 14px; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; outline: none; width: 180px; transition: border-color 0.15s; }
-  .gate-input:focus { border-color: var(--cairn); }
-  .gate-input.error { border-color: #c0392b; }
-  .gate-btn { font-size: 13px; padding: 9px 20px; border-radius: 8px; border: none; background: var(--cairn); color: #f0eaf7; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity 0.15s; }
-  .gate-btn:hover { opacity: 0.85; }
-  .gate-clue { font-size: 11px; color: var(--text-dim); margin-top: 10px; }
-  .gate-error { font-size: 12px; color: #c0392b; margin-top: 8px; display: none; }
-  .gate-error.visible { display: block; }
-
   /* TOOL */
-  .tool-wrap { display: none; }
-  .tool-wrap.visible { display: block; }
+  .tool-wrap { display: block; }
   .tool-inner { max-width: 720px; margin: 0 auto; }
 
   /* METHODOLOGY LINK */
@@ -240,21 +223,6 @@
   <div class="cairn-acronym">Canopy Africa Impact &amp; Risk Navigator</div>
   <p class="cairn-desc">Data-driven ratings across <span class="live-num">261</span> African conservation finance projects. 5 dimensions scored from public registry data and weighted into a single letter grade. No editorial opinion - the data speaks.</p>
   <p class="cairn-dims">Methodology · Additionality · Financial Viability · Sovereign Risk · Community Architecture</p>
-</div>
-
-<!-- GATE -->
-<div class="gate-wrap" id="gate-wrap">
-  <div class="gate-box">
-    <div class="gate-lock">&#128274;</div>
-    <div class="gate-title">Members only</div>
-    <div class="gate-sub">CAIRN ratings are available to Canopy partners and members of the Funders Coalition. Enter the access password below.</div>
-    <div class="gate-row">
-      <input class="gate-input" id="gate-input" type="password" placeholder="Password" autocomplete="off" onkeydown="if(event.key==='Enter')checkPassword()">
-      <button class="gate-btn" onclick="checkPassword()">Enter</button>
-    </div>
-    <div class="gate-clue">Clue: your wife's initials (lowercase)</div>
-    <div class="gate-error" id="gate-error">Incorrect password. Contact Canopy to request access.</div>
-  </div>
 </div>
 
 <!-- TOOL -->
@@ -788,22 +756,7 @@
     }
   }
 
-  function checkPassword() {
-    const val = document.getElementById('gate-input').value.trim().toLowerCase();
-    const input = document.getElementById('gate-input');
-    const error = document.getElementById('gate-error');
-    if (val === 'mej') {
-      document.getElementById('gate-wrap').style.display = 'none';
-      document.getElementById('tool-wrap').classList.add('visible');
-      loadAndScore();
-    } else {
-      input.classList.add('error');
-      error.classList.add('visible');
-      input.value = '';
-      input.focus();
-    }
-  }
-
+  // LOAD
   async function renderLogoMap() {
     const topo = await loadWorld();
     const svg = d3.select('#logo-map');
@@ -817,6 +770,8 @@
     svg.selectAll('path').data(features).join('path')
       .attr('d', path).attr('fill', '#c8dfc8').attr('stroke', '#fff').attr('stroke-width', 0.5);
   }
+
+  loadAndScore();
 
 </script>
 <script src="nav.js" defer></script>

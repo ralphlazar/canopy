@@ -60,11 +60,9 @@
   .home-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 16px; max-width: 1100px; margin: 0 auto; padding: 0 24px 40px; }
   @media (min-width: 769px) {
     .home-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); padding: 0 40px 40px; }
-    .home-card-7 { grid-column: span 2; }
   }
   @media (max-width: 768px) {
     .home-grid { grid-template-columns: 1fr !important; padding: 0 16px 32px !important; }
-    .home-card-7 { grid-column: span 1 !important; }
   }
   .home-card { border: 2px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; min-width: 0; }
   .home-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
@@ -133,6 +131,34 @@
   .home-card-7 { border-color: rgba(193,127,0,0.25); background: rgba(193,127,0,0.025); }
   .home-card-7:hover { border-color: rgba(193,127,0,0.5); }
   .card-num-7 { background: #c17f00; }
+
+  /* Carbon Market Pulse card */
+  .home-card-8 { border-color: rgba(26,53,82,0.25); background: rgba(26,53,82,0.025); min-height: 340px; }
+  .home-card-8:hover { border-color: rgba(26,53,82,0.5); }
+  .card-num-8 { background: #1a3552; }
+  .pulse-instrument { display: flex; align-items: center; justify-content: space-between; padding: 11px 20px; border-bottom: 1px solid var(--border); }
+  .pulse-instrument:last-child { border-bottom: none; }
+  .pulse-inst-name { font-size: 12px; font-weight: 700; color: var(--text); letter-spacing: 0.02em; }
+  .pulse-inst-sub { font-size: 10px; color: var(--text-dim); margin-top: 1px; }
+  .pulse-inst-right { text-align: right; }
+  .pulse-price { font-size: 16px; font-weight: 700; color: #1a3552; letter-spacing: -0.02em; }
+  .pulse-change { font-size: 10px; margin-top: 2px; }
+  .pulse-change.up { color: #1a6b3a; }
+  .pulse-change.down { color: #9a2a2a; }
+  .pulse-change.flat { color: var(--text-dim); }
+  .pulse-signal { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .pulse-signal.bullish { background: #e6f4ec; color: #1a6b3a; }
+  .pulse-signal.bearish { background: #fde8e8; color: #9a2a2a; }
+  .pulse-signal.mixed   { background: #fef6e0; color: #8a6000; }
+  .pulse-signal.neutral { background: var(--bg3); color: var(--text-dim); }
+  .pulse-event { display: flex; align-items: flex-start; gap: 10px; padding: 10px 20px; border-bottom: 1px solid var(--border); }
+  .pulse-event-dot { width: 6px; height: 6px; border-radius: 50%; background: #1a3552; flex-shrink: 0; margin-top: 5px; opacity: 0.5; }
+  .pulse-event-text { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+  .pulse-event-date { font-size: 10px; color: var(--text-dim); margin-top: 1px; }
+  .pulse-footer { padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+  .pulse-footer-note { font-size: 10px; color: var(--text-dim); }
+  .pulse-footer-link { font-size: 10px; color: #1a3552; text-decoration: none; opacity: 0.7; }
+  .pulse-footer-link:hover { opacity: 1; }
 
   /* SEARCH */
   .search-wrap { position: relative; margin-left: 8px; }
@@ -329,13 +355,6 @@
           </div>
         </div>
       </div>
-      <div class="cairn-lock">
-        <div class="cairn-lock-icon">&#128274;</div>
-        <div>
-          <div class="cairn-lock-label">Members only</div>
-          <div class="cairn-lock-sub">Rated opinions on African conservation projects - password required</div>
-        </div>
-      </div>
       <div class="cairn-tags">
         <span class="cairn-tag">Methodology</span>
         <span class="cairn-tag">Community architecture</span>
@@ -360,6 +379,60 @@
         <span class="inst-badge b-blended">Blended finance</span>
         <span class="inst-badge b-philanthropic">Philanthropic</span>
         <span class="inst-badge b-emerging">Emerging</span>
+      </div>
+    </div>
+
+    <div class="home-card home-card-8" onclick="window.location.href='carbonsnaps.html'">
+      <div class="home-card-header">
+        <div>
+          <div class="home-card-map-title"><span class="card-num card-num-8">8</span>Carbon Market Pulse</div>
+          <div class="home-card-map-sub">The markets African conservation projects sell into</div>
+        </div>
+        <div class="home-card-map-cta">Open -></div>
+      </div>
+
+      <div class="pulse-instrument">
+        <div>
+          <div class="pulse-inst-name">VCM</div>
+          <div class="pulse-inst-sub">Voluntary Carbon Market - GEO spot</div>
+        </div>
+        <div class="pulse-inst-right">
+          <div class="pulse-price">$6.40</div>
+          <div class="pulse-change down">-2.1% this week</div>
+          <div style="margin-top:4px"><span class="pulse-signal bearish">Bearish</span></div>
+        </div>
+      </div>
+
+      <div class="pulse-instrument">
+        <div>
+          <div class="pulse-inst-name">CORSIA</div>
+          <div class="pulse-inst-sub">Aviation compliance credits</div>
+        </div>
+        <div class="pulse-inst-right">
+          <div style="margin-top:4px"><span class="pulse-signal mixed">Mixed</span></div>
+          <div class="pulse-change flat" style="margin-top:4px;">Phase 1 ends Dec 2026</div>
+        </div>
+      </div>
+
+      <div class="pulse-event">
+        <div class="pulse-event-dot"></div>
+        <div>
+          <div class="pulse-event-text">EU ETS annual surrender deadline - 261M tonnes of 2025 emissions due. Bullish pressure on EUA.</div>
+          <div class="pulse-event-date">30 Apr 2026 - in 18 days</div>
+        </div>
+      </div>
+
+      <div class="pulse-event">
+        <div class="pulse-event-dot"></div>
+        <div>
+          <div class="pulse-event-text">COP31 Belem - Article 6 implementation and CORSIA Phase 2 transition in focus for African project developers.</div>
+          <div class="pulse-event-date">Nov 2026</div>
+        </div>
+      </div>
+
+      <div class="pulse-footer">
+        <span class="pulse-footer-note">Updated weekly - last refresh 9 Apr 2026</span>
+        <a class="pulse-footer-link" href="https://carbonsnaps.com" target="_blank" onclick="event.stopPropagation()">carbonsnaps.com -></a>
       </div>
     </div>
 
@@ -396,6 +469,9 @@
     </div>
   </footer>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 
 <script>
   let allProjects=[], allInstruments=[], allPolicy=[], allWhosWho=[], allKeystones=[], allIntelligence=[];
@@ -590,8 +666,6 @@
   load();
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
   const tooltip = document.getElementById('map-tooltip');
   function showTooltip(event,html){if(window.matchMedia('(hover: none)').matches)return;tooltip.innerHTML=html;tooltip.classList.add('visible');moveTooltip(event);}
